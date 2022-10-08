@@ -8,6 +8,12 @@
 #'   For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 #'   is 133645678.
 #'
+#' @examples
+#'   \dontrun{
+#'     get_contest(133645678)
+#'   }
+#'
+#' @export
 get_contest <- function(contest_id) {
 
   stopifnot(is.numeric(contest_id))
