@@ -10,6 +10,11 @@
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
 #'   If `draft_group_id` and `contest_id` are both passed, `contest_id` is ignored.
 #'
+#' @examples
+#'   \dontrun{
+#'     get_draft_group(75367)
+#'   }
+#'
 #' @export
 get_draft_group <- function(draft_group_id = NULL,
                             contest_id = NULL) {

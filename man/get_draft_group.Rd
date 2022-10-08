@@ -20,3 +20,9 @@ Fetch information on the available lineup for a specific
   competition. In particular, this includes player names/IDs and
   their salaries.
 }
+\examples{
+  \dontrun{
+    get_draft_group(75367)
+  }
+
+}
