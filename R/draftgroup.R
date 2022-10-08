@@ -70,7 +70,7 @@ get_draft_group_data <- function() {
 
 #' Get Player List
 #'
-#' Fetch list of players for a specific draft group
+#' Fetch list of players for a specific draft group and related info
 #'
 #' @inheritParams get_draft_group_info
 #'
@@ -100,6 +100,45 @@ get_player_list <- function(draft_group_id = NULL,
     httr2::resp_body_json()
 
   res$playerList %>%
+    tidyjson::spread_all() %>%
+    dplyr::as_tibble() %>%
+    dplyr::select(-document.id) %>%
+    clean_names()
+
+}
+
+#' Get Team List
+#'
+#' Fetch list of teams for a specific draft group and related info
+#'
+#' @inheritParams get_draft_group_info
+#'
+#' @export
+get_team_list <- function(draft_group_id = NULL,
+                            contest_id = NULL) {
+
+  # Ensure at least one argument is passed
+  if (all(is.null(draft_group_id), is.null(contest_id))) {
+
+    cli::cli_abort(
+      "`draft_group_id` and `contest_id` cannot both be missing"
+    )
+
+  }
+
+  # Get draft_group_id when it is missing
+  if (is.null(draft_group_id)) {
+
+    draft_group_id <- get_contest(contest_id)$draft_group_id
+
+  }
+
+  res <- httr2::request("https://www.draftkings.com/lineup/getavailableplayers") %>%
+    httr2::req_url_query(draftGroupId = draft_group_id) %>%
+    httr2::req_perform() %>%
+    httr2::resp_body_json()
+
+  res$teamList %>%
     tidyjson::spread_all() %>%
     dplyr::as_tibble() %>%
     dplyr::select(-document.id) %>%
