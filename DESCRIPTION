@@ -1,11 +1,10 @@
 Package: draft.kings
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Draft Kings API Wrapper
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Giovanni Colitti
+Maintainer: Giovanni Colitti <g.a.colitti@gmail.com>
+Description: Fetch data from DraftKings.com using the provided API
 License: file LICENSE
 Encoding: UTF-8
 LazyData: true
