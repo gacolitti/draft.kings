@@ -2,7 +2,9 @@
 
 export("%>%")
 export(clean_names)
-export(get_contest)
-export(get_draft_group)
+export(get_contest_data)
+export(get_contest_info)
+export(get_draft_group_data)
+export(get_draft_group_info)
 export(get_lineup_rules)
 importFrom(magrittr,"%>%")

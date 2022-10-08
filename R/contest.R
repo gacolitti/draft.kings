@@ -1,5 +1,5 @@
 
-#' Get Contest Data
+#' Get Contest Info
 #'
 #' Fetch contest information such as the sport, payout, and contest summary.
 #'
@@ -10,11 +10,11 @@
 #'
 #' @examples
 #'   \dontrun{
-#'     get_contest(133645678)
+#'     get_contest_info(133645678)
 #'   }
 #'
 #' @export
-get_contest <- function(contest_id) {
+get_contest_info <- function(contest_id) {
 
   stopifnot(is.numeric(contest_id))
 
@@ -29,3 +29,21 @@ get_contest <- function(contest_id) {
 
 }
 
+#' Get Contest Data
+#'
+#' Fetch the full table of contests and related info
+#'
+#' @export
+get_contest_data <- function() {
+
+  res <-   httr2::request(base_url = "https://www.draftkings.com/lobby/getcontests") %>%
+    httr2::req_perform() %>%
+    httr2::resp_body_json()
+
+  res$Contests %>%
+    tidyjson::spread_all() %>%
+    dplyr::as_tibble() %>%
+    dplyr::select(-document.id) %>%
+    clean_names()
+
+}

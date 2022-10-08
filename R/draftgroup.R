@@ -1,22 +1,22 @@
 
-#' Get Draft Group Data
+#' Get Draft Group Info
 #'
 #' Fetch information on the available lineup for a specific
 #'   competition. In particular, this includes player names/IDs and
 #'   their salaries.
 #'
-#' @inheritParams get_contest
+#' @inheritParams get_contest_info
 #'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
 #'   If `draft_group_id` and `contest_id` are both passed, `contest_id` is ignored.
 #'
 #' @examples
 #'   \dontrun{
-#'     get_draft_group(75367)
+#'     get_draft_group_info(75367)
 #'   }
 #'
 #' @export
-get_draft_group <- function(draft_group_id = NULL,
+get_draft_group_info <- function(draft_group_id = NULL,
                             contest_id = NULL) {
 
   # Ensure at least one argument is passed
@@ -49,3 +49,21 @@ get_draft_group <- function(draft_group_id = NULL,
 
 }
 
+#' Get Draft Group Data
+#'
+#' Fetch the full table of draft groups and related info
+#'
+#' @export
+get_draft_group_data <- function() {
+
+  res <- httr2::request(base_url = "https://www.draftkings.com/lobby/getcontests") %>%
+    httr2::req_perform() %>%
+    httr2::resp_body_json()
+
+  res$DraftGroups %>%
+    tidyjson::spread_all() %>%
+    dplyr::as_tibble() %>%
+    dplyr::select(-document.id) %>%
+    clean_names()
+
+}
