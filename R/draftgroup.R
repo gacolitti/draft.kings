@@ -49,12 +49,12 @@ get_draft_group_info <- function(draft_group_id = NULL,
 
 }
 
-#' Get Draft Group Data
+#' Get List of Draft Groups
 #'
 #' Fetch the full table of draft groups and related info
 #'
 #' @export
-get_draft_group_data <- function() {
+get_draft_groups <- function() {
 
   res <- httr2::request(base_url = "https://www.draftkings.com/lobby/getcontests") %>%
     httr2::req_perform() %>%

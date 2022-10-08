@@ -29,12 +29,12 @@ get_contest_info <- function(contest_id) {
 
 }
 
-#' Get Contest Data
+#' Get List of Contests
 #'
 #' Fetch the full table of contests and related info
 #'
 #' @export
-get_contest_data <- function() {
+get_contests <- function() {
 
   res <-   httr2::request(base_url = "https://www.draftkings.com/lobby/getcontests") %>%
     httr2::req_perform() %>%
