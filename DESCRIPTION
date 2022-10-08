@@ -11,6 +11,7 @@ LazyData: true
 Imports: 
     dplyr,
     httr2,
+    magrittr,
     tidyjson,
     tidyr
 RoxygenNote: 7.2.0
