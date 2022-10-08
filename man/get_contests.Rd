@@ -4,7 +4,7 @@
 \alias{get_contests}
 \title{Get List of Contests}
 \usage{
-get_contests()
+get_contests(sport = NULL)
 }
 \description{
 Fetch the full table of contests and related info

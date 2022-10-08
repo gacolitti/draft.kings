@@ -34,9 +34,10 @@ get_contest_info <- function(contest_id) {
 #' Fetch the full table of contests and related info
 #'
 #' @export
-get_contests <- function() {
+get_contests <- function(sport = NULL) {
 
   res <-   httr2::request(base_url = "https://www.draftkings.com/lobby/getcontests") %>%
+    httr2::req_url_query(sport = sport) %>%
     httr2::req_perform() %>%
     httr2::resp_body_json()
 
@@ -70,7 +71,7 @@ get_gametype_rules <- function(game_type_id = NULL,
 
   if (is.null(game_type_id)) {
 
-    game_type_id <- get_contest(contest_id)$game_type_id
+    game_type_id <- get_contest_info(contest_id)$game_type_id
 
   }
 

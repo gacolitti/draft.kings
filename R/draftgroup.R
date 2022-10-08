@@ -16,7 +16,7 @@ check_draft_group_id <- function(draft_group_id, contest_id) {
   # Get draft_group_id when it is missing
   if (is.null(draft_group_id)) {
 
-    draft_group_id <- get_contest(contest_id)$draft_group_id
+    draft_group_id <- get_contest_info(contest_id)$draft_group_id
 
   }
 
