@@ -183,13 +183,13 @@ get_player_points <- function(year, week, sport = "nfl") {
       'Accept-Encoding' = 'gzip, deflate, br'
     ) %>%
     httr2::req_body_raw(
-      glue::glue('{"sport":"{sport}","embed":"stats"}')
+      glue::glue('{{"sport":"{sport}","embed":"stats"}}')
     ) %>%
     httr2::req_perform()
 
-
   resp %>%
     httr2::resp_body_json() %>%
+    magrittr::extract2("data") %>%
     tidyjson::spread_all()
 
 }
