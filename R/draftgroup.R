@@ -76,6 +76,9 @@ get_draft_groups <- function() {
   res$DraftGroups %>%
     tidyjson::spread_all() %>%
     dplyr::as_tibble() %>%
+    dplyr::group_by(player_id) %>%
+    dplyr::mutate(is_captain = ifelse(salary == max(salary), TRUE, FALSE)) %>%
+    dplyr::ungroup() %>%
     dplyr::select(-document.id) %>%
     clean_names()
 
@@ -156,5 +159,37 @@ get_team_list <- function(draft_group_id = NULL,
     dplyr::as_tibble() %>%
     dplyr::select(-document.id) %>%
     clean_names()
+
+}
+
+
+#' Get Player Points Earned
+#'
+#' Retrieve player fantasy points earned in each game for a given season and week.
+#'
+#' @param year integer.
+#' @param week integer.
+#' @param sport
+#'
+get_player_points <- function(year, week, sport = "nfl") {
+
+  resp <- httr2::request(
+    glue::glue("https://live.draftkings.com/api/v2/leaderboards/players/seasons/{year}/weeks/{week}")
+  ) %>%
+    httr2::req_method("POST") %>%
+    httr2::req_headers(
+      'Content-Type' = 'application/json',
+      'Accept' = '*/*',
+      'Accept-Encoding' = 'gzip, deflate, br'
+    ) %>%
+    httr2::req_body_raw(
+      glue::glue('{"sport":"{sport}","embed":"stats"}')
+    ) %>%
+    httr2::req_perform()
+
+
+  resp %>%
+    httr2::resp_body_json() %>%
+    tidyjson::spread_all()
 
 }

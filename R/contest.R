@@ -18,7 +18,9 @@ get_contest_info <- function(contest_id) {
 
   stopifnot(is.numeric(contest_id))
 
-  httr2::request("https://api.draftkings.com/contests/v1/contests/133682546?format=json") %>%
+  httr2::request(
+      glue::glue("https://api.draftkings.com/contests/v1/contests/{contest_id}?format=json")
+    ) %>%
     httr2::req_perform() %>%
     httr2::resp_body_json() %>%
     tidyjson::spread_all() %>%
@@ -81,8 +83,8 @@ get_gametype_rules <- function(game_type_id = NULL,
     httr2::req_perform() %>%
     httr2::resp_body_string() %>%
     tidyjson::spread_all() %>%
-    as_tibble() %>%
-    select(-document.id) %>%
+    dplyr::as_tibble() %>%
+    dplyr::select(-document.id) %>%
     clean_names()
 
 }
