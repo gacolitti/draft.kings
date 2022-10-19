@@ -80,7 +80,7 @@ add_options <- function(req, options) {
 
   if (!is.null(options)) {
 
-    req <- do.call(httr2::req_options, args = c(options, list(req = req)))
+    req <- do.call(httr2::req_options, args = c(options, list(.req = req)))
 
   }
 
