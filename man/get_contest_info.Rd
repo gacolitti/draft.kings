@@ -4,13 +4,24 @@
 \alias{get_contest_info}
 \title{Get Contest Info}
 \usage{
-get_contest_info(contest_id)
+get_contest_info(
+  contest_id,
+  throttle_rate = NULL,
+  proxy_args = NULL,
+  options = NULL
+)
 }
 \arguments{
 \item{contest_id}{The sequence of digits that correspond to a specific contest.
 This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
+
+\item{throttle_rate}{List of arguments to `httr2::req_throttle`}
+
+\item{proxy_args}{List of arguments to `httr2::req_proxy`}
+
+\item{options}{List of arguments to `httr2::req_options`}
 }
 \description{
 Fetch contest information such as the sport, payout, and contest summary.

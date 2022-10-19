@@ -3,6 +3,9 @@
 #'
 #' Fetch contest information such as the sport, payout, and contest summary.
 #'
+#' @inheritParams add_proxy
+#' @inheritParams add_options
+#' @inheritParams add_throttle
 #' @param contest_id The sequence of digits that correspond to a specific contest.
 #'   This can be found by examining the URL of a contest page.
 #'   For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
@@ -14,13 +17,19 @@
 #'   }
 #'
 #' @export
-get_contest_info <- function(contest_id) {
+get_contest_info <- function(contest_id,
+                             throttle_rate = NULL,
+                             proxy_args = NULL,
+                             options = NULL) {
 
   stopifnot(is.numeric(contest_id))
 
   httr2::request(
       glue::glue("https://api.draftkings.com/contests/v1/contests/{contest_id}?format=json")
     ) %>%
+    add_proxy(proxy_args) %>%
+    add_options(options) %>%
+    add_throttle(throttle_rate) %>%
     httr2::req_perform() %>%
     httr2::resp_body_json() %>%
     tidyjson::spread_all() %>%

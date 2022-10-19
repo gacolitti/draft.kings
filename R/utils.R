@@ -49,3 +49,61 @@ clean_names <- function(.data,
     n
   }
 }
+
+#' Add Proxy Args
+#'
+#' Add list of arguments for `httr2::req_proxy` to a request object
+#'
+#' @inheritParams httr2::req_proxy
+#' @param proxy_args List of arguments to `httr2::req_proxy`
+#'
+add_proxy <- function(req, proxy_args) {
+
+  if (!is.null(proxy_args)) {
+
+    req <- do.call(httr2::req_proxy, args = c(proxy_args, list(req = req)))
+
+  }
+
+  req
+
+}
+
+#' Add Options
+#'
+#' Add list of arguments for `httr2::req_options` to a request object
+#'
+#' @inheritParams httr2::req_options
+#' @param options List of arguments to `httr2::req_options`
+#'
+add_options <- function(req, options) {
+
+  if (!is.null(options)) {
+
+    req <- do.call(httr2::req_options, args = c(options, list(req = req)))
+
+  }
+
+  req
+
+}
+
+#' Add Throttle
+#'
+#' Add list of arguments for `httr2::req_throttle` to a request object
+#'
+#' @inheritParams httr2::req_throttle
+#' @param throttle_rate List of arguments to `httr2::req_throttle`
+#'
+add_throttle <- function(req, throttle_rate) {
+
+  if (!is.null(throttle_rate)) {
+
+    req <- do.call(httr2::req_throttle, args = c(throttle_rate, list(req = req)))
+
+  }
+
+  req
+
+}
+
