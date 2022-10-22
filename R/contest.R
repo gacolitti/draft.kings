@@ -6,6 +6,7 @@
 #' @inheritParams add_proxy
 #' @inheritParams add_options
 #' @inheritParams add_throttle
+#' @inheritParams add_headers
 #' @param contest_id The sequence of digits that correspond to a specific contest.
 #'   This can be found by examining the URL of a contest page.
 #'   For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
@@ -20,6 +21,8 @@
 get_contest_info <- function(contest_id,
                              throttle_rate = NULL,
                              proxy_args = NULL,
+                             headers = NULL,
+                             retry_options = NULL,
                              options = NULL) {
 
   stopifnot(is.numeric(contest_id))
@@ -30,6 +33,8 @@ get_contest_info <- function(contest_id,
     add_proxy(proxy_args) %>%
     add_options(options) %>%
     add_throttle(throttle_rate) %>%
+    add_headers(headers) %>%
+    add_retry(retry_options) %>%
     httr2::req_perform() %>%
     httr2::resp_body_json() %>%
     tidyjson::spread_all() %>%

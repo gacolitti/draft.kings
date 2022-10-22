@@ -8,6 +8,8 @@ get_contest_info(
   contest_id,
   throttle_rate = NULL,
   proxy_args = NULL,
+  headers = NULL,
+  retry_options = NULL,
   options = NULL
 )
 }
@@ -20,6 +22,8 @@ is 133645678.}
 \item{throttle_rate}{List of arguments to `httr2::req_throttle`}
 
 \item{proxy_args}{List of arguments to `httr2::req_proxy`}
+
+\item{headers}{List of arguments to `httr2::req_headers`}
 
 \item{options}{List of arguments to `httr2::req_options`}
 }

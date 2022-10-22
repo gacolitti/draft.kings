@@ -107,3 +107,41 @@ add_throttle <- function(req, throttle_rate) {
 
 }
 
+#' Add Headers
+#'
+#' Add list of arguments for `httr2::req_headers` to a request object
+#'
+#' @inheritParams httr2::req_throttle
+#' @param headers List of arguments to `httr2::req_headers`
+#'
+add_headers <- function(req, headers) {
+
+  if (!is.null(headers)) {
+
+    req <- do.call(httr2::req_headers, args = c(headers, list(.req = req)))
+
+  }
+
+  req
+
+}
+
+#' Add Retry
+#'
+#' Add list of arguments for `httr2::req_retry` to a request object
+#'
+#' @inheritParams httr2::req_retry
+#' @param headers List of arguments to `httr2::req_retry`
+#'
+add_retry <- function(req, options) {
+
+  if (!is.null(options)) {
+
+    req <- do.call(httr2::req_retry, args = c(options, list(req = req)))
+
+  }
+
+  req
+
+}
+
