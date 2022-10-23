@@ -23,11 +23,12 @@ get_contest_info <- function(contest_id,
                              proxy_args = NULL,
                              headers = NULL,
                              retry_options = NULL,
+                             is_error = NULL,
                              options = NULL) {
 
   stopifnot(is.numeric(contest_id))
 
-  httr2::request(
+  resp <- httr2::request(
       glue::glue("https://api.draftkings.com/contests/v1/contests/{contest_id}?format=json")
     ) %>%
     add_proxy(proxy_args) %>%
@@ -35,7 +36,11 @@ get_contest_info <- function(contest_id,
     add_throttle(throttle_rate) %>%
     add_headers(headers) %>%
     add_retry(retry_options) %>%
-    httr2::req_perform() %>%
+    httr2::req_error(body = error_body,
+                     is_error = is_error) %>%
+    httr2::req_perform()
+
+  resp %>%
     httr2::resp_body_json() %>%
     tidyjson::spread_all() %>%
     dplyr::as_tibble() %>%

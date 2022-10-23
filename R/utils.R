@@ -10,6 +10,7 @@
 clean_names <- function(.data,
                         unique = FALSE,
                         minus_to_underscore = FALSE) {
+
   n <- if (is.data.frame(.data)) colnames(.data) else .data
 
   # If Non-ASCII characters found, return original strings
@@ -48,6 +49,36 @@ clean_names <- function(.data,
   } else {
     n
   }
+}
+
+#' Returns the error message from a response
+#'
+#' @param resp list, expects output from a call to a Mosaic API endpoint
+#'
+#' @noRd
+#' @keywords internal
+error_body <- function(resp) {
+
+  if (httr2::resp_content_type(resp) == "application/json") {
+
+    resp_body <- httr2::resp_body_json(resp)
+    paste0(
+      tools::toTitleCase(gsub("_", " ", (resp_body$errorType))),
+      "\n",
+      resp_body$error
+    )
+
+  } else if (httr2::resp_content_type(resp) == "text/html") {
+
+    resp_body <- httr2::resp_body_html(resp)
+    paste0(
+      tools::toTitleCase(gsub("_", " ", (resp_body$errorType))),
+      "\n",
+      resp_body$error
+    )
+
+  }
+
 }
 
 #' Add Proxy Args
