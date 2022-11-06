@@ -57,7 +57,7 @@ clean_names <- function(.data,
 #'
 #' @noRd
 #' @keywords internal
-error_body <- function(resp) {
+get_error_body <- function(resp) {
 
   if (httr2::resp_content_type(resp) == "application/json") {
 
@@ -70,12 +70,7 @@ error_body <- function(resp) {
 
   } else if (httr2::resp_content_type(resp) == "text/html") {
 
-    resp_body <- httr2::resp_body_html(resp)
-    paste0(
-      tools::toTitleCase(gsub("_", " ", (resp_body$errorType))),
-      "\n",
-      resp_body$error
-    )
+    httr2::resp_body_html(resp)
 
   }
 
@@ -107,11 +102,11 @@ add_proxy <- function(req, proxy_args) {
 #' @inheritParams httr2::req_options
 #' @param options List of arguments to `httr2::req_options`
 #'
-add_options <- function(req, options) {
+add_curl_options <- function(req, curl_options) {
 
-  if (!is.null(options)) {
+  if (!is.null(curl_options)) {
 
-    req <- do.call(httr2::req_options, args = c(options, list(.req = req)))
+    req <- do.call(httr2::req_options, args = c(curl_options, list(.req = req)))
 
   }
 
@@ -173,6 +168,54 @@ add_retry <- function(req, options) {
   }
 
   req
+
+}
+
+#' Process Request Based on Output Argument
+#'
+#' @inheritParams add_retry
+#'
+#' @param output One of "cleaned_json" (the default),
+#'   "json", "response", or "request". If "cleaned_json" then `tidyjson::spread_all` is used
+#'   to parse the JSON body,
+dkreq_process <- function(req, output) {
+
+  if (output == "request") {
+
+    return(req)
+
+  } else {
+
+    resp <- httr2::req_perform(req)
+
+  }
+
+
+  if (output == "response") {
+
+    return(resp)
+
+  } else {
+
+    resp_json <-  httr2::resp_body_json(resp)
+
+  }
+
+  if (output == "json") {
+
+    return(resp_json)
+
+  } else {
+
+    resp_json_clean <- tidyjson::spread_all(resp_json) %>%
+      dplyr::as_tibble() %>%
+      dplyr::select(-document.id) %>%
+      tidyr::drop_na() %>%
+      clean_names()
+
+    return(resp_json_clean)
+
+  }
 
 }
 

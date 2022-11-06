@@ -24,5 +24,5 @@ doubtful, out, and injured.}
 }
 \description{
 Retrieve contest player list and other information used in
-  optimization.
+optimization.
 }

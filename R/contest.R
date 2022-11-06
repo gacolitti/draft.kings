@@ -4,9 +4,10 @@
 #' Fetch contest information such as the sport, payout, and contest summary.
 #'
 #' @inheritParams add_proxy
-#' @inheritParams add_options
+#' @inheritParams add_curl_options
 #' @inheritParams add_throttle
 #' @inheritParams add_headers
+#' @inheritParams httr2::req_error
 #' @param contest_id The sequence of digits that correspond to a specific contest.
 #'   This can be found by examining the URL of a contest page.
 #'   For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
@@ -23,30 +24,31 @@ get_contest_info <- function(contest_id,
                              proxy_args = NULL,
                              headers = NULL,
                              retry_options = NULL,
-                             is_error = NULL,
-                             options = NULL) {
+                             is_error_func = NULL,
+                             curl_options = NULL,
+                             output = c("cleaned_json", "json", "response", "request")) {
 
   stopifnot(is.numeric(contest_id))
+  output <- match.arg(output)
 
-  resp <- httr2::request(
-      glue::glue("https://api.draftkings.com/contests/v1/contests/{contest_id}?format=json")
-    ) %>%
-    add_proxy(proxy_args) %>%
-    add_options(options) %>%
-    add_throttle(throttle_rate) %>%
-    add_headers(headers) %>%
-    add_retry(retry_options) %>%
-    httr2::req_error(body = error_body,
-                     is_error = is_error) %>%
-    httr2::req_perform()
+  req <- dkreq(
+    req,
+    proxy_args = proxy_args,
+    throttle_rate = throttle_rate,
+    headers = headers,
+    curl_options = curl_options,
+    retry_options = retry_options,
+    is_error_func = is_error_func
+  )
 
-  resp %>%
-    httr2::resp_body_json() %>%
-    tidyjson::spread_all() %>%
-    dplyr::as_tibble() %>%
-    dplyr::select(-document.id) %>%
-    tidyr::drop_na() %>%
-    clean_names()
+  req <- httr2::req_url_path_append(
+    req,
+    glue::glue(
+      "contests/v1/contests/{contest_id}?format=json"
+    )
+  )
+
+  dkreq_process(req, output)
 
 }
 

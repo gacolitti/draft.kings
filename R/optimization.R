@@ -2,7 +2,7 @@
 #' Get Contest Schematic
 #'
 #' Retrieve contest player list and other information used in
-#'   optimization.
+#' optimization.
 #'
 #' @inheritParams get_contest_info
 #'

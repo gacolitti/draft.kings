@@ -10,7 +10,9 @@ get_contest_info(
   proxy_args = NULL,
   headers = NULL,
   retry_options = NULL,
-  options = NULL
+  is_error_func = NULL,
+  curl_options = NULL,
+  output = c("cleaned_json", "json", "response", "request")
 )
 }
 \arguments{
@@ -24,8 +26,6 @@ is 133645678.}
 \item{proxy_args}{List of arguments to `httr2::req_proxy`}
 
 \item{headers}{List of arguments to `httr2::req_headers`}
-
-\item{options}{List of arguments to `httr2::req_options`}
 }
 \description{
 Fetch contest information such as the sport, payout, and contest summary.
