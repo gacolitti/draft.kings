@@ -2,6 +2,7 @@
 
 export("%>%")
 export(clean_names)
+export(dkreq)
 export(get_contest_info)
 export(get_contest_schematic)
 export(get_contests)
