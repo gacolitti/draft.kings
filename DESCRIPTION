@@ -14,10 +14,12 @@ Imports:
     glue,
     httr2,
     magrittr,
+    ompr,
     tidyjson,
     tidyr
 RoxygenNote: 7.2.0
 Suggests: 
+    diffviewer,
     httptest2,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
