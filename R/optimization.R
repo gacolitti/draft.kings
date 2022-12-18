@@ -75,8 +75,6 @@ optimize_lineup <- function(...,
                             contest_id = NULL,
                             max_points = NULL) {
 
-  library(ROI.plugin.glpk)
-
   if (is.null(contest_schematic)) {
 
     contest_schematic <- get_contest_schematic(contest_id, ...)
