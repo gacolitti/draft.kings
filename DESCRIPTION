@@ -15,6 +15,7 @@ Imports:
     httr2,
     magrittr,
     ompr,
+    ROI.plugin.glpk,
     tidyjson,
     tidyr
 RoxygenNote: 7.2.0
