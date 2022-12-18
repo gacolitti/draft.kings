@@ -12,7 +12,7 @@ optimize_lineup(
 )
 }
 \arguments{
-\item{contest_schematic}{Output from `[get_contest_schematic()]` which
+\item{contest_schematic}{Output from \verb{[get_contest_schematic()]} which
 includes information needed for optimization; including player info such as,
 news status, salary, and projected fantasy points.}
 
@@ -22,7 +22,7 @@ For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the
 is 133645678.}
 
 \item{max_points}{Optional upper threshold of points. This is used primarily
-to get many successive lineups in `[get_optimal_lineups()]`}
+to get many successive lineups in \verb{[get_optimal_lineups()]}}
 }
 \description{
 Determine the optimal lineup of players based on the list of

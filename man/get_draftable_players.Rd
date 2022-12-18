@@ -8,7 +8,7 @@ get_draftable_players(draft_group_id = NULL, contest_id = NULL)
 }
 \arguments{
 \item{draft_group_id}{Sequence of digits that correspond to a draft table/group.
-If `draft_group_id` and `contest_id` are both passed, `contest_id` is ignored.}
+If \code{draft_group_id} and \code{contest_id} are both passed, \code{contest_id} is ignored.}
 
 \item{contest_id}{The sequence of digits that correspond to a specific contest.
 This can be found by examining the URL of a contest page.
@@ -17,8 +17,8 @@ is 133645678.}
 }
 \description{
 Fetch information on the available lineup for a specific
-  competition. In particular, this includes player names/IDs and
-  their salaries.
+competition. In particular, this includes player names/IDs and
+their salaries.
 }
 \examples{
   \dontrun{

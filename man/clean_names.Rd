@@ -11,8 +11,8 @@ clean_names(.data, unique = FALSE, minus_to_underscore = FALSE)
 
 \item{unique}{Should the variable names be unique?}
 
-\item{minus_to_underscore}{By default `-` is replaced with `minus`.
-This argument replaces the hyphen with `_` (underscore) instead.}
+\item{minus_to_underscore}{By default \code{-} is replaced with \code{minus}.
+This argument replaces the hyphen with \verb{_} (underscore) instead.}
 }
 \value{
 Returns vector if vector or data.frame if data.frame.

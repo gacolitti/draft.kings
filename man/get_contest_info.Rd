@@ -10,7 +10,7 @@ get_contest_info(
   proxy_args = NULL,
   headers = NULL,
   retry_options = NULL,
-  is_error_func = NULL,
+  error_handling_options = NULL,
   curl_options = NULL,
   output = c("cleaned_json", "json", "response", "request")
 )
@@ -21,11 +21,11 @@ This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
 
-\item{throttle_rate}{List of arguments to `httr2::req_throttle`}
+\item{throttle_rate}{List of arguments to \link[httr2:req_throttle]{httr2::req_throttle}}
 
-\item{proxy_args}{List of arguments to `httr2::req_proxy`}
+\item{proxy_args}{List of arguments to \link[httr2:req_proxy]{httr2::req_proxy}}
 
-\item{headers}{List of arguments to `httr2::req_headers`}
+\item{headers}{List of arguments to \code{\link[httr2:req_headers]{httr2::req_headers()}}}
 }
 \description{
 Fetch contest information such as the sport, payout, and contest summary.

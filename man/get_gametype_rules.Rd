@@ -4,12 +4,19 @@
 \alias{get_gametype_rules}
 \title{Get Gametype Rules}
 \usage{
-get_gametype_rules(game_type_id = NULL, contest_id = NULL)
+get_gametype_rules(
+  game_type_id = NULL,
+  contest_id = NULL,
+  output = c("cleaned_json", "json", "response", "request"),
+  ...
+)
 }
 \arguments{
 \item{game_type_id}{Integer corresponding to the game type.
 For example, 159 in \url{https://api.draftkings.com/lineups/v1/gametypes/159/rules}.
-If both `game_type_id` and `contest_id` are passed, then `contest_id` is ignored.}
+If both \code{game_type_id} and \code{contest_id} are passed, then \code{contest_id} is ignored.}
+
+\item{...}{Arguments passed to \code{\link[=dkreq]{dkreq()}}}
 }
 \description{
 Fetch rules corresponding to a specific game type ID.

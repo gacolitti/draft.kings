@@ -13,7 +13,7 @@ get_optimal_lineups(
 )
 }
 \arguments{
-\item{contest_schematic}{Output from `[get_contest_schematic()]` which
+\item{contest_schematic}{Output from \verb{[get_contest_schematic()]} which
 includes information needed for optimization; including player info such as,
 news status, salary, and projected fantasy points.}
 
@@ -29,6 +29,6 @@ optimal lineup and the current optimal lineup during iterations.
 Usually the default of 0.001 is fine.}
 }
 \description{
-Wrapper around `optimize_lineup()`. Can return an
-  arbitrary number of optimal lineups in succession.
+Wrapper around \code{optimize_lineup()}. Can return an
+arbitrary number of optimal lineups in succession.
 }

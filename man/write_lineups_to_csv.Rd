@@ -7,11 +7,11 @@
 write_lineups_to_csv(lineups, file = "lineups.csv")
 }
 \arguments{
-\item{lineups}{Output from `[get_optimal_lineups()]`}
+\item{lineups}{Output from \verb{[get_optimal_lineups()]}}
 
 \item{file}{Path and name of the CSV file to create}
 }
 \description{
-Given the output from `[get_optimal_lineups()]`, create a
+Given the output from \verb{[get_optimal_lineups()]}, create a
 CSV formatted for uplaod to \url{https://www.draftkings.com/lineup/upload}
 }

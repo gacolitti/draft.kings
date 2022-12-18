@@ -4,8 +4,24 @@
 \alias{get_contests}
 \title{Get List of Contests}
 \usage{
-get_contests(sport = NULL)
+get_contests(
+  sport = NULL,
+  throttle_rate = NULL,
+  proxy_args = NULL,
+  headers = NULL,
+  retry_options = NULL,
+  error_handling_options = NULL,
+  curl_options = NULL,
+  output = c("cleaned_json", "json", "response", "request")
+)
+}
+\arguments{
+\item{throttle_rate}{List of arguments to \link[httr2:req_throttle]{httr2::req_throttle}}
+
+\item{proxy_args}{List of arguments to \link[httr2:req_proxy]{httr2::req_proxy}}
+
+\item{headers}{List of arguments to \code{\link[httr2:req_headers]{httr2::req_headers()}}}
 }
 \description{
-Fetch the full table of contests and related info
+Fetch the full table of contests and related info from DraftKings.com lobby
 }
