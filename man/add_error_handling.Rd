@@ -9,7 +9,7 @@ add_error_handling(req, error_handling_options = NULL)
 \arguments{
 \item{req}{A \link[httr2]{request}.}
 
-\item{headers}{List of arguments to \code{\link[httr2:req_error]{httr2::req_error()}}}
+\item{error_handling_options}{List of arguments to \code{\link[httr2:req_error]{httr2::req_error()}}}
 }
 \description{
 Add list of arguments to a request object that when errors occur and how the message is

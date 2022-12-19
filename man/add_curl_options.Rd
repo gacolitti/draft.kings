@@ -9,7 +9,7 @@ add_curl_options(req, curl_options)
 \arguments{
 \item{req}{A \link[httr2]{request}.}
 
-\item{options}{List of arguments to \link[httr2:req_options]{httr2::req_options}}
+\item{curl_options}{List of arguments to \link[httr2:req_options]{httr2::req_options}}
 }
 \description{
 Add list of curl arguments to a request object

@@ -21,8 +21,8 @@ add_proxy <- function(req, proxy_args) {
 #'
 #' Add list of curl arguments to a request object
 #'
-#' @inheritParams httr2::req_options
-#' @param options List of arguments to [httr2::req_options]
+#' @inheritParams httr2::req_error
+#' @param curl_options List of arguments to [httr2::req_options]
 #'
 add_curl_options <- function(req, curl_options) {
 
@@ -100,7 +100,7 @@ add_retry <- function(req, retry_options) {
 #' extracted.
 #'
 #' @inheritParams httr2::req_error
-#' @param headers List of arguments to [httr2::req_error()]
+#' @param error_handling_options List of arguments to [httr2::req_error()]
 #'
 add_error_handling <- function(req, error_handling_options = NULL) {
 
@@ -118,7 +118,7 @@ add_error_handling <- function(req, error_handling_options = NULL) {
 
 #' Add To URL Path
 #'
-#' @inheritParams httr2::req_url_path_append
+#' @inheritParams httr2::req_error
 #' @param paths List of arguments to [httr2::req_url_path_append()]
 #'
 add_to_path <- function(req, paths) {

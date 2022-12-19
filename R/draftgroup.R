@@ -2,6 +2,7 @@
 #' Check Draft Group Inputs
 #'
 #' Use either `draft_group_id` or `contest_id` if `draft_group_id` is `NULL`.
+#' @inheritParams get_draftable_players
 check_draft_group_id <- function(draft_group_id, contest_id) {
 
   # Ensure at least one argument is passed
@@ -32,6 +33,8 @@ check_draft_group_id <- function(draft_group_id, contest_id) {
 #'
 #' @inheritParams get_contest_info
 #'
+#' @importFrom rlang .data .env
+#'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
 #'   If `draft_group_id` and `contest_id` are both passed, `contest_id` is ignored.
 #'
@@ -55,7 +58,7 @@ get_draftable_players <- function(draft_group_id = NULL,
   draft_groups_json$draftables %>%
     tidyjson::spread_all() %>%
     dplyr::as_tibble() %>%
-    dplyr::select(-document.id) %>%
+    dplyr::select(-"document.id") %>%
     clean_names()
 
 }
@@ -65,6 +68,8 @@ get_draftable_players <- function(draft_group_id = NULL,
 #' Get List of Draft Groups
 #'
 #' Fetch the full table of draft groups and related info
+#'
+#' @importFrom rlang .data .env
 #'
 #' @export
 get_draft_groups <- function() {
@@ -76,10 +81,10 @@ get_draft_groups <- function() {
   res$DraftGroups %>%
     tidyjson::spread_all() %>%
     dplyr::as_tibble() %>%
-    dplyr::group_by(player_id) %>%
-    dplyr::mutate(is_captain = ifelse(salary == max(salary), TRUE, FALSE)) %>%
+    dplyr::group_by("player_id") %>%
+    dplyr::mutate(is_captain = ifelse(.data$salary == max(.data$salary), TRUE, FALSE)) %>%
     dplyr::ungroup() %>%
-    dplyr::select(-document.id) %>%
+    dplyr::select(-"document.id") %>%
     clean_names()
 
 }
@@ -106,7 +111,7 @@ get_draft_group_info <- function(draft_group_id = NULL,
     tidyjson::enter_object("draftGroup") %>%
     tidyjson::spread_all() %>%
     dplyr::as_tibble() %>%
-    dplyr::select(-document.id) %>%
+    dplyr::select(-"document.id") %>%
     clean_names()
 
 
@@ -132,7 +137,7 @@ get_player_list <- function(draft_group_id = NULL,
   res$playerList %>%
     tidyjson::spread_all() %>%
     dplyr::as_tibble() %>%
-    dplyr::select(-document.id) %>%
+    dplyr::select(-"document.id") %>%
     clean_names()
 
 }
@@ -157,7 +162,7 @@ get_team_list <- function(draft_group_id = NULL,
   res$teamList %>%
     tidyjson::spread_all() %>%
     dplyr::as_tibble() %>%
-    dplyr::select(-document.id) %>%
+    dplyr::select(-"document.id") %>%
     clean_names()
 
 }
@@ -169,7 +174,7 @@ get_team_list <- function(draft_group_id = NULL,
 #'
 #' @param year integer.
 #' @param week integer.
-#' @param sport
+#' @param sport character.
 #'
 get_player_points <- function(year, week, sport = "nfl") {
 

@@ -16,6 +16,15 @@ get_gametype_rules(
 For example, 159 in \url{https://api.draftkings.com/lineups/v1/gametypes/159/rules}.
 If both \code{game_type_id} and \code{contest_id} are passed, then \code{contest_id} is ignored.}
 
+\item{contest_id}{The sequence of digits that correspond to a specific contest.
+This can be found by examining the URL of a contest page.
+For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
+is 133645678.}
+
+\item{output}{One of "cleaned_json" (the default),
+"json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
+to parse the JSON body,}
+
 \item{...}{Arguments passed to \code{\link[=dkreq]{dkreq()}}}
 }
 \description{

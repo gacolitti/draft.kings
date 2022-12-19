@@ -12,6 +12,8 @@ optimize_lineup(
 )
 }
 \arguments{
+\item{...}{Other arguments passed to \verb{[get_contest_schematic()]}}
+
 \item{contest_schematic}{Output from \verb{[get_contest_schematic()]} which
 includes information needed for optimization; including player info such as,
 news status, salary, and projected fantasy points.}

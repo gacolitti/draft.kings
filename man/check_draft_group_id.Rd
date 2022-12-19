@@ -6,6 +6,15 @@
 \usage{
 check_draft_group_id(draft_group_id, contest_id)
 }
+\arguments{
+\item{draft_group_id}{Sequence of digits that correspond to a draft table/group.
+If \code{draft_group_id} and \code{contest_id} are both passed, \code{contest_id} is ignored.}
+
+\item{contest_id}{The sequence of digits that correspond to a specific contest.
+This can be found by examining the URL of a contest page.
+For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
+is 133645678.}
+}
 \description{
 Use either \code{draft_group_id} or \code{contest_id} if \code{draft_group_id} is \code{NULL}.
 }

@@ -6,6 +6,8 @@
 #'
 #' @inheritParams get_contest_info
 #'
+#' @importFrom rlang .data .env
+#'
 #' @param exclude_players Optional list of full player names to exclude
 #' @param exclude_questionable Exclude players with statuses that indicate
 #'   they will not play. These include players that are questionable,
@@ -20,22 +22,22 @@ get_contest_schematic <- function(contest_id,
 
   players <- get_player_list(contest_id = contest_id) %>%
     dplyr::transmute(
-      player_id = pid,
-      first_name = fn,
-      last_name = ln,
-      salary = s,
-      fppg = as.numeric(ppg),
-      jersey_number = jn,
-      position = pn,
-      team_id = tid,
-      news,
-      status = i
+      "player_id" = .data$pid,
+      "first_name" = .data$fn,
+      "last_name" = .data$ln,
+      "salary" = .data$s,
+      "fppg" = as.numeric(.data$ppg),
+      "jersey_number" = .data$jn,
+      "position" = .data$pn,
+      "team_id" = .data$tid,
+      "news",
+      "status" = .data$i
     )
 
   if (exclude_questionable) {
 
     players <- players %>%
-      dplyr::filter(status == "")
+      dplyr::filter(.data$status == "")
 
   }
 
@@ -43,13 +45,13 @@ get_contest_schematic <- function(contest_id,
 
     players <- players %>%
       dplyr::filter(
-        !paste(first_name, last_name) %in% !!exclude_players
+        !paste(.data$first_name, .data$last_name) %in% !!.env$exclude_players
       )
 
   }
 
   players <- players %>%
-    dplyr::mutate(row_number = dplyr::row_number())
+    dplyr::mutate("row_number" = dplyr::row_number())
 
   list(players = players,
        rules = rules,
@@ -65,11 +67,14 @@ get_contest_schematic <- function(contest_id,
 #' fantasy points.
 #'
 #' @inheritParams get_contest_schematic
+#' @importFrom rlang .data .env
+#' @import ROI.plugin.glpk
 #' @param contest_schematic Output from `[get_contest_schematic()]` which
 #'   includes information needed for optimization; including player info such as,
 #'   news status, salary, and projected fantasy points.
 #' @param max_points Optional upper threshold of points. This is used primarily
 #'   to get many successive lineups in `[get_optimal_lineups()]`
+#' @param ... Other arguments passed to `[get_contest_schematic()]`
 optimize_lineup <- function(...,
                             contest_schematic = NULL,
                             contest_id = NULL,
@@ -156,19 +161,19 @@ optimize_lineup <- function(...,
     dplyr::mutate(salary = ifelse(j == 2, salary * 1.5, salary),
                   fppg = ifelse(j == 2, fppg * 1.5, fppg)) %>%
     dplyr::transmute(
-      player_id,
-      first_name,
-      last_name,
-      is_captain = ifelse(j == 2, TRUE, FALSE),
-      team_id,
-      fppg,
-      salary,
-      jersey_number,
-      position,
-      news,
-      status
+      "player_id",
+      "first_name",
+      "last_name",
+      "is_captain" = ifelse(j == 2, TRUE, FALSE),
+      "team_id",
+      "fppg",
+      "salary",
+      "jersey_number",
+      "position",
+      "news",
+      "status"
     ) %>%
-    dplyr::arrange(dplyr::desc(is_captain))
+    dplyr::arrange(dplyr::desc(.data$is_captain))
 
   # Add draftable ID
   drafttable <- get_draftable_players(contest_id = contest_id)
@@ -176,7 +181,7 @@ optimize_lineup <- function(...,
   res <- res %>%
     dplyr::inner_join(
       drafttable %>%
-        dplyr::select(player_id, salary, draftable_id),
+        dplyr::select("player_id", "salary", "draftable_id"),
       by = c("player_id", "salary")
     )
 
@@ -194,6 +199,7 @@ optimize_lineup <- function(...,
 #'   arbitrary number of optimal lineups in succession.
 #'
 #' @inheritParams optimize_lineup
+#' @inheritParams get_contest_schematic
 #' @param n Number of lineups to return
 #' @param tolerance The difference in fantasy points between the previous
 #'   optimal lineup and the current optimal lineup during iterations.
@@ -235,21 +241,28 @@ get_optimal_lineups <-function(contest_schematic = NULL,
 #' Given the output from `[get_optimal_lineups()]`, create a
 #' CSV formatted for uplaod to \url{https://www.draftkings.com/lineup/upload}
 #'
+#' @importFrom rlang .data .env
+#'
 #' @param lineups Output from `[get_optimal_lineups()]`
 #' @param file Path and name of the CSV file to create
 write_lineups_to_csv <- function(lineups, file = "lineups.csv") {
 
   purrr::map_dfr(lineups, ~ .["optimal_lineup"][[1]], , .id = "id") %>%
-    dplyr::group_by(id) %>%
-    dplyr::mutate(is_captain = ifelse(is_captain, "CPT1", paste0("FLEX", dplyr::row_number()))) %>%
+    dplyr::group_by("id") %>%
+    dplyr::mutate(
+      "is_captain" = ifelse(.data$is_captain, "CPT1", paste0("FLEX", dplyr::row_number()))
+    ) %>%
     dplyr::ungroup() %>%
-    dplyr::transmute(id, is_captain,
-                     value = paste0(first_name, " ", last_name, " (", draftable_id, ")")) %>%
+    dplyr::transmute(
+      "id",
+      "is_captain",
+      "value" = paste0(.data$first_name, " ", .data$last_name, " (", .data$draftable_id, ")")
+    ) %>%
     tidyr::pivot_wider(names_from = "is_captain",
                        values_from = "value") %>%
-    dplyr::select(-id) %>%
-    setNames(c("CPT", rep("FLEX", 5))) %>%
-    write.csv(file = file, row.names = FALSE)
+    dplyr::select(-"id") %>%
+    stats::setNames(c("CPT", rep("FLEX", 5))) %>%
+    utils::write.csv(file = file, row.names = FALSE)
 
 
 }

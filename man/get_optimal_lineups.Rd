@@ -24,6 +24,8 @@ is 133645678.}
 
 \item{n}{Number of lineups to return}
 
+\item{exclude_players}{Optional list of full player names to exclude}
+
 \item{tolerance}{The difference in fantasy points between the previous
 optimal lineup and the current optimal lineup during iterations.
 Usually the default of 0.001 is fine.}

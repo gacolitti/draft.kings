@@ -4,6 +4,14 @@
 #' Fetch contest information such as the sport, payout, and contest summary.
 #'
 #' @inheritParams dkreq
+#' @inheritParams dkreq_process
+#' @inheritParams add_throttle
+#' @inheritParams add_proxy
+#' @inheritParams add_headers
+#' @inheritParams add_retry
+#' @inheritParams add_error_handling
+#' @inheritParams add_curl_options
+#'
 #' @param contest_id The sequence of digits that correspond to a specific contest.
 #'   This can be found by examining the URL of a contest page.
 #'   For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
@@ -34,7 +42,7 @@ get_contest_info <- function(contest_id,
     curl_options = curl_options,
     retry_options = retry_options,
     error_handling_options = error_handling_options,
-    url_path = glue::glue("contests/v1/contests/{contest_id}"),
+    paths = glue::glue("contests/v1/contests/{contest_id}"),
     query_params = list(format = "json")
   )
 
@@ -47,6 +55,15 @@ get_contest_info <- function(contest_id,
 #' Fetch the full table of contests and related info from DraftKings.com lobby
 #'
 #' @inheritParams dkreq
+#' @inheritParams dkreq_process
+#' @inheritParams add_throttle
+#' @inheritParams add_proxy
+#' @inheritParams add_headers
+#' @inheritParams add_retry
+#' @inheritParams add_error_handling
+#' @inheritParams add_curl_options
+#'
+#' @param sport character. optional.
 #'
 #' @export
 get_contests <- function(sport = NULL,
@@ -67,7 +84,7 @@ get_contests <- function(sport = NULL,
     curl_options = curl_options,
     retry_options = retry_options,
     error_handling_options = error_handling_options,
-    url_path = "lobby/getcontests",
+    paths = "lobby/getcontests",
     query_params = list(sport = sport)
   )
 
@@ -78,6 +95,10 @@ get_contests <- function(sport = NULL,
 #' Get Gametype Rules
 #'
 #' Fetch rules corresponding to a specific game type ID.
+#'
+#' @inheritParams dkreq
+#' @inheritParams dkreq_process
+#' @inheritParams get_contest_info
 #'
 #' @param game_type_id Integer corresponding to the game type.
 #'   For example, 159 in \url{https://api.draftkings.com/lineups/v1/gametypes/159/rules}.
@@ -106,7 +127,7 @@ get_gametype_rules <- function(game_type_id = NULL,
 
   }
 
-  req <- dkreq(..., url_path = glue::glue("lineups/v1/gametypes/{game_type_id}/rules"))
+  req <- dkreq(..., paths = glue::glue("lineups/v1/gametypes/{game_type_id}/rules"))
 
   out <- dkreq_process(req, output = "json")
 
@@ -114,13 +135,13 @@ get_gametype_rules <- function(game_type_id = NULL,
     purrr::compact() %>%
     dplyr::as_tibble() %>%
     clean_names() %>%
-    setNames(paste0("salary_cap_", names(.)))
+    stats::setNames(paste0("salary_cap_", names(.)))
 
   team_count <- out$teamCount %>%
     purrr::compact() %>%
     dplyr::as_tibble() %>%
     clean_names() %>%
-    setNames(paste0("team_count_", names(.)))
+    stats::setNames(paste0("team_count_", names(.)))
 
   unique_players <- dplyr::tibble("unique_players" = out$uniquePlayers)
 

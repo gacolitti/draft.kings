@@ -123,7 +123,7 @@ dkreq_process <- function(req, output, subset = NULL) {
       purrr::compact() %>%
       tidyjson::spread_all() %>%
       dplyr::as_tibble() %>%
-      dplyr::select(-document.id) %>%
+      dplyr::select(-"document.id") %>%
       clean_names()
 
     return(resp_json_clean)
