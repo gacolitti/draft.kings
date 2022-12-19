@@ -15,8 +15,8 @@
 #'
 #' @export
 get_contest_schematic <- function(contest_id,
-                               exclude_players = NULL,
-                               exclude_questionable = TRUE) {
+                                  exclude_players = NULL,
+                                  exclude_questionable = TRUE) {
 
   rules <- get_gametype_rules(contest_id = contest_id)
 
@@ -30,7 +30,7 @@ get_contest_schematic <- function(contest_id,
       "jersey_number" = .data$jn,
       "position" = .data$pn,
       "team_id" = .data$tid,
-      "news",
+      .data$news,
       "status" = .data$i
     )
 
@@ -156,22 +156,22 @@ optimize_lineup <- function(...,
 
   res <- mod_res %>%
     ompr::get_solution(player[i, j]) %>%
-    dplyr::filter(value > 0) %>%
+    dplyr::filter(.data$value > 0) %>%
     dplyr::inner_join(players, by = c("i" = "row_number")) %>%
-    dplyr::mutate(salary = ifelse(j == 2, salary * 1.5, salary),
-                  fppg = ifelse(j == 2, fppg * 1.5, fppg)) %>%
+    dplyr::mutate("salary" = ifelse(.data$j == 2, .data$salary * 1.5, .data$salary),
+                  "fppg" = ifelse(.data$j == 2, .data$fppg * 1.5, .data$fppg)) %>%
     dplyr::transmute(
-      "player_id",
-      "first_name",
-      "last_name",
-      "is_captain" = ifelse(j == 2, TRUE, FALSE),
-      "team_id",
-      "fppg",
-      "salary",
-      "jersey_number",
-      "position",
-      "news",
-      "status"
+      .data$player_id,
+      .data$first_name,
+      .data$last_name,
+      "is_captain" = ifelse(.data$j == 2, TRUE, FALSE),
+      .data$team_id,
+      .data$fppg,
+      .data$salary,
+      .data$jersey_number,
+      .data$position,
+      .data$news,
+      .data$status
     ) %>%
     dplyr::arrange(dplyr::desc(.data$is_captain))
 
