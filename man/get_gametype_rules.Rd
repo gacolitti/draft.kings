@@ -25,7 +25,7 @@ is 133645678.}
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
 to parse the JSON body,}
 
-\item{...}{Arguments passed to \code{\link[=dkreq]{dkreq()}}}
+\item{...}{Arguments passed to \code{\link[=dk_request]{dk_request()}}}
 }
 \description{
 Fetch rules corresponding to a specific game type ID.

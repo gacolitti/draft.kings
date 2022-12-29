@@ -3,8 +3,8 @@
 #'
 #' Fetch contest information such as the sport, payout, and contest summary.
 #'
-#' @inheritParams dkreq
-#' @inheritParams dkreq_process
+#' @inheritParams dk_request
+#' @inheritParams dk_request_process
 #' @inheritParams add_throttle
 #' @inheritParams add_proxy
 #' @inheritParams add_headers
@@ -35,7 +35,7 @@ get_contest_info <- function(contest_id,
   stopifnot(is.numeric(contest_id))
   output <- match.arg(output)
 
-  req <- dkreq(
+  req <- dk_request(
     proxy_args = proxy_args,
     throttle_rate = throttle_rate,
     headers = headers,
@@ -46,7 +46,7 @@ get_contest_info <- function(contest_id,
     query_params = list(format = "json")
   )
 
-  dkreq_process(req, output)
+  dk_request_process(req, output, objclass = "contest_info_resp")
 
 }
 
@@ -54,8 +54,8 @@ get_contest_info <- function(contest_id,
 #'
 #' Fetch the full table of contests and related info from DraftKings.com lobby
 #'
-#' @inheritParams dkreq
-#' @inheritParams dkreq_process
+#' @inheritParams dk_request
+#' @inheritParams dk_request_process
 #' @inheritParams add_throttle
 #' @inheritParams add_proxy
 #' @inheritParams add_headers
@@ -77,7 +77,7 @@ get_contests <- function(sport = NULL,
 
   output <- match.arg(output)
 
-  req <- dkreq(
+  req <- dk_request(
     base_url = "https://www.draftkings.com/",
     throttle_rate = throttle_rate,
     headers = headers,
@@ -88,7 +88,7 @@ get_contests <- function(sport = NULL,
     query_params = list(sport = sport)
   )
 
-  dkreq_process(req, output, subset = "Contests")
+  dk_request_process(req, output, objclass = "contests_resp")
 
 }
 
@@ -96,14 +96,14 @@ get_contests <- function(sport = NULL,
 #'
 #' Fetch rules corresponding to a specific game type ID.
 #'
-#' @inheritParams dkreq
-#' @inheritParams dkreq_process
+#' @inheritParams dk_request
+#' @inheritParams dk_request_process
 #' @inheritParams get_contest_info
 #'
 #' @param game_type_id Integer corresponding to the game type.
 #'   For example, 159 in \url{https://api.draftkings.com/lineups/v1/gametypes/159/rules}.
 #'   If both `game_type_id` and `contest_id` are passed, then `contest_id` is ignored.
-#' @param ... Arguments passed to [dkreq()]
+#' @param ... Arguments passed to [dk_request()]
 #'
 #' @export
 get_gametype_rules <- function(game_type_id = NULL,
@@ -127,25 +127,9 @@ get_gametype_rules <- function(game_type_id = NULL,
 
   }
 
-  req <- dkreq(..., paths = glue::glue("lineups/v1/gametypes/{game_type_id}/rules"))
+  req <- dk_request(..., paths = glue::glue("lineups/v1/gametypes/{game_type_id}/rules"))
 
-  out <- dkreq_process(req, output = "json")
-
-  salary <- out$salaryCap %>%
-    purrr::compact() %>%
-    dplyr::as_tibble() %>%
-    clean_names() %>%
-    stats::setNames(paste0("salary_cap_", names(.)))
-
-  team_count <- out$teamCount %>%
-    purrr::compact() %>%
-    dplyr::as_tibble() %>%
-    clean_names() %>%
-    stats::setNames(paste0("team_count_", names(.)))
-
-  unique_players <- dplyr::tibble("unique_players" = out$uniquePlayers)
-
-  dplyr::bind_cols(salary, team_count, unique_players)
+  dk_request_process(req, output, objclass = "gametype_rules_resp")
 
 }
 

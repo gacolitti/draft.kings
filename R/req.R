@@ -14,7 +14,7 @@
 #' @param query_params A list of query parameters passed to `[httr2::req_url_query]`.
 #'
 #' @export
-dkreq <- function(proxy_args = NULL,
+dk_request <- function(proxy_args = NULL,
                   curl_options = NULL,
                   throttle_rate = NULL,
                   headers = NULL,
@@ -36,6 +36,53 @@ dkreq <- function(proxy_args = NULL,
   req <- httr2::req_url_query(req, !!! query_params)
 
   req
+
+}
+
+#' Process Draft Kings Request Object
+#'
+#' Wrapper to facilitate how a request should
+#' be processed based on a desired output.
+#'
+#' @inheritParams dk_req_perform
+#' @inheritParams httr2::request
+#'
+#' @param output One of "cleaned_json" (the default),
+#'   "json", "response", or "request". If "cleaned_json" then [tidyjson::spread_all()] is used
+#'   to parse the JSON body,
+#'
+#' @return See `output`.
+#' @export
+#'
+dk_request_process <- function(req,
+                               output = c("cleaned_json", "json", "response", "request"),
+                               objclass = NULL) {
+
+  output <- rlang::arg_match(output)
+
+  if (output == "request") {
+
+    return(req)
+
+  }
+
+  if (output == "response") {
+
+    out <- dk_req_perform(req, output = "response", objclass = objclass)
+
+  } else {
+
+    out <- dk_req_perform(req, output = "json", objclass = objclass)
+
+  }
+
+  if (output == "cleaned_json") {
+
+    out <- dk_resp_parse(out)
+
+  }
+
+  out
 
 }
 
