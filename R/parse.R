@@ -117,9 +117,12 @@ dk_resp_parse.gametype_rules_resp <- function(resp) {
 
 #### Draftgroup ------------------------------------------------------------------------------------
 
+
+
+
 dk_resp_parse.draftable_players_resp <- function(resp) {
 
-  resp %>%
+  resp$draftables %>%
     extract_json() %>%
     convert_json()
 
@@ -150,7 +153,7 @@ dk_resp_parse.draft_group_info_resp <- function(resp) {
     dplyr::as_tibble() %>%
     dplyr::mutate("contestTypeValue" = as.character(.data$contestType),
                   "contestTypeName" = names(.data$contestType)) %>%
-    dplyr::select(-.data$contestType) %>%
+    dplyr::select(-"contestType") %>%
     tidyr::pivot_wider(names_from = "contestTypeName",
                        values_from = "contestTypeValue") %>%
     tidyr::unnest_wider("games", names_repair = "minimal") %>%
@@ -165,7 +168,7 @@ dk_resp_parse.draft_group_info_resp <- function(resp) {
       )
     ) %>%
     tidyr::unnest_wider("gameAttributes") %>%
-    dplyr::select(!dplyr::any_of("sport.1")) %>%
+    dplyr::select(-"sport.1") %>%
     clean_names()
 
 }

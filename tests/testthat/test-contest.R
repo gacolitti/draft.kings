@@ -6,7 +6,7 @@ httptest2::with_mock_dir("contest", {
 
     d <- get_contest_info(9000)
 
-    testthat::expect_snapshot(d)
+    expect_equal(d$contest_key, "9000")
 
   })
 
@@ -22,7 +22,7 @@ httptest2::with_mock_dir("contest", {
 
     d <- get_gametype_rules(159)
 
-    testthat::expect_snapshot(d)
+    expect_equal(d$game_type_id, 159)
 
   })
 

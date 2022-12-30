@@ -3,7 +3,7 @@
 #'
 #' Use either `draft_group_id` or `contest_id` if `draft_group_id` is `NULL`.
 #' @inheritParams get_draftable_players
-check_draft_group_id <- function(draft_group_id, contest_id) {
+check_draft_group_id <- function(draft_group_id = NULL, contest_id = NULL) {
 
   # Ensure at least one argument is passed
   if (all(is.null(draft_group_id), is.null(contest_id))) {
