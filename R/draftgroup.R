@@ -32,6 +32,7 @@ check_draft_group_id <- function(draft_group_id, contest_id) {
 #'   their salaries.
 #'
 #' @inheritParams get_contest_info
+#' @inheritDotParams get_contest_info
 #'
 #' @importFrom rlang .data .env
 #'
@@ -45,21 +46,22 @@ check_draft_group_id <- function(draft_group_id, contest_id) {
 #'
 #' @export
 get_draftable_players <- function(draft_group_id = NULL,
-                                  contest_id = NULL) {
+                                  contest_id = NULL,
+                                  output = c("cleaned_json", "json", "response", "request"),
+                                  ...) {
+
+  output <- rlang::arg_match(output)
 
   draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
 
-  draft_groups_json <- httr2::request(
-    glue::glue("https://api.draftkings.com/draftgroups/v1/draftgroups/{draft_group_id}/draftables")
-  ) %>%
-    httr2::req_perform() %>%
-    httr2::resp_body_json()
+  req <- dk_request(
+    ...,
+    paths = glue::glue(
+      "/draftgroups/v1/draftgroups/{draft_group_id}/draftables"
+    )
+  )
 
-  draft_groups_json$draftables %>%
-    tidyjson::spread_all() %>%
-    dplyr::as_tibble() %>%
-    dplyr::select(-"document.id") %>%
-    clean_names()
+  dk_request_process(req, output, objclass = "draftable_players_resp")
 
 }
 
@@ -69,20 +71,24 @@ get_draftable_players <- function(draft_group_id = NULL,
 #'
 #' Fetch the full table of draft groups and related info
 #'
-#' @importFrom rlang .data .env
+#' @inheritParams get_contests
+#' @inheritDotParams get_contests
 #'
 #' @export
-get_draft_groups <- function() {
+get_draft_groups <- function(sport = NULL,
+                             output = c("cleaned_json", "json", "response", "request"),
+                             ...) {
 
-  res <- httr2::request(base_url = "https://www.draftkings.com/lobby/getcontests") %>%
-    httr2::req_perform() %>%
-    httr2::resp_body_json()
+  output <- rlang::arg_match(output)
 
-  res$DraftGroups %>%
-    tidyjson::spread_all() %>%
-    dplyr::as_tibble() %>%
-    dplyr::select(-"document.id") %>%
-    clean_names()
+  req <- dk_request(
+    ...,
+    base_url = "https://www.draftkings.com/",
+    paths = "lobby/getcontests",
+    query_params = list(sport = sport)
+  )
+
+  dk_request_process(req, output, objclass = "draft_groups_resp")
 
 }
 
@@ -91,26 +97,24 @@ get_draft_groups <- function() {
 #' Fetch info for a specific draft group
 #'
 #' @inheritParams get_draftable_players
+#' @inheritDotParams get_draftable_players
 #'
 #' @export
 get_draft_group_info <- function(draft_group_id = NULL,
-                                 contest_id = NULL) {
+                                 contest_id = NULL,
+                                 output = c("cleaned_json", "json", "response", "request"),
+                                 ...) {
+
+  output <- rlang::arg_match(output)
 
   draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
 
-  res <- httr2::request(
-    glue::glue("https://api.draftkings.com/draftgroups/v1/{draft_group_id}")
-  ) %>%
-    httr2::req_perform() %>%
-    httr2::resp_body_string()
+  req <- dk_request(
+    ...,
+    paths = glue::glue("draftgroups/v1/{draft_group_id}")
+  )
 
-  res %>%
-    tidyjson::enter_object("draftGroup") %>%
-    tidyjson::spread_all() %>%
-    dplyr::as_tibble() %>%
-    dplyr::select(-"document.id") %>%
-    clean_names()
-
+  dk_request_process(req, output, objclass = "draft_group_info_resp")
 
 }
 
@@ -119,23 +123,26 @@ get_draft_group_info <- function(draft_group_id = NULL,
 #' Fetch list of players for a specific draft group and related info
 #'
 #' @inheritParams get_draft_group_info
+#' @inheritDotParams get_draft_group_info
 #'
 #' @export
 get_player_list <- function(draft_group_id = NULL,
-                            contest_id = NULL) {
+                            contest_id = NULL,
+                            output = c("cleaned_json", "json", "response", "request"),
+                            ...) {
+
+  output <- rlang::arg_match(output)
 
   draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
 
-  res <- httr2::request("https://www.draftkings.com/lineup/getavailableplayers") %>%
-    httr2::req_url_query(draftGroupId = draft_group_id) %>%
-    httr2::req_perform() %>%
-    httr2::resp_body_json()
+  req <- dk_request(
+    ...,
+    paths = "lineup/getavailableplayers",
+    base_url = "https://www.draftkings.com/",
+    query_params = list("draftGroupId" = draft_group_id)
+  )
 
-  res$playerList %>%
-    tidyjson::spread_all() %>%
-    dplyr::as_tibble() %>%
-    dplyr::select(-"document.id") %>%
-    clean_names()
+  dk_request_process(req, output, objclass = "player_list_resp")
 
 }
 
@@ -144,23 +151,26 @@ get_player_list <- function(draft_group_id = NULL,
 #' Fetch list of teams for a specific draft group and related info
 #'
 #' @inheritParams get_draft_group_info
+#' @inheritDotParams get_draft_group_info
 #'
 #' @export
 get_team_list <- function(draft_group_id = NULL,
-                            contest_id = NULL) {
+                          contest_id = NULL,
+                          output = c("cleaned_json", "json", "response", "request"),
+                          ...) {
+
+  output <- rlang::arg_match(output)
 
   draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
 
-  res <- httr2::request("https://www.draftkings.com/lineup/getavailableplayers") %>%
-    httr2::req_url_query(draftGroupId = draft_group_id) %>%
-    httr2::req_perform() %>%
-    httr2::resp_body_json()
+  req <- dk_request(
+    ...,
+    paths = "lineup/getavailableplayers",
+    base_url = "https://www.draftkings.com/",
+    query_params = list("draftGroupId" = draft_group_id)
+  )
 
-  res$teamList %>%
-    tidyjson::spread_all() %>%
-    dplyr::as_tibble() %>%
-    dplyr::select(-"document.id") %>%
-    clean_names()
+  dk_request_process(req, output, objclass = "team_list_resp")
 
 }
 
@@ -169,29 +179,34 @@ get_team_list <- function(draft_group_id = NULL,
 #' Retrieve player fantasy points earned in each
 #' game for a given season and week.
 #'
-#' @param year integer.
-#' @param week integer.
-#' @param sport character.
+#' @inheritParams get_contest_info
+#' @inheritDotParams get_contest_info
 #'
-get_player_points <- function(year, week, sport = "nfl") {
+#' @param week integer.
+#' @param year integer. optional. Defaults to the current year.
+#' @param sport character. Defaults to NFL.
+#'
+get_player_points <- function(week,
+                              year = as.numeric(format(Sys.Date(), "%Y")),
+                              sport = "nfl",
+                              output = c("cleaned_json", "json", "response", "request"),
+                              ...) {
 
-  resp <- httr2::request(
-    glue::glue("https://live.draftkings.com/api/v2/leaderboards/players/seasons/{year}/weeks/{week}")
+  output <- rlang::arg_match(output)
+
+  req <- dk_request(
+    ...,
+    base_url = "https://live.draftkings.com/api/v2/",
+    paths = glue::glue("leaderboards/players/seasons/{year}/weeks/{week}"),
+    headers = list('Content-Type' = 'application/json',
+                    'Accept' = '*/*',
+                    'Accept-Encoding' = 'gzip, deflate, br'),
+    method = "POST"
   ) %>%
-    httr2::req_method("POST") %>%
-    httr2::req_headers(
-      'Content-Type' = 'application/json',
-      'Accept' = '*/*',
-      'Accept-Encoding' = 'gzip, deflate, br'
-    ) %>%
     httr2::req_body_raw(
       glue::glue('{{"sport":"{sport}","embed":"stats"}}')
-    ) %>%
-    httr2::req_perform()
+    )
 
-  resp %>%
-    httr2::resp_body_json() %>%
-    magrittr::extract2("data") %>%
-    tidyjson::spread_all()
+  dk_request_process(req, output, objclass = "player_points_resp")
 
 }

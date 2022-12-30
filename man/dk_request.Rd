@@ -13,7 +13,8 @@ dk_request(
   query_params = NULL,
   retry_options = NULL,
   error_handling_options = NULL,
-  base_url = "https://api.draftkings.com/"
+  base_url = "https://api.draftkings.com/",
+  method = "GET"
 )
 }
 \arguments{
@@ -34,6 +35,8 @@ dk_request(
 \item{error_handling_options}{List of arguments to \code{\link[httr2:req_error]{httr2::req_error()}}}
 
 \item{base_url}{Base URL for request.}
+
+\item{method}{Custom HTTP method}
 }
 \description{
 Create Draft Kings Request Object

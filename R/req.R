@@ -10,22 +10,24 @@
 #' @inheritParams add_retry
 #' @inheritParams httr2::req_error
 #' @inheritParams httr2::request
+#' @inheritParams httr2::req_method
 #'
 #' @param query_params A list of query parameters passed to `[httr2::req_url_query]`.
 #'
 #' @export
 dk_request <- function(proxy_args = NULL,
-                  curl_options = NULL,
-                  throttle_rate = NULL,
-                  headers = NULL,
-                  paths = NULL,
-                  query_params = NULL,
-                  retry_options = NULL,
-                  error_handling_options = NULL,
-                  base_url = "https://api.draftkings.com/"
-                  ) {
+                       curl_options = NULL,
+                       throttle_rate = NULL,
+                       headers = NULL,
+                       paths = NULL,
+                       query_params = NULL,
+                       retry_options = NULL,
+                       error_handling_options = NULL,
+                       base_url = "https://api.draftkings.com/",
+                       method = "GET") {
 
   req <- httr2::request(base_url)
+  req <- httr2::req_method(req, method)
   req <- add_proxy(req, proxy_args)
   req <- add_curl_options(req, curl_options)
   req <- add_throttle(req, throttle_rate)

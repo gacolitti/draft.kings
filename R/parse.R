@@ -1,5 +1,5 @@
 
-
+#### Utils -----------------------------------------------------------------------------------------
 #' Extract JSON from Response
 #'
 #' @noRd
@@ -15,6 +15,23 @@ extract_json <- function(resp) {
   resp
 
 }
+
+#' Convert JSON to Tibble
+#'
+#' @noRd
+#' @keywords internal
+convert_json <- function(resp) {
+
+  resp %>%
+    purrr::compact() %>%
+    tidyjson::spread_all() %>%
+    tidyjson::as_tibble() %>%
+    dplyr::select(-"document.id") %>%
+    clean_names()
+
+}
+
+## Parse -------------------------------------------------------------------------------------------
 
 #' Parse Response JSON
 #'
@@ -32,17 +49,15 @@ dk_resp_parse.default <- function(resp) {
 
 }
 
+#### Contest ---------------------------------------------------------------------------------------
+
 #' @method dk_resp_parse contest_info_resp
 #' @export
 dk_resp_parse.contest_info_resp <- function(resp) {
 
   resp %>%
     extract_json() %>%
-    purrr::compact() %>%
-    tidyjson::spread_all() %>%
-    dplyr::as_tibble() %>%
-    dplyr::select(-"document.id") %>%
-    clean_names()
+    convert_json()
 
 }
 
@@ -53,11 +68,7 @@ dk_resp_parse.contests_resp <- function(resp) {
   resp <- extract_json(resp)
 
   resp$Contests %>%
-    purrr::compact() %>%
-    tidyjson::spread_all() %>%
-    dplyr::as_tibble() %>%
-    dplyr::select(-"document.id") %>%
-    clean_names()
+    convert_json()
 
 }
 
@@ -101,5 +112,99 @@ dk_resp_parse.gametype_rules_resp <- function(resp) {
   dplyr::bind_cols(d1, d2) %>%
     dplyr::as_tibble() %>%
     clean_names()
+
+}
+
+#### Draftgroup ------------------------------------------------------------------------------------
+
+dk_resp_parse.draftable_players_resp <- function(resp) {
+
+  resp %>%
+    extract_json() %>%
+    convert_json()
+
+}
+
+#' @method dk_resp_parse draft_groups_resp
+#' @export
+dk_resp_parse.draft_groups_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  resp$DraftGroups %>%
+    convert_json()
+
+}
+
+#' @method dk_resp_parse draft_group_info_resp
+#'
+#' @importFrom rlang .data .env
+#'
+#' @export
+dk_resp_parse.draft_group_info_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  resp$draftGroup %>%
+    purrr::compact() %>%
+    dplyr::as_tibble() %>%
+    dplyr::mutate("contestTypeValue" = as.character(.data$contestType),
+                  "contestTypeName" = names(.data$contestType)) %>%
+    dplyr::select(-.data$contestType) %>%
+    tidyr::pivot_wider(names_from = "contestTypeName",
+                       values_from = "contestTypeValue") %>%
+    tidyr::unnest_wider("games", names_repair = "minimal") %>%
+    tidyr::unnest_wider("sportSpecificData") %>%
+    tidyr::unnest_wider("leagues") %>%
+    dplyr::mutate(
+      "gameAttributes" = list(
+        .data$gameAttributes %>%
+          unlist %>%
+          stats::setNames(., paste0("gameAttributes_", names(.),
+                             sort(rep(seq.int(1, length(.) / 2, 1), 2))))
+      )
+    ) %>%
+    tidyr::unnest_wider("gameAttributes") %>%
+    dplyr::select(!dplyr::any_of("sport.1")) %>%
+    clean_names()
+
+}
+
+#' @method dk_resp_parse player_list_resp
+#'
+#' @importFrom rlang .data .env
+#'
+#' @export
+dk_resp_parse.player_list_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  resp$playerList %>%
+    convert_json()
+
+}
+
+
+#' @method dk_resp_parse team_list_resp
+#'
+#' @export
+dk_resp_parse.team_list_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  resp$teamList %>%
+    convert_json()
+
+}
+
+#' @method dk_resp_parse player_points_resp
+#'
+#' @export
+dk_resp_parse.player_points_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  resp$data %>%
+    convert_json()
 
 }

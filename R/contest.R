@@ -3,7 +3,6 @@
 #'
 #' Fetch contest information such as the sport, payout, and contest summary.
 #'
-#' @inheritParams dk_request
 #' @inheritParams dk_request_process
 #'
 #' @param contest_id The sequence of digits that correspond to a specific contest.
@@ -23,7 +22,7 @@ get_contest_info <- function(contest_id,
                              ...) {
 
   stopifnot(is.numeric(contest_id))
-  output <- match.arg(output)
+  output <- rlang::arg_match(output)
 
   req <- dk_request(
     ...,
@@ -39,7 +38,6 @@ get_contest_info <- function(contest_id,
 #'
 #' Fetch the full table of contests and related info from DraftKings.com lobby
 #'
-#' @inheritParams dk_request
 #' @inheritParams dk_request_process
 #'
 #' @param sport character. optional.
@@ -50,7 +48,7 @@ get_contests <- function(sport = NULL,
                          output = c("cleaned_json", "json", "response", "request"),
                          ...) {
 
-  output <- match.arg(output)
+  output <- rlang::arg_match(output)
 
   req <- dk_request(
     ...,
@@ -67,7 +65,6 @@ get_contests <- function(sport = NULL,
 #'
 #' Fetch rules corresponding to a specific game type ID.
 #'
-#' @inheritParams dk_request
 #' @inheritParams dk_request_process
 #' @inheritParams get_contest_info
 #'
@@ -82,7 +79,7 @@ get_gametype_rules <- function(game_type_id = NULL,
                                output = c("cleaned_json", "json", "response", "request"),
                                ...) {
 
-  output <- match.arg(output)
+  output <- rlang::arg_match(output)
 
   if (all(is.null(game_type_id), is.null(contest_id))) {
 
