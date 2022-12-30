@@ -6,13 +6,8 @@
 \usage{
 get_contest_info(
   contest_id,
-  throttle_rate = NULL,
-  proxy_args = NULL,
-  headers = NULL,
-  retry_options = NULL,
-  error_handling_options = NULL,
-  curl_options = NULL,
-  output = c("cleaned_json", "json", "response", "request")
+  output = c("cleaned_json", "json", "response", "request"),
+  ...
 )
 }
 \arguments{
@@ -21,21 +16,11 @@ This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
 
-\item{throttle_rate}{List of arguments to \link[httr2:req_throttle]{httr2::req_throttle}}
-
-\item{proxy_args}{List of arguments to \link[httr2:req_proxy]{httr2::req_proxy}}
-
-\item{headers}{List of arguments to \code{\link[httr2:req_headers]{httr2::req_headers()}}}
-
-\item{retry_options}{List of arguments passed to \code{\link[httr2:req_retry]{httr2::req_retry()}}}
-
-\item{error_handling_options}{List of arguments to \code{\link[httr2:req_error]{httr2::req_error()}}}
-
-\item{curl_options}{List of arguments to \link[httr2:req_options]{httr2::req_options}}
-
 \item{output}{One of "cleaned_json" (the default),
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
 to parse the JSON body,}
+
+\item{...}{Arguments passed to \code{\link[=dk_request]{dk_request()}}}
 }
 \description{
 Fetch contest information such as the sport, payout, and contest summary.
