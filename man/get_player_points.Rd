@@ -14,5 +14,6 @@ get_player_points(year, week, sport = "nfl")
 \item{sport}{character.}
 }
 \description{
-Retrieve player fantasy points earned in each game for a given season and week.
+Retrieve player fantasy points earned in each
+game for a given season and week.
 }

@@ -22,7 +22,7 @@ their salaries.
 }
 \examples{
   \dontrun{
-    get_draft_group_info(75367)
+    get_draft_group(75367)
   }
 
 }

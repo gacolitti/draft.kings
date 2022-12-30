@@ -40,12 +40,12 @@ check_draft_group_id <- function(draft_group_id, contest_id) {
 #'
 #' @examples
 #'   \dontrun{
-#'     get_draft_group_info(75367)
+#'     get_draft_group(75367)
 #'   }
 #'
 #' @export
 get_draftable_players <- function(draft_group_id = NULL,
-                            contest_id = NULL) {
+                                  contest_id = NULL) {
 
   draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
 
@@ -81,9 +81,6 @@ get_draft_groups <- function() {
   res$DraftGroups %>%
     tidyjson::spread_all() %>%
     dplyr::as_tibble() %>%
-    dplyr::group_by("player_id") %>%
-    dplyr::mutate(is_captain = ifelse(.data$salary == max(.data$salary), TRUE, FALSE)) %>%
-    dplyr::ungroup() %>%
     dplyr::select(-"document.id") %>%
     clean_names()
 
@@ -167,10 +164,10 @@ get_team_list <- function(draft_group_id = NULL,
 
 }
 
-
 #' Get Player Points Earned
 #'
-#' Retrieve player fantasy points earned in each game for a given season and week.
+#' Retrieve player fantasy points earned in each
+#' game for a given season and week.
 #'
 #' @param year integer.
 #' @param week integer.
