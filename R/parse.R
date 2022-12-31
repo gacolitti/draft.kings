@@ -115,6 +115,26 @@ dk_resp_parse.gametype_rules_resp <- function(resp) {
 
 }
 
+#' @method dk_resp_parse game_types_resp
+#' @importFrom rlang .data .env
+#' @export
+dk_resp_parse.game_types_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  resp$GameTypes %>%
+    dplyr::bind_rows() %>%
+    dplyr::mutate(
+      "GameStyleName" = names(.data$GameStyle),
+      "GameStyleValue" = as.character(.data$GameStyle)
+    ) %>%
+    dplyr::select(-"GameStyle") %>%
+    tidyr::pivot_wider(names_from = "GameStyleName",
+                       values_from = "GameStyleValue",
+                       names_repair = "minimal")
+
+}
+
 #### Draftgroup ------------------------------------------------------------------------------------
 
 

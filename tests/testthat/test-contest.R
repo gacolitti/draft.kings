@@ -26,4 +26,12 @@ httptest2::with_mock_dir("contest", {
 
   })
 
+  testthat::test_that("get_game_types() returns expected results", {
+
+    d <- get_game_types()
+
+    expect_snapshot(d)
+
+  })
+
 })

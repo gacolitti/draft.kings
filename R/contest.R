@@ -102,3 +102,27 @@ get_gametype_rules <- function(game_type_id = NULL,
 
 }
 
+#' Get List of Game Types
+#'
+#' Fetch the full list of game types
+#'
+#' @inheritParams get_contests
+#' @inheritDotParams get_contests
+#'
+#' @export
+get_game_types <- function(sport = NULL,
+                             output = c("cleaned_json", "json", "response", "request"),
+                             ...) {
+
+  output <- rlang::arg_match(output)
+
+  req <- dk_request(
+    ...,
+    base_url = "https://www.draftkings.com/",
+    paths = "lobby/getcontests",
+    query_params = list(sport = sport)
+  )
+
+  dk_request_process(req, output, objclass = "game_types_resp")
+
+}
