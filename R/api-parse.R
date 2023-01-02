@@ -202,8 +202,7 @@ dk_resp_parse.player_list_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-  resp$playerList %>%
-    convert_json()
+   convert_json(resp$playerList)
 
 }
 
@@ -215,8 +214,7 @@ dk_resp_parse.team_list_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-  resp$teamList %>%
-    convert_json()
+   convert_json(resp$teamList)
 
 }
 
@@ -227,7 +225,20 @@ dk_resp_parse.player_points_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-  resp$data %>%
-    convert_json()
+  convert_json(resp$data)
+
+}
+
+## Leaderboard -------------------------------------------------------------------------------------
+
+#' @method dk_resp_parse leaderboard_resp
+#'
+#' @export
+dk_resp_parse.leaderboard_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  dplyr::bind_rows(resp$leaderBoard) %>%
+    clean_names()
 
 }
