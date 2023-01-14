@@ -244,3 +244,17 @@ dk_resp_parse.leaderboard_resp <- function(resp) {
     clean_names()
 
 }
+
+## Sports ------------------------------------------------------------------------------------------
+
+#' @method dk_resp_parse sports_resp
+#'
+#' @export
+dk_resp_parse.sports_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  dplyr::bind_rows(resp$sports) %>%
+    clean_names()
+
+}
