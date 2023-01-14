@@ -1,0 +1,73 @@
+{
+    "draftGroup": {
+        "draftGroupId": 75367,
+        "contestType": {
+            "contestTypeId": 159,
+            "sport": "NFL",
+            "gameType": "SalaryCap"
+        },
+        "sportId": 1,
+        "startTimeSuffix": " (Madden Stream NO vs LV)",
+        "startTimeType": "Normal",
+        "minStartTime": "2022-10-08T18:00:00.0000000Z",
+        "maxStartTime": "2022-10-08T18:00:00.0000000Z",
+        "draftGroupState": "Historical",
+        "allowUgc": true,
+        "leagues": [
+            {
+                "leagueId": 79,
+                "leagueName": "Simulation",
+                "leagueAbbreviation": "SIM"
+            }
+        ],
+        "games": [
+            {
+                "gameId": 5915939,
+                "awayTeamId": 350,
+                "homeTeamId": 341,
+                "startDate": "2022-10-08T18:00:00.0000000Z",
+                "timeRemainingStatus": "ScoresOfficial",
+                "sport": "NFL",
+                "status": "ScoresOfficial",
+                "description": "NO @ LV",
+                "sportSpecificData": {
+                    "timeRemaining": "ScoresOfficial",
+                    "homeTeamScore": "23",
+                    "awayTeamScore": "17",
+                    "quarter": "5"
+                },
+                "league": "SIM",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "5"
+                    },
+                    {
+                        "typeId": 10,
+                        "value": "0"
+                    },
+                    {
+                        "typeId": 11,
+                        "value": "00"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "2"
+                    }
+                ]
+            }
+        ],
+        "gameTypeId": 159,
+        "allTags": [
+
+        ]
+    },
+    "responseStatus": {
+
+    },
+    "errorStatus": {
+
+    }
+}

@@ -5,7 +5,24 @@
 \title{Get Draft Group Info
 Get List of Draft Groups}
 \usage{
-get_draft_groups()
+get_draft_groups(
+  sport = NULL,
+  output = c("cleaned_json", "json", "response", "request"),
+  ...
+)
+}
+\arguments{
+\item{sport}{character. optional.}
+
+\item{output}{One of "cleaned_json" (the default),
+"json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
+to parse the JSON body,}
+
+\item{...}{
+  Arguments passed on to \code{\link[=get_contests]{get_contests}}
+  \describe{
+    \item{\code{}}{}
+  }}
 }
 \description{
 Fetch the full table of draft groups and related info

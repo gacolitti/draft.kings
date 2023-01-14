@@ -1,17 +1,26 @@
-# get_contest_info() returns expected results for contest ID 9000
+# get_contests() returns expected results
 
     Code
       d
     Output
-      # A tibble: 1 x 29
-        contes~1 payou~2 is_ca~3 scori~4 conte~5 sport is_gu~6 is_pr~7 is_re~8 was_r~9
-        <chr>    <chr>   <lgl>     <dbl> <chr>   <chr> <lgl>   <lgl>   <lgl>   <lgl>  
-      1 This 5-~ $45     TRUE          1 Comple~ MLB   FALSE   FALSE   FALSE   FALSE  
-      # ... with 19 more variables: fpp_award <dbl>, sort_order <dbl>,
-      #   contest_start_time <chr>, game_type_id <dbl>, ticket_only_entry <lgl>,
-      #   game_set_key <chr>, contest_key <chr>, name <chr>, draft_group_id <dbl>,
-      #   play_type_id <dbl>, entries <dbl>, maximum_entries <dbl>,
-      #   maximum_entries_per_user <dbl>, entry_fee <dbl>, crown_amount <dbl>,
-      #   total_payouts <dbl>, contest_state <chr>, payout_descriptions_cash <chr>,
-      #   attributes_league <chr>, and abbreviated variable names ...
+      # A tibble: 2,255 x 54
+            uc    ec   mec   fpp     s n          nt      m     a     po tix   sdstr~1
+         <dbl> <dbl> <dbl> <dbl> <dbl> <chr>   <dbl>  <dbl> <dbl>  <dbl> <lgl> <chr>  
+       1     0     0     3    15     3 NHL $1~    61    117    15 1.5 e3 FALSE Fri 7:~
+       2     0     0     1   121     3 NHL $4~    28     44   121 4.8 e3 FALSE Fri 7:~
+       3     0     0   150    20     1 NFL $2~ 33323 148392    20 2.52e6 FALSE Sun 1:~
+       4     0     0    75  2222     1 NFL $5~  1063   2511  2222 5.02e6 FALSE Sun 1:~
+       5     0     0   150    15     4 NBA $3~ 22999  27450    15 3.5 e5 FALSE Fri 7:~
+       6     0     0    25   600     4 NBA $4~   704    835   600 4.51e5 FALSE Fri 7:~
+       7     0     0   100   333     1 NFL $1~   947   3336   333 1   e6 FALSE Sun 1:~
+       8     0     0     5    33     1 NFL $2~  1299   7067    33 2   e5 FALSE Sun 1:~
+       9     0     0    20     4     4 NBA $1~ 27654  29726     4 1   e5 FALSE Fri 7:~
+      10     0     0     8     4     4 NBA $1~    31    297     4 1   e3 FALSE Fri 7:~
+      # ... with 2,245 more rows, 42 more variables: sd <chr>, id <dbl>, tmpl <dbl>,
+      #   pt <dbl>, so <dbl>, fwt <lgl>, is_owner <lgl>, start_time_type <dbl>,
+      #   dg <dbl>, ulc <dbl>, cs <dbl>, game_type <chr>, ssd <lgl>, dgpo <dbl>,
+      #   cso <dbl>, ir <dbl>, rl <lgl>, rlc <dbl>, rll <dbl>, sa <lgl>,
+      #   free_with_crowns <lgl>, crown_amount <dbl>, is_bonus_finalized <lgl>,
+      #   is_snake_draft <lgl>, attr_is_guaranteed <chr>, attr_is_starred <chr>,
+      #   pd_cash <chr>, attr_lobby_class <chr>, pd_contest_seat <chr>, ...
 

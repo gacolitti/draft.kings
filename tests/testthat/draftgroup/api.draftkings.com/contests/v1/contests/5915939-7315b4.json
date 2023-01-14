@@ -1,0 +1,88 @@
+{
+    "contestDetail": {
+        "contestSummary": "This 2-player contest features $2,000.00 in total prizes and pays out the top 1 finishing positions. First place wins $2,000.00.",
+        "payoutSummary": [
+            {
+                "minPosition": 1,
+                "maxPosition": 1,
+                "tierPayoutDescriptions": {
+                    "Cash": "$2,000.00"
+                },
+                "payoutDescriptions": [
+                    {
+                        "payoutDescriptionType": "Text",
+                        "order": 1,
+                        "payoutDescription": "$2,000.00",
+                        "quantity": 1,
+                        "value": 2000
+                    }
+                ]
+            }
+        ],
+        "PayoutDescription": "$2,000",
+        "IsCashPrizeOnly": true,
+        "scoringStyleId": 1,
+        "contestStateDetail": "Cancelled",
+        "sport": "MLB",
+        "isGuaranteed": false,
+        "isPrivate": false,
+        "isResizable": false,
+        "wasResized": false,
+        "exclusions": [
+            "AllContests",
+            "ContestTypeBlackList-12",
+            "GameTypeBlackList-0",
+            "PaidGameTypeBlackList-0",
+            "SportsBlackList-0",
+            "PaidContests",
+            "PublicContest",
+            "NonGuaranteedPaidContests"
+        ],
+        "acceptedTickets": [
+            506
+        ],
+        "payoutDescriptions": {
+            "Cash": "$2,000.00"
+        },
+        "payoutDescriptionMetadata": [
+            {
+                "payoutDescriptionType": "Text",
+                "order": 0,
+                "payoutDescription": "$2,000.00",
+                "quantity": 1,
+                "value": 2000
+            }
+        ],
+        "fppAward": 2400,
+        "ownerUserKey": "109870",
+        "sortOrder": 2078200,
+        "filters": [
+
+        ],
+        "contestStartTime": "2015-04-24T23:05:00.0000000Z",
+        "gameTypeId": 0,
+        "ticketOnlyEntry": false,
+        "gameSetKey": "14628EE6A8E4419FC690E1BDD4A50A8F",
+        "contestKey": "5915939",
+        "name": "MLB $1,060 Head-to-Head vs. just2buff",
+        "draftGroupId": 6106,
+        "playTypeId": 1896,
+        "entries": 1,
+        "maximumEntries": 2,
+        "maximumEntriesPerUser": 1,
+        "entryFee": 1060,
+        "crownAmount": 583000,
+        "totalPayouts": 2000.00000000000000,
+        "contestState": "Completed",
+        "attributes": {
+            "IsCombinable": "true",
+            "Multi Match Limit By User": "109870",
+            "On Demand Creation": "true",
+            "Is H2H": "true",
+            "DC Prize Structure Type": "7"
+        }
+    },
+    "errorStatus": {
+
+    }
+}

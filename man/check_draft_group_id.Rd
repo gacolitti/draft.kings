@@ -4,7 +4,7 @@
 \alias{check_draft_group_id}
 \title{Check Draft Group Inputs}
 \usage{
-check_draft_group_id(draft_group_id, contest_id)
+check_draft_group_id(draft_group_id = NULL, contest_id = NULL)
 }
 \arguments{
 \item{draft_group_id}{Sequence of digits that correspond to a draft table/group.

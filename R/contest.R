@@ -3,19 +3,13 @@
 #'
 #' Fetch contest information such as the sport, payout, and contest summary.
 #'
-#' @inheritParams dkreq
-#' @inheritParams dkreq_process
-#' @inheritParams add_throttle
-#' @inheritParams add_proxy
-#' @inheritParams add_headers
-#' @inheritParams add_retry
-#' @inheritParams add_error_handling
-#' @inheritParams add_curl_options
+#' @inheritParams dk_request_process
 #'
 #' @param contest_id The sequence of digits that correspond to a specific contest.
 #'   This can be found by examining the URL of a contest page.
 #'   For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 #'   is 133645678.
+#' @param ... Arguments passed to [draft.kings::dk_request()]
 #'
 #' @examples
 #'   \dontrun{
@@ -24,29 +18,19 @@
 #'
 #' @export
 get_contest_info <- function(contest_id,
-                             throttle_rate = NULL,
-                             proxy_args = NULL,
-                             headers = NULL,
-                             retry_options = NULL,
-                             error_handling_options = NULL,
-                             curl_options = NULL,
-                             output = c("cleaned_json", "json", "response", "request")) {
+                             output = c("cleaned_json", "json", "response", "request"),
+                             ...) {
 
   stopifnot(is.numeric(contest_id))
-  output <- match.arg(output)
+  output <- rlang::arg_match(output)
 
-  req <- dkreq(
-    proxy_args = proxy_args,
-    throttle_rate = throttle_rate,
-    headers = headers,
-    curl_options = curl_options,
-    retry_options = retry_options,
-    error_handling_options = error_handling_options,
+  req <- dk_request(
+    ...,
     paths = glue::glue("contests/v1/contests/{contest_id}"),
     query_params = list(format = "json")
   )
 
-  dkreq_process(req, output)
+  dk_request_process(req, output, objclass = "contest_info_resp")
 
 }
 
@@ -54,41 +38,26 @@ get_contest_info <- function(contest_id,
 #'
 #' Fetch the full table of contests and related info from DraftKings.com lobby
 #'
-#' @inheritParams dkreq
-#' @inheritParams dkreq_process
-#' @inheritParams add_throttle
-#' @inheritParams add_proxy
-#' @inheritParams add_headers
-#' @inheritParams add_retry
-#' @inheritParams add_error_handling
-#' @inheritParams add_curl_options
+#' @inheritParams dk_request_process
 #'
 #' @param sport character. optional.
+#' @param ... Arguments passed to [draft.kings::dk_request()]
 #'
 #' @export
 get_contests <- function(sport = NULL,
-                         throttle_rate = NULL,
-                         proxy_args = NULL,
-                         headers = NULL,
-                         retry_options = NULL,
-                         error_handling_options = NULL,
-                         curl_options = NULL,
-                         output = c("cleaned_json", "json", "response", "request")) {
+                         output = c("cleaned_json", "json", "response", "request"),
+                         ...) {
 
-  output <- match.arg(output)
+  output <- rlang::arg_match(output)
 
-  req <- dkreq(
+  req <- dk_request(
+    ...,
     base_url = "https://www.draftkings.com/",
-    throttle_rate = throttle_rate,
-    headers = headers,
-    curl_options = curl_options,
-    retry_options = retry_options,
-    error_handling_options = error_handling_options,
     paths = "lobby/getcontests",
     query_params = list(sport = sport)
   )
 
-  dkreq_process(req, output, subset = "Contests")
+  dk_request_process(req, output, objclass = "contests_resp")
 
 }
 
@@ -96,14 +65,13 @@ get_contests <- function(sport = NULL,
 #'
 #' Fetch rules corresponding to a specific game type ID.
 #'
-#' @inheritParams dkreq
-#' @inheritParams dkreq_process
+#' @inheritParams dk_request_process
 #' @inheritParams get_contest_info
 #'
 #' @param game_type_id Integer corresponding to the game type.
 #'   For example, 159 in \url{https://api.draftkings.com/lineups/v1/gametypes/159/rules}.
 #'   If both `game_type_id` and `contest_id` are passed, then `contest_id` is ignored.
-#' @param ... Arguments passed to [dkreq()]
+#' @param ... Arguments passed to [draft.kings::dk_request()]
 #'
 #' @export
 get_gametype_rules <- function(game_type_id = NULL,
@@ -111,7 +79,7 @@ get_gametype_rules <- function(game_type_id = NULL,
                                output = c("cleaned_json", "json", "response", "request"),
                                ...) {
 
-  output <- match.arg(output)
+  output <- rlang::arg_match(output)
 
   if (all(is.null(game_type_id), is.null(contest_id))) {
 
@@ -127,25 +95,34 @@ get_gametype_rules <- function(game_type_id = NULL,
 
   }
 
-  req <- dkreq(..., paths = glue::glue("lineups/v1/gametypes/{game_type_id}/rules"))
+  req <- dk_request(...,
+                    paths = glue::glue("lineups/v1/gametypes/{game_type_id}/rules"))
 
-  out <- dkreq_process(req, output = "json")
-
-  salary <- out$salaryCap %>%
-    purrr::compact() %>%
-    dplyr::as_tibble() %>%
-    clean_names() %>%
-    stats::setNames(paste0("salary_cap_", names(.)))
-
-  team_count <- out$teamCount %>%
-    purrr::compact() %>%
-    dplyr::as_tibble() %>%
-    clean_names() %>%
-    stats::setNames(paste0("team_count_", names(.)))
-
-  unique_players <- dplyr::tibble("unique_players" = out$uniquePlayers)
-
-  dplyr::bind_cols(salary, team_count, unique_players)
+  dk_request_process(req, output, objclass = "gametype_rules_resp")
 
 }
 
+#' Get List of Game Types
+#'
+#' Fetch the full list of game types
+#'
+#' @inheritParams get_contests
+#' @inheritDotParams get_contests
+#'
+#' @export
+get_game_types <- function(sport = NULL,
+                             output = c("cleaned_json", "json", "response", "request"),
+                             ...) {
+
+  output <- rlang::arg_match(output)
+
+  req <- dk_request(
+    ...,
+    base_url = "https://www.draftkings.com/",
+    paths = "lobby/getcontests",
+    query_params = list(sport = sport)
+  )
+
+  dk_request_process(req, output, objclass = "game_types_resp")
+
+}

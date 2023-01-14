@@ -4,15 +4,35 @@
 \alias{get_player_points}
 \title{Get Player Points Earned}
 \usage{
-get_player_points(year, week, sport = "nfl")
+get_player_points(
+  week,
+  year = as.numeric(format(Sys.Date(), "\%Y")),
+  sport = "nfl",
+  output = c("cleaned_json", "json", "response", "request"),
+  ...
+)
 }
 \arguments{
-\item{year}{integer.}
-
 \item{week}{integer.}
 
-\item{sport}{character.}
+\item{year}{integer. optional. Defaults to the current year.}
+
+\item{sport}{character. Defaults to NFL.}
+
+\item{output}{One of "cleaned_json" (the default),
+"json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
+to parse the JSON body,}
+
+\item{...}{
+  Arguments passed on to \code{\link[=get_contest_info]{get_contest_info}}
+  \describe{
+    \item{\code{contest_id}}{The sequence of digits that correspond to a specific contest.
+This can be found by examining the URL of a contest page.
+For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
+is 133645678.}
+  }}
 }
 \description{
-Retrieve player fantasy points earned in each game for a given season and week.
+Retrieve player fantasy points earned in each
+game for a given season and week.
 }

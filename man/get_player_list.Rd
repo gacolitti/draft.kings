@@ -4,7 +4,12 @@
 \alias{get_player_list}
 \title{Get Player List}
 \usage{
-get_player_list(draft_group_id = NULL, contest_id = NULL)
+get_player_list(
+  draft_group_id = NULL,
+  contest_id = NULL,
+  output = c("cleaned_json", "json", "response", "request"),
+  ...
+)
 }
 \arguments{
 \item{draft_group_id}{Sequence of digits that correspond to a draft table/group.
@@ -14,6 +19,16 @@ If \code{draft_group_id} and \code{contest_id} are both passed, \code{contest_id
 This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
+
+\item{output}{One of "cleaned_json" (the default),
+"json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
+to parse the JSON body,}
+
+\item{...}{
+  Arguments passed on to \code{\link[=get_draft_group_info]{get_draft_group_info}}
+  \describe{
+    \item{\code{}}{}
+  }}
 }
 \description{
 Fetch list of players for a specific draft group and related info
