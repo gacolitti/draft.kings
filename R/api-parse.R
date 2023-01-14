@@ -125,13 +125,15 @@ dk_resp_parse.game_types_resp <- function(resp) {
   resp$GameTypes %>%
     dplyr::bind_rows() %>%
     dplyr::mutate(
-      "GameStyleName" = names(.data$GameStyle),
+      "GameStyleName" = paste0("game_style_", names(.data$GameStyle)) %>%
+        gsub("game_style_GameStyle", "game_style", .),
       "GameStyleValue" = as.character(.data$GameStyle)
     ) %>%
     dplyr::select(-"GameStyle") %>%
     tidyr::pivot_wider(names_from = "GameStyleName",
                        values_from = "GameStyleValue",
-                       names_repair = "minimal")
+                       names_repair = "minimal") %>%
+    clean_names()
 
 }
 
