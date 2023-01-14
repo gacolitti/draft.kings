@@ -6,7 +6,7 @@
 \usage{
 dk_get_leaderboard(
   contest_id,
-  cookiefile = "cookies.txt",
+  cookiefile = path.expand("~/cookies.txt"),
   output = c("cleaned_json", "json", "response", "request"),
   ...
 )
@@ -16,6 +16,8 @@ dk_get_leaderboard(
 This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
+
+\item{cookiefile}{Path to the cookies needed to perform API request.}
 
 \item{output}{One of "cleaned_json" (the default),
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
@@ -28,7 +30,10 @@ to parse the JSON body,}
   }}
 }
 \description{
-Fetch leaderboard for a contest.
+Fetch leaderboard for a contest. A leaderboard
+contains a list of entries in a contest,
+fantasy points for each entry, associated user
+for each entry, rank, and winnings.
 }
 \examples{
   \dontrun{

@@ -9,6 +9,7 @@
 #' @inheritParams dk_request_process
 #' @inheritParams get_contest_info
 #' @inheritDotParams get_contest_info
+#' @param cookiefile Path to the cookies needed to perform API request.
 #'
 #' @examples
 #'   \dontrun{
@@ -17,7 +18,7 @@
 #'
 #' @export
 dk_get_leaderboard <- function(contest_id,
-                               cookiefile = "cookies.txt",
+                               cookiefile = path.expand("~/cookies.txt"),
                                output = c("cleaned_json", "json", "response", "request"),
                                ...) {
 
