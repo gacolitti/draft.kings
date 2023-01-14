@@ -24,3 +24,28 @@
       #   is_snake_draft <lgl>, attr_is_guaranteed <chr>, attr_is_starred <chr>,
       #   pd_cash <chr>, attr_lobby_class <chr>, pd_contest_seat <chr>, ...
 
+# get_game_types() returns expected results
+
+    Code
+      d
+    Output
+      # A tibble: 25 x 15
+         game_ty~1 name  descr~2 tag   sport~3 draft~4 is_se~5 game_~6 game_~7 game_~8
+             <int> <chr> <chr>   <chr>   <int> <chr>   <lgl>   <chr>   <chr>   <chr>  
+       1       125 Clas~ Create~ ""          3 Salary~ FALSE   13      3       1      
+       2         1 Clas~ Create~ ""          1 Salary~ FALSE   1       1       1      
+       3        70 Clas~ Create~ ""          4 Salary~ FALSE   5       4       2      
+       4        73 Tiers Our no~ ""          4 Tiered  FALSE   6       4       6      
+       5        98 Clas~ Create~ ""          6 Salary~ FALSE   50      6       1      
+       6       158 Madd~ Create~ ""          1 Salary~ FALSE   96      1       12     
+       7       122 Clas~ Create~ ""         12 Salary~ FALSE   17      12      1      
+       8        94 Clas~ Create~ ""          5 Salary~ FALSE   46      5       1      
+       9       127 Show~ Create~ ""          3 Salary~ FALSE   71      3       2      
+      10         6 Clas~ Create~ ""         13 Salary~ FALSE   20      13      1      
+      # ... with 15 more rows, 5 more variables: game_style_name <chr>,
+      #   game_style_abbreviation <chr>, game_style_description <chr>,
+      #   game_style_is_enabled <chr>, game_style_attributes <chr>, and abbreviated
+      #   variable names 1: game_type_id, 2: description, 3: sport_id, 4: draft_type,
+      #   5: is_season_long, 6: game_style_id, 7: game_style_sport_id,
+      #   8: game_style_sort_order
+
