@@ -10,52 +10,80 @@
 #'
 #' @importFrom rlang .data .env
 #'
-#' @param exclude_players Optional list of full player names to exclude
+#' @param player_df Object returned by `get_player_list()`. If `NULL` (the default),
+#'   then this object is fetched using the `contest_id`.
+#' @param players A vector of player IDs to include. If `NULL` (the default), then use
+#'   all players found with `get_player_list()`.
+#' @param exclude_players A vector of player IDs to exclude.
 #' @param exclude_questionable Exclude players with statuses that indicate
 #'   they will not play. These include players that are questionable,
 #'   doubtful, out, and injured.
 #'
 #' @export
 get_contest_schematic <- function(contest_id,
+                                  player_df = NULL,
+                                  players = NULL,
                                   exclude_players = NULL,
                                   exclude_questionable = TRUE) {
 
   rules <- get_gametype_rules(contest_id = contest_id)
 
-  players <- get_player_list(contest_id = contest_id) %>%
+  players_intersect <- intersect(players, exclude_players)
+
+  if (length(players_intersect) > 0) {
+
+    cli::cli_abort(
+        "You cannot include the same player IDs in `players` and `exclude_players`."
+    )
+
+  }
+
+  if (is.null(player_df)) {
+
+    player_df <- get_player_list(contest_id = contest_id)
+
+  }
+
+  player_df <- player_df %>%
     dplyr::transmute(
       "player_id" = .data$pid,
       "first_name" = .data$fn,
       "last_name" = .data$ln,
       "salary" = .data$s,
-      "fppg" = as.numeric(.data$ppg),
-      "jersey_number" = .data$jn,
-      "position" = .data$pn,
+      "fantasy_points" = as.numeric(.data$ppg),
       "team_id" = .data$tid,
-      .data$news,
       "status" = .data$i
     )
 
   if (exclude_questionable) {
 
-    players <- players %>%
+    player_df <- player_df %>%
       dplyr::filter(.data$status == "")
 
   }
 
   if (!is.null(exclude_players)) {
 
-    players <- players %>%
+    player_df <- player_df %>%
       dplyr::filter(
-        !paste(.data$first_name, .data$last_name) %in% !!.env$exclude_players
+        !.data$player_id %in% .env$exclude_players
       )
 
   }
 
-  players <- players %>%
+  if (!is.null(players)) {
+
+    player_df <- player_df %>%
+      dplyr::filter(
+        .data$player_id %in% .env$players
+      )
+
+  }
+
+  player_df <- player_df %>%
     dplyr::mutate("row_number" = dplyr::row_number())
 
-  out <- list(players = players,
+  out <- list(players = player_df,
               rules = rules,
               contest_id = contest_id)
 
@@ -78,19 +106,18 @@ dk_extract_solution <- function(solved_model) {
     ompr::get_solution(player[i, j]) %>%
     dplyr::filter(.data$value > 0) %>%
     dplyr::inner_join(solved_model$contest_schematic$players, by = c("i" = "row_number")) %>%
-    dplyr::mutate("salary" = ifelse(.data$j == 2, .data$salary * 1.5, .data$salary),
-                  "fppg" = ifelse(.data$j == 2, .data$fppg * 1.5, .data$fppg)) %>%
+    dplyr::mutate(
+      "salary" = ifelse(.data$j == 2, .data$salary * 1.5, .data$salary),
+      "fantasy_points" = ifelse(.data$j == 2, .data$fantasy_points * 1.5, .data$fantasy_points)
+    ) %>%
     dplyr::transmute(
       .data$player_id,
       .data$first_name,
       .data$last_name,
       "is_captain" = ifelse(.data$j == 2, TRUE, FALSE),
       .data$team_id,
-      .data$fppg,
+      .data$fantasy_points,
       .data$salary,
-      .data$jersey_number,
-      .data$position,
-      .data$news,
       .data$status
     ) %>%
     dplyr::arrange(dplyr::desc(.data$is_captain))
@@ -241,7 +268,7 @@ dk_optimize_lineup.showdown_captain_mode <- function(contest_schematic, max_poin
   mod <- ompr::MIPModel() %>%
     ompr::add_variable(player[i, j], i = 1:nrow(players), j = 1:2, type = "binary") %>%
     ompr::set_objective(
-      ompr::sum_over(players$fppg[i] * player[i, 1] + players$fppg[i] * 1.5 * player[i, 2],
+      ompr::sum_over(players$fantasy_points[i] * player[i, 1] + players$fantasy_points[i] * 1.5 * player[i, 2],
                      i = 1:nrow(players)), "max"
     ) %>%
     # The sum of all player salaries must be less than salary cap max value
@@ -256,7 +283,7 @@ dk_optimize_lineup.showdown_captain_mode <- function(contest_schematic, max_poin
 
     mod <- mod %>%
       ompr::add_constraint(
-        ompr::sum_over(players$fppg[i] * player[i, 1] + players$fppg[i] * 1.5 * player[i, 2],
+        ompr::sum_over(players$fantasy_points[i] * player[i, 1] + players$fantasy_points[i] * 1.5 * player[i, 2],
                        i = 1:nrow(players)) <= max_points
       )
 
