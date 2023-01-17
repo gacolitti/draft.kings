@@ -6,6 +6,8 @@
 \usage{
 get_contest_schematic(
   contest_id,
+  player_df = NULL,
+  players = NULL,
   exclude_players = NULL,
   exclude_questionable = TRUE
 )
@@ -16,7 +18,13 @@ This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
 
-\item{exclude_players}{Optional list of full player names to exclude}
+\item{player_df}{Object returned by \code{get_player_list()}. If \code{NULL} (the default),
+then this object is fetched using the \code{contest_id}.}
+
+\item{players}{A vector of player IDs to include. If \code{NULL} (the default), then use
+all players found with \code{get_player_list()}.}
+
+\item{exclude_players}{A vector of player IDs to exclude.}
 
 \item{exclude_questionable}{Exclude players with statuses that indicate
 they will not play. These include players that are questionable,
