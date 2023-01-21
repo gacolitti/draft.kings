@@ -14,19 +14,25 @@
 #'   then this object is fetched using the `contest_id`.
 #' @param players A vector of player IDs to include. If `NULL` (the default), then use
 #'   all players found with `get_player_list()`.
+#' @param rules Object returned by `get_gametype_rules()`. If `NULL` (the default),
+#'   then this object is fetched using the `contest_id`.
 #' @param exclude_players A vector of player IDs to exclude.
 #' @param exclude_questionable Exclude players with statuses that indicate
 #'   they will not play. These include players that are questionable,
 #'   doubtful, out, and injured.
 #'
+#' @examples
+#'   \dontrun{
+#'     get_contest_schematic(contest_id = 133645678)
+#'   }
+#'
 #' @export
 get_contest_schematic <- function(contest_id,
                                   player_df = NULL,
+                                  rules = NULL,
                                   players = NULL,
                                   exclude_players = NULL,
                                   exclude_questionable = TRUE) {
-
-  rules <- get_gametype_rules(contest_id = contest_id)
 
   players_intersect <- intersect(players, exclude_players)
 
@@ -35,6 +41,12 @@ get_contest_schematic <- function(contest_id,
     cli::cli_abort(
         "You cannot include the same player IDs in `players` and `exclude_players`."
     )
+
+  }
+
+  if (is.null(rules)) {
+
+    rules <- get_gametype_rules(contest_id = contest_id)
 
   }
 
@@ -87,7 +99,7 @@ get_contest_schematic <- function(contest_id,
               rules = rules,
               contest_id = contest_id)
 
-  class(out) <- c("showdown_captain_mode", class(out))
+  class(out) <- c(clean_names(rules$game_type_name), class(out))
 
   out
 

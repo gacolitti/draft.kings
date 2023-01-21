@@ -7,6 +7,7 @@
 get_contest_schematic(
   contest_id,
   player_df = NULL,
+  rules = NULL,
   players = NULL,
   exclude_players = NULL,
   exclude_questionable = TRUE
@@ -21,6 +22,9 @@ is 133645678.}
 \item{player_df}{Object returned by \code{get_player_list()}. If \code{NULL} (the default),
 then this object is fetched using the \code{contest_id}.}
 
+\item{rules}{Object returned by \code{get_gametype_rules()}. If \code{NULL} (the default),
+then this object is fetched using the \code{contest_id}.}
+
 \item{players}{A vector of player IDs to include. If \code{NULL} (the default), then use
 all players found with \code{get_player_list()}.}
 
@@ -33,4 +37,10 @@ doubtful, out, and injured.}
 \description{
 Retrieve contest player list and other information used in
 optimization.
+}
+\examples{
+  \dontrun{
+    get_contest_schematic(contest_id = 133645678)
+  }
+
 }
