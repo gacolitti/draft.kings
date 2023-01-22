@@ -7,7 +7,7 @@
 dk_get_optimal_lineups(contest_schematic, n = 1, tolerance = 0.001)
 }
 \arguments{
-\item{contest_schematic}{Output from \verb{[get_contest_schematic()]} which
+\item{contest_schematic}{Output from \verb{[prepare_contest_schematic()]} which
 includes information needed for optimization; including player info such as,
 news status, salary, and projected fantasy points.}
 

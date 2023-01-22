@@ -65,8 +65,6 @@ get_draftable_players <- function(draft_group_id = NULL,
 
 }
 
-#' Get Draft Group Info
-
 #' Get List of Draft Groups
 #'
 #' Fetch the full table of draft groups and related info
