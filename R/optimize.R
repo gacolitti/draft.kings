@@ -1,65 +1,221 @@
 
 ## Prep and extract  -------------------------------------------------------------------------------
 
-#' Get Contest Schematic
+#' Prepare Contest Schematic
 #'
-#' Retrieve contest player list and other information used in
-#' optimization.
+#' Combine information needed for optimization.
+#' Passed to `dk_optimize()`.
 #'
 #' @inheritParams get_contest_info
 #'
 #' @importFrom rlang .data .env
 #'
-#' @param exclude_players Optional list of full player names to exclude
+#' @param draft_group Object returned by `get_draftable_players()`. If `NULL` (the default),
+#'   then this object is fetched using the `contest_id`. The following columns are required:
+#'    draftable_id, player_id, first_name, last_name, display_name, salary, team_id, status.
+#' @param draft_group_exp_fp A data.frame with two columns `draftable_id`
+#'   (found in the output of `get_draftable_players()`) and `exp_fp`
+#'   (expected fantasy points). Note that the Showdown Captain Mode contest type includes
+#'   two rows for each player/defense. If `draft_group` contains rows not found in
+#'   `draft_group_exp_fp`, then a warning is issued and those missing rows are dropped.
+#'   If `NULL` (the default), then `exp_fp` is set equal to the `ppg` value returned by
+#'   `get_player_list()`.
+#' @param include_players A vector of player IDs to include. If `NULL` (the default), then use
+#'   all players found with `get_draftable_players()`.
+#' @param exclude_players A vector of player IDs to exclude.
+#' @param rules Object returned by `get_gametype_rules()`. If `NULL` (the default),
+#'   rules are fetched using the `contest_id`.
 #' @param exclude_questionable Exclude players with statuses that indicate
 #'   they will not play. These include players that are questionable,
 #'   doubtful, out, and injured.
 #'
+#' @examples
+#'   \dontrun{
+#'     prepare_contest_schematic(contest_id = 133645678)
+#'   }
+#'
 #' @export
-get_contest_schematic <- function(contest_id,
-                                  exclude_players = NULL,
-                                  exclude_questionable = TRUE) {
+prepare_contest_schematic <- function(contest_id,
+                                      draft_group_exp_fp = NULL,
+                                      draft_group = NULL,
+                                      rules = NULL,
+                                      include_players = NULL,
+                                      exclude_players = NULL,
+                                      exclude_questionable = TRUE) {
 
-  rules <- get_gametype_rules(contest_id = contest_id)
+  players_intersect <- intersect(include_players, exclude_players)
 
-  players <- get_player_list(contest_id = contest_id) %>%
-    dplyr::transmute(
-      "player_id" = .data$pid,
-      "first_name" = .data$fn,
-      "last_name" = .data$ln,
-      "salary" = .data$s,
-      "fppg" = as.numeric(.data$ppg),
-      "jersey_number" = .data$jn,
-      "position" = .data$pn,
-      "team_id" = .data$tid,
-      .data$news,
-      "status" = .data$i
+  if (length(players_intersect) > 0) {
+
+    cli::cli_abort(
+        "You cannot include the same player IDs in `include_players` and `exclude_players`."
     )
-
-  if (exclude_questionable) {
-
-    players <- players %>%
-      dplyr::filter(.data$status == "")
 
   }
 
+  # Check for expected column names in rules
+  if (!is.null(rules)) {
+
+    missing_cols <- setdiff(c("salary_cap_max_value", "team_count_min_value", "unique_players"),
+                            colnames(rules))
+
+    if (length(missing_cols) > 0) {
+
+      cli::cli_abort("Missing required columns(?s) from `rules`: {missing_cols}")
+
+    }
+
+  }
+
+  # Check for expected column names in draft_group_exp_fp
+  if (!is.null(draft_group_exp_fp)) {
+
+    missing_cols <- setdiff(c("draftable_id", "exp_fp"), colnames(draft_group_exp_fp))
+
+    if (length(missing_cols) > 0) {
+
+      cli::cli_abort("Missing required columns(?s) from `draft_group_exp_fp`: {missing_cols}")
+
+    }
+
+  }
+
+  # Check for expected column names in draft_group
+  if (!is.null(draft_group)) {
+
+    missing_cols <- setdiff(c("draftable_id",
+                              "player_id",
+                              "first_name",
+                              "last_name",
+                              "display_name",
+                              "salary",
+                              "team_id",
+                              "status"), colnames(draft_group))
+
+    if (length(missing_cols) > 0) {
+
+      cli::cli_abort("Missing required column(?s) from `draft_group` {missing_cols}")
+
+    }
+
+  }
+
+  # Fetch contest info if rules, draft_group, or draft_group_exp_fp not passed
+  if (is.null(rules) || is.null(draft_group) || is.null(draft_group_exp_fp)) {
+
+    contest_info <- get_contest_info(contest_id)
+
+  }
+
+  # Fetch rules if not passed
+  if (is.null(rules)) {
+
+    rules <- get_gametype_rules(game_type_id = contest_info$game_type_id)
+
+  }
+
+  # Fetch draft group if not passed
+  if (is.null(draft_group)) {
+
+    draft_group <- get_draftable_players(draft_group_id = contest_info$draft_group_id)
+
+  }
+
+  # Ensure each row in draft_group has a match in draft_group_exp_fp
+  if (!is.null(draft_group_exp_fp)) {
+
+    # Check for missing rows in draft_group_exp_fp based on rows in draft_group
+    missing_draft_group <- dplyr::anti_join(draft_group, draft_group_exp_fp, by = "draftable_id")
+
+    if (nrow(missing_draft_group) > 0) {
+
+      cli::cli_warn(
+        "Found draftable IDs in `draft_group` not found in `draft_group_exp_fp`"
+      )
+
+    }
+
+  }
+
+  # Subset columns in draft_group
+  draft_group <- draft_group %>%
+    dplyr::select(
+      "draftable_id",
+      "player_id",
+      "first_name",
+      "last_name",
+      "display_name",
+      "salary",
+      "team_id",
+      "status"
+    )
+
+  # Optionally remove players with a status other than "None"
+  if (exclude_questionable) {
+
+    draft_group <- draft_group %>%
+      dplyr::filter(.data$status == "None")
+
+  }
+
+  # Optionally exclude players
   if (!is.null(exclude_players)) {
 
-    players <- players %>%
+    draft_group <- draft_group %>%
       dplyr::filter(
-        !paste(.data$first_name, .data$last_name) %in% !!.env$exclude_players
+        !.data$player_id %in% .env$exclude_players
       )
 
   }
 
-  players <- players %>%
+  # Optionally include subset of players
+  if (!is.null(include_players)) {
+
+    draft_group <- draft_group %>%
+      dplyr::filter(
+        .data$player_id %in% .env$include_players
+      )
+
+  }
+
+  # Add expected fantasy points to draft group
+  if (is.null(draft_group_exp_fp)) {
+
+    player_list <- get_player_list(draft_group_id = contest_info$draft_group_id) %>%
+      dplyr::transmute("player_id" = .data$pid, "exp_fp" = as.numeric(.data$ppg))
+
+    draft_group <- draft_group %>%
+      dplyr::left_join(player_list, by = "player_id")
+
+  }
+
+  # Adjust exp_fp if game type is showdown captain mode
+  # Add column to indicate captain
+  if (rules$game_type_name == "Showdown Captain Mode") {
+
+    draft_group <- draft_group %>%
+      dplyr::group_by(.data$player_id) %>%
+      dplyr::mutate("exp_fp" = ifelse(.data$salary == max(.data$salary),
+                                      .data$exp_fp * 1.5,
+                                      .data$exp_fp),
+                    "is_captain" = ifelse(.data$salary == max(.data$salary),
+                                                         TRUE,
+                                                         FALSE)) %>%
+      dplyr::ungroup()
+
+  }
+
+  # Add row number
+  draft_group <- draft_group %>%
     dplyr::mutate("row_number" = dplyr::row_number())
 
-  out <- list(players = players,
+  # Combine objects into list
+  out <- list(draft_group = draft_group,
               rules = rules,
               contest_id = contest_id)
 
-  class(out) <- c("showdown_captain_mode", class(out))
+  # Add class based on game type found in rules
+  class(out) <- c(clean_names(rules$game_type_name), class(out))
 
   out
 
@@ -75,35 +231,11 @@ get_contest_schematic <- function(contest_id,
 dk_extract_solution <- function(solved_model) {
 
   res <- solved_model$solved_model %>%
-    ompr::get_solution(player[i, j]) %>%
+    ompr::get_solution(draftable_id[i]) %>%
     dplyr::filter(.data$value > 0) %>%
-    dplyr::inner_join(solved_model$contest_schematic$players, by = c("i" = "row_number")) %>%
-    dplyr::mutate("salary" = ifelse(.data$j == 2, .data$salary * 1.5, .data$salary),
-                  "fppg" = ifelse(.data$j == 2, .data$fppg * 1.5, .data$fppg)) %>%
-    dplyr::transmute(
-      .data$player_id,
-      .data$first_name,
-      .data$last_name,
-      "is_captain" = ifelse(.data$j == 2, TRUE, FALSE),
-      .data$team_id,
-      .data$fppg,
-      .data$salary,
-      .data$jersey_number,
-      .data$position,
-      .data$news,
-      .data$status
-    ) %>%
+    dplyr::inner_join(solved_model$contest_schematic$draft_group, by = c("i" = "row_number")) %>%
+    dplyr::select(-dplyr::any_of(c("i", "value", "variable"))) %>%
     dplyr::arrange(dplyr::desc(.data$is_captain))
-
-  # Add draftable ID
-  drafttable <- get_draftable_players(contest_id = solved_model$contest_schematic$contest_id)
-
-  res <- res %>%
-    dplyr::inner_join(
-      drafttable %>%
-        dplyr::select("player_id", "salary", "draftable_id"),
-      by = c("player_id", "salary")
-    )
 
   list(
     optimal_lineup = res,
@@ -198,7 +330,7 @@ dk_write_lineups_to_csv <- function(optimal_lineups, file = "lineups.csv") {
 #' Get optimal players based on player pool, projected fantasy points,
 #' and rules defined by a contest schematic.
 #'
-#' @param contest_schematic Output from `[get_contest_schematic()]` which
+#' @param contest_schematic Output from `[prepare_contest_schematic()]` which
 #'   includes information needed for optimization; including player info such as,
 #'   news status, salary, and projected fantasy points.
 #' @param ... Other arguments passed to optimization method.
@@ -216,7 +348,7 @@ dk_optimize_lineup <- function(contest_schematic, ...) {
 #' available players, their salaries, and their projected
 #' fantasy points for a showdown captain mode contest type.
 #'
-#' @inheritParams get_contest_schematic
+#' @inheritParams prepare_contest_schematic
 #' @inheritParams dk_optimize_lineup
 #' @importFrom rlang .data .env
 #' @import ROI.plugin.glpk
@@ -227,27 +359,22 @@ dk_optimize_lineup <- function(contest_schematic, ...) {
 #' @export
 dk_optimize_lineup.showdown_captain_mode <- function(contest_schematic, max_points = NULL, ...) {
 
-  players <- contest_schematic$players
+  draft_group <- contest_schematic$draft_group
   rules <- contest_schematic$rules
   contest_id <- contest_schematic$contest_id
 
-  # Set max_points var if not passed
-  if (is.null(max_points)) {
-
-    max_points <- Inf
-
-  }
-
   mod <- ompr::MIPModel() %>%
-    ompr::add_variable(player[i, j], i = 1:nrow(players), j = 1:2, type = "binary") %>%
+    ompr::add_variable(draftable_id[i],
+                       i = draft_group$row_number,
+                       type = "binary") %>%
     ompr::set_objective(
-      ompr::sum_over(players$fppg[i] * player[i, 1] + players$fppg[i] * 1.5 * player[i, 2],
-                     i = 1:nrow(players)), "max"
+      ompr::sum_over(draft_group$exp_fp[i] * draftable_id[i],
+                     i = draft_group$row_number), "max"
     ) %>%
     # The sum of all player salaries must be less than salary cap max value
     ompr::add_constraint(
-      ompr::sum_over(players$salary[i] * player[i, 1] + players$salary[i] * 1.5 * player[i, 2],
-                     i = 1:nrow(players)) <= rules$salary_cap_max_value
+      ompr::sum_over(draft_group$salary[i] * draftable_id[i],
+                     i = draft_group$row_number) <= rules$salary_cap_max_value
     )
 
   # Optionally set an upper bound on the number of expected fantasy points
@@ -256,8 +383,8 @@ dk_optimize_lineup.showdown_captain_mode <- function(contest_schematic, max_poin
 
     mod <- mod %>%
       ompr::add_constraint(
-        ompr::sum_over(players$fppg[i] * player[i, 1] + players$fppg[i] * 1.5 * player[i, 2],
-                       i = 1:nrow(players)) <= max_points
+        ompr::sum_over(draft_group$exp_fp[i] * draftable_id[i],
+                       i = draft_group$row_number) <= max_points
       )
 
   }
@@ -267,12 +394,9 @@ dk_optimize_lineup.showdown_captain_mode <- function(contest_schematic, max_poin
 
     mod <- mod %>%
       ompr::add_constraint(
-        ompr::sum_over(player[i, j], i = which(players$team_id == unique(players$team_id)[1]),
-                       j = 1:2) >= 1
-      ) %>%
-      ompr::add_constraint(
-        ompr::sum_over(player[i, j], i = which(players$team_id == unique(players$team_id)[2]),
-                       j = 1:2) >= 1
+        ompr::sum_over(draftable_id[i],
+                       i = draft_group$row_number[which(draft_group$team_id == team_id)]) >= 1,
+        team_id = unique(draft_group$team_id)
       )
 
   }
@@ -282,7 +406,9 @@ dk_optimize_lineup.showdown_captain_mode <- function(contest_schematic, max_poin
 
     mod <- mod %>%
       ompr::add_constraint(
-        ompr::sum_over(player[i, j], j = 1:2) <= 1, i = 1:nrow(players)
+        ompr::sum_over(draftable_id[i],
+                       i = draft_group$row_number[which(draft_group$player_id == player_id)]) <= 1,
+        player_id = draft_group$player_id
       )
 
   }
@@ -290,13 +416,17 @@ dk_optimize_lineup.showdown_captain_mode <- function(contest_schematic, max_poin
   # Ensure six players are selected
   mod <- mod %>%
     ompr::add_constraint(
-      ompr::sum_over(player[i, j], j = 1:2, i = 1:nrow(players)) == 6
+      ompr::sum_over(
+        draftable_id[i],
+        i = draft_group$row_number
+      ) == 6
     )
 
   # Ensure 1 captain
   mod <- mod %>%
     ompr::add_constraint(
-      ompr::sum_over(player[i, 2], i = 1:nrow(players)) == 1
+      ompr::sum_over(draftable_id[i],
+                     i = draft_group$row_number[which(draft_group$is_captain)]) == 1
     )
 
 

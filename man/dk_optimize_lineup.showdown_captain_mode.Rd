@@ -7,7 +7,7 @@
 \method{dk_optimize_lineup}{showdown_captain_mode}(contest_schematic, max_points = NULL, ...)
 }
 \arguments{
-\item{contest_schematic}{Output from \verb{[get_contest_schematic()]} which
+\item{contest_schematic}{Output from \verb{[prepare_contest_schematic()]} which
 includes information needed for optimization; including player info such as,
 news status, salary, and projected fantasy points.}
 

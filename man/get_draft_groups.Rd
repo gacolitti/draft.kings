@@ -2,8 +2,7 @@
 % Please edit documentation in R/draftgroup.R
 \name{get_draft_groups}
 \alias{get_draft_groups}
-\title{Get Draft Group Info
-Get List of Draft Groups}
+\title{Get List of Draft Groups}
 \usage{
 get_draft_groups(
   sport = NULL,
