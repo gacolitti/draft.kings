@@ -1,1 +1,1 @@
-utils::globalVariables(c(".", "fppg", "i", "j", "player", "salary", "value"))
+utils::globalVariables(c(".", "i", "draftable_id", "team_id", "player_id"))

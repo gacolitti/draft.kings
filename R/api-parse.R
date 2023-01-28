@@ -245,6 +245,90 @@ dk_resp_parse.leaderboard_resp <- function(resp) {
 
 }
 
+#' @method dk_resp_parse entries_resp
+#'
+#' @export
+dk_resp_parse.entries_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  purrr::map_dfr(
+    resp$entries,
+    function(.entry) {
+
+      # Extract keys from entry information
+      entry_info <- .entry
+
+      entry_info <- entry_info[c("contestKey", "entryKey", "userKey", "draftGroupId", "lineupId")] %>%
+        dplyr::bind_rows() %>%
+        clean_names()
+
+      # Extract all player stats and combine into table
+      stats <- purrr::map_dfr(
+        .entry$roster$scorecards,
+        function(.scorecard) {
+
+          stats <- dplyr::bind_rows(.scorecard$stats)
+
+          # Get percent drafted captain from playerUtilizations nested list
+          # Percent drafted "all" is already included so no need to extract
+          if (!is.null(.scorecard$playerUtilizations) &&
+              length(.scorecard$playerUtilizations) == 2) {
+            percent_drafted_cpt <- .scorecard$playerUtilizations[[2]]$value
+          } else {
+            percent_drafted_cpt <- NULL
+          }
+          .scorecard$playerUtilizations <- NULL
+
+          # Get player link (appears to be link to live boxscore page)
+          if (!is.null(.scorecard$playerLink) &&
+              length(.scorecard$playerLink) > 0) {
+            player_deep_link <- .scorecard$playerLink[[1]]$DeepLink
+          } else {
+            player_deep_link <- NULL
+          }
+          .scorecard$playerLink <- NULL
+
+          if (!is.null(.scorecard$projection$valueIcon)) {
+            player_projection_icon <- .scorecard$projection$valueIcon
+          } else {
+            player_projection_icon <- NULL
+          }
+          .scorecard$projection <- NULL
+
+          # Remove competition nested list because this information is redundant
+          .scorecard$competition <- NULL
+
+          # Remove player stats because this has already been extracted
+          .scorecard$stats <- NULL
+
+          # Remove other unknown columns if present
+          .scorecard$playerStates <- NULL
+          .scorecard$attributes <- NULL
+
+          player_info <- dplyr::bind_rows(.scorecard)
+          player_info$percent_drafted_cp <- percent_drafted_cpt
+          player_info$player_deep_link <- player_deep_link
+          player_info$player_projection_icon <- player_projection_icon
+
+          player_info %>%
+            tidyr::crossing(stats) %>%
+            clean_names()
+
+        }
+      )
+
+      # Combine entry info keys with stats
+      # This should be a one to many crossing,
+      # because entry info should be one row and stats should
+      # be multiple rows.
+      tidyr::crossing(entry_info, stats)
+
+    }
+  )
+
+}
+
 ## Sports ------------------------------------------------------------------------------------------
 
 #' @method dk_resp_parse sports_resp

@@ -55,7 +55,7 @@
     Code
       d
     Output
-      # A tibble: 75 x 17
+      # A tibble: 76 x 17
          draft~1 conte~2 start~3 start~4 sort_~5 draft~6 game_~7 game_~8 sport~9 sport
            <dbl>   <dbl> <chr>   <chr>     <dbl> <chr>     <dbl> <lgl>     <dbl> <chr>
        1   81315      21 2023-0~ 2023-0~       1 "Featu~       1 NA            0 NFL  
@@ -66,9 +66,9 @@
        6   81317      96 2023-0~ 2023-0~       8 "Featu~      96 NA            0 NFL  
        7   81320     108 2023-0~ 2023-0~      10 "Featu~     108 NA            0 NFL  
        8   81321     110 2023-0~ 2023-0~      11 "Featu~     110 NA            0 NFL  
-       9   81207     158 2023-0~ 2023-0~      18 ""          158 NA            0 NFL  
-      10   81208     159 2023-0~ 2023-0~      19 ""          159 NA            0 NFL  
-      # ... with 65 more rows, 7 more variables: game_count <dbl>,
+       9   81210     159 2023-0~ 2023-0~      21 ""          159 NA            0 NFL  
+      10   81211     158 2023-0~ 2023-0~      22 "Featu~     158 NA            0 NFL  
+      # ... with 66 more rows, 7 more variables: game_count <dbl>,
       #   contest_start_time_suffix <chr>, contest_start_time_type <dbl>,
       #   games <lgl>, draft_group_series_id <dbl>, game_set_key <chr>,
       #   allowugc <lgl>, and abbreviated variable names 1: draft_group_id,
