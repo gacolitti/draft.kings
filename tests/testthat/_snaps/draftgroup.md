@@ -55,20 +55,20 @@
     Code
       d
     Output
-      # A tibble: 87 x 17
+      # A tibble: 75 x 17
          draft~1 conte~2 start~3 start~4 sort_~5 draft~6 game_~7 game_~8 sport~9 sport
            <dbl>   <dbl> <chr>   <chr>     <dbl> <chr>     <dbl> <lgl>     <dbl> <chr>
-       1   79691      21 2023-0~ 2023-0~       1 "Featu~       1 NA            0 NFL  
-       2   79968      21 2023-0~ 2023-0~       9 ""            1 NA            0 NFL  
-       3   79995      53 2023-0~ 2023-0~      10 "Featu~      53 NA            0 NFL  
-       4   79967      21 2023-0~ 2023-0~      11 ""            1 NA            0 NFL  
-       5   79976      96 2023-0~ 2023-0~      12 "Featu~      96 NA            0 NFL  
-       6   79979      96 2023-0~ 2023-0~      13 ""           96 NA            0 NFL  
-       7   79973      96 2023-0~ 2023-0~      14 ""           96 NA            0 NFL  
-       8   80094      96 2023-0~ 2023-0~      15 ""           96 NA            0 NFL  
-       9   79975      96 2023-0~ 2023-0~      16 ""           96 NA            0 NFL  
-      10   79977      96 2023-0~ 2023-0~      17 ""           96 NA            0 NFL  
-      # ... with 77 more rows, 7 more variables: game_count <dbl>,
+       1   81315      21 2023-0~ 2023-0~       1 "Featu~       1 NA            0 NFL  
+       2   81325      51 2023-0~ 2023-0~       2 ""           51 NA            0 NFL  
+       3   81316      96 2023-0~ 2023-0~       3 ""           96 NA            0 NFL  
+       4   81318     108 2023-0~ 2023-0~       6 ""          108 NA            0 NFL  
+       5   81319     110 2023-0~ 2023-0~       7 ""          110 NA            0 NFL  
+       6   81317      96 2023-0~ 2023-0~       8 "Featu~      96 NA            0 NFL  
+       7   81320     108 2023-0~ 2023-0~      10 "Featu~     108 NA            0 NFL  
+       8   81321     110 2023-0~ 2023-0~      11 "Featu~     110 NA            0 NFL  
+       9   81207     158 2023-0~ 2023-0~      18 ""          158 NA            0 NFL  
+      10   81208     159 2023-0~ 2023-0~      19 ""          159 NA            0 NFL  
+      # ... with 65 more rows, 7 more variables: game_count <dbl>,
       #   contest_start_time_suffix <chr>, contest_start_time_type <dbl>,
       #   games <lgl>, draft_group_series_id <dbl>, game_set_key <chr>,
       #   allowugc <lgl>, and abbreviated variable names 1: draft_group_id,
