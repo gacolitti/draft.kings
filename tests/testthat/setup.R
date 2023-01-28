@@ -1,11 +1,19 @@
 library(httptest2)
 
 # to avoid errors with R CMD CHECK
-# want to replace the root of request URL with just mosaic_api
 set_redactor(function (x) {
   gsub_response(
     x,
-    "live.draftkings.com/api/v2/leaderboards|api.draftkings.com/draftgroups/v1",
+    paste0(
+      collapse = "|",
+      c(
+        "live.draftkings.com/api/v2/leaderboards",
+        "api.draftkings.com/draftgroups/v1",
+        "api.draftkings.com"
+        # "api.draftkings.com/scores/v2/entries",
+        # "api.draftkings.com/scores/v1/leaderboard"
+      )
+    ),
     "url"
   )
 

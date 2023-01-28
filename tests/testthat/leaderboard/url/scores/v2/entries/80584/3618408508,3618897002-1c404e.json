@@ -1,0 +1,1626 @@
+{
+    "entries": [
+        {
+            "roster": {
+                "scorecards": [
+                    {
+                        "firstName": "Josh",
+                        "lastName": "Allen",
+                        "shortName": "J. Allen",
+                        "displayName": "Josh Allen",
+                        "rosterPositionId": 511,
+                        "rosterPosition": "CPT",
+                        "rosterPositionSortOrder": 1,
+                        "eTag": "352",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "96.51"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "68.21"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":868199}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 96.51,
+                        "draftableId": 26368922,
+                        "score": 42.12,
+                        "stats": [
+                            {
+                                "statId": 36,
+                                "name": "Passing Touchdowns",
+                                "abbreviation": "PaTD",
+                                "fantasyPoints": 18,
+                                "statValue": 3,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 38,
+                                "name": "Rushing Touchdowns",
+                                "abbreviation": "RuTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 39,
+                                "name": "Passing Yards",
+                                "abbreviation": "PaYds",
+                                "fantasyPoints": 21.12,
+                                "statValue": 352,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 41,
+                                "name": "Rushing Yards",
+                                "abbreviation": "RuYds",
+                                "fantasyPoints": 3,
+                                "statValue": 20,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 46,
+                                "name": "Interceptions Thrown",
+                                "abbreviation": "INT",
+                                "fantasyPoints": -3,
+                                "statValue": 2,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 47,
+                                "name": "300+ Yards Passing Game",
+                                "abbreviation": "300+Pass",
+                                "fantasyPoints": 4.5,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 48,
+                                "name": "100+ Rushing Game",
+                                "abbreviation": "100+Rush",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 50,
+                                "name": "Fumbles Lost",
+                                "abbreviation": "FUM",
+                                "fantasyPoints": -1.5,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            }
+                        ],
+                        "statsDescription": "3 PaTD, 352 PaYds, 20 RuYds, 2 INT, 1 300+Pass, 1 FUM",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Tyreek",
+                        "lastName": "Hill",
+                        "shortName": "T. Hill",
+                        "displayName": "Tyreek Hill",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "305",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "29.75"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "2.03"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":823156}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 29.75,
+                        "draftableId": 26368976,
+                        "score": 16.4,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 38,
+                                "name": "Rushing Touchdowns",
+                                "abbreviation": "RuTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 6.9,
+                                "statValue": 69,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 41,
+                                "name": "Rushing Yards",
+                                "abbreviation": "RuYds",
+                                "fantasyPoints": 0.5,
+                                "statValue": 5,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 7,
+                                "statValue": 7,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 48,
+                                "name": "100+ Rushing Game",
+                                "abbreviation": "100+Rush",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 51,
+                                "name": "2 Point Conversions",
+                                "abbreviation": "2PT",
+                                "fantasyPoints": 2,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 70,
+                                "name": "2PTs Passing",
+                                "abbreviation": "2PtPass",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 15,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "69 RecYds, 5 RuYds, 7 REC, 1 2PT",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF"
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": ""
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Stefon",
+                        "lastName": "Diggs",
+                        "shortName": "S. Diggs",
+                        "displayName": "Stefon Diggs",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "350",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "83.31"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "8.13"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":694041}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 83.31,
+                        "draftableId": 26368977,
+                        "score": 21.4,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 11.4,
+                                "statValue": 114,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 7,
+                                "statValue": 7,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 3,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 9,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "114 RecYds, 7 REC, 1 100+Rec",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Gabe",
+                        "lastName": "Davis",
+                        "shortName": "G. Davis",
+                        "displayName": "Gabe Davis",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "296",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "39.04"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "2.47"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":976761}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 39.04,
+                        "draftableId": 26368984,
+                        "score": 26.3,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 6,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 11.3,
+                                "statValue": 113,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 6,
+                                "statValue": 6,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 3,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 9,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "1 RecTD, 113 RecYds, 6 REC, 1 100+Rec",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Khalil",
+                        "lastName": "Shakir",
+                        "shortName": "K. Shakir",
+                        "displayName": "Khalil Shakir",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "352",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "12.48"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":1130603}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 12.48,
+                        "draftableId": 26369000,
+                        "score": 8.1,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 5.1,
+                                "statValue": 51,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 3,
+                                "statValue": 3,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 5,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "51 RecYds, 3 REC",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Cole",
+                        "lastName": "Beasley",
+                        "shortName": "C. Beasley",
+                        "displayName": "Cole Beasley",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "344",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "13.50"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "0.44"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":460830}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 13.50,
+                        "draftableId": 26369002,
+                        "score": 11.5,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 6,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 3.5,
+                                "statValue": 35,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 2,
+                                "statValue": 2,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 5,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "1 RecTD, 35 RecYds, 2 REC",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    }
+                ]
+            },
+            "draftGroupId": 80584,
+            "contestKey": "140039397",
+            "entryKey": "3618408508",
+            "lineupId": -1,
+            "userName": "CALMLYDOMINATING",
+            "userKey": "11222656",
+            "userEntryCount": 1,
+            "userEntryIndex": 1,
+            "timeRemaining": 0,
+            "timeRemainingUnit": "PMR",
+            "maxTimeRemaining": 360,
+            "timeRemainingOpponent": 0,
+            "rank": 1,
+            "fantasyPoints": 125.82,
+            "fantasyPointsOpponent": 125.82,
+            "userNameOpponent": "billsfan777",
+            "numberTicketsWon": 0,
+            "ticketsValue": 0,
+            "winningValue": 10,
+            "winnings": [
+                {
+                    "value": 10,
+                    "description": "Cash"
+                }
+            ]
+        },
+        {
+            "roster": {
+                "scorecards": [
+                    {
+                        "firstName": "Josh",
+                        "lastName": "Allen",
+                        "shortName": "J. Allen",
+                        "displayName": "Josh Allen",
+                        "rosterPositionId": 511,
+                        "rosterPosition": "CPT",
+                        "rosterPositionSortOrder": 1,
+                        "eTag": "352",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "96.51"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "68.21"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":868199}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 96.51,
+                        "draftableId": 26368922,
+                        "score": 42.12,
+                        "stats": [
+                            {
+                                "statId": 36,
+                                "name": "Passing Touchdowns",
+                                "abbreviation": "PaTD",
+                                "fantasyPoints": 18,
+                                "statValue": 3,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 38,
+                                "name": "Rushing Touchdowns",
+                                "abbreviation": "RuTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 39,
+                                "name": "Passing Yards",
+                                "abbreviation": "PaYds",
+                                "fantasyPoints": 21.12,
+                                "statValue": 352,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 41,
+                                "name": "Rushing Yards",
+                                "abbreviation": "RuYds",
+                                "fantasyPoints": 3,
+                                "statValue": 20,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 46,
+                                "name": "Interceptions Thrown",
+                                "abbreviation": "INT",
+                                "fantasyPoints": -3,
+                                "statValue": 2,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 47,
+                                "name": "300+ Yards Passing Game",
+                                "abbreviation": "300+Pass",
+                                "fantasyPoints": 4.5,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 48,
+                                "name": "100+ Rushing Game",
+                                "abbreviation": "100+Rush",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 50,
+                                "name": "Fumbles Lost",
+                                "abbreviation": "FUM",
+                                "fantasyPoints": -1.5,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            }
+                        ],
+                        "statsDescription": "3 PaTD, 352 PaYds, 20 RuYds, 2 INT, 1 300+Pass, 1 FUM",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Tyreek",
+                        "lastName": "Hill",
+                        "shortName": "T. Hill",
+                        "displayName": "Tyreek Hill",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "305",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "29.75"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "2.03"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":823156}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 29.75,
+                        "draftableId": 26368976,
+                        "score": 16.4,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 38,
+                                "name": "Rushing Touchdowns",
+                                "abbreviation": "RuTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 6.9,
+                                "statValue": 69,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 41,
+                                "name": "Rushing Yards",
+                                "abbreviation": "RuYds",
+                                "fantasyPoints": 0.5,
+                                "statValue": 5,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 7,
+                                "statValue": 7,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 48,
+                                "name": "100+ Rushing Game",
+                                "abbreviation": "100+Rush",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 51,
+                                "name": "2 Point Conversions",
+                                "abbreviation": "2PT",
+                                "fantasyPoints": 2,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 70,
+                                "name": "2PTs Passing",
+                                "abbreviation": "2PtPass",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 15,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "69 RecYds, 5 RuYds, 7 REC, 1 2PT",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF"
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": ""
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Stefon",
+                        "lastName": "Diggs",
+                        "shortName": "S. Diggs",
+                        "displayName": "Stefon Diggs",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "350",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "83.31"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "8.13"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":694041}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 83.31,
+                        "draftableId": 26368977,
+                        "score": 21.4,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 11.4,
+                                "statValue": 114,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 7,
+                                "statValue": 7,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 3,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 9,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "114 RecYds, 7 REC, 1 100+Rec",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Gabe",
+                        "lastName": "Davis",
+                        "shortName": "G. Davis",
+                        "displayName": "Gabe Davis",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "296",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "39.04"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "2.47"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":976761}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 39.04,
+                        "draftableId": 26368984,
+                        "score": 26.3,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 6,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 11.3,
+                                "statValue": 113,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 6,
+                                "statValue": 6,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 3,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 9,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "1 RecTD, 113 RecYds, 6 REC, 1 100+Rec",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Khalil",
+                        "lastName": "Shakir",
+                        "shortName": "K. Shakir",
+                        "displayName": "Khalil Shakir",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "352",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "12.48"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":1130603}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 12.48,
+                        "draftableId": 26369000,
+                        "score": 8.1,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 5.1,
+                                "statValue": 51,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 3,
+                                "statValue": 3,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 5,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "51 RecYds, 3 REC",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    },
+                    {
+                        "firstName": "Cole",
+                        "lastName": "Beasley",
+                        "shortName": "C. Beasley",
+                        "displayName": "Cole Beasley",
+                        "rosterPositionId": 512,
+                        "rosterPosition": "FLEX",
+                        "rosterPositionSortOrder": 2,
+                        "eTag": "344",
+                        "playerUtilizations": [
+                            {
+                                "displayKey": "ALL",
+                                "value": "13.50"
+                            },
+                            {
+                                "displayKey": "CPT",
+                                "value": "0.44"
+                            }
+                        ],
+                        "playerLink": [
+                            {
+                                "DisplayText": "Boxscore",
+                                "DeepLink": "dklive://NFL/boxscores?gameid=5819869",
+                                "Priority": 1,
+                                "Tracking": "{\"link\":{\"LinkUrl\":\"dklive://NFL/boxscores?gameid=5819869\",\"LinkCopy\":\"Boxscore\",\"PlayerId\":460830}}",
+                                "PlayerLinkType": "DkLiveCompetitionLink"
+                            }
+                        ],
+                        "percentDrafted": 13.50,
+                        "draftableId": 26369002,
+                        "score": 11.5,
+                        "stats": [
+                            {
+                                "statId": 37,
+                                "name": "Receiving Touchdowns",
+                                "abbreviation": "RecTD",
+                                "fantasyPoints": 6,
+                                "statValue": 1,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 40,
+                                "name": "Receiving Yards",
+                                "abbreviation": "RecYds",
+                                "fantasyPoints": 3.5,
+                                "statValue": 35,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 44,
+                                "name": "Receptions",
+                                "abbreviation": "REC",
+                                "fantasyPoints": 2,
+                                "statValue": 2,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 49,
+                                "name": "100+ Receiving Game",
+                                "abbreviation": "100+Rec",
+                                "fantasyPoints": 0,
+                                "statValue": 0,
+                                "contributesToScoring": true
+                            },
+                            {
+                                "statId": 467,
+                                "name": "Targets",
+                                "abbreviation": "Targets",
+                                "fantasyPoints": 0,
+                                "statValue": 5,
+                                "contributesToScoring": false
+                            }
+                        ],
+                        "statsDescription": "1 RecTD, 35 RecYds, 2 REC",
+                        "timeRemainingUnit": "PMR",
+                        "timeRemaining": 0,
+                        "maxTimeRemaining": 0,
+                        "competition": {
+                            "competitionId": 5819869,
+                            "name": "MIA 31 @ BUF 34",
+                            "nameDisplay": [
+                                {
+                                    "value": "MIA"
+                                },
+                                {
+                                    "value": " 31"
+                                },
+                                {
+                                    "value": " @ "
+                                },
+                                {
+                                    "value": "BUF",
+                                    "isEmphasized": true
+                                },
+                                {
+                                    "value": " 34"
+                                }
+                            ],
+                            "timeStatus": "Final",
+                            "competitionStatus": "ScoresOfficial",
+                            "attributes": {
+                                "timeRemaining": "Final",
+                                "homeTeamScore": "34",
+                                "awayTeamScore": "31",
+                                "quarter": "4",
+                                "dkLiveLinkText": "Boxscore",
+                                "dkLiveLink": "dklive://NFL/boxscores?gameid=5819869"
+                            },
+                            "startTime": "2023-01-15T18:00:00.0000000Z"
+                        },
+                        "projection": {
+                            "valueIcon": "fire"
+                        },
+                        "attributes": {
+
+                        },
+                        "playerStates": [
+
+                        ]
+                    }
+                ]
+            },
+            "draftGroupId": 80584,
+            "contestKey": "140039397",
+            "entryKey": "3618897002",
+            "lineupId": -1,
+            "userName": "billsfan777",
+            "userKey": "1510",
+            "userEntryCount": 1,
+            "userEntryIndex": 1,
+            "timeRemaining": 0,
+            "timeRemainingUnit": "PMR",
+            "maxTimeRemaining": 360,
+            "timeRemainingOpponent": 0,
+            "rank": 1,
+            "fantasyPoints": 125.82,
+            "fantasyPointsOpponent": 125.82,
+            "userNameOpponent": "CALMLYDOMINATING",
+            "numberTicketsWon": 0,
+            "ticketsValue": 0,
+            "winningValue": 10,
+            "winnings": [
+                {
+                    "value": 10,
+                    "description": "Cash"
+                }
+            ]
+        }
+    ]
+}

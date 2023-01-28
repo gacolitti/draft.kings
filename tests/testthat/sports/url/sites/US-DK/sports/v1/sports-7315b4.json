@@ -58,7 +58,7 @@
             "sportId": 10,
             "fullName": "Nascar",
             "sortOrder": 7,
-            "hasPublicContests": false,
+            "hasPublicContests": true,
             "isEnabled": true,
             "regionFullSportName": "Nascar",
             "regionAbbreviatedSportName": "NAS"

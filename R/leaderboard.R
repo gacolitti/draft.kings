@@ -39,3 +39,48 @@ dk_get_leaderboard <- function(contest_id,
   dk_request_process(req, output, objclass = "leaderboard_resp")
 
 }
+
+#' Get Entry Details
+#'
+#' Fetch details for entries in a contest,
+#' including the drafted roster for each
+#' entry, stats for each player in an entry roster,
+#' and the fantasy points associated to each stat.
+#'
+#' @inheritParams dk_request_process
+#' @inheritParams get_contest_info
+#' @inheritParams dk_get_leaderboard
+#' @inheritParams get_draftable_players
+#' @inheritDotParams get_contest_info
+#' @param entry_keys Vector of numeric (or character) keys that correspond to a specific entry in
+#'   a specific contest. See output from [dk_get_leaderboard()].
+#'
+#' @examples
+#'   \dontrun{
+#'     dk_get_entries(draft_group_id = 80584, entry_keys = c(3618408508, 3618897002))
+#'   }
+#'
+#' @export
+dk_get_entries <- function(draft_group_id,
+                           entry_keys,
+                           cookiefile = path.expand("~/cookies.txt"),
+                           output = c("cleaned_json", "json", "response", "request"),
+                           ...) {
+
+  output <- rlang::arg_match(output)
+
+  req <- dk_request(
+    ...,
+    paths = glue::glue("scores/v2/entries/{draft_group_id}/{paste0(entry_keys, collapse = ',')}"),
+    query_params = list(
+      "format" = "json",
+      "embed" = "roster"
+    ),
+    curl_options = list(
+      "cookiefile" = cookiefile
+    )
+  )
+
+  dk_request_process(req, output, objclass = "entries_resp")
+
+}
