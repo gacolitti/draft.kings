@@ -11,7 +11,7 @@ httptest2::with_mock_dir("draftgroup", {
 
   test_that("dk_get_draft_group() works when passed a contest ID", {
 
-    d <- dk_get_draft_group(contest_id = 5915939)
+    d <- dk_get_draft_group(contest_key = 5915939)
 
     expect_snapshot(d)
 

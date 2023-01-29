@@ -16,7 +16,7 @@ dk_prepare_schematic(
 }
 \arguments{
 \item{draft_group_id}{Sequence of digits that correspond to a draft table/group.
-If \code{draft_group_id} and \code{contest_id} are both passed, \code{contest_id} is ignored.}
+If \code{draft_group_id} and \code{contest_key} are both passed, \code{contest_key} is ignored.}
 
 \item{draft_group_exp_fp}{A data.frame with two columns \code{draftable_id}
 (found in the output of \code{get_draftable_players()}) and \code{exp_fp}

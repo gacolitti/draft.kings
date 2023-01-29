@@ -17,7 +17,7 @@
 #'   }
 #'
 #' @export
-dk_get_leaderboard <- function(contest_id,
+dk_get_leaderboard <- function(contest_key,
                                cookiefile = path.expand("~/cookies.txt"),
                                output = c("cleaned_json", "json", "response", "request"),
                                ...) {
@@ -26,7 +26,7 @@ dk_get_leaderboard <- function(contest_id,
 
   req <- dk_request(
     ...,
-    paths = glue::glue("scores/v1/leaderboards/{contest_id}"),
+    paths = glue::glue("scores/v1/leaderboards/{contest_key}"),
     query_params = list(
       "format" = "json",
       "embed" = "leaderboard"

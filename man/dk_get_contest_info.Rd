@@ -5,13 +5,13 @@
 \title{Get Contest Info}
 \usage{
 dk_get_contest_info(
-  contest_id,
+  contest_key,
   output = c("cleaned_json", "json", "response", "request"),
   ...
 )
 }
 \arguments{
-\item{contest_id}{The sequence of digits that correspond to a specific contest.
+\item{contest_key}{The sequence of digits that correspond to a specific contest.
 This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}

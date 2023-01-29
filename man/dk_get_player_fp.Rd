@@ -26,7 +26,7 @@ to parse the JSON body,}
 \item{...}{
   Arguments passed on to \code{\link[=dk_get_contest_info]{dk_get_contest_info}}
   \describe{
-    \item{\code{contest_id}}{The sequence of digits that correspond to a specific contest.
+    \item{\code{contest_key}}{The sequence of digits that correspond to a specific contest.
 This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}

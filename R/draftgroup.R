@@ -1,16 +1,16 @@
 
 #' Check Draft Group Inputs
 #'
-#' Use either `draft_group_id` or `contest_id` if `draft_group_id` is `NULL`.
+#' Use either `draft_group_id` or `contest_key` if `draft_group_id` is `NULL`.
 #' @inheritParams dk_get_draft_group
 #' @keywords internal
-check_draft_group_id <- function(draft_group_id = NULL, contest_id = NULL) {
+check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 
   # Ensure at least one argument is passed
-  if (all(is.null(draft_group_id), is.null(contest_id))) {
+  if (all(is.null(draft_group_id), is.null(contest_key))) {
 
     cli::cli_abort(
-      "`draft_group_id` and `contest_id` cannot both be missing"
+      "`draft_group_id` and `contest_key` cannot both be missing"
     )
 
   }
@@ -18,7 +18,7 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_id = NULL) {
   # Get draft_group_id when it is missing
   if (is.null(draft_group_id)) {
 
-    draft_group_id <- dk_get_contest_info(contest_id)$draft_group_id
+    draft_group_id <- dk_get_contest_info(contest_key)$draft_group_id
 
   }
 
@@ -38,7 +38,7 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_id = NULL) {
 #' @importFrom rlang .data .env
 #'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
-#'   If `draft_group_id` and `contest_id` are both passed, `contest_id` is ignored.
+#'   If `draft_group_id` and `contest_key` are both passed, `contest_key` is ignored.
 #'
 #' @examples
 #'   \dontrun{
@@ -47,13 +47,13 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_id = NULL) {
 #'
 #' @export
 dk_get_draft_group <- function(draft_group_id = NULL,
-                                  contest_id = NULL,
+                                  contest_key = NULL,
                                   output = c("cleaned_json", "json", "response", "request"),
                                   ...) {
 
   output <- rlang::arg_match(output)
 
-  draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
+  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
   req <- dk_request(
     ...,
@@ -101,13 +101,13 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
 #'
 #' @export
 dk_get_draft_group_info <- function(draft_group_id = NULL,
-                                 contest_id = NULL,
+                                 contest_key = NULL,
                                  output = c("cleaned_json", "json", "response", "request"),
                                  ...) {
 
   output <- rlang::arg_match(output)
 
-  draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
+  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
   req <- dk_request(
     ...,
@@ -127,13 +127,13 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
 #'
 #' @export
 dk_get_player_list <- function(draft_group_id = NULL,
-                            contest_id = NULL,
+                            contest_key = NULL,
                             output = c("cleaned_json", "json", "response", "request"),
                             ...) {
 
   output <- rlang::arg_match(output)
 
-  draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
+  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
   req <- dk_request(
     ...,
@@ -155,13 +155,13 @@ dk_get_player_list <- function(draft_group_id = NULL,
 #'
 #' @export
 dk_get_team_list <- function(draft_group_id = NULL,
-                          contest_id = NULL,
+                          contest_key = NULL,
                           output = c("cleaned_json", "json", "response", "request"),
                           ...) {
 
   output <- rlang::arg_match(output)
 
-  draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
+  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
   req <- dk_request(
     ...,
