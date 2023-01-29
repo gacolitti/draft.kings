@@ -20,9 +20,9 @@
       #   is_swappable <lgl>, is_disabled <lgl>, news_status <chr>,
       #   player_image50 <chr>, player_image160 <chr>, alt_player_image50 <chr>,
       #   alt_player_image160 <chr>, team_id <dbl>, team_abbreviation <chr>,
-      #   player_game_hash <chr>, competition_competition_id <dbl>,
-      #   competition_name <chr>, competition_start_time <chr>, and abbreviated
-      #   variable names 1: first_name, 2: last_name, 3: display_name, ...
+      #   player_game_hash <chr>, competition_id <dbl>, competition_name <chr>,
+      #   competition_start_time <chr>, and abbreviated variable names 1: first_name,
+      #   2: last_name, 3: display_name, 4: short_name, 5: player_id, ...
 
 # dk_get_draft_group() works when passed a contest ID
 
@@ -45,10 +45,10 @@
       # ... with 1,255 more rows, 13 more variables: salary <dbl>, status <chr>,
       #   is_swappable <lgl>, is_disabled <lgl>, news_status <chr>,
       #   player_image50 <chr>, player_image160 <chr>, team_id <dbl>,
-      #   team_abbreviation <chr>, player_game_hash <chr>,
-      #   competition_competition_id <dbl>, competition_name <chr>,
-      #   competition_start_time <chr>, and abbreviated variable names 1: first_name,
-      #   2: last_name, 3: display_name, 4: short_name, 5: player_id, ...
+      #   team_abbreviation <chr>, player_game_hash <chr>, competition_id <dbl>,
+      #   competition_name <chr>, competition_start_time <chr>, and abbreviated
+      #   variable names 1: first_name, 2: last_name, 3: display_name, 4: short_name,
+      #   5: player_id, 6: player_dk_id, 7: position, 8: roster_slot_id
 
 # dk_get_lobby_draft_groups() returns expected data
 

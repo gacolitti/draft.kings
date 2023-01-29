@@ -61,9 +61,9 @@ dk_resp_parse.contest_info_resp <- function(resp) {
 
 }
 
-#' @method dk_resp_parse contests_resp
+#' @method dk_resp_parse lobby_contests_resp
 #' @export
-dk_resp_parse.contests_resp <- function(resp) {
+dk_resp_parse.lobby_contests_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
@@ -72,9 +72,9 @@ dk_resp_parse.contests_resp <- function(resp) {
 
 }
 
-#' @method dk_resp_parse gametype_rules_resp
+#' @method dk_resp_parse game_type_rules_resp
 #' @export
-dk_resp_parse.gametype_rules_resp <- function(resp) {
+dk_resp_parse.game_type_rules_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
@@ -115,10 +115,10 @@ dk_resp_parse.gametype_rules_resp <- function(resp) {
 
 }
 
-#' @method dk_resp_parse game_types_resp
+#' @method dk_resp_parse lobby_game_types_resp
 #' @importFrom rlang .data .env
 #' @export
-dk_resp_parse.game_types_resp <- function(resp) {
+dk_resp_parse.lobby_game_types_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
@@ -142,17 +142,18 @@ dk_resp_parse.game_types_resp <- function(resp) {
 
 
 
-dk_resp_parse.draftable_players_resp <- function(resp) {
+dk_resp_parse.draft_group_resp <- function(resp) {
 
   resp$draftables %>%
     extract_json() %>%
-    convert_json()
+    convert_json() %>%
+    stats::setNames(., gsub("competition_competition", "competition", colnames(.)))
 
 }
 
-#' @method dk_resp_parse draft_groups_resp
+#' @method dk_resp_parse lobby_draft_groups_resp
 #' @export
-dk_resp_parse.draft_groups_resp <- function(resp) {
+dk_resp_parse.lobby_draft_groups_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
@@ -220,10 +221,10 @@ dk_resp_parse.team_list_resp <- function(resp) {
 
 }
 
-#' @method dk_resp_parse player_points_resp
+#' @method dk_resp_parse player_fp_resp
 #'
 #' @export
-dk_resp_parse.player_points_resp <- function(resp) {
+dk_resp_parse.player_fp_resp <- function(resp) {
 
   resp <- extract_json(resp)
 

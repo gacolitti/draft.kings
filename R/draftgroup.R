@@ -66,7 +66,7 @@ dk_get_draft_group <- function(draft_group_id = NULL,
     )
   )
 
-  dk_request_process(req, output, objclass = "draftable_players_resp")
+  dk_request_process(req, output, objclass = "draft_group_resp")
 
 }
 
@@ -92,7 +92,7 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
     query_params = list(sport = sport)
   )
 
-  dk_request_process(req, output, objclass = "draft_groups_resp")
+  dk_request_process(req, output, objclass = "lobby_draft_groups_resp")
 
 }
 
@@ -211,6 +211,6 @@ dk_get_player_fp <- function(week,
       glue::glue('{{"sport":"{sport}","embed":"stats"}}')
     )
 
-  dk_request_process(req, output, objclass = "player_points_resp")
+  dk_request_process(req, output, objclass = "player_fp_resp")
 
 }

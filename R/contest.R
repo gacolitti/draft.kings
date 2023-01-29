@@ -57,7 +57,7 @@ dk_get_lobby_contests <- function(sport = NULL,
     query_params = list(sport = sport)
   )
 
-  dk_request_process(req, output, objclass = "contests_resp")
+  dk_request_process(req, output, objclass = "lobby_contests_resp")
 
 }
 
@@ -98,7 +98,7 @@ dk_get_game_type_rules <- function(game_type_id = NULL,
   req <- dk_request(...,
                     paths = glue::glue("lineups/v1/gametypes/{game_type_id}/rules"))
 
-  dk_request_process(req, output, objclass = "gametype_rules_resp")
+  dk_request_process(req, output, objclass = "game_type_rules_resp")
 
 }
 
@@ -123,6 +123,6 @@ dk_get_lobby_game_types <- function(sport = NULL,
     query_params = list(sport = sport)
   )
 
-  dk_request_process(req, output, objclass = "game_types_resp")
+  dk_request_process(req, output, objclass = "lobby_game_types_resp")
 
 }
