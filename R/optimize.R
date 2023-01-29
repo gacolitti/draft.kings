@@ -457,6 +457,6 @@ print.showdown_captain_mode_solution <- function(x, ...) {
 #' @export
 print.showdown_captain_mode_multiple_solutions <- function(x, ...) {
 
-  cat(cli::cli_text("Found {length(optimal_lineups)} showdown captain mode optimal lineup{?s}."))
+  cli::cli_alert_success("Found {length(x)} showdown captain mode optimal lineup{?s}.")
 
 }
