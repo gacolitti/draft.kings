@@ -2,12 +2,12 @@
 % Please edit documentation in R/optimize.R
 \name{dk_optimize_lineup.showdown_captain_mode}
 \alias{dk_optimize_lineup.showdown_captain_mode}
-\title{Optimize Showdown Captain Mode Contest Lineup}
+\title{Optimize Showdown Captain Mode Game Type Lineup}
 \usage{
-\method{dk_optimize_lineup}{showdown_captain_mode}(contest_schematic, max_points = NULL, ...)
+\method{dk_optimize_lineup}{showdown_captain_mode}(schematic, max_points = NULL, ...)
 }
 \arguments{
-\item{contest_schematic}{Output from \verb{[prepare_contest_schematic()]} which
+\item{schematic}{Output from \verb{[dk_prepare_schematic()]} which
 includes information needed for optimization; including player info such as,
 news status, salary, and projected fantasy points.}
 
@@ -19,5 +19,5 @@ to get many successive lineups in \verb{[get_optimal_lineups()]}}
 \description{
 Determine the optimal lineup of players based on the list of
 available players, their salaries, and their projected
-fantasy points for a showdown captain mode contest type.
+fantasy points for a showdown captain mode game type.
 }
