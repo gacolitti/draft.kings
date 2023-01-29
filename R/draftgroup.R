@@ -39,6 +39,8 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 #'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
 #'   If `draft_group_id` and `contest_key` are both passed, `contest_key` is ignored.
+#' @param draftable_ids Unique draftable IDs to filter by. If `NULL` (the default),
+#'   then all draftable IDs will be included in the result.
 #'
 #' @examples
 #'   \dontrun{
@@ -47,9 +49,10 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 #'
 #' @export
 dk_get_draft_group <- function(draft_group_id = NULL,
-                                  contest_key = NULL,
-                                  output = c("cleaned_json", "json", "response", "request"),
-                                  ...) {
+                               contest_key = NULL,
+                               draftable_ids = NULL,
+                               output = c("cleaned_json", "json", "response", "request"),
+                               ...) {
 
   output <- rlang::arg_match(output)
 
@@ -58,7 +61,8 @@ dk_get_draft_group <- function(draft_group_id = NULL,
   req <- dk_request(
     ...,
     paths = glue::glue(
-      "/draftgroups/v1/draftgroups/{draft_group_id}/draftables"
+      "/draftgroups/v1/draftgroups/{draft_group_id}/draftables/",
+      "{paste0(draftable_ids, collapse = ',')}"
     )
   )
 

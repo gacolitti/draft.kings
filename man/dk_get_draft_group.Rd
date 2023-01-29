@@ -7,6 +7,7 @@
 dk_get_draft_group(
   draft_group_id = NULL,
   contest_key = NULL,
+  draftable_ids = NULL,
   output = c("cleaned_json", "json", "response", "request"),
   ...
 )
@@ -19,6 +20,9 @@ If \code{draft_group_id} and \code{contest_key} are both passed, \code{contest_k
 This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
+
+\item{draftable_ids}{Unique draftable IDs to filter by. If \code{NULL} (the default),
+then all draftable IDs will be included in the result.}
 
 \item{output}{One of "cleaned_json" (the default),
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used

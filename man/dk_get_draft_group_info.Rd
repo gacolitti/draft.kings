@@ -27,7 +27,8 @@ to parse the JSON body,}
 \item{...}{
   Arguments passed on to \code{\link[=dk_get_draft_group]{dk_get_draft_group}}
   \describe{
-    \item{\code{}}{}
+    \item{\code{draftable_ids}}{Unique draftable IDs to filter by. If \code{NULL} (the default),
+then all draftable IDs will be included in the result.}
   }}
 }
 \description{
