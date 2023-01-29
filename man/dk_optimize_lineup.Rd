@@ -4,10 +4,10 @@
 \alias{dk_optimize_lineup}
 \title{Optimize Lineup}
 \usage{
-dk_optimize_lineup(contest_schematic, ...)
+dk_optimize_lineup(schematic, ...)
 }
 \arguments{
-\item{contest_schematic}{Output from \verb{[prepare_contest_schematic()]} which
+\item{schematic}{Output from \verb{[dk_prepare_schematic()]} which
 includes information needed for optimization; including player info such as,
 news status, salary, and projected fantasy points.}
 
@@ -15,5 +15,5 @@ news status, salary, and projected fantasy points.}
 }
 \description{
 Get optimal players based on player pool, projected fantasy points,
-and rules defined by a contest schematic.
+and rules defined by a schematic. See \code{\link[=dk_prepare_schematic]{dk_prepare_schematic()}}.
 }

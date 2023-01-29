@@ -4,10 +4,10 @@
 \alias{dk_extract_solution}
 \title{Extract Solution}
 \usage{
-dk_extract_solution(solved_model)
+dk_extract_solution(x)
 }
 \arguments{
-\item{solved_model}{Optimal lineup object created by \code{\link[=dk_optimize_lineup]{dk_optimize_lineup()}}.}
+\item{x}{Optimal lineup object created by \code{\link[=dk_optimize_lineup]{dk_optimize_lineup()}}.}
 }
 \description{
 Extract information from optimized lineup solution

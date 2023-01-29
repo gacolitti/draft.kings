@@ -5,14 +5,14 @@
 \title{Get Leaderboard}
 \usage{
 dk_get_leaderboard(
-  contest_id,
+  contest_key,
   cookiefile = path.expand("~/cookies.txt"),
   output = c("cleaned_json", "json", "response", "request"),
   ...
 )
 }
 \arguments{
-\item{contest_id}{The sequence of digits that correspond to a specific contest.
+\item{contest_key}{The sequence of digits that correspond to a specific contest.
 This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
@@ -24,7 +24,7 @@ is 133645678.}
 to parse the JSON body,}
 
 \item{...}{
-  Arguments passed on to \code{\link[=get_contest_info]{get_contest_info}}
+  Arguments passed on to \code{\link[=dk_get_contest_info]{dk_get_contest_info}}
   \describe{
     \item{\code{}}{}
   }}

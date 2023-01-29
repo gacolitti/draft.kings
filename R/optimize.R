@@ -1,21 +1,21 @@
 
 ## Prep and extract  -------------------------------------------------------------------------------
 
-#' Prepare Contest Schematic
+#' Prepare Schematic
 #'
 #' Combine information needed for optimization.
 #' Passed to `dk_optimize()`.
 #'
-#' @inheritParams get_contest_info
+#' @inheritParams dk_get_draft_group
 #'
 #' @importFrom rlang .data .env
 #'
 #' @param draft_group Object returned by `get_draftable_players()`. If `NULL` (the default),
-#'   then this object is fetched using the `contest_id`. The following columns are required:
+#'   then this object is fetched using the `draft_group_id`. The following columns are required:
 #'    draftable_id, player_id, first_name, last_name, display_name, salary, team_id, status.
 #' @param draft_group_exp_fp A data.frame with two columns `draftable_id`
 #'   (found in the output of `get_draftable_players()`) and `exp_fp`
-#'   (expected fantasy points). Note that the Showdown Captain Mode contest type includes
+#'   (expected fantasy points). Note that the Showdown Captain Mode game type includes
 #'   two rows for each player/defense. If `draft_group` contains rows not found in
 #'   `draft_group_exp_fp`, then a warning is issued and those missing rows are dropped.
 #'   If `NULL` (the default), then `exp_fp` is set equal to the `ppg` value returned by
@@ -24,18 +24,18 @@
 #'   all players found with `get_draftable_players()`.
 #' @param exclude_players A vector of player IDs to exclude.
 #' @param rules Object returned by `get_gametype_rules()`. If `NULL` (the default),
-#'   rules are fetched using the `contest_id`.
+#'   rules are fetched using the `draft_group_id`.
 #' @param exclude_questionable Exclude players with statuses that indicate
 #'   they will not play. These include players that are questionable,
 #'   doubtful, out, and injured.
 #'
 #' @examples
 #'   \dontrun{
-#'     prepare_contest_schematic(contest_id = 133645678)
+#'     dk_prepare_schematic(draft_group_id = 75367)
 #'   }
 #'
 #' @export
-prepare_contest_schematic <- function(contest_id,
+dk_prepare_schematic <- function(draft_group_id,
                                       draft_group_exp_fp = NULL,
                                       draft_group = NULL,
                                       rules = NULL,
@@ -94,30 +94,30 @@ prepare_contest_schematic <- function(contest_id,
 
     if (length(missing_cols) > 0) {
 
-      cli::cli_abort("Missing required column(?s) from `draft_group` {missing_cols}")
+      cli::cli_abort("Missing required column(?s) from `draft_group`: {missing_cols}")
 
     }
 
   }
 
-  # Fetch contest info if rules, draft_group, or draft_group_exp_fp not passed
+  # Fetch draft group info if rules, draft_group, or draft_group_exp_fp not passed
   if (is.null(rules) || is.null(draft_group) || is.null(draft_group_exp_fp)) {
 
-    contest_info <- get_contest_info(contest_id)
+    draft_group_info <- dk_get_draft_group_info(draft_group_id)
 
   }
 
   # Fetch rules if not passed
   if (is.null(rules)) {
 
-    rules <- get_gametype_rules(game_type_id = contest_info$game_type_id)
+    rules <- dk_get_game_type_rules(game_type_id = draft_group_info$game_type_id)
 
   }
 
   # Fetch draft group if not passed
   if (is.null(draft_group)) {
 
-    draft_group <- get_draftable_players(draft_group_id = contest_info$draft_group_id)
+    draft_group <- dk_get_draft_group(draft_group_id)
 
   }
 
@@ -181,7 +181,7 @@ prepare_contest_schematic <- function(contest_id,
   # Add expected fantasy points to draft group
   if (is.null(draft_group_exp_fp)) {
 
-    player_list <- get_player_list(draft_group_id = contest_info$draft_group_id) %>%
+    player_list <- dk_get_player_list(draft_group_id) %>%
       dplyr::transmute("player_id" = .data$pid, "exp_fp" = as.numeric(.data$ppg))
 
     draft_group <- draft_group %>%
@@ -212,7 +212,7 @@ prepare_contest_schematic <- function(contest_id,
   # Combine objects into list
   out <- list(draft_group = draft_group,
               rules = rules,
-              contest_id = contest_id)
+              draft_group_id = draft_group_id)
 
   # Add class based on game type found in rules
   class(out) <- c(clean_names(rules$game_type_name), class(out))
@@ -225,22 +225,23 @@ prepare_contest_schematic <- function(contest_id,
 #'
 #' Extract information from optimized lineup solution
 #'
-#' @param solved_model Optimal lineup object created by [draft.kings::dk_optimize_lineup()].
+#' @param x Optimal lineup object created by [draft.kings::dk_optimize_lineup()].
 #'
 #' @export
-dk_extract_solution <- function(solved_model) {
+dk_extract_solution <- function(x) {
 
-  res <- solved_model$solved_model %>%
+  res <- x$solved_model %>%
     ompr::get_solution(draftable_id[i]) %>%
     dplyr::filter(.data$value > 0) %>%
-    dplyr::inner_join(solved_model$contest_schematic$draft_group, by = c("i" = "row_number")) %>%
+    dplyr::inner_join(x$schematic$draft_group, by = c("i" = "row_number")) %>%
     dplyr::select(-dplyr::any_of(c("i", "value", "variable"))) %>%
     dplyr::arrange(dplyr::desc(.data$is_captain))
 
   list(
     optimal_lineup = res,
-    salary = sum(res$salary),
-    expected_points = ompr::objective_value(solved_model$solved_model)
+    draft_group_id = x$schematic$draft_group_id,
+    salary_total = sum(res$salary),
+    exp_fp_total = ompr::objective_value(x$solved_model)
   )
 
 }
@@ -257,7 +258,7 @@ dk_extract_solution <- function(solved_model) {
 #'   Usually the default of 0.001 is fine.
 #'
 #' @export
-dk_get_optimal_lineups <-function(contest_schematic,
+dk_get_optimal_lineups <-function(schematic,
                                   n = 1,
                                   tolerance = 0.001) {
 
@@ -273,7 +274,7 @@ dk_get_optimal_lineups <-function(contest_schematic,
     }
 
     optimal_lineups[[i]] <- dk_optimize_lineup(
-      contest_schematic = contest_schematic,
+      schematic = schematic,
       max_points = max_points
     )
 
@@ -328,27 +329,27 @@ dk_write_lineups_to_csv <- function(optimal_lineups, file = "lineups.csv") {
 #' Optimize Lineup
 #'
 #' Get optimal players based on player pool, projected fantasy points,
-#' and rules defined by a contest schematic.
+#' and rules defined by a schematic. See [dk_prepare_schematic()].
 #'
-#' @param contest_schematic Output from `[prepare_contest_schematic()]` which
+#' @param schematic Output from `[dk_prepare_schematic()]` which
 #'   includes information needed for optimization; including player info such as,
 #'   news status, salary, and projected fantasy points.
 #' @param ... Other arguments passed to optimization method.
 #'
 #' @export
-dk_optimize_lineup <- function(contest_schematic, ...) {
+dk_optimize_lineup <- function(schematic, ...) {
 
   UseMethod("dk_optimize_lineup")
 
 }
 
-#' Optimize Showdown Captain Mode Contest Lineup
+#' Optimize Showdown Captain Mode Game Type Lineup
 #'
 #' Determine the optimal lineup of players based on the list of
 #' available players, their salaries, and their projected
-#' fantasy points for a showdown captain mode contest type.
+#' fantasy points for a showdown captain mode game type.
 #'
-#' @inheritParams prepare_contest_schematic
+#' @inheritParams dk_prepare_schematic
 #' @inheritParams dk_optimize_lineup
 #' @importFrom rlang .data .env
 #' @import ROI.plugin.glpk
@@ -357,11 +358,11 @@ dk_optimize_lineup <- function(contest_schematic, ...) {
 #'
 #' @method dk_optimize_lineup showdown_captain_mode
 #' @export
-dk_optimize_lineup.showdown_captain_mode <- function(contest_schematic, max_points = NULL, ...) {
+dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NULL, ...) {
 
-  draft_group <- contest_schematic$draft_group
-  rules <- contest_schematic$rules
-  contest_id <- contest_schematic$contest_id
+  draft_group <- schematic$draft_group
+  rules <- schematic$rules
+  draft_group_id <- schematic$draft_group_id
 
   mod <- ompr::MIPModel() %>%
     ompr::add_variable(draftable_id[i],
@@ -433,7 +434,7 @@ dk_optimize_lineup.showdown_captain_mode <- function(contest_schematic, max_poin
   solved_model <- ompr::solve_model(mod, ompr.roi::with_ROI(solver = "glpk"))
 
   out <- list(solved_model = solved_model,
-              contest_schematic = contest_schematic)
+              schematic = schematic)
 
   class(out) <- c("showdown_captain_mode_solution", class(out))
 
@@ -457,6 +458,6 @@ print.showdown_captain_mode_solution <- function(x, ...) {
 #' @export
 print.showdown_captain_mode_multiple_solutions <- function(x, ...) {
 
-  cat(cli::cli_text("Found {length(optimal_lineups)} showdown captain mode optimal lineup{?s}."))
+  cli::cli_alert_success("Found {length(x)} showdown captain mode optimal lineup{?s}.")
 
 }

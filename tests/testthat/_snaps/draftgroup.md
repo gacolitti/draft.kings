@@ -1,4 +1,4 @@
-# get_draftable_players() works when passed a draftgroup ID
+# dk_get_draft_group() works when passed a draftgroup ID
 
     Code
       d
@@ -24,7 +24,7 @@
       #   competition_name <chr>, competition_start_time <chr>, and abbreviated
       #   variable names 1: first_name, 2: last_name, 3: display_name, ...
 
-# get_draftable_players() works when passed a contest ID
+# dk_get_draft_group() works when passed a contest ID
 
     Code
       d
@@ -50,12 +50,12 @@
       #   competition_start_time <chr>, and abbreviated variable names 1: first_name,
       #   2: last_name, 3: display_name, 4: short_name, 5: player_id, ...
 
-# get_draft_groups() returns expected data
+# dk_get_lobby_draft_groups() returns expected data
 
     Code
       d
     Output
-      # A tibble: 76 x 17
+      # A tibble: 44 x 17
          draft~1 conte~2 start~3 start~4 sort_~5 draft~6 game_~7 game_~8 sport~9 sport
            <dbl>   <dbl> <chr>   <chr>     <dbl> <chr>     <dbl> <lgl>     <dbl> <chr>
        1   81315      21 2023-0~ 2023-0~       1 "Featu~       1 NA            0 NFL  
@@ -66,16 +66,16 @@
        6   81317      96 2023-0~ 2023-0~       8 "Featu~      96 NA            0 NFL  
        7   81320     108 2023-0~ 2023-0~      10 "Featu~     108 NA            0 NFL  
        8   81321     110 2023-0~ 2023-0~      11 "Featu~     110 NA            0 NFL  
-       9   81210     159 2023-0~ 2023-0~      21 ""          159 NA            0 NFL  
-      10   81211     158 2023-0~ 2023-0~      22 "Featu~     158 NA            0 NFL  
-      # ... with 66 more rows, 7 more variables: game_count <dbl>,
+       9   81430     158 2023-0~ 2023-0~      26 ""          158 NA            0 NFL  
+      10   81432     159 2023-0~ 2023-0~      28 ""          159 NA            0 NFL  
+      # ... with 34 more rows, 7 more variables: game_count <dbl>,
       #   contest_start_time_suffix <chr>, contest_start_time_type <dbl>,
       #   games <lgl>, draft_group_series_id <dbl>, game_set_key <chr>,
       #   allowugc <lgl>, and abbreviated variable names 1: draft_group_id,
       #   2: contest_type_id, 3: start_date, 4: start_date_est, 5: sort_order,
       #   6: draft_group_tag, 7: game_type_id, 8: game_type, 9: sport_sort_order
 
-# get_draft_group_info() returns expected data
+# dk_get_draft_group_info() returns expected data
 
     Code
       d
@@ -92,7 +92,7 @@
       #   competition_status_detail <chr>, game_attributes_type_id1 <chr>,
       #   game_attributes_value1 <chr>, game_attributes_type_id2 <chr>, ...
 
-# get_player_list() returns expected data
+# dk_get_player_list() returns expected data
 
     Code
       d
@@ -116,7 +116,7 @@
       #   ipc <lgl>, pp <dbl>, i <chr>, news <dbl>, img_lg <chr>, alt_img_lg <chr>,
       #   img_sm <chr>, alt_img_sm <chr>
 
-# get_team_list() returns expected data
+# dk_get_team_list() returns expected data
 
     Code
       d
@@ -126,7 +126,7 @@
         <chr> <dbl> <chr> <dbl> <chr>                 <dbl> <dbl> <chr>        <dbl>
       1 LV      341 NO      350 /Date(1665252000000)/     0     1 Final            4
 
-# get_player_points() returns expected data
+# dk_get_player_fp() returns expected data
 
     Code
       d

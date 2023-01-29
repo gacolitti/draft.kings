@@ -7,8 +7,8 @@
 #' for each entry, rank, and winnings.
 #'
 #' @inheritParams dk_request_process
-#' @inheritParams get_contest_info
-#' @inheritDotParams get_contest_info
+#' @inheritParams dk_get_contest_info
+#' @inheritDotParams dk_get_contest_info
 #' @param cookiefile Path to the cookies needed to perform API request.
 #'
 #' @examples
@@ -17,7 +17,7 @@
 #'   }
 #'
 #' @export
-dk_get_leaderboard <- function(contest_id,
+dk_get_leaderboard <- function(contest_key,
                                cookiefile = path.expand("~/cookies.txt"),
                                output = c("cleaned_json", "json", "response", "request"),
                                ...) {
@@ -26,7 +26,7 @@ dk_get_leaderboard <- function(contest_id,
 
   req <- dk_request(
     ...,
-    paths = glue::glue("scores/v1/leaderboards/{contest_id}"),
+    paths = glue::glue("scores/v1/leaderboards/{contest_key}"),
     query_params = list(
       "format" = "json",
       "embed" = "leaderboard"
@@ -48,10 +48,10 @@ dk_get_leaderboard <- function(contest_id,
 #' and the fantasy points associated to each stat.
 #'
 #' @inheritParams dk_request_process
-#' @inheritParams get_contest_info
+#' @inheritParams dk_get_contest_info
 #' @inheritParams dk_get_leaderboard
-#' @inheritParams get_draftable_players
-#' @inheritDotParams get_contest_info
+#' @inheritParams dk_get_draft_group
+#' @inheritDotParams dk_get_contest_info
 #' @param entry_keys Vector of numeric (or character) keys that correspond to a specific entry in
 #'   a specific contest. See output from [dk_get_leaderboard()].
 #'

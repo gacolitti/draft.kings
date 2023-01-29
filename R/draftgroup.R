@@ -1,15 +1,16 @@
 
 #' Check Draft Group Inputs
 #'
-#' Use either `draft_group_id` or `contest_id` if `draft_group_id` is `NULL`.
-#' @inheritParams get_draftable_players
-check_draft_group_id <- function(draft_group_id = NULL, contest_id = NULL) {
+#' Use either `draft_group_id` or `contest_key` if `draft_group_id` is `NULL`.
+#' @inheritParams dk_get_draft_group
+#' @keywords internal
+check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 
   # Ensure at least one argument is passed
-  if (all(is.null(draft_group_id), is.null(contest_id))) {
+  if (all(is.null(draft_group_id), is.null(contest_key))) {
 
     cli::cli_abort(
-      "`draft_group_id` and `contest_id` cannot both be missing"
+      "`draft_group_id` and `contest_key` cannot both be missing"
     )
 
   }
@@ -17,7 +18,7 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_id = NULL) {
   # Get draft_group_id when it is missing
   if (is.null(draft_group_id)) {
 
-    draft_group_id <- get_contest_info(contest_id)$draft_group_id
+    draft_group_id <- dk_get_contest_info(contest_key)$draft_group_id
 
   }
 
@@ -25,19 +26,21 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_id = NULL) {
 
 }
 
-#' Get Draftable Players
+#' Get Draft group
 #'
-#' Fetch information on the available lineup for a specific
-#'   competition. In particular, this includes player names/IDs and
-#'   their salaries.
+#' Fetch information on the available players for a specific
+#' draft group ID. In particular, this includes player names/IDs and
+#' their salaries.
 #'
-#' @inheritParams get_contest_info
-#' @inheritDotParams get_contest_info
+#' @inheritParams dk_get_contest_info
+#' @inheritDotParams dk_get_contest_info
 #'
 #' @importFrom rlang .data .env
 #'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
-#'   If `draft_group_id` and `contest_id` are both passed, `contest_id` is ignored.
+#'   If `draft_group_id` and `contest_key` are both passed, `contest_key` is ignored.
+#' @param draftable_ids Unique draftable IDs to filter by. If `NULL` (the default),
+#'   then all draftable IDs will be included in the result.
 #'
 #' @examples
 #'   \dontrun{
@@ -45,19 +48,21 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_id = NULL) {
 #'   }
 #'
 #' @export
-get_draftable_players <- function(draft_group_id = NULL,
-                                  contest_id = NULL,
-                                  output = c("cleaned_json", "json", "response", "request"),
-                                  ...) {
+dk_get_draft_group <- function(draft_group_id = NULL,
+                               contest_key = NULL,
+                               draftable_ids = NULL,
+                               output = c("cleaned_json", "json", "response", "request"),
+                               ...) {
 
   output <- rlang::arg_match(output)
 
-  draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
+  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
   req <- dk_request(
     ...,
     paths = glue::glue(
-      "/draftgroups/v1/draftgroups/{draft_group_id}/draftables"
+      "/draftgroups/v1/draftgroups/{draft_group_id}/draftables/",
+      "{paste0(draftable_ids, collapse = ',')}"
     )
   )
 
@@ -65,15 +70,16 @@ get_draftable_players <- function(draft_group_id = NULL,
 
 }
 
-#' Get List of Draft Groups
+#' Get List of Draft Groups in Lobby
 #'
 #' Fetch the full table of draft groups and related info
+#' currently present at \url{www.draftkings.com/lobby}.
 #'
-#' @inheritParams get_contests
-#' @inheritDotParams get_contests
+#' @inheritParams dk_get_lobby_contests
+#' @inheritDotParams dk_get_lobby_contests
 #'
 #' @export
-get_draft_groups <- function(sport = NULL,
+dk_get_lobby_draft_groups <- function(sport = NULL,
                              output = c("cleaned_json", "json", "response", "request"),
                              ...) {
 
@@ -94,18 +100,18 @@ get_draft_groups <- function(sport = NULL,
 #'
 #' Fetch info for a specific draft group
 #'
-#' @inheritParams get_draftable_players
-#' @inheritDotParams get_draftable_players
+#' @inheritParams dk_get_draft_group
+#' @inheritDotParams dk_get_draft_group
 #'
 #' @export
-get_draft_group_info <- function(draft_group_id = NULL,
-                                 contest_id = NULL,
+dk_get_draft_group_info <- function(draft_group_id = NULL,
+                                 contest_key = NULL,
                                  output = c("cleaned_json", "json", "response", "request"),
                                  ...) {
 
   output <- rlang::arg_match(output)
 
-  draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
+  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
   req <- dk_request(
     ...,
@@ -118,20 +124,20 @@ get_draft_group_info <- function(draft_group_id = NULL,
 
 #' Get Player List
 #'
-#' Fetch list of players for a specific draft group and related info
+#' Fetch list of players and related info for a specific draft group.
 #'
-#' @inheritParams get_draft_group_info
-#' @inheritDotParams get_draft_group_info
+#' @inheritParams dk_get_draft_group_info
+#' @inheritDotParams dk_get_draft_group_info
 #'
 #' @export
-get_player_list <- function(draft_group_id = NULL,
-                            contest_id = NULL,
+dk_get_player_list <- function(draft_group_id = NULL,
+                            contest_key = NULL,
                             output = c("cleaned_json", "json", "response", "request"),
                             ...) {
 
   output <- rlang::arg_match(output)
 
-  draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
+  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
   req <- dk_request(
     ...,
@@ -146,20 +152,20 @@ get_player_list <- function(draft_group_id = NULL,
 
 #' Get Team List
 #'
-#' Fetch list of teams for a specific draft group and related info
+#' Fetch list of teams for a specific draft group.
 #'
-#' @inheritParams get_draft_group_info
-#' @inheritDotParams get_draft_group_info
+#' @inheritParams dk_get_draft_group_info
+#' @inheritDotParams dk_get_draft_group_info
 #'
 #' @export
-get_team_list <- function(draft_group_id = NULL,
-                          contest_id = NULL,
+dk_get_team_list <- function(draft_group_id = NULL,
+                          contest_key = NULL,
                           output = c("cleaned_json", "json", "response", "request"),
                           ...) {
 
   output <- rlang::arg_match(output)
 
-  draft_group_id <- check_draft_group_id(draft_group_id, contest_id)
+  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
   req <- dk_request(
     ...,
@@ -172,19 +178,19 @@ get_team_list <- function(draft_group_id = NULL,
 
 }
 
-#' Get Player Points Earned
+#' Get Player Fantasy Points Earned
 #'
 #' Retrieve player fantasy points earned in each
 #' game for a given season and week.
 #'
-#' @inheritParams get_contest_info
-#' @inheritDotParams get_contest_info
+#' @inheritParams dk_get_contest_info
+#' @inheritDotParams dk_get_contest_info
 #'
 #' @param week integer.
 #' @param year integer. optional. Defaults to the current year.
 #' @param sport character. Defaults to NFL.
 #'
-get_player_points <- function(week,
+dk_get_player_fp <- function(week,
                               year = as.numeric(format(Sys.Date(), "%Y")),
                               sport = "nfl",
                               output = c("cleaned_json", "json", "response", "request"),

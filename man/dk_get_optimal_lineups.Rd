@@ -4,10 +4,10 @@
 \alias{dk_get_optimal_lineups}
 \title{Get Multiple Optimal Lineups}
 \usage{
-dk_get_optimal_lineups(contest_schematic, n = 1, tolerance = 0.001)
+dk_get_optimal_lineups(schematic, n = 1, tolerance = 0.001)
 }
 \arguments{
-\item{contest_schematic}{Output from \verb{[prepare_contest_schematic()]} which
+\item{schematic}{Output from \verb{[dk_prepare_schematic()]} which
 includes information needed for optimization; including player info such as,
 news status, salary, and projected fantasy points.}
 
