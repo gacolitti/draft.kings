@@ -17,7 +17,7 @@
 #'   }
 #'
 #' @export
-get_contest_info <- function(contest_id,
+dk_get_contest_info <- function(contest_id,
                              output = c("cleaned_json", "json", "response", "request"),
                              ...) {
 
@@ -34,7 +34,7 @@ get_contest_info <- function(contest_id,
 
 }
 
-#' Get List of Contests
+#' Get List of Contests in Lobby
 #'
 #' Fetch the full table of contests and related info from DraftKings.com lobby
 #'
@@ -44,7 +44,7 @@ get_contest_info <- function(contest_id,
 #' @param ... Arguments passed to [draft.kings::dk_request()]
 #'
 #' @export
-get_contests <- function(sport = NULL,
+dk_get_lobby_contests <- function(sport = NULL,
                          output = c("cleaned_json", "json", "response", "request"),
                          ...) {
 
@@ -66,7 +66,7 @@ get_contests <- function(sport = NULL,
 #' Fetch rules corresponding to a specific game type ID.
 #'
 #' @inheritParams dk_request_process
-#' @inheritParams get_contest_info
+#' @inheritParams dk_get_contest_info
 #'
 #' @param game_type_id Integer corresponding to the game type.
 #'   For example, 159 in \url{https://api.draftkings.com/lineups/v1/gametypes/159/rules}.
@@ -74,7 +74,7 @@ get_contests <- function(sport = NULL,
 #' @param ... Arguments passed to [draft.kings::dk_request()]
 #'
 #' @export
-get_gametype_rules <- function(game_type_id = NULL,
+dk_get_game_type_rules <- function(game_type_id = NULL,
                                contest_id = NULL,
                                output = c("cleaned_json", "json", "response", "request"),
                                ...) {
@@ -91,7 +91,7 @@ get_gametype_rules <- function(game_type_id = NULL,
 
   if (is.null(game_type_id)) {
 
-    game_type_id <- get_contest_info(contest_id)$game_type_id
+    game_type_id <- dk_get_contest_info(contest_id)$game_type_id
 
   }
 
@@ -102,15 +102,15 @@ get_gametype_rules <- function(game_type_id = NULL,
 
 }
 
-#' Get List of Game Types
+#' Get List of Game Types in Lobby
 #'
 #' Fetch the full list of game types
 #'
-#' @inheritParams get_contests
-#' @inheritDotParams get_contests
+#' @inheritParams dk_get_lobby_contests
+#' @inheritDotParams dk_get_lobby_contests
 #'
 #' @export
-get_game_types <- function(sport = NULL,
+dk_get_lobby_game_types <- function(sport = NULL,
                              output = c("cleaned_json", "json", "response", "request"),
                              ...) {
 

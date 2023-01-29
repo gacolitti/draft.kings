@@ -6,7 +6,7 @@
 #' Combine information needed for optimization.
 #' Passed to `dk_optimize()`.
 #'
-#' @inheritParams get_draftable_players
+#' @inheritParams dk_get_draft_group
 #'
 #' @importFrom rlang .data .env
 #'
@@ -103,21 +103,21 @@ dk_prepare_schematic <- function(draft_group_id,
   # Fetch draft group info if rules, draft_group, or draft_group_exp_fp not passed
   if (is.null(rules) || is.null(draft_group) || is.null(draft_group_exp_fp)) {
 
-    draft_group_info <- get_draft_group_info(draft_group_id)
+    draft_group_info <- dk_get_draft_group_info(draft_group_id)
 
   }
 
   # Fetch rules if not passed
   if (is.null(rules)) {
 
-    rules <- get_gametype_rules(game_type_id = draft_group_info$game_type_id)
+    rules <- dk_get_game_type_rules(game_type_id = draft_group_info$game_type_id)
 
   }
 
   # Fetch draft group if not passed
   if (is.null(draft_group)) {
 
-    draft_group <- get_draftable_players(draft_group_id)
+    draft_group <- dk_get_draft_group(draft_group_id)
 
   }
 
@@ -181,7 +181,7 @@ dk_prepare_schematic <- function(draft_group_id,
   # Add expected fantasy points to draft group
   if (is.null(draft_group_exp_fp)) {
 
-    player_list <- get_player_list(draft_group_id) %>%
+    player_list <- dk_get_player_list(draft_group_id) %>%
       dplyr::transmute("player_id" = .data$pid, "exp_fp" = as.numeric(.data$ppg))
 
     draft_group <- draft_group %>%

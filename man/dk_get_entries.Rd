@@ -26,7 +26,7 @@ a specific contest. See output from \code{\link[=dk_get_leaderboard]{dk_get_lead
 to parse the JSON body,}
 
 \item{...}{
-  Arguments passed on to \code{\link[=get_contest_info]{get_contest_info}}
+  Arguments passed on to \code{\link[=dk_get_contest_info]{dk_get_contest_info}}
   \describe{
     \item{\code{contest_id}}{The sequence of digits that correspond to a specific contest.
 This can be found by examining the URL of a contest page.

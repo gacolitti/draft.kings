@@ -13,7 +13,7 @@
 #'   }
 #'
 #' @export
-get_sports <- function(output = c("cleaned_json", "json", "response", "request"),
+dk_get_sports <- function(output = c("cleaned_json", "json", "response", "request"),
                         ...) {
 
   output <- rlang::arg_match(output)

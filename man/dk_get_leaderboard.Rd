@@ -24,7 +24,7 @@ is 133645678.}
 to parse the JSON body,}
 
 \item{...}{
-  Arguments passed on to \code{\link[=get_contest_info]{get_contest_info}}
+  Arguments passed on to \code{\link[=dk_get_contest_info]{dk_get_contest_info}}
   \describe{
     \item{\code{}}{}
   }}
