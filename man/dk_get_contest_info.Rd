@@ -27,7 +27,7 @@ Fetch contest information such as the sport, payout, and contest summary.
 }
 \examples{
   \dontrun{
-    get_contest_info(133645678)
+    dk_get_contest_info(133645678)
   }
 
 }

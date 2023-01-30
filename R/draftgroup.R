@@ -44,7 +44,7 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 #'
 #' @examples
 #'   \dontrun{
-#'     get_draft_group(75367)
+#'     dk_get_draft_group(75367)
 #'   }
 #'
 #' @export

@@ -80,17 +80,35 @@
     Code
       d
     Output
-      # A tibble: 1 x 37
-        draft_group_id sport~1 start~2 start~3 min_s~4 max_s~5 draft~6 allow~7 leagu~8
+      $info
+      # A tibble: 1 x 12
+        draft_group_id sport~1 start~2 start~3 min_s~4 max_s~5 draft~6 allow~7 game_~8
                  <int>   <int> <chr>   <chr>   <chr>   <chr>   <chr>   <lgl>     <int>
-      1          75367       1 " (Mad~ Normal  2022-1~ 2022-1~ Histor~ TRUE         79
-      # ... with 28 more variables: league_name <chr>, league_abbreviation <chr>,
-      #   game_id <int>, away_team_id <int>, home_team_id <int>, start_date <chr>,
-      #   time_remaining_status <chr>, sport <chr>, status <chr>, description <chr>,
-      #   time_remaining <chr>, home_team_score <chr>, away_team_score <chr>,
-      #   quarter <chr>, league <chr>, competition_status <chr>,
-      #   competition_status_detail <chr>, game_attributes_type_id1 <chr>,
-      #   game_attributes_value1 <chr>, game_attributes_type_id2 <chr>, ...
+      1          75367       1 " (Mad~ Normal  2022-1~ 2022-1~ Histor~ TRUE        159
+      # ... with 3 more variables: contest_type_id <int>, sport <chr>,
+      #   game_type <chr>, and abbreviated variable names 1: sport_id,
+      #   2: start_time_suffix, 3: start_time_type, 4: min_start_time,
+      #   5: max_start_time, 6: draft_group_state, 7: allow_ugc, 8: game_type_id
+      
+      $games
+      # A tibble: 1 x 15
+        game_id away_tea~1 home_~2 start~3 time_~4 sport status descr~5 league compe~6
+          <int>      <int>   <int> <chr>   <chr>   <chr> <chr>  <chr>   <chr>  <chr>  
+      1 5915939        350     341 2022-1~ Scores~ NFL   Score~ NO @ LV SIM    Scores~
+      # ... with 5 more variables: competition_status_detail <chr>,
+      #   sport_specific_data_time_remaining <chr>,
+      #   sport_specific_data_home_team_score <chr>,
+      #   sport_specific_data_away_team_score <chr>,
+      #   sport_specific_data_quarter <chr>, and abbreviated variable names
+      #   1: away_team_id, 2: home_team_id, 3: start_date, 4: time_remaining_status,
+      #   5: description, 6: competition_status
+      
+      $leagues
+      # A tibble: 1 x 3
+        league_id league_name league_abbreviation
+            <int> <chr>       <chr>              
+      1        79 Simulation  SIM                
+      
 
 # dk_get_player_list() returns expected data
 

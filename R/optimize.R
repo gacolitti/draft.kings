@@ -31,7 +31,7 @@
 #'
 #' @examples
 #'   \dontrun{
-#'     dk_prepare_schematic(draft_group_id = 75367)
+#'     dk_prepare_schematic(draft_group_id = 80584)
 #'   }
 #'
 #' @export
@@ -90,6 +90,7 @@ dk_prepare_schematic <- function(draft_group_id,
                               "display_name",
                               "salary",
                               "team_id",
+                              "competition_id",
                               "status"), colnames(draft_group))
 
     if (length(missing_cols) > 0) {
@@ -103,7 +104,7 @@ dk_prepare_schematic <- function(draft_group_id,
   # Fetch draft group info if rules, draft_group, or draft_group_exp_fp not passed
   if (is.null(rules) || is.null(draft_group) || is.null(draft_group_exp_fp)) {
 
-    draft_group_info <- dk_get_draft_group_info(draft_group_id)
+    draft_group_info <- dk_get_draft_group_info(draft_group_id)$info
 
   }
 
@@ -147,6 +148,7 @@ dk_prepare_schematic <- function(draft_group_id,
       "display_name",
       "salary",
       "team_id",
+      "competition_id",
       "status"
     )
 
@@ -441,7 +443,6 @@ dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NUL
   out
 
 }
-
 
 ## Print methods -----------------------------------------------------------------------------------
 

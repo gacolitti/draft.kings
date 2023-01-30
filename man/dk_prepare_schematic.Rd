@@ -48,7 +48,7 @@ Passed to \code{dk_optimize()}.
 }
 \examples{
   \dontrun{
-    dk_prepare_schematic(draft_group_id = 75367)
+    dk_prepare_schematic(draft_group_id = 80584)
   }
 
 }

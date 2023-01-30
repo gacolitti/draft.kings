@@ -41,7 +41,7 @@ their salaries.
 }
 \examples{
   \dontrun{
-    get_draft_group(75367)
+    dk_get_draft_group(75367)
   }
 
 }
