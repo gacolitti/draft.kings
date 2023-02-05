@@ -206,6 +206,7 @@ dk_get_team_list <- function(draft_group_id = NULL,
 #' @param year integer. optional. Defaults to the current year.
 #' @param sport character. Defaults to NFL.
 #'
+#' @export
 dk_get_player_fp <- function(week,
                               year = as.numeric(format(Sys.Date(), "%Y")),
                               sport = "nfl",
