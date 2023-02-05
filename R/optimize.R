@@ -172,7 +172,11 @@ dk_prepare_schematic <- function(draft_group_id,
   # Add expected fantasy points to draft group
   # if "exp_fp" column does not exist in draft_group
   # and draft_group_exp_fp is not passed. Otherwise,
+<<<<<<< HEAD
   # join draft_group_exp_fp to draft_group
+=======
+  # join passed draft_group_exp_fp to draft_group
+>>>>>>> 201e776 ([fix]: Expected fantasy points not handled properly in dk_prepare_schematic())
   if (is.null(draft_group$exp_fp)) {
 
     if (is.null(draft_group_exp_fp)) {
