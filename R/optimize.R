@@ -18,8 +18,8 @@
 #'   (expected fantasy points). Note that the Showdown Captain Mode game type includes
 #'   two rows for each player/defense. If `draft_group` contains rows not found in
 #'   `draft_group_exp_fp`, then a warning is issued and those missing rows are dropped.
-#'   If `NULL` (the default), then `exp_fp` is set equal to the `ppg` value returned by
-#'   `get_player_list()`.
+#'   If `NULL` (the default), and `exp_fp` does not exist in `draft_group`,
+#'   then `exp_fp` is set equal to the `ppg` value returned by `get_player_list()`.
 #' @param include_players A vector of player IDs to include. If `NULL` (the default), then use
 #'   all players found with `get_draftable_players()`.
 #' @param exclude_players A vector of player IDs to exclude.
@@ -27,7 +27,7 @@
 #'   rules are fetched using the `draft_group_id`.
 #' @param exclude_questionable Exclude players with statuses that indicate
 #'   they will not play. These include players that are questionable,
-#'   doubtful, out, and injured.
+#'   doubtful, out, and injured. Default is `FALSE`.
 #'
 #' @examples
 #'   \dontrun{
@@ -41,7 +41,7 @@ dk_prepare_schematic <- function(draft_group_id,
                                  rules = NULL,
                                  include_players = NULL,
                                  exclude_players = NULL,
-                                 exclude_questionable = TRUE) {
+                                 exclude_questionable = FALSE) {
 
   players_intersect <- intersect(include_players, exclude_players)
 
@@ -139,21 +139,6 @@ dk_prepare_schematic <- function(draft_group_id,
 
   }
 
-  # Subset columns in draft_group
-  draft_group <- draft_group %>%
-    dplyr::select(
-      "draftable_id",
-      "player_id",
-      "first_name",
-      "last_name",
-      "display_name",
-      "salary",
-      "team_id",
-      "competition_id",
-      "position",
-      "status"
-    )
-
   # Optionally remove players with a status other than "None"
   if (exclude_questionable) {
 
@@ -183,13 +168,25 @@ dk_prepare_schematic <- function(draft_group_id,
   }
 
   # Add expected fantasy points to draft group
-  if (is.null(draft_group_exp_fp)) {
+  # if "exp_fp" column does not exist in draft_group
+  # and draft_group_exp_fp is not passed. Otherwise,
+  # join passed draft_group_exp_fp to draft_group
+  if (is.null(draft_group$exp_fp)) {
 
-    player_list <- dk_get_player_list(draft_group_id) %>%
-      dplyr::transmute("player_id" = .data$pid, "exp_fp" = as.numeric(.data$ppg))
+    if (is.null(draft_group_exp_fp)) {
 
-    draft_group <- draft_group %>%
-      dplyr::left_join(player_list, by = "player_id")
+      player_list <- dk_get_player_list(draft_group_id) %>%
+        dplyr::transmute("player_id" = .data$pid, "exp_fp" = as.numeric(.data$ppg))
+
+      draft_group <- draft_group %>%
+        dplyr::left_join(player_list, by = "player_id")
+
+    } else {
+
+      draft_group <- draft_group %>%
+        dplyr::left_join(draft_group_exp_fp, by = "draftable_id")
+
+    }
 
   }
 
