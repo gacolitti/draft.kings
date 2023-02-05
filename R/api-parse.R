@@ -61,9 +61,9 @@ dk_resp_parse.contest_info_resp <- function(resp) {
 
 }
 
-#' @method dk_resp_parse contests_resp
+#' @method dk_resp_parse lobby_contests_resp
 #' @export
-dk_resp_parse.contests_resp <- function(resp) {
+dk_resp_parse.lobby_contests_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
@@ -72,9 +72,9 @@ dk_resp_parse.contests_resp <- function(resp) {
 
 }
 
-#' @method dk_resp_parse gametype_rules_resp
+#' @method dk_resp_parse game_type_rules_resp
 #' @export
-dk_resp_parse.gametype_rules_resp <- function(resp) {
+dk_resp_parse.game_type_rules_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
@@ -115,10 +115,10 @@ dk_resp_parse.gametype_rules_resp <- function(resp) {
 
 }
 
-#' @method dk_resp_parse game_types_resp
+#' @method dk_resp_parse lobby_game_types_resp
 #' @importFrom rlang .data .env
 #' @export
-dk_resp_parse.game_types_resp <- function(resp) {
+dk_resp_parse.lobby_game_types_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
@@ -139,20 +139,18 @@ dk_resp_parse.game_types_resp <- function(resp) {
 
 #### Draftgroup ------------------------------------------------------------------------------------
 
-
-
-
-dk_resp_parse.draftable_players_resp <- function(resp) {
+dk_resp_parse.draft_group_resp <- function(resp) {
 
   resp$draftables %>%
     extract_json() %>%
-    convert_json()
+    convert_json() %>%
+    stats::setNames(., gsub("competition_competition", "competition", colnames(.)))
 
 }
 
-#' @method dk_resp_parse draft_groups_resp
+#' @method dk_resp_parse lobby_draft_groups_resp
 #' @export
-dk_resp_parse.draft_groups_resp <- function(resp) {
+dk_resp_parse.lobby_draft_groups_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
@@ -168,30 +166,54 @@ dk_resp_parse.draft_groups_resp <- function(resp) {
 #' @export
 dk_resp_parse.draft_group_info_resp <- function(resp) {
 
-  resp <- extract_json(resp)
+  json <- extract_json(resp)
 
-  resp$draftGroup %>%
-    purrr::compact() %>%
+  # Extract contest type and leagues
+  contest_type <- dplyr::as_tibble(json$draftGroup$contestType)
+  leagues <- purrr::map_dfr(json$draftGroup$leagues, dplyr::as_tibble)
+
+  # Extract games
+  games <- purrr::map_dfr(json$draftGroup$games, function(.game) {
+
+    # Remove gameAttributes list if it exists
+    .game$gameAttributes <- NULL
+
+    # Extract sport specific data
+    if (!is.null(.game$sportSpecificData) && length(.game$sportSpecificData) > 0) {
+
+      sport_specific_data <- .game$sportSpecificData %>%
+        dplyr::as_tibble() %>%
+        stats::setNames(., paste0("sport_specific_data_", colnames(.)))
+
+    }
+
+    .game$sportSpecificData <- NULL
+
+    if (exists("sport_specific_data")) {
+
+      out <- dplyr::bind_cols(dplyr::as_tibble(.game), sport_specific_data)
+
+    } else {
+
+      out <- dplyr::as_tibble(.game)
+
+    }
+
+    out
+  })
+
+  # Remove list elements from json
+  # Combine remaining draft group info with contest type info
+  draft_group_info <- json$draftGroup %>%
+    purrr::discard(is.list) %>%
     dplyr::as_tibble() %>%
-    dplyr::mutate("contestTypeValue" = as.character(.data$contestType),
-                  "contestTypeName" = names(.data$contestType)) %>%
-    dplyr::select(-"contestType") %>%
-    tidyr::pivot_wider(names_from = "contestTypeName",
-                       values_from = "contestTypeValue") %>%
-    tidyr::unnest_wider("games", names_repair = "minimal") %>%
-    tidyr::unnest_wider("sportSpecificData") %>%
-    tidyr::unnest_wider("leagues") %>%
-    dplyr::mutate(
-      "gameAttributes" = list(
-        .data$gameAttributes %>%
-          unlist %>%
-          stats::setNames(., paste0("gameAttributes_", names(.),
-                             sort(rep(seq.int(1, length(.) / 2, 1), 2))))
-      )
-    ) %>%
-    tidyr::unnest_wider("gameAttributes") %>%
-    dplyr::select(-"sport.1") %>%
-    clean_names()
+    dplyr::bind_cols(contest_type)
+
+  # Combine draft group info, games, and leagues into list
+  list(info = clean_names(draft_group_info),
+       games = clean_names(games),
+       leagues = clean_names(leagues))
+
 
 }
 
@@ -220,10 +242,10 @@ dk_resp_parse.team_list_resp <- function(resp) {
 
 }
 
-#' @method dk_resp_parse player_points_resp
+#' @method dk_resp_parse player_fp_resp
 #'
 #' @export
-dk_resp_parse.player_points_resp <- function(resp) {
+dk_resp_parse.player_fp_resp <- function(resp) {
 
   resp <- extract_json(resp)
 

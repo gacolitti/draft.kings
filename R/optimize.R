@@ -31,17 +31,17 @@
 #'
 #' @examples
 #'   \dontrun{
-#'     dk_prepare_schematic(draft_group_id = 75367)
+#'     dk_prepare_schematic(draft_group_id = 80584)
 #'   }
 #'
 #' @export
 dk_prepare_schematic <- function(draft_group_id,
-                                      draft_group_exp_fp = NULL,
-                                      draft_group = NULL,
-                                      rules = NULL,
-                                      include_players = NULL,
-                                      exclude_players = NULL,
-                                      exclude_questionable = TRUE) {
+                                 draft_group_exp_fp = NULL,
+                                 draft_group = NULL,
+                                 rules = NULL,
+                                 include_players = NULL,
+                                 exclude_players = NULL,
+                                 exclude_questionable = TRUE) {
 
   players_intersect <- intersect(include_players, exclude_players)
 
@@ -90,6 +90,8 @@ dk_prepare_schematic <- function(draft_group_id,
                               "display_name",
                               "salary",
                               "team_id",
+                              "competition_id",
+                              "position",
                               "status"), colnames(draft_group))
 
     if (length(missing_cols) > 0) {
@@ -103,7 +105,7 @@ dk_prepare_schematic <- function(draft_group_id,
   # Fetch draft group info if rules, draft_group, or draft_group_exp_fp not passed
   if (is.null(rules) || is.null(draft_group) || is.null(draft_group_exp_fp)) {
 
-    draft_group_info <- dk_get_draft_group_info(draft_group_id)
+    draft_group_info <- dk_get_draft_group_info(draft_group_id)$info
 
   }
 
@@ -147,6 +149,8 @@ dk_prepare_schematic <- function(draft_group_id,
       "display_name",
       "salary",
       "team_id",
+      "competition_id",
+      "position",
       "status"
     )
 
@@ -205,6 +209,14 @@ dk_prepare_schematic <- function(draft_group_id,
 
   }
 
+  # Remove duplicates in terms of everything but draftable_id
+  draft_group <- draft_group %>%
+    dplyr::distinct(dplyr::across(!dplyr::all_of("draftable_id")), .keep_all = TRUE)
+
+  # Separate players that can perform multiple positions into different rows
+  draft_group <- draft_group %>%
+    tidyr::separate_rows(.data$position, sep = "/")
+
   # Add row number
   draft_group <- draft_group %>%
     dplyr::mutate("row_number" = dplyr::row_number())
@@ -234,8 +246,7 @@ dk_extract_solution <- function(x) {
     ompr::get_solution(draftable_id[i]) %>%
     dplyr::filter(.data$value > 0) %>%
     dplyr::inner_join(x$schematic$draft_group, by = c("i" = "row_number")) %>%
-    dplyr::select(-dplyr::any_of(c("i", "value", "variable"))) %>%
-    dplyr::arrange(dplyr::desc(.data$is_captain))
+    dplyr::select(-dplyr::any_of(c("i", "value", "variable")))
 
   list(
     optimal_lineup = res,
@@ -249,7 +260,7 @@ dk_extract_solution <- function(x) {
 #' Get Multiple Optimal Lineups
 #'
 #' Wrapper around [dk_optimize_lineup()]. Can return an
-#'   arbitrary number of optimal lineups in succession.
+#' arbitrary number of optimal lineups in succession.
 #'
 #' @inheritParams dk_optimize_lineup
 #' @param n Number of lineups to return.
@@ -283,65 +294,59 @@ dk_get_optimal_lineups <-function(schematic,
   optimal_lineups <- stats::setNames(optimal_lineups, paste0("solution_",
                                                              seq_len(length(optimal_lineups))))
 
-  class(optimal_lineups) <- c("showdown_captain_mode_multiple_solutions", class(optimal_lineups))
+  class(optimal_lineups) <- c(
+    paste0(clean_names(schematic$rules$game_type_name), "_multiple_solutions"),
+    class(optimal_lineups)
+  )
   optimal_lineups
 
 }
 
-#' Write Lineups to CSV
-#'
-#' Given the output from `[dk_get_optimal_lineups()]`, create a
-#' CSV formatted for uplaod to \url{https://www.draftkings.com/lineup/upload}
-#'
-#' @importFrom rlang .data .env
-#'
-#' @param optimal_lineups Output from `[get_optimal_lineups()]`
-#' @param file Path and name of the CSV file to create
-dk_write_lineups_to_csv <- function(optimal_lineups, file = "lineups.csv") {
-
-  purrr::map_dfr(optimal_lineups[1], function(.x) {
-
-    dk_extract_solution(.x)$optimal_lineup %>%
-      dplyr::transmute(
-        "is_captain" = ifelse(.data$is_captain, "CPT1", paste0("FLEX", dplyr::row_number())),
-        "value" = paste0(
-          .data$first_name,
-          " ",
-          .data$last_name,
-          " (",
-          .data$draftable_id,
-          ")"
-        )
-      ) %>%
-      tidyr::pivot_wider(names_from = "is_captain",
-                         values_from = "value")
-
-    }
-
-    ) %>%
-    stats::setNames(c("CPT", rep("FLEX", 5))) %>%
-    utils::write.csv(file = file, row.names = FALSE)
-
-}
-
-## Optimize ----------------------------------------------------------------------------------------
+## Optimize Methods --------------------------------------------------------------------------------
 
 #' Optimize Lineup
 #'
 #' Get optimal players based on player pool, projected fantasy points,
 #' and rules defined by a schematic. See [dk_prepare_schematic()].
 #'
-#' @param schematic Output from `[dk_prepare_schematic()]` which
+#' @param schematic Output from [dk_prepare_schematic()] which
 #'   includes information needed for optimization; including player info such as,
 #'   news status, salary, and projected fantasy points.
+#' @param max_points Optional upper threshold of points. This is used primarily
+#'   to get many successive lineups in [dk_get_optimal_lineups()]
 #' @param ... Other arguments passed to optimization method.
 #'
 #' @export
-dk_optimize_lineup <- function(schematic, ...) {
+dk_optimize_lineup <- function(schematic, max_points, ...) {
+
+  if (!requireNamespace("ROI.plugin.symphony", quietly = TRUE)) {
+
+    cli::cli_abort(
+      "The `ROI.plugin.symphony` package is required to use this function."
+    )
+
+  }
+
+  if (!requireNamespace("ompr", quietly = TRUE)) {
+
+    cli::cli_abort(
+      "The `ompr` package is required to use this function."
+    )
+
+  }
+
+  if (!requireNamespace("ompr.roi", quietly = TRUE)) {
+
+    cli::cli_abort(
+      "The `ompr.roi` package is required to use this function."
+    )
+
+  }
 
   UseMethod("dk_optimize_lineup")
 
 }
+
 
 #' Optimize Showdown Captain Mode Game Type Lineup
 #'
@@ -349,13 +354,9 @@ dk_optimize_lineup <- function(schematic, ...) {
 #' available players, their salaries, and their projected
 #' fantasy points for a showdown captain mode game type.
 #'
-#' @inheritParams dk_prepare_schematic
-#' @inheritParams dk_optimize_lineup
 #' @importFrom rlang .data .env
-#' @import ROI.plugin.glpk
-#' @param max_points Optional upper threshold of points. This is used primarily
-#'   to get many successive lineups in `[get_optimal_lineups()]`
 #'
+#' @rdname dk_optimize_lineup
 #' @method dk_optimize_lineup showdown_captain_mode
 #' @export
 dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NULL, ...) {
@@ -431,7 +432,7 @@ dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NUL
     )
 
 
-  solved_model <- ompr::solve_model(mod, ompr.roi::with_ROI(solver = "glpk"))
+  solved_model <- ompr::solve_model(mod, ompr.roi::with_ROI(solver = "symphony", ...))
 
   out <- list(solved_model = solved_model,
               schematic = schematic)
@@ -442,8 +443,209 @@ dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NUL
 
 }
 
+#' Optimize Classic Game Type Lineup
+#'
+#' Determine the optimal lineup of players based on the list of
+#' available players, their salaries, and their projected
+#' fantasy points for a classic game type.
+#'
+#' @importFrom rlang .data .env
+#'
+#' @rdname dk_optimize_lineup
+#' @method dk_optimize_lineup classic
+#' @export
+dk_optimize_lineup.classic <- function(schematic, max_points = NULL, ...) {
+
+  draft_group <- schematic$draft_group
+  rules <- schematic$rules
+  draft_group_id <- schematic$draft_group_id
+
+  if (!rules$game_type_id %in% c(70, 1)) {
+
+    cli::cli_abort(
+      "Game type {rules$game_type_id} associated with draft group ID {draft_group_id} is not supported"
+    )
+
+  }
+
+  mod <- ompr::MIPModel() %>%
+
+    ompr::add_variable(draftable_id[i],
+                       i = draft_group$row_number,
+                       type = "binary") %>%
+
+    ompr::add_variable(competition_id[j],
+                       j = unique(draft_group$competition_id),
+                       type = "binary") %>%
+
+    ompr::set_objective(
+      ompr::sum_over(draft_group$exp_fp[i] * draftable_id[i],
+                     i = draft_group$row_number), "max"
+    ) %>%
+
+    # The sum of all player salaries must be less than salary cap max value
+    ompr::add_constraint(
+      ompr::sum_over(draft_group$salary[i] * draftable_id[i],
+                     i = draft_group$row_number) <= rules$salary_cap_max_value
+    )
+
+  # Optionally set an upper bound on the number of expected fantasy points
+  # This is used to get multiple lineups
+  if (!is.null(max_points)) {
+
+    mod <- mod %>%
+      ompr::add_constraint(
+        ompr::sum_over(draft_group$exp_fp[i] * draftable_id[i],
+                       i = draft_group$row_number) <= max_points
+      )
+
+  }
+
+  # Ensure at least two competitions are present
+  if (!is.na(rules$game_count_min_value)) {
+
+    mod <- mod %>%
+      # force group binary variables to be 1 if item is in group
+      ompr::add_constraint(
+        ompr::sum_over(
+          draftable_id[i],
+          i = draft_group$row_number[which(draft_group$competition_id == j)]
+        ) - 10000 * competition_id[j] <= 0,
+        j = unique(draft_group$competition_id)
+      ) %>%
+
+      # force at least one binary variable for item inclusion to be 1 for all items in group
+      # if group binary is 1
+      ompr::add_constraint(
+        competition_id[j] - 10000 * ompr::sum_over(
+          draftable_id[i],
+          i = draft_group$row_number[which(draft_group$competition_id == j)]
+        ) <= 0,
+        j = unique(draft_group$competition_id)
+      ) %>%
+
+      # force at least two competitions
+      ompr::add_constraint(
+        ompr::sum_over(
+          competition_id[j],
+          j = unique(draft_group$competition_id)
+        ) >= 2
+      )
+
+  }
+
+  # Ensure player is selected max one time
+  if (rules$unique_players) {
+
+    mod <- mod %>%
+      ompr::add_constraint(
+        ompr::sum_over(draftable_id[i],
+                       i = draft_group$row_number[which(draft_group$player_id == player_id)]) <= 1,
+        player_id = draft_group$player_id
+      )
+
+  }
+
+  # Set player constraints for NBA classic
+  if (rules$game_type_id == 70) {
+
+    # Ensure at least 1 player in each position
+    mod <- mod %>%
+      ompr::add_constraint(
+        ompr::sum_over(
+          draftable_id[i],
+          i = draft_group$row_number[which(draft_group$position == position)]
+        ) >= 1,
+        position = unique(draft_group$position)
+      )
+
+    # Ensure 8 players (allows for one flex that can come from any position)
+    mod <- mod %>%
+      ompr::add_constraint(
+        ompr::sum_over(
+          draftable_id[i],
+          i = draft_group$row_number
+        ) == 8
+      )
+
+  }
+
+  # Set player constraints for NFL classic
+  if (rules$game_type_id == 1) {
+
+    # Ensure 1 QB, 1 DST
+    mod <- mod %>%
+      ompr::add_constraint(
+        ompr::sum_over(
+          draftable_id[i],
+          i = draft_group$row_number[which(draft_group$position == position)]
+        ) == 1,
+        position = c("QB", "DST")
+      )
+
+    # Ensure at least 3 WR
+    mod <- mod %>%
+      ompr::add_constraint(
+        ompr::sum_over(
+          draftable_id[i],
+          i = draft_group$row_number[which(draft_group$position == position)]
+        ) >= 3,
+        position = "WR"
+      )
+
+    # Ensure at least 2 RB
+    mod <- mod %>%
+      ompr::add_constraint(
+        ompr::sum_over(
+          draftable_id[i],
+          i = draft_group$row_number[which(draft_group$position == position)]
+        ) >= 2,
+        position = "RB"
+      )
+
+    # Ensure at least 1 TE
+    mod <- mod %>%
+      ompr::add_constraint(
+        ompr::sum_over(
+          draftable_id[i],
+          i = draft_group$row_number[which(draft_group$position == position)]
+        ) >= 1,
+        position = "TE"
+      )
+
+    # Ensure 9 players (allows for one flex which can be either RB/WR/TE)
+    mod <- mod %>%
+      ompr::add_constraint(
+        ompr::sum_over(
+          draftable_id[i],
+          i = draft_group$row_number
+        ) == 9
+      )
+
+  }
+
+  solved_model <- ompr::solve_model(mod, ompr.roi::with_ROI(solver = "symphony"))
+
+  out <- list(solved_model = solved_model,
+              schematic = schematic)
+
+  class(out) <- c("classic_solution", class(out))
+
+  out
+
+}
+
 
 ## Print methods -----------------------------------------------------------------------------------
+
+
+#' @method print classic_solution
+#' @export
+print.classic_solution <- function(x, ...) {
+
+  print(dk_extract_solution(x))
+
+}
 
 
 #' @method print showdown_captain_mode_solution
@@ -459,5 +661,73 @@ print.showdown_captain_mode_solution <- function(x, ...) {
 print.showdown_captain_mode_multiple_solutions <- function(x, ...) {
 
   cli::cli_alert_success("Found {length(x)} showdown captain mode optimal lineup{?s}.")
+
+}
+
+#' @method print classic_multiple_solutions
+#' @export
+print.classic_multiple_solutions <- function(x, ...) {
+
+  cli::cli_alert_success("Found {length(x)} classic optimal lineup{?s}.")
+
+}
+
+# CSV Methods --------------------------------------------------------------------------------------
+
+#' Write Lineups to CSV
+#'
+#' Create CSV of optimal lineups that can be uploaded to
+#' \url{https://www.draftkings.com/lineup/upload}.
+#'
+#' @param optimal_lineups Output from [dk_get_optimal_lineups()]
+#' @param file Path and name of the CSV file to create
+#' @param ... Other args passed to [utils::write.csv()]
+#'
+#' @export
+dk_write_csv <- function(optimal_lineups, file, ...) {
+
+  UseMethod("dk_write_csv")
+
+}
+
+#' Write Showdown Captain Mode Lineups to CSV
+#'
+#' Given the output from [dk_get_optimal_lineups()], create a
+#' CSV of Showdown Captain Mode lineups formatted for
+#' uplaod to \url{https://www.draftkings.com/lineup/upload}.
+#'
+#' @importFrom rlang .data .env
+#'
+#' @rdname dk_write_csv
+#' @method dk_write_csv showdown_captain_mode_multiple_solutions
+#' @export
+dk_write_csv.showdown_captain_mode_multiple_solutions <- function(
+    optimal_lineups,
+    file = "showdown_captain_mode_lineups.csv",
+    ...
+  ) {
+
+  purrr::map_dfr(optimal_lineups[1], function(.x) {
+
+    dk_extract_solution(.x)$optimal_lineup %>%
+      dplyr::transmute(
+        "is_captain" = ifelse(.data$is_captain, "CPT1", paste0("FLEX", dplyr::row_number())),
+        "value" = paste0(
+          .data$first_name,
+          " ",
+          .data$last_name,
+          " (",
+          .data$draftable_id,
+          ")"
+        )
+      ) %>%
+      tidyr::pivot_wider(names_from = "is_captain",
+                         values_from = "value")
+
+  }
+
+  ) %>%
+    stats::setNames(c("CPT", rep("FLEX", 5))) %>%
+    utils::write.csv(file = file, row.names = FALSE, ...)
 
 }

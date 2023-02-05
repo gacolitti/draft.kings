@@ -148,7 +148,7 @@
             "sportId": 22,
             "fullName": "Call Of Duty",
             "sortOrder": 17,
-            "hasPublicContests": true,
+            "hasPublicContests": false,
             "isEnabled": true,
             "regionFullSportName": "Call Of Duty",
             "regionAbbreviatedSportName": "COD"

@@ -44,7 +44,11 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 #'
 #' @examples
 #'   \dontrun{
-#'     get_draft_group(75367)
+#'     # NFL Showdown Captain Mode
+#'     dk_get_draft_group(75284)
+#'
+#'     # NFL Classic
+#'     dk_get_draft_group(74625)
 #'   }
 #'
 #' @export
@@ -66,7 +70,7 @@ dk_get_draft_group <- function(draft_group_id = NULL,
     )
   )
 
-  dk_request_process(req, output, objclass = "draftable_players_resp")
+  dk_request_process(req, output, objclass = "draft_group_resp")
 
 }
 
@@ -92,7 +96,7 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
     query_params = list(sport = sport)
   )
 
-  dk_request_process(req, output, objclass = "draft_groups_resp")
+  dk_request_process(req, output, objclass = "lobby_draft_groups_resp")
 
 }
 
@@ -102,6 +106,12 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
 #'
 #' @inheritParams dk_get_draft_group
 #' @inheritDotParams dk_get_draft_group
+#'
+#' @examples
+#' \dontrun{
+#'   dk_get_draft_group_info(75284)
+#'
+#' }
 #'
 #' @export
 dk_get_draft_group_info <- function(draft_group_id = NULL,
@@ -128,6 +138,12 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
 #'
 #' @inheritParams dk_get_draft_group_info
 #' @inheritDotParams dk_get_draft_group_info
+#'
+#' @examples
+#' \dontrun{
+#'   dk_get_player_list(75284)
+#'
+#' }
 #'
 #' @export
 dk_get_player_list <- function(draft_group_id = NULL,
@@ -211,6 +227,6 @@ dk_get_player_fp <- function(week,
       glue::glue('{{"sport":"{sport}","embed":"stats"}}')
     )
 
-  dk_request_process(req, output, objclass = "player_points_resp")
+  dk_request_process(req, output, objclass = "player_fp_resp")
 
 }

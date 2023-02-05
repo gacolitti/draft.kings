@@ -33,3 +33,10 @@ to parse the JSON body,}
 \description{
 Fetch list of players and related info for a specific draft group.
 }
+\examples{
+\dontrun{
+  dk_get_player_list(75284)
+
+}
+
+}

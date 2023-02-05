@@ -34,3 +34,10 @@ then all draftable IDs will be included in the result.}
 \description{
 Fetch info for a specific draft group
 }
+\examples{
+\dontrun{
+  dk_get_draft_group_info(75284)
+
+}
+
+}

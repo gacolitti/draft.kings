@@ -9,7 +9,7 @@
 #' @inheritParams dk_request_process
 #' @inheritParams dk_get_contest_info
 #' @inheritDotParams dk_get_contest_info
-#' @param cookiefile Path to the cookies needed to perform API request.
+#' @param cookies Path to JSON of cookies needed to perform API request.
 #'
 #' @examples
 #'   \dontrun{
@@ -18,11 +18,15 @@
 #'
 #' @export
 dk_get_leaderboard <- function(contest_key,
-                               cookiefile = path.expand("~/cookies.txt"),
+                               cookies = path.expand("~/cookies.json"),
                                output = c("cleaned_json", "json", "response", "request"),
                                ...) {
 
   output <- rlang::arg_match(output)
+
+  cook <- jsonlite::read_json(cookies)
+  clean_cook <- paste0(unlist(lapply(cook, function(x) {paste0(x$name, "=", x$value)})),
+                       collapse = ";")
 
   req <- dk_request(
     ...,
@@ -32,7 +36,7 @@ dk_get_leaderboard <- function(contest_key,
       "embed" = "leaderboard"
     ),
     curl_options = list(
-      "cookiefile" = cookiefile
+      "cookie" = clean_cook
     )
   )
 
@@ -63,11 +67,15 @@ dk_get_leaderboard <- function(contest_key,
 #' @export
 dk_get_entries <- function(draft_group_id,
                            entry_keys,
-                           cookiefile = path.expand("~/cookies.txt"),
+                           cookies = path.expand("~/cookies.json"),
                            output = c("cleaned_json", "json", "response", "request"),
                            ...) {
 
   output <- rlang::arg_match(output)
+
+  cook <- jsonlite::read_json(cookies)
+  clean_cook <- paste0(unlist(lapply(cook, function(x) {paste0(x$name, "=", x$value)})),
+                       collapse = ";")
 
   req <- dk_request(
     ...,
@@ -77,7 +85,7 @@ dk_get_entries <- function(draft_group_id,
       "embed" = "roster"
     ),
     curl_options = list(
-      "cookiefile" = cookiefile
+      "cookie" = clean_cook
     )
   )
 

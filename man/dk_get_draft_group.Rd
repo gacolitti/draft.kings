@@ -41,7 +41,11 @@ their salaries.
 }
 \examples{
   \dontrun{
-    get_draft_group(75367)
+    # NFL Showdown Captain Mode
+    dk_get_draft_group(75284)
+
+    # NFL Classic
+    dk_get_draft_group(74625)
   }
 
 }

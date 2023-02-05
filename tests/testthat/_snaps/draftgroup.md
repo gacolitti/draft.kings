@@ -20,9 +20,9 @@
       #   is_swappable <lgl>, is_disabled <lgl>, news_status <chr>,
       #   player_image50 <chr>, player_image160 <chr>, alt_player_image50 <chr>,
       #   alt_player_image160 <chr>, team_id <dbl>, team_abbreviation <chr>,
-      #   player_game_hash <chr>, competition_competition_id <dbl>,
-      #   competition_name <chr>, competition_start_time <chr>, and abbreviated
-      #   variable names 1: first_name, 2: last_name, 3: display_name, ...
+      #   player_game_hash <chr>, competition_id <dbl>, competition_name <chr>,
+      #   competition_start_time <chr>, and abbreviated variable names 1: first_name,
+      #   2: last_name, 3: display_name, 4: short_name, 5: player_id, ...
 
 # dk_get_draft_group() works when passed a contest ID
 
@@ -45,30 +45,30 @@
       # ... with 1,255 more rows, 13 more variables: salary <dbl>, status <chr>,
       #   is_swappable <lgl>, is_disabled <lgl>, news_status <chr>,
       #   player_image50 <chr>, player_image160 <chr>, team_id <dbl>,
-      #   team_abbreviation <chr>, player_game_hash <chr>,
-      #   competition_competition_id <dbl>, competition_name <chr>,
-      #   competition_start_time <chr>, and abbreviated variable names 1: first_name,
-      #   2: last_name, 3: display_name, 4: short_name, 5: player_id, ...
+      #   team_abbreviation <chr>, player_game_hash <chr>, competition_id <dbl>,
+      #   competition_name <chr>, competition_start_time <chr>, and abbreviated
+      #   variable names 1: first_name, 2: last_name, 3: display_name, 4: short_name,
+      #   5: player_id, 6: player_dk_id, 7: position, 8: roster_slot_id
 
 # dk_get_lobby_draft_groups() returns expected data
 
     Code
       d
     Output
-      # A tibble: 44 x 17
+      # A tibble: 50 x 17
          draft~1 conte~2 start~3 start~4 sort_~5 draft~6 game_~7 game_~8 sport~9 sport
            <dbl>   <dbl> <chr>   <chr>     <dbl> <chr>     <dbl> <lgl>     <dbl> <chr>
-       1   81315      21 2023-0~ 2023-0~       1 "Featu~       1 NA            0 NFL  
-       2   81325      51 2023-0~ 2023-0~       2 ""           51 NA            0 NFL  
-       3   81316      96 2023-0~ 2023-0~       3 ""           96 NA            0 NFL  
-       4   81318     108 2023-0~ 2023-0~       6 ""          108 NA            0 NFL  
-       5   81319     110 2023-0~ 2023-0~       7 ""          110 NA            0 NFL  
-       6   81317      96 2023-0~ 2023-0~       8 "Featu~      96 NA            0 NFL  
-       7   81320     108 2023-0~ 2023-0~      10 "Featu~     108 NA            0 NFL  
-       8   81321     110 2023-0~ 2023-0~      11 "Featu~     110 NA            0 NFL  
-       9   81430     158 2023-0~ 2023-0~      26 ""          158 NA            0 NFL  
-      10   81432     159 2023-0~ 2023-0~      28 ""          159 NA            0 NFL  
-      # ... with 34 more rows, 7 more variables: game_count <dbl>,
+       1   81607      96 2023-0~ 2023-0~       1 "Featu~      96 NA            0 NFL  
+       2   81609     108 2023-0~ 2023-0~       3 "Featu~     108 NA            0 NFL  
+       3   81610     110 2023-0~ 2023-0~       4 "Featu~     110 NA            0 NFL  
+       4   81476     159 2023-0~ 2023-0~      27 ""          159 NA            0 NFL  
+       5   81477     159 2023-0~ 2023-0~      28 ""          159 NA            0 NFL  
+       6   81478     158 2023-0~ 2023-0~      29 "Featu~     158 NA            0 NFL  
+       7   81479     159 2023-0~ 2023-0~      30 ""          159 NA            0 NFL  
+       8   81480     159 2023-0~ 2023-0~      31 ""          159 NA            0 NFL  
+       9   81481     159 2023-0~ 2023-0~      32 "Featu~     159 NA            0 NFL  
+      10   81828     158 2023-0~ 2023-0~      33 ""          158 NA            0 NFL  
+      # ... with 40 more rows, 7 more variables: game_count <dbl>,
       #   contest_start_time_suffix <chr>, contest_start_time_type <dbl>,
       #   games <lgl>, draft_group_series_id <dbl>, game_set_key <chr>,
       #   allowugc <lgl>, and abbreviated variable names 1: draft_group_id,
@@ -80,17 +80,35 @@
     Code
       d
     Output
-      # A tibble: 1 x 37
-        draft_group_id sport~1 start~2 start~3 min_s~4 max_s~5 draft~6 allow~7 leagu~8
+      $info
+      # A tibble: 1 x 12
+        draft_group_id sport~1 start~2 start~3 min_s~4 max_s~5 draft~6 allow~7 game_~8
                  <int>   <int> <chr>   <chr>   <chr>   <chr>   <chr>   <lgl>     <int>
-      1          75367       1 " (Mad~ Normal  2022-1~ 2022-1~ Histor~ TRUE         79
-      # ... with 28 more variables: league_name <chr>, league_abbreviation <chr>,
-      #   game_id <int>, away_team_id <int>, home_team_id <int>, start_date <chr>,
-      #   time_remaining_status <chr>, sport <chr>, status <chr>, description <chr>,
-      #   time_remaining <chr>, home_team_score <chr>, away_team_score <chr>,
-      #   quarter <chr>, league <chr>, competition_status <chr>,
-      #   competition_status_detail <chr>, game_attributes_type_id1 <chr>,
-      #   game_attributes_value1 <chr>, game_attributes_type_id2 <chr>, ...
+      1          75367       1 " (Mad~ Normal  2022-1~ 2022-1~ Histor~ TRUE        159
+      # ... with 3 more variables: contest_type_id <int>, sport <chr>,
+      #   game_type <chr>, and abbreviated variable names 1: sport_id,
+      #   2: start_time_suffix, 3: start_time_type, 4: min_start_time,
+      #   5: max_start_time, 6: draft_group_state, 7: allow_ugc, 8: game_type_id
+      
+      $games
+      # A tibble: 1 x 15
+        game_id away_tea~1 home_~2 start~3 time_~4 sport status descr~5 league compe~6
+          <int>      <int>   <int> <chr>   <chr>   <chr> <chr>  <chr>   <chr>  <chr>  
+      1 5915939        350     341 2022-1~ Scores~ NFL   Score~ NO @ LV SIM    Scores~
+      # ... with 5 more variables: competition_status_detail <chr>,
+      #   sport_specific_data_time_remaining <chr>,
+      #   sport_specific_data_home_team_score <chr>,
+      #   sport_specific_data_away_team_score <chr>,
+      #   sport_specific_data_quarter <chr>, and abbreviated variable names
+      #   1: away_team_id, 2: home_team_id, 3: start_date, 4: time_remaining_status,
+      #   5: description, 6: competition_status
+      
+      $leagues
+      # A tibble: 1 x 3
+        league_id league_name league_abbreviation
+            <int> <chr>       <chr>              
+      1        79 Simulation  SIM                
+      
 
 # dk_get_player_list() returns expected data
 

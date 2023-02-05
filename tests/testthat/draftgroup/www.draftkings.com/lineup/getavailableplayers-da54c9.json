@@ -25,7 +25,7 @@
 
             ],
             "s": 10600,
-            "ppg": "13.8",
+            "ppg": "13.5",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -62,7 +62,7 @@
 
             ],
             "s": 10200,
-            "ppg": "17.5",
+            "ppg": "17.2",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -99,7 +99,7 @@
 
             ],
             "s": 9600,
-            "ppg": "24.4",
+            "ppg": "23.9",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -173,7 +173,7 @@
 
             ],
             "s": 8400,
-            "ppg": "12.8",
+            "ppg": "13.0",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -210,7 +210,7 @@
 
             ],
             "s": 7800,
-            "ppg": "10.2",
+            "ppg": "9.8",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -247,7 +247,7 @@
 
             ],
             "s": 7400,
-            "ppg": "12.9",
+            "ppg": "13.3",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -321,7 +321,7 @@
 
             ],
             "s": 6600,
-            "ppg": "7.7",
+            "ppg": "7.9",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -358,7 +358,7 @@
 
             ],
             "s": 6200,
-            "ppg": "10.1",
+            "ppg": "9.6",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -469,7 +469,7 @@
 
             ],
             "s": 5800,
-            "ppg": "10.8",
+            "ppg": "11.2",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -506,7 +506,7 @@
 
             ],
             "s": 5400,
-            "ppg": "11.6",
+            "ppg": "11.2",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -617,7 +617,7 @@
 
             ],
             "s": 4200,
-            "ppg": "6.2",
+            "ppg": "6.4",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -691,7 +691,7 @@
 
             ],
             "s": 3800,
-            "ppg": "4.2",
+            "ppg": "4.3",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -876,7 +876,7 @@
 
             ],
             "s": 2200,
-            "ppg": "3.3",
+            "ppg": "3.1",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -913,7 +913,7 @@
 
             ],
             "s": 2000,
-            "ppg": "1.1",
+            "ppg": "1.0",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -1061,7 +1061,7 @@
 
             ],
             "s": 1200,
-            "ppg": "0.8",
+            "ppg": "0.7",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -1246,7 +1246,7 @@
 
             ],
             "s": 1000,
-            "ppg": "0.4",
+            "ppg": "0.5",
             "or": 0,
             "swp": false,
             "ipc": false,
@@ -1363,7 +1363,7 @@
             "ipc": false,
             "pp": 0,
             "i": "",
-            "news": 0,
+            "news": 2,
             "imgLg": "https://dkn.gs/sports/images/nfl/players/0/20040.png",
             "altImgLg": null,
             "imgSm": "https://dkn.gs/sports/images/nfl/players/50/20040.png",
@@ -1511,7 +1511,7 @@
             "ipc": false,
             "pp": 0,
             "i": "",
-            "news": 2,
+            "news": 0,
             "imgLg": "https://dkn.gs/sports/images/nfl/players/0/560956.png",
             "altImgLg": null,
             "imgSm": "https://dkn.gs/sports/images/nfl/players/50/560956.png",
