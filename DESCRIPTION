@@ -13,12 +13,10 @@ Imports:
     dplyr,
     glue,
     httr2,
+    jsonlite,
     magrittr,
-    ompr,
-    ompr.roi,
     purrr,
     rlang,
-    ROI.plugin.glpk,
     stats,
     tidyjson,
     tidyr,
@@ -27,6 +25,9 @@ RoxygenNote: 7.2.0
 Suggests: 
     diffviewer,
     httptest2,
+    ompr,
+    ompr.roi,
+    ROI.plugin.symphony,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)

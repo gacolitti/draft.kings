@@ -130,7 +130,7 @@
             "sportId": 19,
             "fullName": "Counter Strike: Global Offensive",
             "sortOrder": 15,
-            "hasPublicContests": false,
+            "hasPublicContests": true,
             "isEnabled": true,
             "regionFullSportName": "Counter Strike: Global Offensive",
             "regionAbbreviatedSportName": "CS:GO"

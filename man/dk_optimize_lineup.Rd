@@ -2,18 +2,35 @@
 % Please edit documentation in R/optimize.R
 \name{dk_optimize_lineup}
 \alias{dk_optimize_lineup}
+\alias{dk_optimize_lineup.showdown_captain_mode}
+\alias{dk_optimize_lineup.classic}
 \title{Optimize Lineup}
 \usage{
-dk_optimize_lineup(schematic, ...)
+dk_optimize_lineup(schematic, max_points, ...)
+
+\method{dk_optimize_lineup}{showdown_captain_mode}(schematic, max_points = NULL, ...)
+
+\method{dk_optimize_lineup}{classic}(schematic, max_points = NULL, ...)
 }
 \arguments{
-\item{schematic}{Output from \verb{[dk_prepare_schematic()]} which
+\item{schematic}{Output from \code{\link[=dk_prepare_schematic]{dk_prepare_schematic()}} which
 includes information needed for optimization; including player info such as,
 news status, salary, and projected fantasy points.}
+
+\item{max_points}{Optional upper threshold of points. This is used primarily
+to get many successive lineups in \code{\link[=dk_get_optimal_lineups]{dk_get_optimal_lineups()}}}
 
 \item{...}{Other arguments passed to optimization method.}
 }
 \description{
 Get optimal players based on player pool, projected fantasy points,
 and rules defined by a schematic. See \code{\link[=dk_prepare_schematic]{dk_prepare_schematic()}}.
+
+Determine the optimal lineup of players based on the list of
+available players, their salaries, and their projected
+fantasy points for a showdown captain mode game type.
+
+Determine the optimal lineup of players based on the list of
+available players, their salaries, and their projected
+fantasy points for a classic game type.
 }

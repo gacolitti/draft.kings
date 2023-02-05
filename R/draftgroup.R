@@ -44,7 +44,11 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 #'
 #' @examples
 #'   \dontrun{
-#'     dk_get_draft_group(75367)
+#'     # NFL Showdown Captain Mode
+#'     dk_get_draft_group(75284)
+#'
+#'     # NFL Classic
+#'     dk_get_draft_group(74625)
 #'   }
 #'
 #' @export
@@ -103,6 +107,12 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
 #' @inheritParams dk_get_draft_group
 #' @inheritDotParams dk_get_draft_group
 #'
+#' @examples
+#' \dontrun{
+#'   dk_get_draft_group_info(75284)
+#'
+#' }
+#'
 #' @export
 dk_get_draft_group_info <- function(draft_group_id = NULL,
                                  contest_key = NULL,
@@ -128,6 +138,12 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
 #'
 #' @inheritParams dk_get_draft_group_info
 #' @inheritDotParams dk_get_draft_group_info
+#'
+#' @examples
+#' \dontrun{
+#'   dk_get_player_list(75284)
+#'
+#' }
 #'
 #' @export
 dk_get_player_list <- function(draft_group_id = NULL,

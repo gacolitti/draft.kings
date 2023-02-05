@@ -18,7 +18,7 @@ Fetch list of sport names and IDs.
 }
 \examples{
   \dontrun{
-    get_sports()
+    dk_get_sports()
   }
 
 }

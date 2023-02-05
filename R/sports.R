@@ -9,7 +9,7 @@
 #'
 #' @examples
 #'   \dontrun{
-#'     get_sports()
+#'     dk_get_sports()
 #'   }
 #'
 #' @export
