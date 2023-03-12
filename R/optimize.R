@@ -43,8 +43,9 @@ dk_prepare_schematic <- function(draft_group_id,
                                  exclude_players = NULL,
                                  exclude_questionable = FALSE) {
 
-  players_intersect <- intersect(include_players, exclude_players)
 
+  # Error if same players are included in `include_players` and `exclude_players`
+  players_intersect <- intersect(include_players, exclude_players)
   if (length(players_intersect) > 0) {
 
     cli::cli_abort(
@@ -53,7 +54,7 @@ dk_prepare_schematic <- function(draft_group_id,
 
   }
 
-  # Check for expected column names in rules
+  # Check for expected column names and types in rules
   if (!is.null(rules)) {
 
     missing_cols <- setdiff(c("salary_cap_max_value", "team_count_min_value", "unique_players"),
@@ -61,7 +62,7 @@ dk_prepare_schematic <- function(draft_group_id,
 
     if (length(missing_cols) > 0) {
 
-      cli::cli_abort("Missing required columns(?s) from `rules`: {missing_cols}")
+      cli::cli_abort("Missing required column{?s} from `rules`: {missing_cols}")
 
     }
 
@@ -96,7 +97,7 @@ dk_prepare_schematic <- function(draft_group_id,
 
     if (length(missing_cols) > 0) {
 
-      cli::cli_abort("Missing required column(?s) from `draft_group`: {missing_cols}")
+      cli::cli_abort("Missing required column{?s} from `draft_group`: {missing_cols}")
 
     }
 
