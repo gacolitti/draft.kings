@@ -55,20 +55,20 @@
     Code
       d
     Output
-      # A tibble: 50 x 17
+      # A tibble: 70 x 17
          draft~1 conte~2 start~3 start~4 sort_~5 draft~6 game_~7 game_~8 sport~9 sport
            <dbl>   <dbl> <chr>   <chr>     <dbl> <chr>     <dbl> <lgl>     <dbl> <chr>
-       1   81607      96 2023-0~ 2023-0~       1 "Featu~      96 NA            0 NFL  
-       2   81609     108 2023-0~ 2023-0~       3 "Featu~     108 NA            0 NFL  
-       3   81610     110 2023-0~ 2023-0~       4 "Featu~     110 NA            0 NFL  
-       4   81476     159 2023-0~ 2023-0~      27 ""          159 NA            0 NFL  
-       5   81477     159 2023-0~ 2023-0~      28 ""          159 NA            0 NFL  
-       6   81478     158 2023-0~ 2023-0~      29 "Featu~     158 NA            0 NFL  
-       7   81479     159 2023-0~ 2023-0~      30 ""          159 NA            0 NFL  
-       8   81480     159 2023-0~ 2023-0~      31 ""          159 NA            0 NFL  
-       9   81481     159 2023-0~ 2023-0~      32 "Featu~     159 NA            0 NFL  
-      10   81828     158 2023-0~ 2023-0~      33 ""          158 NA            0 NFL  
-      # ... with 40 more rows, 7 more variables: game_count <dbl>,
+       1   83426     253 2023-0~ 2023-0~       4 "Featu~     253 NA            0 NFL  
+       2   83427     254 2023-0~ 2023-0~       5 ""          254 NA            0 NFL  
+       3   83428     254 2023-0~ 2023-0~       6 "Featu~     254 NA            0 NFL  
+       4   83245     159 2023-0~ 2023-0~      25 ""          159 NA            0 NFL  
+       5   83246     159 2023-0~ 2023-0~      26 ""          159 NA            0 NFL  
+       6   83247     158 2023-0~ 2023-0~      27 "Featu~     158 NA            0 NFL  
+       7   83248     159 2023-0~ 2023-0~      28 ""          159 NA            0 NFL  
+       8   83249     159 2023-0~ 2023-0~      29 ""          159 NA            0 NFL  
+       9   83250     159 2023-0~ 2023-0~      30 "Featu~     159 NA            0 NFL  
+      10   83704     158 2023-0~ 2023-0~      31 ""          158 NA            0 NFL  
+      # ... with 60 more rows, 7 more variables: game_count <dbl>,
       #   contest_start_time_suffix <chr>, contest_start_time_type <dbl>,
       #   games <lgl>, draft_group_series_id <dbl>, game_set_key <chr>,
       #   allowugc <lgl>, and abbreviated variable names 1: draft_group_id,
@@ -121,7 +121,7 @@
        1 611417     0 27581 5915939 Davan~ Adams Dava~ Adams    17 WR    1.67e12   341
        2 691536     0 28389 5915939 Jameis Wins~ Jame~ Wins~     2 QB    1.67e12   350
        3 750846     0 30180 5915939 Alvin  Kama~ Alvin Kama~    41 RB    1.67e12   350
-       4 496083     0 27564 5915939 Derek  Carr  Derek Carr      4 QB    1.67e12   341
+       4 496083     0 27564 5915939 Derek  Carr  Derek Carr      0 QB    1.67e12   341
        5 653699     0 29281 5915939 Micha~ Thom~ Mich~ Thom~    13 WR    1.67e12   350
        6 944416     0 31856 5915939 Josh   Jaco~ Josh  Jaco~    28 RB    1.67e12   341
        7 600191     0 28592 5915939 Darren Wall~ Darr~ Wall~    83 TE    1.67e12   341
@@ -147,7 +147,7 @@
 # dk_get_player_fp() returns expected data
 
     Code
-      d
+      d_nfl
     Output
       # A tibble: 350 x 27
          player_id player_dk_id first~1 last_~2 team_id posit~3 salary fanta~4 value~5
@@ -169,4 +169,30 @@
       #   opposing_team_name <chr>, opposing_team_abbreviation <chr>,
       #   fantasy_stats_num_games <dbl>, fantasy_points_per_game <dbl>,
       #   player_state <chr>, pregame_projection <dbl>, ...
+
+---
+
+    Code
+      d_nba
+    Output
+      # A tibble: 188 x 26
+         player_id player_dk_id first~1 last_~2 team_id posit~3 salary fanta~4 value~5
+             <dbl>        <dbl> <chr>   <chr>     <dbl> <chr>    <dbl>   <dbl> <chr>  
+       1    463121        33322 Damian  Lillard      22 PG       10500       0 ""     
+       2    830650        33018 Nikola  Jokic         7 C        11600       0 ""     
+       3    794508        33292 Joel    Embiid       20 C        11500       0 ""     
+       4   1257420       527219 LaMelo  Ball       5312 PG        3000       0 ""     
+       5    395388        33070 James   Harden       20 PG        9900       0 ""     
+       6    214152        33114 LeBron  James        13 SF       10400       0 ""     
+       7   1067856        33258 Shai    Gilgeo~      25 PG        9100       0 ""     
+       8    603096        33122 Anthony Davis        13 PF       10700       0 ""     
+       9    879707        33398 Donovan Mitche~       5 SG        9300       0 ""     
+      10   1132025        33223 Zion    Willia~       3 PF        8300       0 ""     
+      # ... with 178 more rows, 17 more variables: pregame_projection <dbl>,
+      #   real_time_projection <dbl>, game_id <dbl>, points <dbl>, sport <chr>,
+      #   game_status <chr>, game_start_time <chr>, date <chr>, image_url <chr>,
+      #   team_city <chr>, team_name <chr>, team_abbreviation <chr>,
+      #   opposing_team_city <chr>, opposing_team_name <chr>,
+      #   opposing_team_abbreviation <chr>, fantasy_stats_num_games <dbl>,
+      #   fantasy_points_per_game <dbl>, and abbreviated variable names ...
 

@@ -21,7 +21,7 @@ Imports:
     tidyjson,
     tidyr,
     utils
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
 Suggests: 
     diffviewer,
     httptest2,
