@@ -75,3 +75,61 @@ get_error_body <- function(resp) {
   }
 
 }
+
+#' Check the classes of a data frame and allow for multiple different classes for certain columns
+#'
+#' This function checks the classes of a data frame and allows for certain columns to have multiple
+#' allowed classes.
+#'
+#' @param df The data frame to check
+#' @param class_list A named list that specifies the expected classes for each column
+#'
+#'   The `class_list` argument should be a named list, where the names correspond to the column
+#'   names in `df`. Each entry in the list should be a character vector of the allowed classes for
+#'   the corresponding column. For example, `class_list = list(col1 = "numeric", col2 =
+#'   c("character", "factor"), col3 = "logical")` specifies that `col1` must be of class
+#'   `"numeric"`, `col2` must be of class `"character"` or `"factor"`, and `col3` must be of class
+#'   `"logical"`.
+#'
+#' @return The checked data frame
+#'
+#' @examples
+#' df <- data.frame(
+#'   col1 = c(1, 2, 3),
+#'   col2 = c("a", "b", "c"),
+#'   col3 = c(TRUE, FALSE, TRUE),
+#'   stringsAsFactors = FALSE
+#' )
+#'
+#' class_list <- list(
+#'   col1 = "numeric",
+#'   col2 = c("character", "factor"),
+#'   col3 = "logical"
+#' )
+#'
+#' check_data_frame(df, class_list)
+#'
+#' @keywords internal
+check_df <- function(df, class_list) {
+  # check that required columns are present in data frame
+  required_columns <- names(class_list)
+  missing_cols <- setdiff(required_columns, colnames(df))
+  if (length(missing_cols) > 0) {
+    cli::cli_abort("Missing required column{?s} from `rules`: {missing_cols}")
+  }
+
+  # iterate over required columns and check classes
+  for (col in required_columns) {
+    allowed_classes <- class_list[[col]]
+    if (!class(df[[col]]) %in% allowed_classes) {
+      cli::cli_abort(
+        "Column `{col}` must be of class {.cls {allowed_classes}}"
+      )
+    }
+  }
+
+  # return the checked data frame
+  return(df)
+}
+
+

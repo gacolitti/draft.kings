@@ -197,28 +197,53 @@ dk_get_team_list <- function(draft_group_id = NULL,
 #' Get Player Fantasy Points Earned
 #'
 #' Retrieve player fantasy points earned in each
-#' game for a given season and week.
+#' game for a given season and week (NFL) or date (NBA/MLB).
 #'
 #' @inheritParams dk_get_contest_info
 #' @inheritDotParams dk_get_contest_info
 #'
-#' @param week integer.
-#' @param year integer. optional. Defaults to the current year.
+#' @param timeframe integer. Either the week number for NFL, or a date of the form `20230312` for
+#'   MLB and NBA. If the timeframe format detected does not match the sport argument passed, an
+#'   error is returned.
+#' @param season integer. optional. Defaults to the current season year.
 #' @param sport character. Defaults to NFL.
 #'
 #' @export
-dk_get_player_fp <- function(week,
-                              year = as.numeric(format(Sys.Date(), "%Y")),
-                              sport = "nfl",
+dk_get_player_fp <- function(timeframe,
+                              season = as.numeric(format(Sys.Date(), "%Y")),
+                              sport = c("nfl", "nba", "mlb"),
                               output = c("cleaned_json", "json", "response", "request"),
                               ...) {
 
   output <- rlang::arg_match(output)
+  sport <- rlang::arg_match(sport)
+
+  # Error if timeframe does not correspond to sport
+  if ((nchar(timeframe) > 2 & sport == "nfl") | (nchar(timeframe) != 8 & sport != "nfl")) {
+    cli::cli_abort(
+      "Incorrect `timeframe` or `sport`. Ensure the timeframe argument corresponds to the sport."
+    )
+  }
+
+  # Create path based on sport
+  if (sport == "nfl") {
+
+    path <- glue::glue("leaderboards/players/seasons/{season}/weeks/{timeframe}")
+
+  } else if (sport %in% c("nba", "mlb")) {
+
+    path <- glue::glue("leaderboards/players/seasons/{season}/dates/{timeframe}")
+
+  } else {
+
+    cli::cli_abort("`{sport}` not a supported sport.")
+
+  }
 
   req <- dk_request(
     ...,
     base_url = "https://live.draftkings.com/api/v2/",
-    paths = glue::glue("leaderboards/players/seasons/{year}/weeks/{week}"),
+    paths = path,
     headers = list('Content-Type' = 'application/json',
                     'Accept' = '*/*',
                     'Accept-Encoding' = 'gzip, deflate, br'),

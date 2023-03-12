@@ -5,17 +5,19 @@
 \title{Get Player Fantasy Points Earned}
 \usage{
 dk_get_player_fp(
-  week,
-  year = as.numeric(format(Sys.Date(), "\%Y")),
-  sport = "nfl",
+  timeframe,
+  season = as.numeric(format(Sys.Date(), "\%Y")),
+  sport = c("nfl", "nba", "mlb"),
   output = c("cleaned_json", "json", "response", "request"),
   ...
 )
 }
 \arguments{
-\item{week}{integer.}
+\item{timeframe}{integer. Either the week number for NFL, or a date of the form \code{20230312} for
+MLB and NBA. If the timeframe format detected does not match the sport argument passed, an
+error is returned.}
 
-\item{year}{integer. optional. Defaults to the current year.}
+\item{season}{integer. optional. Defaults to the current season year.}
 
 \item{sport}{character. Defaults to NFL.}
 
@@ -34,5 +36,5 @@ is 133645678.}
 }
 \description{
 Retrieve player fantasy points earned in each
-game for a given season and week.
+game for a given season and week (NFL) or date (NBA/MLB).
 }

@@ -51,9 +51,11 @@ httptest2::with_mock_dir("draftgroup", {
 
   test_that("dk_get_player_fp() returns expected data", {
 
-    d <- dk_get_player_fp(year = 2020, week = 16, sport = "nfl")
+    d_nfl <- dk_get_player_fp(season = 2020, timeframe = 16, sport = "nfl")
+    d_nba <- dk_get_player_fp(season = 2022, timeframe = 20230312, sport = "nba")
 
-    expect_snapshot(d)
+    expect_snapshot(d_nfl)
+    expect_snapshot(d_nba)
 
   })
 
