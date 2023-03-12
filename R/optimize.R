@@ -57,49 +57,50 @@ dk_prepare_schematic <- function(draft_group_id,
   # Check for expected column names and types in rules
   if (!is.null(rules)) {
 
-    missing_cols <- setdiff(c("salary_cap_max_value", "team_count_min_value", "unique_players"),
-                            colnames(rules))
-
-    if (length(missing_cols) > 0) {
-
-      cli::cli_abort("Missing required column{?s} from `rules`: {missing_cols}")
-
-    }
+    check_df(
+      rules,
+      list(
+        "salary_cap_max_value" = c("integer", "numeric"),
+        "team_count_min_value" = c("integer", "numeric"),
+        "unique_players"       = "logical"
+      )
+    )
 
   }
 
   # Check for expected column names in draft_group_exp_fp
   if (!is.null(draft_group_exp_fp)) {
 
-    missing_cols <- setdiff(c("draftable_id", "exp_fp"), colnames(draft_group_exp_fp))
 
-    if (length(missing_cols) > 0) {
-
-      cli::cli_abort("Missing required columns(?s) from `draft_group_exp_fp`: {missing_cols}")
-
-    }
+    check_df(
+      draft_group_exp_fp,
+      list(
+        "draftable_id" = c("integer", "numeric"),
+        "exp_fp" = c("integer", "numeric")
+      )
+    )
 
   }
 
   # Check for expected column names in draft_group
   if (!is.null(draft_group)) {
 
-    missing_cols <- setdiff(c("draftable_id",
-                              "player_id",
-                              "first_name",
-                              "last_name",
-                              "display_name",
-                              "salary",
-                              "team_id",
-                              "competition_id",
-                              "position",
-                              "status"), colnames(draft_group))
 
-    if (length(missing_cols) > 0) {
-
-      cli::cli_abort("Missing required column{?s} from `draft_group`: {missing_cols}")
-
-    }
+    check_df(
+      draft_group_exp_fp,
+      list(
+        "draftable_id" = c("integer", "numeric"),
+        "player_id" = c("integer", "numeric"),
+        "first_name" = c("character"),
+        "last_name" = c("character"),
+        "display_name" = c("character"),
+        "salary" = c("integer", "numeric"),
+        "team_id" = c("integer", "numeric"),
+        "competition_id" = c("integer", "numeric"),
+        "position" = c("character"),
+        "status" = c("character")
+      )
+    )
 
   }
 
@@ -171,7 +172,7 @@ dk_prepare_schematic <- function(draft_group_id,
   # Add expected fantasy points to draft group
   # if "exp_fp" column does not exist in draft_group
   # and draft_group_exp_fp is not passed. Otherwise,
-  # join passed draft_group_exp_fp to draft_group
+  # join draft_group_exp_fp to draft_group
   if (is.null(draft_group$exp_fp)) {
 
     if (is.null(draft_group_exp_fp)) {
