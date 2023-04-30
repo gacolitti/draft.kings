@@ -115,7 +115,9 @@ check_df <- function(df, class_list) {
   required_columns <- names(class_list)
   missing_cols <- setdiff(required_columns, colnames(df))
   if (length(missing_cols) > 0) {
-    cli::cli_abort("Missing required column{?s} from `rules`: {missing_cols}")
+    cli::cli_abort(
+        "Missing required columns from `{deparse(substitute(df))}`: {missing_cols}"
+    )
   }
 
   # iterate over required columns and check classes
