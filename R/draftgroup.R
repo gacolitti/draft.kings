@@ -208,6 +208,8 @@ dk_get_team_list <- function(draft_group_id = NULL,
 #' @param season integer. optional. Defaults to the current season year.
 #' @param sport character. Defaults to NFL.
 #'
+#' @details Data starts on October 18th, 2022 for NBA.
+#'
 #' @export
 dk_get_player_fp <- function(timeframe,
                               season = as.numeric(format(Sys.Date(), "%Y")),

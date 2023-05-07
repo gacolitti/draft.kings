@@ -87,7 +87,7 @@ dk_prepare_schematic <- function(draft_group_id,
 
 
     check_df(
-      draft_group_exp_fp,
+      draft_group,
       list(
         "draftable_id" = c("integer", "numeric"),
         "player_id" = c("integer", "numeric"),
