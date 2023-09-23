@@ -340,6 +340,10 @@ dk_resp_parse.entries_resp <- function(resp) {
         }
       )
 
+      # Sometimes stats are missing
+      # In this case, just return the entry info
+      if (purrr::is_empty(stats)) return(entry_info)
+
       # Combine entry info keys with stats
       # This should be a one to many crossing,
       # because entry info should be one row and stats should
