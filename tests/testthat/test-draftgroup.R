@@ -5,7 +5,9 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_draft_group(draft_group_id = 75367)
 
-    expect_snapshot(d)
+    set.seed(1)
+    d_sampled <- d |> dplyr::slice_sample(n = 5)
+    expect_snapshot(dplyr::glimpse(d_sampled, 200))
 
   })
 
@@ -13,7 +15,9 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_draft_group(contest_key = 5915939)
 
-    expect_snapshot(d)
+    set.seed(1)
+    d_sampled <- d |> dplyr::slice_sample(n = 5)
+    expect_snapshot(dplyr::glimpse(d_sampled, 200))
 
   })
 
@@ -21,7 +25,9 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_lobby_draft_groups()
 
-    expect_snapshot(d)
+    set.seed(1)
+    d_sampled <- d |> dplyr::slice_sample(n = 5)
+    expect_snapshot(dplyr::glimpse(d_sampled, 200))
 
   })
 
@@ -29,7 +35,7 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_draft_group_info(draft_group_id = 75367)
 
-    expect_snapshot(d)
+    expect_snapshot(dplyr::glimpse(d, 200))
 
   })
 
@@ -37,7 +43,9 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_player_list(draft_group_id = 75367)
 
-    expect_snapshot(d)
+    set.seed(1)
+    d_sampled <- d |> dplyr::slice_sample(n = 5)
+    expect_snapshot(dplyr::glimpse(d_sampled, 200))
 
   })
 
@@ -45,7 +53,9 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_team_list(draft_group_id = 75367)
 
-    expect_snapshot(d)
+    set.seed(1)
+    d_sampled <- d |> dplyr::slice_sample(n = 5)
+    expect_snapshot(dplyr::glimpse(d_sampled, 200))
 
   })
 
@@ -54,8 +64,13 @@ httptest2::with_mock_dir("draftgroup", {
     d_nfl <- dk_get_player_fp(season = 2020, timeframe = 16, sport = "nfl")
     d_nba <- dk_get_player_fp(season = 2022, timeframe = 20230312, sport = "nba")
 
-    expect_snapshot(d_nfl)
-    expect_snapshot(d_nba)
+    set.seed(1)
+    d_sampled <- d_nfl |> dplyr::slice_sample(n = 5)
+    expect_snapshot(dplyr::glimpse(d_sampled, 200))
+
+    set.seed(1)
+    d_sampled <- d_nba |> dplyr::slice_sample(n = 5)
+    expect_snapshot(dplyr::glimpse(d_sampled, 200))
 
   })
 

@@ -1,198 +1,253 @@
 # dk_get_draft_group() works when passed a draftgroup ID
 
     Code
-      d
+      dplyr::glimpse(d_sampled, 200)
     Output
-      # A tibble: 82 x 24
-         draftable_id first_~1 last_~2 displ~3 short~4 playe~5 playe~6 posit~7 roste~8
-                <dbl> <chr>    <chr>   <chr>   <chr>     <dbl>   <dbl> <chr>     <dbl>
-       1     24651606 Davante  Adams   Davant~ D. Ada~  611417   19493 WR          511
-       2     24651607 Jameis   Winston Jameis~ J. Win~  691536   20214 QB          511
-       3     24651608 Alvin    Kamara  Alvin ~ A. Kam~  750846   18573 RB          511
-       4     24651609 Derek    Carr    Derek ~ D. Carr  496083   12350 QB          511
-       5     24651610 Michael  Thomas  Michae~ M. Tho~  653699   18818 WR          511
-       6     24651611 Josh     Jacobs  Josh J~ J. Jac~  944416   12715 RB          511
-       7     24651612 Darren   Waller  Darren~ D. Wal~  600191   13162 TE          511
-       8     24651565 Davante  Adams   Davant~ D. Ada~  611417   19493 WR          512
-       9     24651613 Mark     Ingram~ Mark I~ M. Ing~  456613   17165 RB          511
-      10     24651566 Jameis   Winston Jameis~ J. Win~  691536   20214 QB          512
-      # ... with 72 more rows, 15 more variables: salary <dbl>, status <chr>,
-      #   is_swappable <lgl>, is_disabled <lgl>, news_status <chr>,
-      #   player_image50 <chr>, player_image160 <chr>, alt_player_image50 <chr>,
-      #   alt_player_image160 <chr>, team_id <dbl>, team_abbreviation <chr>,
-      #   player_game_hash <chr>, competition_id <dbl>, competition_name <chr>,
-      #   competition_start_time <chr>, and abbreviated variable names 1: first_name,
-      #   2: last_name, 3: display_name, 4: short_name, 5: player_id, ...
+      Rows: 5
+      Columns: 24
+      $ draftable_id           <dbl> 24651646, 24651627, 24651606, 24651625, 24651628
+      $ first_name             <chr> "Kawaan", "Deonte", "Davante", "Wil", "Tre'Quan"
+      $ last_name              <chr> "Baker", "Harty", "Adams", "Lutz", "Smith"
+      $ display_name           <chr> "Kawaan Baker", "Deonte Harty", "Davante Adams", "Wil Lutz", "Tre'Quan Smith"
+      $ short_name             <chr> "K. Baker", "D. Harty", "D. Adams", "W. Lutz", "T. Smith"
+      $ player_id              <dbl> 951485, 1166545, 611417, 700299, 838415
+      $ player_dk_id           <dbl> 560956, 18497, 19493, 18657, 18806
+      $ position               <chr> "WR", "WR", "WR", "K", "WR"
+      $ roster_slot_id         <dbl> 511, 511, 511, 511, 511
+      $ salary                 <dbl> 1500, 4200, 15900, 5400, 3600
+      $ status                 <chr> "None", "None", "None", "None", "None"
+      $ is_swappable           <lgl> FALSE, FALSE, FALSE, FALSE, FALSE
+      $ is_disabled            <lgl> FALSE, FALSE, FALSE, FALSE, FALSE
+      $ news_status            <chr> "None", "Recent", "Breaking", "Breaking", "Breaking"
+      $ player_image50         <chr> "https://dkn.gs/sports/images/nfl/players/50/560956.png", "https://dkn.gs/sports/images/nfl/players/50/18497.png", "https://dkn.gs/sports/images/nfl/players/50/19493.p~
+      $ player_image160        <chr> "https://dkn.gs/sports/images/nfl/players/160/560956.png", "https://dkn.gs/sports/images/nfl/players/160/18497.png", "https://dkn.gs/sports/images/nfl/players/160/1949~
+      $ alt_player_image50     <chr> "", "", "", "", ""
+      $ alt_player_image160    <chr> "", "", "", "", ""
+      $ team_id                <dbl> 350, 350, 341, 350, 350
+      $ team_abbreviation      <chr> "NO", "NO", "LV", "NO", "NO"
+      $ player_game_hash       <chr> "951485-5915939", "1166545-5915939", "611417-5915939", "700299-5915939", "838415-5915939"
+      $ competition_id         <dbl> 5915939, 5915939, 5915939, 5915939, 5915939
+      $ competition_name       <chr> "NO @ LV", "NO @ LV", "NO @ LV", "NO @ LV", "NO @ LV"
+      $ competition_start_time <chr> "2022-10-08T18:00:00.0000000Z", "2022-10-08T18:00:00.0000000Z", "2022-10-08T18:00:00.0000000Z", "2022-10-08T18:00:00.0000000Z", "2022-10-08T18:00:00.0000000Z"
 
 # dk_get_draft_group() works when passed a contest ID
 
     Code
-      d
+      dplyr::glimpse(d_sampled, 200)
     Output
-      # A tibble: 1,265 x 22
-         draftable_id first_~1 last_~2 displ~3 short~4 playe~5 playe~6 posit~7 roste~8
-                <dbl> <chr>    <chr>   <chr>   <chr>     <dbl>   <dbl> <chr>     <dbl>
-       1      4373678 Clayton  Kershaw Clayto~ C. Ker~  326468       0 SP           50
-       2      4373781 Max      Scherz~ Max Sc~ M. Sch~  326473       0 SP           50
-       3      4373757 Félix    Hernán~ Félix ~ F. Her~  244302       0 SP           50
-       4      4373661 Chris    Sale    Chris ~ C. Sale  392121       0 SP           50
-       5      4373772 David    Price   David ~ D. Pri~  388363       0 SP           50
-       6      4373788 Stephen  Strasb~ Stephe~ S. Str~  500543       0 SP           50
-       7      4373676 Zack     Greinke Zack G~ Z. Gre~  202781       0 SP           50
-       8      4373750 Matt     Harvey  Matt H~ M. Har~  390378       0 SP           50
-       9      4373794 Cole     Hamels  Cole H~ C. Ham~  202810       0 SP           50
-      10      4373702 Madison  Bumgar~ Madiso~ M. Bum~  388396       0 SP           50
-      # ... with 1,255 more rows, 13 more variables: salary <dbl>, status <chr>,
-      #   is_swappable <lgl>, is_disabled <lgl>, news_status <chr>,
-      #   player_image50 <chr>, player_image160 <chr>, team_id <dbl>,
-      #   team_abbreviation <chr>, player_game_hash <chr>, competition_id <dbl>,
-      #   competition_name <chr>, competition_start_time <chr>, and abbreviated
-      #   variable names 1: first_name, 2: last_name, 3: display_name, 4: short_name,
-      #   5: player_id, 6: player_dk_id, 7: position, 8: roster_slot_id
+      Rows: 5
+      Columns: 22
+      $ draftable_id           <dbl> 4374353, 4374400, 4373745, 4374278, 4373887
+      $ first_name             <chr> "Charlie", "Travis", "Archie", "Jedd", "Boone"
+      $ last_name              <chr> "Culberson", "Snider", "Bradley", "Gyorko", "Logan"
+      $ display_name           <chr> "Charlie Culberson", "Travis Snider", "Archie Bradley", "Jedd Gyorko", "Boone Logan"
+      $ short_name             <chr> "C. Culberson", "T. Snider", "A. Bradley", "J. Gyorko", "B. Logan"
+      $ player_id              <dbl> 389929, 326476, 597753, 526816, 244205
+      $ player_dk_id           <dbl> 0, 0, 0, 0, 0
+      $ position               <chr> "2B/SS", "OF", "SP", "2B/3B", "RP"
+      $ roster_slot_id         <dbl> 55, 56, 50, 54, 50
+      $ salary                 <dbl> 3000, 3700, 5700, 3200, 4000
+      $ status                 <chr> "None", "None", "None", "None", "None"
+      $ is_swappable           <lgl> FALSE, FALSE, FALSE, FALSE, FALSE
+      $ is_disabled            <lgl> FALSE, FALSE, FALSE, FALSE, FALSE
+      $ news_status            <chr> "None", "None", "None", "None", "None"
+      $ player_image50         <chr> "https://dkn.gs/playerimages/m/mlb_50/389929.png", "https://dkn.gs/playerimages/m/mlb_50/326476.png", "https://dkn.gs/playerimages/m/mlb_50/597753.png", "https://dkn.g~
+      $ player_image160        <chr> "https://dkn.gs/playerimages/m/mlb_retina/389929.png", "https://dkn.gs/playerimages/m/mlb_retina/326476.png", "https://dkn.gs/playerimages/m/mlb_retina/597753.png", "h~
+      $ team_id                <dbl> 251, 225, 253, 249, 251
+      $ team_abbreviation      <chr> "COL", "BAL", "ARI", "SD", "COL"
+      $ player_game_hash       <chr> "389929-1499829", "326476-1498315", "597753-1500189", "526816-1499105", "244205-1499829"
+      $ competition_id         <dbl> 1499829, 1498315, 1500189, 1499105, 1499829
+      $ competition_name       <chr> "SF @ COL", "BOS @ BAL", "PIT @ ARI", "LAD @ SD", "SF @ COL"
+      $ competition_start_time <chr> "2015-04-25T00:40:00.0000000Z", "2015-04-24T23:05:00.0000000Z", "2015-04-25T01:40:00.0000000Z", "2015-04-25T02:10:00.0000000Z", "2015-04-25T00:40:00.0000000Z"
 
 # dk_get_lobby_draft_groups() returns expected data
 
     Code
-      d
+      dplyr::glimpse(d_sampled, 200)
     Output
-      # A tibble: 70 x 17
-         draft~1 conte~2 start~3 start~4 sort_~5 draft~6 game_~7 game_~8 sport~9 sport
-           <dbl>   <dbl> <chr>   <chr>     <dbl> <chr>     <dbl> <lgl>     <dbl> <chr>
-       1   83426     253 2023-0~ 2023-0~       4 "Featu~     253 NA            0 NFL  
-       2   83427     254 2023-0~ 2023-0~       5 ""          254 NA            0 NFL  
-       3   83428     254 2023-0~ 2023-0~       6 "Featu~     254 NA            0 NFL  
-       4   83245     159 2023-0~ 2023-0~      25 ""          159 NA            0 NFL  
-       5   83246     159 2023-0~ 2023-0~      26 ""          159 NA            0 NFL  
-       6   83247     158 2023-0~ 2023-0~      27 "Featu~     158 NA            0 NFL  
-       7   83248     159 2023-0~ 2023-0~      28 ""          159 NA            0 NFL  
-       8   83249     159 2023-0~ 2023-0~      29 ""          159 NA            0 NFL  
-       9   83250     159 2023-0~ 2023-0~      30 "Featu~     159 NA            0 NFL  
-      10   83704     158 2023-0~ 2023-0~      31 ""          158 NA            0 NFL  
-      # ... with 60 more rows, 7 more variables: game_count <dbl>,
-      #   contest_start_time_suffix <chr>, contest_start_time_type <dbl>,
-      #   games <lgl>, draft_group_series_id <dbl>, game_set_key <chr>,
-      #   allowugc <lgl>, and abbreviated variable names 1: draft_group_id,
-      #   2: contest_type_id, 3: start_date, 4: start_date_est, 5: sort_order,
-      #   6: draft_group_tag, 7: game_type_id, 8: game_type, 9: sport_sort_order
+      Rows: 5
+      Columns: 17
+      $ draft_group_id            <dbl> 83904, 83829, 83426, 83860, 83830
+      $ contest_type_id           <dbl> 106, 81, 253, 73, 70
+      $ start_date                <chr> "2023-03-12T20:30:00.0000000Z", "2023-03-13T23:00:00.0000000Z", "2023-03-12T20:00:00.0000000Z", "2023-03-12T22:00:00.0000000Z", "2023-03-13T23:30:00.0000000Z"
+      $ start_date_est            <chr> "2023-03-12T16:30:00.0000000", "2023-03-13T19:00:00.0000000", "2023-03-12T16:00:00.0000000", "2023-03-12T18:00:00.0000000", "2023-03-13T19:30:00.0000000"
+      $ sort_order                <dbl> 999, 999, 4, 999, 999
+      $ draft_group_tag           <chr> "", "", "Featured", "Featured", ""
+      $ game_type_id              <dbl> 106, 81, 253, 73, 70
+      $ game_type                 <lgl> NA, NA, NA, NA, NA
+      $ sport_sort_order          <dbl> 14, 3, 0, 3, 3
+      $ sport                     <chr> "TEN", "NBA", "NFL", "NBA", "NBA"
+      $ game_count                <dbl> 8, 1, 2, 4, 3
+      $ contest_start_time_suffix <chr> " (Late)", " (IND vs DET)", " (XFL Sun Only)", " (NBA Tiers)", " (Turbo)"
+      $ contest_start_time_type   <dbl> 0, 0, 0, 0, 0
+      $ games                     <lgl> NA, NA, NA, NA, NA
+      $ draft_group_series_id     <dbl> 0, 0, 156, 0, 0
+      $ game_set_key              <chr> "45484D9B2E0F2A2651D3763D84C38F54", "050E2D9CD204BA9C9ABF23164AC4C94C", "887E51ACB577FF6B52FA80675088D216", "E9E6EF752803DBCB3FB2BBE596CFC8A3", "79E849EDB354B7B4634~
+      $ allowugc                  <lgl> TRUE, TRUE, TRUE, TRUE, TRUE
 
 # dk_get_draft_group_info() returns expected data
 
     Code
-      d
+      dplyr::glimpse(d, 200)
     Output
-      $info
-      # A tibble: 1 x 12
-        draft_group_id sport~1 start~2 start~3 min_s~4 max_s~5 draft~6 allow~7 game_~8
-                 <int>   <int> <chr>   <chr>   <chr>   <chr>   <chr>   <lgl>     <int>
-      1          75367       1 " (Mad~ Normal  2022-1~ 2022-1~ Histor~ TRUE        159
-      # ... with 3 more variables: contest_type_id <int>, sport <chr>,
-      #   game_type <chr>, and abbreviated variable names 1: sport_id,
-      #   2: start_time_suffix, 3: start_time_type, 4: min_start_time,
-      #   5: max_start_time, 6: draft_group_state, 7: allow_ugc, 8: game_type_id
-      
-      $games
-      # A tibble: 1 x 15
-        game_id away_tea~1 home_~2 start~3 time_~4 sport status descr~5 league compe~6
-          <int>      <int>   <int> <chr>   <chr>   <chr> <chr>  <chr>   <chr>  <chr>  
-      1 5915939        350     341 2022-1~ Scores~ NFL   Score~ NO @ LV SIM    Scores~
-      # ... with 5 more variables: competition_status_detail <chr>,
-      #   sport_specific_data_time_remaining <chr>,
-      #   sport_specific_data_home_team_score <chr>,
-      #   sport_specific_data_away_team_score <chr>,
-      #   sport_specific_data_quarter <chr>, and abbreviated variable names
-      #   1: away_team_id, 2: home_team_id, 3: start_date, 4: time_remaining_status,
-      #   5: description, 6: competition_status
-      
-      $leagues
-      # A tibble: 1 x 3
-        league_id league_name league_abbreviation
-            <int> <chr>       <chr>              
-      1        79 Simulation  SIM                
-      
+      List of 3
+       $ info   : tibble [1 x 12] (S3: tbl_df/tbl/data.frame)
+        ..$ draft_group_id   : int 75367
+        ..$ sport_id         : int 1
+        ..$ start_time_suffix: chr " (Madden Stream NO vs LV)"
+        ..$ start_time_type  : chr "Normal"
+        ..$ min_start_time   : chr "2022-10-08T18:00:00.0000000Z"
+        ..$ max_start_time   : chr "2022-10-08T18:00:00.0000000Z"
+        ..$ draft_group_state: chr "Historical"
+        ..$ allow_ugc        : logi TRUE
+        ..$ game_type_id     : int 159
+        ..$ contest_type_id  : int 159
+        ..$ sport            : chr "NFL"
+        ..$ game_type        : chr "SalaryCap"
+       $ games  : tibble [1 x 15] (S3: tbl_df/tbl/data.frame)
+        ..$ game_id                            : int 5915939
+        ..$ away_team_id                       : int 350
+        ..$ home_team_id                       : int 341
+        ..$ start_date                         : chr "2022-10-08T18:00:00.0000000Z"
+        ..$ time_remaining_status              : chr "ScoresOfficial"
+        ..$ sport                              : chr "NFL"
+        ..$ status                             : chr "ScoresOfficial"
+        ..$ description                        : chr "NO @ LV"
+        ..$ league                             : chr "SIM"
+        ..$ competition_status                 : chr "ScoresOfficial"
+        ..$ competition_status_detail          : chr ""
+        ..$ sport_specific_data_time_remaining : chr "ScoresOfficial"
+        ..$ sport_specific_data_home_team_score: chr "23"
+        ..$ sport_specific_data_away_team_score: chr "17"
+        ..$ sport_specific_data_quarter        : chr "5"
+       $ leagues: tibble [1 x 3] (S3: tbl_df/tbl/data.frame)
+        ..$ league_id          : int 79
+        ..$ league_name        : chr "Simulation"
+        ..$ league_abbreviation: chr "SIM"
 
 # dk_get_player_list() returns expected data
 
     Code
-      d
+      dplyr::glimpse(d_sampled, 200)
     Output
-      # A tibble: 41 x 32
-            pid   did pcode    tsid fn     ln    fnu   lnu      jn pn       dgst   tid
-          <dbl> <dbl> <dbl>   <dbl> <chr>  <chr> <chr> <chr> <dbl> <chr>   <dbl> <dbl>
-       1 611417     0 27581 5915939 Davan~ Adams Dava~ Adams    17 WR    1.67e12   341
-       2 691536     0 28389 5915939 Jameis Wins~ Jame~ Wins~     2 QB    1.67e12   350
-       3 750846     0 30180 5915939 Alvin  Kama~ Alvin Kama~    41 RB    1.67e12   350
-       4 496083     0 27564 5915939 Derek  Carr  Derek Carr      0 QB    1.67e12   341
-       5 653699     0 29281 5915939 Micha~ Thom~ Mich~ Thom~    13 WR    1.67e12   350
-       6 944416     0 31856 5915939 Josh   Jaco~ Josh  Jaco~    28 RB    1.67e12   341
-       7 600191     0 28592 5915939 Darren Wall~ Darr~ Wall~    83 TE    1.67e12   341
-       8 456613     0 24815 5915939 Mark   Ingr~ Mark  Ingr~    22 RB    1.67e12   350
-       9 590796     0 28442 5915939 Ameer  Abdu~ Ameer Abdu~    22 RB    1.67e12   341
-      10 875444     0 32775 5915939 Adam   Trau~ Adam  Trau~    82 TE    1.67e12   350
-      # ... with 31 more rows, and 20 more variables: htid <dbl>, atid <dbl>,
-      #   htabbr <chr>, atabbr <chr>, posid <dbl>, rosposid <dbl>, slo <lgl>,
-      #   is_disabled_from_drafting <lgl>, s <dbl>, ppg <chr>, or <dbl>, swp <lgl>,
-      #   ipc <lgl>, pp <dbl>, i <chr>, news <dbl>, img_lg <chr>, alt_img_lg <chr>,
-      #   img_sm <chr>, alt_img_sm <chr>
+      Rows: 5
+      Columns: 32
+      $ pid                       <dbl> 496083, 922451, 611417, 885540, 838415
+      $ did                       <dbl> 0, 0, 0, 0, 0
+      $ pcode                     <dbl> 27564, 34206, 27581, 33901, 31061
+      $ tsid                      <dbl> 5915939, 5915939, 5915939, 5915939, 5915939
+      $ fn                        <chr> "Derek", "Brittain", "Davante", "Adam", "Tre'Quan"
+      $ ln                        <chr> "Carr", "Brown", "Adams", "Prentice", "Smith"
+      $ fnu                       <chr> "Derek", "Brittain", "Davante", "Adam", "Tre'Quan"
+      $ lnu                       <chr> "Carr", "Brown", "Adams", "Prentice", "Smith"
+      $ jn                        <dbl> 0, 38, 17, 46, 10
+      $ pn                        <chr> "QB", "RB", "WR", "RB", "WR"
+      $ dgst                      <dbl> 1.665252e+12, 1.665252e+12, 1.665252e+12, 1.665252e+12, 1.665252e+12
+      $ tid                       <dbl> 341, 341, 341, 350, 350
+      $ htid                      <dbl> 341, 341, 341, 341, 341
+      $ atid                      <dbl> 350, 350, 350, 350, 350
+      $ htabbr                    <chr> "LV", "LV", "LV", "LV", "LV"
+      $ atabbr                    <chr> "NO", "NO", "NO", "NO", "NO"
+      $ posid                     <dbl> 1, 2, 3, 2, 3
+      $ rosposid                  <dbl> 512, 512, 512, 512, 512
+      $ slo                       <lgl> NA, NA, NA, NA, NA
+      $ is_disabled_from_drafting <lgl> FALSE, FALSE, FALSE, FALSE, FALSE
+      $ s                         <dbl> 9000, 1000, 10600, 1000, 2400
+      $ ppg                       <chr> "16.5", "0.0", "15.5", "0.4", "0.0"
+      $ or                        <dbl> 0, 0, 0, 0, 0
+      $ swp                       <lgl> FALSE, FALSE, FALSE, FALSE, FALSE
+      $ ipc                       <lgl> FALSE, FALSE, FALSE, FALSE, FALSE
+      $ pp                        <dbl> 0, 0, 0, 0, 0
+      $ i                         <chr> "", "", "", "", ""
+      $ news                      <dbl> 1, 0, 0, 0, 0
+      $ img_lg                    <chr> "https://dkn.gs/sports/images/nfl/players/0/12350.png", "https://dkn.gs/sports/images/nfl/players/0/641146.png", "https://dkn.gs/sports/images/nfl/players/0/19493.p~
+      $ alt_img_lg                <chr> NA, NA, NA, NA, NA
+      $ img_sm                    <chr> "https://dkn.gs/sports/images/nfl/players/50/12350.png", "https://dkn.gs/sports/images/nfl/players/50/641146.png", "https://dkn.gs/sports/images/nfl/players/50/1949~
+      $ alt_img_sm                <chr> NA, NA, NA, NA, NA
 
 # dk_get_team_list() returns expected data
 
     Code
-      d
+      dplyr::glimpse(d_sampled, 200)
     Output
-      # A tibble: 1 x 9
-        ht     htid at     atid tz                       dh     s status status_code
-        <chr> <dbl> <chr> <dbl> <chr>                 <dbl> <dbl> <chr>        <dbl>
-      1 LV      341 NO      350 /Date(1665252000000)/     0     1 Final            4
+      Rows: 1
+      Columns: 9
+      $ ht          <chr> "LV"
+      $ htid        <dbl> 341
+      $ at          <chr> "NO"
+      $ atid        <dbl> 350
+      $ tz          <chr> "/Date(1665252000000)/"
+      $ dh          <dbl> 0
+      $ s           <dbl> 1
+      $ status      <chr> "Final"
+      $ status_code <dbl> 4
 
 # dk_get_player_fp() returns expected data
 
     Code
-      d_nfl
+      dplyr::glimpse(d_sampled, 200)
     Output
-      # A tibble: 350 x 27
-         player_id player_dk_id first~1 last_~2 team_id posit~3 salary fanta~4 value~5
-             <dbl>        <dbl> <chr>   <chr>     <dbl> <chr>    <dbl>   <dbl> <chr>  
-       1    750846        18573 Alvin   Kamara      350 RB        7900    59.2 fire   
-       2    611417        19493 Davante Adams       335 WR        9100    46.2 fire   
-       3    694041        17102 Stefon  Diggs       324 WR        8000    44.5 fire   
-       4    593587        20134 Mike    Evans       362 WR        6100    43.1 fire   
-       5    868199        11370 Josh    Allen       324 QB        7300    35.3 fire   
-       6    865895        14491 Myles   Gaskin      345 RB        5300    33.9 fire   
-       7    912070        17742 Michael Gallup      331 WR        4100    33.1 fire   
-       8     25347        17557 Tom     Brady       362 QB        6800    32.9 fire   
-       9    552409        17825 David   Johnson     325 RB        6100    31.9 fire   
-      10    828743        18229 Deshaun Watson      325 QB        7600    30.8 fire   
-      # ... with 340 more rows, 18 more variables: game_id <dbl>, image_url <chr>,
-      #   points <dbl>, sport <chr>, game_status <chr>, game_start_time <chr>,
-      #   week_number <dbl>, team_city <chr>, team_name <chr>,
-      #   team_abbreviation <chr>, opposing_team_city <chr>,
-      #   opposing_team_name <chr>, opposing_team_abbreviation <chr>,
-      #   fantasy_stats_num_games <dbl>, fantasy_points_per_game <dbl>,
-      #   player_state <chr>, pregame_projection <dbl>, ...
+      Rows: 5
+      Columns: 27
+      $ player_id                  <dbl> 976528, 605242, 696882, 397945, 885494
+      $ player_dk_id               <dbl> 485485, 19905, 19867, 11677, 485733
+      $ first_name                 <chr> "KJ", "Tyler", "Jacob", "LeSean", "LeVante"
+      $ last_name                  <chr> "Hamler", "Lockett", "Hollister", "McCoy", "Bellamy"
+      $ team_id                    <dbl> 332, 361, 361, 362, 332
+      $ position                   <chr> "WR", "WR", "TE", "RB", "RB"
+      $ salary                     <dbl> 3200, 6500, 2900, 4000, NA
+      $ fantasy_points             <dbl> 0.3, 7.4, 9.7, 1.5, 2.6
+      $ value_icon                 <chr> "ice", "ice", "", "ice", NA
+      $ game_id                    <dbl> 5674180, 5674306, 5674306, 5674156, 5674180
+      $ image_url                  <chr> "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/976528.png", "https://d327rxwuxd0q0c.cloudfront.net/m/nfl_retina/605242.png", "https://d327rxwuxd0q0c.cloudfron~
+      $ points                     <dbl> 0.3, 7.4, 9.7, 1.5, 2.6
+      $ sport                      <chr> "nfl", "nfl", "nfl", "nfl", "nfl"
+      $ game_status                <chr> "liveOrFinal", "liveOrFinal", "liveOrFinal", "liveOrFinal", "liveOrFinal"
+      $ game_start_time            <chr> "2020-12-27T21:05:00.0000000Z", "2020-12-27T21:25:00.0000000Z", "2020-12-27T21:25:00.0000000Z", "2020-12-26T18:00:00.0000000Z", "2020-12-27T21:05:00.0000000Z"
+      $ week_number                <dbl> 16, 16, 16, 16, 16
+      $ team_city                  <chr> "Denver", "Seattle", "Seattle", "Tampa Bay", "Denver"
+      $ team_name                  <chr> "Broncos", "Seahawks", "Seahawks", "Buccaneers", "Broncos"
+      $ team_abbreviation          <chr> "DEN", "SEA", "SEA", "TB", "DEN"
+      $ opposing_team_city         <chr> "Los Angeles", "Los Angeles", "Los Angeles", "Detroit", "Los Angeles"
+      $ opposing_team_name         <chr> "Chargers", "Rams", "Rams", "Lions", "Chargers"
+      $ opposing_team_abbreviation <chr> "LAC", "LAR", "LAR", "DET", "LAC"
+      $ fantasy_stats_num_games    <dbl> 3, 3, 3, 3, 3
+      $ fantasy_points_per_game    <dbl> 8.1000, 8.3333, 7.4667, 4.0667, 0.8667
+      $ player_state               <chr> NA, NA, NA, NA, NA
+      $ pregame_projection         <dbl> NA, NA, NA, NA, NA
+      $ real_time_projection       <dbl> NA, NA, NA, NA, NA
 
 ---
 
     Code
-      d_nba
+      dplyr::glimpse(d_sampled, 200)
     Output
-      # A tibble: 188 x 26
-         player_id player_dk_id first~1 last_~2 team_id posit~3 salary fanta~4 value~5
-             <dbl>        <dbl> <chr>   <chr>     <dbl> <chr>    <dbl>   <dbl> <chr>  
-       1    463121        33322 Damian  Lillard      22 PG       10500       0 ""     
-       2    830650        33018 Nikola  Jokic         7 C        11600       0 ""     
-       3    794508        33292 Joel    Embiid       20 C        11500       0 ""     
-       4   1257420       527219 LaMelo  Ball       5312 PG        3000       0 ""     
-       5    395388        33070 James   Harden       20 PG        9900       0 ""     
-       6    214152        33114 LeBron  James        13 SF       10400       0 ""     
-       7   1067856        33258 Shai    Gilgeo~      25 PG        9100       0 ""     
-       8    603096        33122 Anthony Davis        13 PF       10700       0 ""     
-       9    879707        33398 Donovan Mitche~       5 SG        9300       0 ""     
-      10   1132025        33223 Zion    Willia~       3 PF        8300       0 ""     
-      # ... with 178 more rows, 17 more variables: pregame_projection <dbl>,
-      #   real_time_projection <dbl>, game_id <dbl>, points <dbl>, sport <chr>,
-      #   game_status <chr>, game_start_time <chr>, date <chr>, image_url <chr>,
-      #   team_city <chr>, team_name <chr>, team_abbreviation <chr>,
-      #   opposing_team_city <chr>, opposing_team_name <chr>,
-      #   opposing_team_abbreviation <chr>, fantasy_stats_num_games <dbl>,
-      #   fantasy_points_per_game <dbl>, and abbreviated variable names ...
+      Rows: 5
+      Columns: 26
+      $ player_id                  <dbl> 840567, 553158, 1325125, 549969, 843005
+      $ player_dk_id               <dbl> 32939, 33189, 649573, 32903, 33316
+      $ first_name                 <chr> "Guillermo", "Gorgui", "Blake", "Joe", "Cameron"
+      $ last_name                  <chr> "Hernangómez", "Dieng", "Wesley", "Harris", "Johnson"
+      $ team_id                    <dbl> 3, 24, 24, 17, 17
+      $ position                   <chr> "C", "C", "PG/SG", "SG", "SF"
+      $ salary                     <dbl> 3400, 3000, 3000, 3700, 6200
+      $ fantasy_points             <dbl> 0, 0, 0, 0, 0
+      $ value_icon                 <chr> "", "", "", "", ""
+      $ pregame_projection         <dbl> 17.0, 15.0, 15.0, 18.5, 31.0
+      $ real_time_projection       <dbl> 17.0, 15.0, 15.0, 18.5, 31.0
+      $ game_id                    <dbl> 5898000, 5903395, 5903395, 5898678, 5898678
+      $ points                     <dbl> 0, 0, 0, 0, 0
+      $ sport                      <chr> "nba", "nba", "nba", "nba", "nba"
+      $ game_status                <chr> "upcoming", "upcoming", "upcoming", "upcoming", "upcoming"
+      $ game_start_time            <chr> "2023-03-12T23:00:00.0000000Z", "2023-03-12T23:00:00.0000000Z", "2023-03-12T23:00:00.0000000Z", "2023-03-12T19:30:00.0000000Z", "2023-03-12T19:30:00.0000000Z"
+      $ date                       <chr> "20230312", "20230312", "20230312", "20230312", "20230312"
+      $ image_url                  <chr> "https://dkn.gs/sports/images/nba/players/160/32939.png", "https://dkn.gs/sports/images/nba/players/160/33189.png", NA, "https://dkn.gs/sports/images/nba/players/1~
+      $ team_city                  <chr> "New Orleans", "San Antonio", "San Antonio", "Brooklyn", "Brooklyn"
+      $ team_name                  <chr> "Pelicans", "Spurs", "Spurs", "Nets", "Nets"
+      $ team_abbreviation          <chr> "NOP", "SAS", "SAS", "BKN", "BKN"
+      $ opposing_team_city         <chr> "Portland", "Oklahoma City", "Oklahoma City", "Denver", "Denver"
+      $ opposing_team_name         <chr> "Trail Blazers", "Thunder", "Thunder", "Nuggets", "Nuggets"
+      $ opposing_team_abbreviation <chr> "POR", "OKC", "OKC", "DEN", "DEN"
+      $ fantasy_stats_num_games    <dbl> 10, 10, 10, 10, 10
+      $ fantasy_points_per_game    <dbl> 22.075, 6.400, 11.950, 6.900, 28.725
 
