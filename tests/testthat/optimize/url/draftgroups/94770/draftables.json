@@ -1,0 +1,5895 @@
+{
+    "draftables": [
+        {
+            "draftableId": 30626000,
+            "firstName": "Domantas",
+            "lastName": "Sabonis",
+            "displayName": "Domantas Sabonis",
+            "shortName": "D. Sabonis",
+            "playerId": 850111,
+            "playerDkId": 33091,
+            "position": "C",
+            "rosterSlotId": 476,
+            "salary": 17100,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33091.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33091.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "51.0",
+                    "sortValue": "51.0"
+                },
+                {
+                    "id": -2,
+                    "value": "27th",
+                    "sortValue": "27",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "850111-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626001,
+            "firstName": "Stephen",
+            "lastName": "Curry",
+            "displayName": "Stephen Curry",
+            "shortName": "S. Curry",
+            "playerId": 338365,
+            "playerDkId": 33049,
+            "position": "PG/SG",
+            "rosterSlotId": 476,
+            "salary": 15600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33049.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33049.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "37.8",
+                    "sortValue": "37.8"
+                },
+                {
+                    "id": -2,
+                    "value": "21st",
+                    "sortValue": "21",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "338365-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626002,
+            "firstName": "De'Aaron",
+            "lastName": "Fox",
+            "displayName": "De'Aaron Fox",
+            "shortName": "D. Fox",
+            "playerId": 957489,
+            "playerDkId": 33343,
+            "position": "PG",
+            "rosterSlotId": 476,
+            "salary": 14700,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33343.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33343.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "36.3",
+                    "sortValue": "36.3"
+                },
+                {
+                    "id": -2,
+                    "value": "11th",
+                    "sortValue": "11",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "957489-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626003,
+            "firstName": "Klay",
+            "lastName": "Thompson",
+            "displayName": "Klay Thompson",
+            "shortName": "K. Thompson",
+            "playerId": 457611,
+            "playerDkId": 33050,
+            "position": "SG/SF",
+            "rosterSlotId": 476,
+            "salary": 12000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33050.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33050.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "30.3",
+                    "sortValue": "30.3"
+                },
+                {
+                    "id": -2,
+                    "value": "4th",
+                    "sortValue": "4",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "457611-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626004,
+            "firstName": "Chris",
+            "lastName": "Paul",
+            "displayName": "Chris Paul",
+            "shortName": "C. Paul",
+            "playerId": 229598,
+            "playerDkId": 33246,
+            "position": "PG",
+            "rosterSlotId": 476,
+            "salary": 11700,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33246.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33246.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "38.5",
+                    "sortValue": "38.5"
+                },
+                {
+                    "id": -2,
+                    "value": "21st",
+                    "sortValue": "21",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "229598-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625967,
+            "firstName": "Domantas",
+            "lastName": "Sabonis",
+            "displayName": "Domantas Sabonis",
+            "shortName": "D. Sabonis",
+            "playerId": 850111,
+            "playerDkId": 33091,
+            "position": "C",
+            "rosterSlotId": 475,
+            "salary": 11400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33091.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33091.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "51.0",
+                    "sortValue": "51.0"
+                },
+                {
+                    "id": -2,
+                    "value": "27th",
+                    "sortValue": "27",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "850111-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626005,
+            "firstName": "Draymond",
+            "lastName": "Green",
+            "displayName": "Draymond Green",
+            "shortName": "D. Green",
+            "playerId": 468895,
+            "playerDkId": 33052,
+            "position": "PF/C",
+            "rosterSlotId": 476,
+            "salary": 10800,
+            "status": "OUT",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33052.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33052.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "468895-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626006,
+            "firstName": "Harrison",
+            "lastName": "Barnes",
+            "displayName": "Harrison Barnes",
+            "shortName": "H. Barnes",
+            "playerId": 552336,
+            "playerDkId": 33337,
+            "position": "SF/PF",
+            "rosterSlotId": 476,
+            "salary": 10500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33337.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33337.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "45.0",
+                    "sortValue": "45.0"
+                },
+                {
+                    "id": -2,
+                    "value": "24th",
+                    "sortValue": "24",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "552336-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625968,
+            "firstName": "Stephen",
+            "lastName": "Curry",
+            "displayName": "Stephen Curry",
+            "shortName": "S. Curry",
+            "playerId": 338365,
+            "playerDkId": 33049,
+            "position": "PG/SG",
+            "rosterSlotId": 475,
+            "salary": 10400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33049.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33049.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "37.8",
+                    "sortValue": "37.8"
+                },
+                {
+                    "id": -2,
+                    "value": "21st",
+                    "sortValue": "21",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "338365-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626007,
+            "firstName": "Andrew",
+            "lastName": "Wiggins",
+            "displayName": "Andrew Wiggins",
+            "shortName": "A. Wiggins",
+            "playerId": 794503,
+            "playerDkId": 33191,
+            "position": "PF",
+            "rosterSlotId": 476,
+            "salary": 10200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33191.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33191.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "13.3",
+                    "sortValue": "13.3"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "794503-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626008,
+            "firstName": "Kevon",
+            "lastName": "Looney",
+            "displayName": "Kevon Looney",
+            "shortName": "K. Looney",
+            "playerId": 846499,
+            "playerDkId": 33056,
+            "position": "C",
+            "rosterSlotId": 476,
+            "salary": 9900,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33056.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33056.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "21.3",
+                    "sortValue": "21.3"
+                },
+                {
+                    "id": -2,
+                    "value": "20th",
+                    "sortValue": "20",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "846499-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625969,
+            "firstName": "De'Aaron",
+            "lastName": "Fox",
+            "displayName": "De'Aaron Fox",
+            "shortName": "D. Fox",
+            "playerId": 957489,
+            "playerDkId": 33343,
+            "position": "PG",
+            "rosterSlotId": 475,
+            "salary": 9800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33343.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33343.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "36.3",
+                    "sortValue": "36.3"
+                },
+                {
+                    "id": -2,
+                    "value": "11th",
+                    "sortValue": "11",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "957489-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626009,
+            "firstName": "Keegan",
+            "lastName": "Murray",
+            "displayName": "Keegan Murray",
+            "shortName": "K. Murray",
+            "playerId": 1231161,
+            "playerDkId": 649547,
+            "position": "PF",
+            "rosterSlotId": 476,
+            "salary": 9600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/649547.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/649547.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "34.5",
+                    "sortValue": "34.5"
+                },
+                {
+                    "id": -2,
+                    "value": "15th",
+                    "sortValue": "15",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1231161-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626010,
+            "firstName": "Malik",
+            "lastName": "Monk",
+            "displayName": "Malik Monk",
+            "shortName": "M. Monk",
+            "playerId": 957492,
+            "playerDkId": 32941,
+            "position": "SG",
+            "rosterSlotId": 476,
+            "salary": 9000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/32941.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/32941.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "27.0",
+                    "sortValue": "27.0"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "957492-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626011,
+            "firstName": "Kevin",
+            "lastName": "Huerter",
+            "displayName": "Kevin Huerter",
+            "shortName": "K. Huerter",
+            "playerId": 944785,
+            "playerDkId": 32851,
+            "position": "SG",
+            "rosterSlotId": 476,
+            "salary": 8100,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/32851.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/32851.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "16.3",
+                    "sortValue": "16.3"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "944785-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625970,
+            "firstName": "Klay",
+            "lastName": "Thompson",
+            "displayName": "Klay Thompson",
+            "shortName": "K. Thompson",
+            "playerId": 457611,
+            "playerDkId": 33050,
+            "position": "SG/SF",
+            "rosterSlotId": 475,
+            "salary": 8000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33050.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33050.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "30.3",
+                    "sortValue": "30.3"
+                },
+                {
+                    "id": -2,
+                    "value": "4th",
+                    "sortValue": "4",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "457611-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625971,
+            "firstName": "Chris",
+            "lastName": "Paul",
+            "displayName": "Chris Paul",
+            "shortName": "C. Paul",
+            "playerId": 229598,
+            "playerDkId": 33246,
+            "position": "PG",
+            "rosterSlotId": 475,
+            "salary": 7800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33246.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33246.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "38.5",
+                    "sortValue": "38.5"
+                },
+                {
+                    "id": -2,
+                    "value": "21st",
+                    "sortValue": "21",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "229598-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626012,
+            "firstName": "Jonathan",
+            "lastName": "Kuminga",
+            "displayName": "Jonathan Kuminga",
+            "shortName": "J. Kuminga",
+            "playerId": 1271708,
+            "playerDkId": 590990,
+            "position": "SF/PF",
+            "rosterSlotId": 476,
+            "salary": 7800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/590990.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/590990.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "26.0",
+                    "sortValue": "26.0"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1271708-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625972,
+            "firstName": "Draymond",
+            "lastName": "Green",
+            "displayName": "Draymond Green",
+            "shortName": "D. Green",
+            "playerId": 468895,
+            "playerDkId": 33052,
+            "position": "PF/C",
+            "rosterSlotId": 475,
+            "salary": 7200,
+            "status": "OUT",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33052.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33052.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "468895-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625973,
+            "firstName": "Harrison",
+            "lastName": "Barnes",
+            "displayName": "Harrison Barnes",
+            "shortName": "H. Barnes",
+            "playerId": 552336,
+            "playerDkId": 33337,
+            "position": "SF/PF",
+            "rosterSlotId": 475,
+            "salary": 7000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33337.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33337.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "45.0",
+                    "sortValue": "45.0"
+                },
+                {
+                    "id": -2,
+                    "value": "24th",
+                    "sortValue": "24",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "552336-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625974,
+            "firstName": "Andrew",
+            "lastName": "Wiggins",
+            "displayName": "Andrew Wiggins",
+            "shortName": "A. Wiggins",
+            "playerId": 794503,
+            "playerDkId": 33191,
+            "position": "PF",
+            "rosterSlotId": 475,
+            "salary": 6800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33191.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33191.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "13.3",
+                    "sortValue": "13.3"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "794503-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625975,
+            "firstName": "Kevon",
+            "lastName": "Looney",
+            "displayName": "Kevon Looney",
+            "shortName": "K. Looney",
+            "playerId": 846499,
+            "playerDkId": 33056,
+            "position": "C",
+            "rosterSlotId": 475,
+            "salary": 6600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33056.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33056.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "21.3",
+                    "sortValue": "21.3"
+                },
+                {
+                    "id": -2,
+                    "value": "20th",
+                    "sortValue": "20",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "846499-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625976,
+            "firstName": "Keegan",
+            "lastName": "Murray",
+            "displayName": "Keegan Murray",
+            "shortName": "K. Murray",
+            "playerId": 1231161,
+            "playerDkId": 649547,
+            "position": "PF",
+            "rosterSlotId": 475,
+            "salary": 6400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/649547.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/649547.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "34.5",
+                    "sortValue": "34.5"
+                },
+                {
+                    "id": -2,
+                    "value": "15th",
+                    "sortValue": "15",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1231161-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626013,
+            "firstName": "Moses",
+            "lastName": "Moody",
+            "displayName": "Moses Moody",
+            "shortName": "M. Moody",
+            "playerId": 1231366,
+            "playerDkId": 591015,
+            "position": "SG/SF",
+            "rosterSlotId": 476,
+            "salary": 6300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/591015.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/591015.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "23.3",
+                    "sortValue": "23.3"
+                },
+                {
+                    "id": -2,
+                    "value": "29th",
+                    "sortValue": "29",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1231366-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625977,
+            "firstName": "Malik",
+            "lastName": "Monk",
+            "displayName": "Malik Monk",
+            "shortName": "M. Monk",
+            "playerId": 957492,
+            "playerDkId": 32941,
+            "position": "SG",
+            "rosterSlotId": 475,
+            "salary": 6000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/32941.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/32941.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "27.0",
+                    "sortValue": "27.0"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "957492-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626014,
+            "firstName": "Dario",
+            "lastName": "Saric",
+            "displayName": "Dario Saric",
+            "shortName": "D. Saric",
+            "playerId": 830641,
+            "playerDkId": 33306,
+            "position": "PF/C",
+            "rosterSlotId": 476,
+            "salary": 6000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33306.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33306.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "21.8",
+                    "sortValue": "21.8"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "830641-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626015,
+            "firstName": "Chris",
+            "lastName": "Duarte",
+            "displayName": "Chris Duarte",
+            "shortName": "C. Duarte",
+            "playerId": 1194085,
+            "playerDkId": 591014,
+            "position": "SG/SF",
+            "rosterSlotId": 476,
+            "salary": 5700,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/591014.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/591014.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "14.5",
+                    "sortValue": "14.5"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1194085-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625978,
+            "firstName": "Kevin",
+            "lastName": "Huerter",
+            "displayName": "Kevin Huerter",
+            "shortName": "K. Huerter",
+            "playerId": 944785,
+            "playerDkId": 32851,
+            "position": "SG",
+            "rosterSlotId": 475,
+            "salary": 5400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/32851.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/32851.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "16.3",
+                    "sortValue": "16.3"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+                {
+                    "id": 100,
+                    "value": "true"
+                }
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "944785-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626016,
+            "firstName": "Gary",
+            "lastName": "Payton II",
+            "displayName": "Gary Payton II",
+            "shortName": "G. Payton II",
+            "playerId": 846407,
+            "playerDkId": 116047,
+            "position": "PG/SF",
+            "rosterSlotId": 476,
+            "salary": 5400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/116047.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/116047.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "12.5",
+                    "sortValue": "12.5"
+                },
+                {
+                    "id": -2,
+                    "value": "4th",
+                    "sortValue": "4",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "846407-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625979,
+            "firstName": "Jonathan",
+            "lastName": "Kuminga",
+            "displayName": "Jonathan Kuminga",
+            "shortName": "J. Kuminga",
+            "playerId": 1271708,
+            "playerDkId": 590990,
+            "position": "SF/PF",
+            "rosterSlotId": 475,
+            "salary": 5200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/590990.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/590990.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "26.0",
+                    "sortValue": "26.0"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1271708-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626017,
+            "firstName": "Trey",
+            "lastName": "Lyles",
+            "displayName": "Trey Lyles",
+            "shortName": "T. Lyles",
+            "playerId": 845596,
+            "playerDkId": 33360,
+            "position": "PF/C",
+            "rosterSlotId": 476,
+            "salary": 4800,
+            "status": "OUT",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33360.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33360.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "15th",
+                    "sortValue": "15",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "845596-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626018,
+            "firstName": "Colby",
+            "lastName": "Jones",
+            "displayName": "Colby Jones",
+            "shortName": "C. Jones",
+            "playerId": 1231798,
+            "playerDkId": 713786,
+            "position": "SG/SF",
+            "rosterSlotId": 476,
+            "salary": 4500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/713786.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/713786.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "1.3",
+                    "sortValue": "1.3"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1231798-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625980,
+            "firstName": "Moses",
+            "lastName": "Moody",
+            "displayName": "Moses Moody",
+            "shortName": "M. Moody",
+            "playerId": 1231366,
+            "playerDkId": 591015,
+            "position": "SG/SF",
+            "rosterSlotId": 475,
+            "salary": 4200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/591015.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/591015.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "23.3",
+                    "sortValue": "23.3"
+                },
+                {
+                    "id": -2,
+                    "value": "29th",
+                    "sortValue": "29",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1231366-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625981,
+            "firstName": "Dario",
+            "lastName": "Saric",
+            "displayName": "Dario Saric",
+            "shortName": "D. Saric",
+            "playerId": 830641,
+            "playerDkId": 33306,
+            "position": "PF/C",
+            "rosterSlotId": 475,
+            "salary": 4000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33306.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33306.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "21.8",
+                    "sortValue": "21.8"
+                },
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "830641-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626019,
+            "firstName": "Sasha",
+            "lastName": "Vezenkov",
+            "displayName": "Sasha Vezenkov",
+            "shortName": "S. Vezenkov",
+            "playerId": 1350854,
+            "playerDkId": 743298,
+            "position": "PF",
+            "rosterSlotId": 476,
+            "salary": 3900,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "playerImage50": "https://dkn.gs/sports/images/nba/teams/50/32954.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/teams/160/32954.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "15.5",
+                    "sortValue": "15.5"
+                },
+                {
+                    "id": -2,
+                    "value": "15th",
+                    "sortValue": "15",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1350854-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625982,
+            "firstName": "Chris",
+            "lastName": "Duarte",
+            "displayName": "Chris Duarte",
+            "shortName": "C. Duarte",
+            "playerId": 1194085,
+            "playerDkId": 591014,
+            "position": "SG/SF",
+            "rosterSlotId": 475,
+            "salary": 3800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/591014.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/591014.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "14.5",
+                    "sortValue": "14.5"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1194085-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625983,
+            "firstName": "Gary",
+            "lastName": "Payton II",
+            "displayName": "Gary Payton II",
+            "shortName": "G. Payton II",
+            "playerId": 846407,
+            "playerDkId": 116047,
+            "position": "PG/SF",
+            "rosterSlotId": 475,
+            "salary": 3600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/116047.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/116047.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "12.5",
+                    "sortValue": "12.5"
+                },
+                {
+                    "id": -2,
+                    "value": "4th",
+                    "sortValue": "4",
+                    "quality": "Low"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "846407-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626020,
+            "firstName": "JaVale",
+            "lastName": "McGee",
+            "displayName": "JaVale McGee",
+            "shortName": "J. McGee",
+            "playerId": 333212,
+            "playerDkId": 33118,
+            "position": "C",
+            "rosterSlotId": 476,
+            "salary": 3300,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33118.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33118.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "12.8",
+                    "sortValue": "12.8"
+                },
+                {
+                    "id": -2,
+                    "value": "27th",
+                    "sortValue": "27",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "333212-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625984,
+            "firstName": "Trey",
+            "lastName": "Lyles",
+            "displayName": "Trey Lyles",
+            "shortName": "T. Lyles",
+            "playerId": 845596,
+            "playerDkId": 33360,
+            "position": "PF/C",
+            "rosterSlotId": 475,
+            "salary": 3200,
+            "status": "OUT",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33360.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33360.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "15th",
+                    "sortValue": "15",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "845596-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625985,
+            "firstName": "Colby",
+            "lastName": "Jones",
+            "displayName": "Colby Jones",
+            "shortName": "C. Jones",
+            "playerId": 1231798,
+            "playerDkId": 713786,
+            "position": "SG/SF",
+            "rosterSlotId": 475,
+            "salary": 3000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/713786.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/713786.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "1.3",
+                    "sortValue": "1.3"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1231798-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626021,
+            "firstName": "Davion",
+            "lastName": "Mitchell",
+            "displayName": "Davion Mitchell",
+            "shortName": "D. Mitchell",
+            "playerId": 1061659,
+            "playerDkId": 591009,
+            "position": "PG/SG",
+            "rosterSlotId": 476,
+            "salary": 3000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/591009.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/591009.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "9.3",
+                    "sortValue": "9.3"
+                },
+                {
+                    "id": -2,
+                    "value": "11th",
+                    "sortValue": "11",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1061659-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626022,
+            "firstName": "Brandin",
+            "lastName": "Podziemski",
+            "displayName": "Brandin Podziemski",
+            "shortName": "B. Podziemski",
+            "playerId": 1324108,
+            "playerDkId": 713772,
+            "position": "PG/SG",
+            "rosterSlotId": 476,
+            "salary": 2700,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/713772.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/713772.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "4th",
+                    "sortValue": "4",
+                    "quality": "Low"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1324108-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625986,
+            "firstName": "Sasha",
+            "lastName": "Vezenkov",
+            "displayName": "Sasha Vezenkov",
+            "shortName": "S. Vezenkov",
+            "playerId": 1350854,
+            "playerDkId": 743298,
+            "position": "PF",
+            "rosterSlotId": 475,
+            "salary": 2600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "playerImage50": "https://dkn.gs/sports/images/nba/teams/50/32954.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/teams/160/32954.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "15.5",
+                    "sortValue": "15.5"
+                },
+                {
+                    "id": -2,
+                    "value": "15th",
+                    "sortValue": "15",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1350854-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626023,
+            "firstName": "Trayce",
+            "lastName": "Jackson-Davis",
+            "displayName": "Trayce Jackson-Davis",
+            "shortName": "T. Jackson-Davis",
+            "playerId": 1187569,
+            "playerDkId": 713808,
+            "position": "PF/C",
+            "rosterSlotId": 476,
+            "salary": 2400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/713808.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/713808.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1187569-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625987,
+            "firstName": "JaVale",
+            "lastName": "McGee",
+            "displayName": "JaVale McGee",
+            "shortName": "J. McGee",
+            "playerId": 333212,
+            "playerDkId": 33118,
+            "position": "C",
+            "rosterSlotId": 475,
+            "salary": 2200,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33118.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33118.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "12.8",
+                    "sortValue": "12.8"
+                },
+                {
+                    "id": -2,
+                    "value": "27th",
+                    "sortValue": "27",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "333212-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626024,
+            "firstName": "Jerome",
+            "lastName": "Robinson",
+            "displayName": "Jerome Robinson",
+            "shortName": "J. Robinson",
+            "playerId": 893002,
+            "playerDkId": 33110,
+            "position": "SF",
+            "rosterSlotId": 476,
+            "salary": 2100,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33110.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33110.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "29th",
+                    "sortValue": "29",
+                    "quality": "High"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "893002-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625988,
+            "firstName": "Davion",
+            "lastName": "Mitchell",
+            "displayName": "Davion Mitchell",
+            "shortName": "D. Mitchell",
+            "playerId": 1061659,
+            "playerDkId": 591009,
+            "position": "PG/SG",
+            "rosterSlotId": 475,
+            "salary": 2000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/591009.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/591009.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "9.3",
+                    "sortValue": "9.3"
+                },
+                {
+                    "id": -2,
+                    "value": "11th",
+                    "sortValue": "11",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1061659-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625989,
+            "firstName": "Brandin",
+            "lastName": "Podziemski",
+            "displayName": "Brandin Podziemski",
+            "shortName": "B. Podziemski",
+            "playerId": 1324108,
+            "playerDkId": 713772,
+            "position": "PG/SG",
+            "rosterSlotId": 475,
+            "salary": 1800,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/713772.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/713772.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "4th",
+                    "sortValue": "4",
+                    "quality": "Low"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1324108-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625990,
+            "firstName": "Trayce",
+            "lastName": "Jackson-Davis",
+            "displayName": "Trayce Jackson-Davis",
+            "shortName": "T. Jackson-Davis",
+            "playerId": 1187569,
+            "playerDkId": 713808,
+            "position": "PF/C",
+            "rosterSlotId": 475,
+            "salary": 1600,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Breaking",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/713808.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/713808.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "17th",
+                    "sortValue": "17",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1187569-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626025,
+            "firstName": "Usman",
+            "lastName": "Garuba",
+            "displayName": "Usman Garuba",
+            "shortName": "U. Garuba",
+            "playerId": 1318915,
+            "playerDkId": 586457,
+            "position": "C",
+            "rosterSlotId": 476,
+            "salary": 1500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/586457.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/586457.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "20th",
+                    "sortValue": "20",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1318915-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626026,
+            "firstName": "Cory",
+            "lastName": "Joseph",
+            "displayName": "Cory Joseph",
+            "shortName": "C. Joseph",
+            "playerId": 552805,
+            "playerDkId": 33336,
+            "position": "PG",
+            "rosterSlotId": 476,
+            "salary": 1500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33336.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33336.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "2.8",
+                    "sortValue": "2.8"
+                },
+                {
+                    "id": -2,
+                    "value": "21st",
+                    "sortValue": "21",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "552805-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626027,
+            "firstName": "Lester",
+            "lastName": "Quinones",
+            "displayName": "Lester Quinones",
+            "shortName": "L. Quinones",
+            "playerId": 1175110,
+            "playerDkId": 649600,
+            "position": "PG/SG",
+            "rosterSlotId": 476,
+            "salary": 1500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/649600.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/649600.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "4th",
+                    "sortValue": "4",
+                    "quality": "Low"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1175110-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626028,
+            "firstName": "Jalen",
+            "lastName": "Slawson",
+            "displayName": "Jalen Slawson",
+            "shortName": "J. Slawson",
+            "playerId": 1135981,
+            "playerDkId": 713805,
+            "position": "SF",
+            "rosterSlotId": 476,
+            "salary": 1500,
+            "status": "Q",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/713805.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/713805.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "24th",
+                    "sortValue": "24",
+                    "quality": "High"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1135981-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626029,
+            "firstName": "Alex",
+            "lastName": "Len",
+            "displayName": "Alex Len",
+            "shortName": "A. Len",
+            "playerId": 616982,
+            "playerDkId": 32837,
+            "position": "C",
+            "rosterSlotId": 476,
+            "salary": 1500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/32837.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/32837.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "27th",
+                    "sortValue": "27",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "616982-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626030,
+            "firstName": "Kessler",
+            "lastName": "Edwards",
+            "displayName": "Kessler Edwards",
+            "shortName": "K. Edwards",
+            "playerId": 1135006,
+            "playerDkId": 591048,
+            "position": "SF",
+            "rosterSlotId": 476,
+            "salary": 1500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/591048.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/591048.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "24th",
+                    "sortValue": "24",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1135006-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626031,
+            "firstName": "Keon",
+            "lastName": "Ellis",
+            "displayName": "Keon Ellis",
+            "shortName": "K. Ellis",
+            "playerId": 1231210,
+            "playerDkId": 649606,
+            "position": "PG/SG",
+            "rosterSlotId": 476,
+            "salary": 1500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/649606.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/649606.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1231210-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30626032,
+            "firstName": "Jordan",
+            "lastName": "Ford",
+            "displayName": "Jordan Ford",
+            "shortName": "J. Ford",
+            "playerId": 955995,
+            "playerDkId": 529739,
+            "position": "PG",
+            "rosterSlotId": 476,
+            "salary": 1500,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/teams/50/32954.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/teams/160/32954.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "11th",
+                    "sortValue": "11",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "955995-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625991,
+            "firstName": "Jerome",
+            "lastName": "Robinson",
+            "displayName": "Jerome Robinson",
+            "shortName": "J. Robinson",
+            "playerId": 893002,
+            "playerDkId": 33110,
+            "position": "SF",
+            "rosterSlotId": 475,
+            "salary": 1400,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33110.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33110.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "29th",
+                    "sortValue": "29",
+                    "quality": "High"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "893002-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625992,
+            "firstName": "Usman",
+            "lastName": "Garuba",
+            "displayName": "Usman Garuba",
+            "shortName": "U. Garuba",
+            "playerId": 1318915,
+            "playerDkId": 586457,
+            "position": "C",
+            "rosterSlotId": 475,
+            "salary": 1000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/586457.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/586457.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "20th",
+                    "sortValue": "20",
+                    "quality": "Medium"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1318915-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625993,
+            "firstName": "Cory",
+            "lastName": "Joseph",
+            "displayName": "Cory Joseph",
+            "shortName": "C. Joseph",
+            "playerId": 552805,
+            "playerDkId": 33336,
+            "position": "PG",
+            "rosterSlotId": 475,
+            "salary": 1000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/33336.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/33336.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "2.8",
+                    "sortValue": "2.8"
+                },
+                {
+                    "id": -2,
+                    "value": "21st",
+                    "sortValue": "21",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "552805-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625994,
+            "firstName": "Lester",
+            "lastName": "Quinones",
+            "displayName": "Lester Quinones",
+            "shortName": "L. Quinones",
+            "playerId": 1175110,
+            "playerDkId": 649600,
+            "position": "PG/SG",
+            "rosterSlotId": 475,
+            "salary": 1000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/649600.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/649600.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW",
+                        "isEmphasized": true
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC"
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW",
+                            "isEmphasized": true
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC"
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "4th",
+                    "sortValue": "4",
+                    "quality": "Low"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 9,
+            "teamAbbreviation": "GSW",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1175110-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625995,
+            "firstName": "Jalen",
+            "lastName": "Slawson",
+            "displayName": "Jalen Slawson",
+            "shortName": "J. Slawson",
+            "playerId": 1135981,
+            "playerDkId": 713805,
+            "position": "SF",
+            "rosterSlotId": 475,
+            "salary": 1000,
+            "status": "Q",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "Recent",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/713805.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/713805.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": -2,
+                    "value": "24th",
+                    "sortValue": "24",
+                    "quality": "High"
+                },
+                {
+                    "id": 219,
+                    "value": "-",
+                    "sortValue": ""
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1135981-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625996,
+            "firstName": "Alex",
+            "lastName": "Len",
+            "displayName": "Alex Len",
+            "shortName": "A. Len",
+            "playerId": 616982,
+            "playerDkId": 32837,
+            "position": "C",
+            "rosterSlotId": 475,
+            "salary": 1000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/32837.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/32837.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "27th",
+                    "sortValue": "27",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "616982-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625997,
+            "firstName": "Kessler",
+            "lastName": "Edwards",
+            "displayName": "Kessler Edwards",
+            "shortName": "K. Edwards",
+            "playerId": 1135006,
+            "playerDkId": 591048,
+            "position": "SF",
+            "rosterSlotId": 475,
+            "salary": 1000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/591048.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/591048.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "24th",
+                    "sortValue": "24",
+                    "quality": "High"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1135006-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625998,
+            "firstName": "Keon",
+            "lastName": "Ellis",
+            "displayName": "Keon Ellis",
+            "shortName": "K. Ellis",
+            "playerId": 1231210,
+            "playerDkId": 649606,
+            "position": "PG/SG",
+            "rosterSlotId": 475,
+            "salary": 1000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/players/50/649606.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/players/160/649606.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "12th",
+                    "sortValue": "12",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "1231210-5956958",
+            "externalRequirements": {
+
+            }
+        },
+        {
+            "draftableId": 30625999,
+            "firstName": "Jordan",
+            "lastName": "Ford",
+            "displayName": "Jordan Ford",
+            "shortName": "J. Ford",
+            "playerId": 955995,
+            "playerDkId": 529739,
+            "position": "PG",
+            "rosterSlotId": 475,
+            "salary": 1000,
+            "status": "None",
+            "isSwappable": true,
+            "isDisabled": false,
+            "newsStatus": "None",
+            "playerImage50": "https://dkn.gs/sports/images/nba/teams/50/32954.png",
+            "playerImage160": "https://dkn.gs/sports/images/nba/teams/160/32954.png",
+            "altPlayerImage50": "",
+            "altPlayerImage160": "",
+            "competition": {
+                "competitionId": 5956958,
+                "name": "GSW @ SAC",
+                "nameDisplay": [
+                    {
+                        "value": "GSW"
+                    },
+                    {
+                        "value": " @ "
+                    },
+                    {
+                        "value": "SAC",
+                        "isEmphasized": true
+                    }
+                ],
+                "startTime": "2023-10-28T02:00:00.0000000Z"
+            },
+            "competitions": [
+                {
+                    "competitionId": 5956958,
+                    "name": "GSW @ SAC",
+                    "nameDisplay": [
+                        {
+                            "value": "GSW"
+                        },
+                        {
+                            "value": " @ "
+                        },
+                        {
+                            "value": "SAC",
+                            "isEmphasized": true
+                        }
+                    ],
+                    "startTime": "2023-10-28T02:00:00.0000000Z"
+                }
+            ],
+            "draftStatAttributes": [
+                {
+                    "id": 219,
+                    "value": "0.0",
+                    "sortValue": "0.0"
+                },
+                {
+                    "id": -2,
+                    "value": "11th",
+                    "sortValue": "11",
+                    "quality": "Medium"
+                }
+            ],
+            "playerAttributes": [
+
+            ],
+            "teamLeagueSeasonAttributes": [
+
+            ],
+            "playerGameAttributes": [
+
+            ],
+            "teamId": 23,
+            "teamAbbreviation": "SAC",
+            "draftAlerts": [
+
+            ],
+            "playerGameHash": "955995-5956958",
+            "externalRequirements": {
+
+            }
+        }
+    ],
+    "competitions": [
+        {
+            "competitionId": 5956958,
+            "sport": "NBA",
+            "sportId": 4,
+            "homeTeam": {
+                "teamId": 23,
+                "teamName": "Kings",
+                "abbreviation": "SAC",
+                "city": "Sacramento"
+            },
+            "awayTeam": {
+                "teamId": 9,
+                "teamName": "Warriors",
+                "abbreviation": "GSW",
+                "city": "Golden State"
+            },
+            "startTime": "2023-10-28T02:00:00.0000000Z",
+            "name": "GSW @ SAC",
+            "venue": "Golden 1 Center",
+            "startingLineupsAvailable": true,
+            "depthChartsAvailable": true,
+            "competitionState": "Upcoming",
+            "competitionStateDetail": "",
+            "competitionStartedEarly": false,
+            "competitionAttributes": [
+                {
+                    "typeId": 9,
+                    "value": "Pre-Game"
+                },
+                {
+                    "typeId": 23,
+                    "value": "2"
+                },
+                {
+                    "typeId": 27,
+                    "value": "False"
+                },
+                {
+                    "typeId": 32,
+                    "value": "ESPN"
+                },
+                {
+                    "typeId": 52,
+                    "value": "0"
+                },
+                {
+                    "typeId": 53,
+                    "value": "0"
+                }
+            ]
+        }
+    ],
+    "teamsWithoutCompetitions": [
+
+    ],
+    "draftAlerts": [
+
+    ],
+    "draftStats": [
+        {
+            "id": 219,
+            "abbr": "FPPG",
+            "name": "Fantasy Points Per Game",
+            "order": 11
+        },
+        {
+            "id": -2,
+            "abbr": "OPRK",
+            "name": "Opponent Rank",
+            "order": 20
+        }
+    ],
+    "playerGameAttributes": [
+        {
+            "id": 100,
+            "name": "In Starting Lineup",
+            "type": "boolean",
+            "filterable": true,
+            "prompt": "Hide Non Starters"
+        },
+        {
+            "id": 99,
+            "name": "Starting Lineup Order",
+            "type": "int",
+            "filterable": false
+        }
+    ],
+    "errorStatus": {
+
+    }
+}

@@ -173,7 +173,7 @@ dk_prepare_schematic <- function(draft_group_id,
   # if "exp_fp" column does not exist in draft_group
   # and draft_group_exp_fp is not passed. Otherwise,
   # join draft_group_exp_fp to draft_group
-  if (is.null(draft_group$exp_fp)) {
+  if (!"exp_fp" %in% colnames(draft_group)) {
 
     if (is.null(draft_group_exp_fp)) {
 
@@ -214,7 +214,7 @@ dk_prepare_schematic <- function(draft_group_id,
 
   # Separate players that can perform multiple positions into different rows
   draft_group <- draft_group %>%
-    tidyr::separate_rows(.data$position, sep = "/")
+    tidyr::separate_rows("position", sep = "/")
 
   # Add row number
   draft_group <- draft_group %>%
