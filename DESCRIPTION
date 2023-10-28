@@ -25,9 +25,11 @@ Imports:
     utils
 RoxygenNote: 7.2.3
 Suggests: 
+    devtools,
     diffviewer,
     httptest2,
     ROI.plugin.glpk,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    usethis
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
