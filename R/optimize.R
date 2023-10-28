@@ -315,16 +315,12 @@ dk_get_optimal_lineups <-function(schematic,
 #'   to get many successive lineups in [dk_get_optimal_lineups()]
 #' @param ... Other arguments passed to optimization method.
 #'
+#' @inheritParams ompr.roi::with_ROI
+#'
 #' @export
-dk_optimize_lineup <- function(schematic, max_points, ...) {
+dk_optimize_lineup <- function(schematic, max_points, solver = "glpk", ...) {
 
-  if (!requireNamespace("ROI.plugin.symphony", quietly = TRUE)) {
-
-    cli::cli_abort(
-      "The `ROI.plugin.symphony` package is required to use this function."
-    )
-
-  }
+  check_solver(solver)
 
   UseMethod("dk_optimize_lineup")
 
@@ -342,7 +338,7 @@ dk_optimize_lineup <- function(schematic, max_points, ...) {
 #' @rdname dk_optimize_lineup
 #' @method dk_optimize_lineup showdown_captain_mode
 #' @export
-dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NULL, ...) {
+dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NULL, solver = "glpk", ...) {
 
   draft_group <- schematic$draft_group
   rules <- schematic$rules
@@ -415,7 +411,7 @@ dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NUL
     )
 
 
-  solved_model <- ompr::solve_model(mod, ompr.roi::with_ROI(solver = "symphony", ...))
+  solved_model <- ompr::solve_model(mod, ompr.roi::with_ROI(solver = solver, ...))
 
   out <- list(solved_model = solved_model,
               schematic = schematic)
@@ -437,7 +433,7 @@ dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NUL
 #' @rdname dk_optimize_lineup
 #' @method dk_optimize_lineup classic
 #' @export
-dk_optimize_lineup.classic <- function(schematic, max_points = NULL, ...) {
+dk_optimize_lineup.classic <- function(schematic, max_points = NULL, solver = "glpk", ...) {
 
   draft_group <- schematic$draft_group
   rules <- schematic$rules
@@ -607,7 +603,7 @@ dk_optimize_lineup.classic <- function(schematic, max_points = NULL, ...) {
 
   }
 
-  solved_model <- ompr::solve_model(mod, ompr.roi::with_ROI(solver = "symphony"))
+  solved_model <- ompr::solve_model(mod, ompr.roi::with_ROI(solver = solver, ...))
 
   out <- list(solved_model = solved_model,
               schematic = schematic)

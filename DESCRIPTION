@@ -19,15 +19,15 @@ Imports:
     ompr.roi,
     purrr,
     rlang,
-    ROI.plugin.glpk,
     stats,
     tidyjson,
     tidyr,
     utils
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Suggests: 
     diffviewer,
     httptest2,
+    ROI.plugin.glpk,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
