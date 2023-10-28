@@ -19,6 +19,7 @@ Imports:
     ompr.roi,
     purrr,
     rlang,
+    ROI.plugin.glpk,
     stats,
     tidyjson,
     tidyr,
@@ -27,7 +28,6 @@ RoxygenNote: 7.2.1
 Suggests: 
     diffviewer,
     httptest2,
-    ROI.plugin.symphony,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)

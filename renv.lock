@@ -9,6 +9,23 @@
     ]
   },
   "Packages": {
+    "Matrix": {
+      "Package": "Matrix",
+      "Version": "1.6-1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "grDevices",
+        "graphics",
+        "grid",
+        "lattice",
+        "methods",
+        "stats",
+        "utils"
+      ],
+      "Hash": "1a00d4828f33a9d690806e98bd17150c"
+    },
     "R6": {
       "Package": "R6",
       "Version": "2.5.1",
@@ -18,6 +35,43 @@
         "R"
       ],
       "Hash": "470851b6d5d0ac559e9d01bb352b4021"
+    },
+    "ROI": {
+      "Package": "ROI",
+      "Version": "1.0-1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "methods",
+        "registry",
+        "slam",
+        "utils"
+      ],
+      "Hash": "42ce9ee4c1cf168869f4386d2cdeadd2"
+    },
+    "ROI.plugin.glpk": {
+      "Package": "ROI.plugin.glpk",
+      "Version": "1.0-0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "ROI",
+        "Rglpk",
+        "methods"
+      ],
+      "Hash": "b13d1b61260f4c843aa569c2c9711c4e"
+    },
+    "Rglpk": {
+      "Package": "Rglpk",
+      "Version": "0.6-5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "slam"
+      ],
+      "Hash": "5190f2200c77e13f66b26b6db549ba08"
     },
     "askpass": {
       "Package": "askpass",
@@ -38,6 +92,28 @@
         "tools"
       ],
       "Hash": "50c838a310445e954bc13f26f26a6ecf"
+    },
+    "backports": {
+      "Package": "backports",
+      "Version": "1.4.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "c39fbec8a30d23e721980b8afb31984c"
+    },
+    "checkmate": {
+      "Package": "checkmate",
+      "Version": "2.3.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "backports",
+        "utils"
+      ],
+      "Hash": "ed4275b13c6ab74b89a31def0b6bf835"
     },
     "cli": {
       "Package": "cli",
@@ -69,6 +145,17 @@
         "R"
       ],
       "Hash": "511bacbfa153a15251166b463b4da4f9"
+    },
+    "data.table": {
+      "Package": "data.table",
+      "Version": "1.14.8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "methods"
+      ],
+      "Hash": "b4c06e554f33344e044ccd7fdca750a9"
     },
     "dplyr": {
       "Package": "dplyr",
@@ -104,6 +191,13 @@
         "utils"
       ],
       "Hash": "1d9e7ad3c8312a192dea7d3db0274fde"
+    },
+    "fastmap": {
+      "Package": "fastmap",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "f7736a18de97dea803bde0a2daaafb27"
     },
     "generics": {
       "Package": "generics",
@@ -156,6 +250,31 @@
       ],
       "Hash": "266a20443ca13c65688b2116d5220f76"
     },
+    "lattice": {
+      "Package": "lattice",
+      "Version": "0.21-9",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "grDevices",
+        "graphics",
+        "grid",
+        "stats",
+        "utils"
+      ],
+      "Hash": "5558c61e0136e247252f5f952cdaad6a"
+    },
+    "lazyeval": {
+      "Package": "lazyeval",
+      "Version": "0.2.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "d908914ae53b04d4c0c0fd72ecc35370"
+    },
     "lifecycle": {
       "Package": "lifecycle",
       "Version": "1.0.3",
@@ -169,6 +288,17 @@
       ],
       "Hash": "001cecbeac1cff9301bdc3775ee46a86"
     },
+    "listcomp": {
+      "Package": "listcomp",
+      "Version": "0.4.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "compiler",
+        "rlang"
+      ],
+      "Hash": "4062982514dd797c7013124da49994c8"
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.3",
@@ -178,6 +308,38 @@
         "R"
       ],
       "Hash": "7ce2733a9826b3aeb1775d56fd305472"
+    },
+    "ompr": {
+      "Package": "ompr",
+      "Version": "1.0.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "Matrix",
+        "R",
+        "data.table",
+        "fastmap",
+        "lazyeval",
+        "listcomp",
+        "methods",
+        "rlang"
+      ],
+      "Hash": "0da028ac4709a29038a43e55a189ae1d"
+    },
+    "ompr.roi": {
+      "Package": "ompr.roi",
+      "Version": "1.0.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "Matrix",
+        "R",
+        "ROI",
+        "methods",
+        "ompr",
+        "slam"
+      ],
+      "Hash": "0f9f0bb7e9cff9da0237c8bd206d40a2"
     },
     "openssl": {
       "Package": "openssl",
@@ -241,12 +403,26 @@
       ],
       "Hash": "5e3c5dc0b071b21fa128676560dbe94d"
     },
+    "registry": {
+      "Package": "registry",
+      "Version": "0.5-1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "utils"
+      ],
+      "Hash": "1c9935f4f14c6c096c9c9072ddee59f1"
+    },
     "renv": {
       "Package": "renv",
       "Version": "1.0.3",
-      "OS_type": null,
-      "Repository": "CRAN",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "41b847654f567341725473431dd0d5ab"
     },
     "rlang": {
       "Package": "rlang",
@@ -258,6 +434,17 @@
         "utils"
       ],
       "Hash": "a85c767b55f0bf9b7ad16c6d7baee5bb"
+    },
+    "slam": {
+      "Package": "slam",
+      "Version": "0.1-50",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "stats"
+      ],
+      "Hash": "e25793551cbdb843154152e5ee88cbd6"
     },
     "stringi": {
       "Package": "stringi",
