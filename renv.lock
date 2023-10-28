@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.0",
+    "Version": "4.3.1",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -50,28 +50,6 @@
         "utils"
       ],
       "Hash": "42ce9ee4c1cf168869f4386d2cdeadd2"
-    },
-    "ROI.plugin.glpk": {
-      "Package": "ROI.plugin.glpk",
-      "Version": "1.0-0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "ROI",
-        "Rglpk",
-        "methods"
-      ],
-      "Hash": "b13d1b61260f4c843aa569c2c9711c4e"
-    },
-    "Rglpk": {
-      "Package": "Rglpk",
-      "Version": "0.6-5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "slam"
-      ],
-      "Hash": "5190f2200c77e13f66b26b6db549ba08"
     },
     "askpass": {
       "Package": "askpass",
