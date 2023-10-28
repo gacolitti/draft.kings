@@ -38,3 +38,6 @@ is 133645678.}
 Retrieve player fantasy points earned in each
 game for a given season and week (NFL) or date (NBA/MLB).
 }
+\details{
+Data starts on October 18th, 2022 for NBA.
+}

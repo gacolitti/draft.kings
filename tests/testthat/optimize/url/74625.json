@@ -1,0 +1,582 @@
+{
+    "draftGroup": {
+        "draftGroupId": 74625,
+        "contestType": {
+            "contestTypeId": 21,
+            "sport": "NFL",
+            "gameType": "SalaryCap",
+            "allowLateSwap": true
+        },
+        "sportId": 1,
+        "startTimeType": "Normal",
+        "minStartTime": "2022-09-25T17:00:00.0000000Z",
+        "maxStartTime": "2022-09-25T20:25:00.0000000Z",
+        "draftGroupState": "Historical",
+        "allowUgc": true,
+        "leagues": [
+            {
+                "leagueId": 1,
+                "leagueName": "National Football League",
+                "leagueAbbreviation": "NFL"
+            }
+        ],
+        "games": [
+            {
+                "gameId": 5817889,
+                "awayTeamId": 335,
+                "homeTeamId": 362,
+                "startDate": "2022-09-25T20:25:00.0000000Z",
+                "location": "Raymond James Stadium",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "GB @ TB",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "12",
+                    "awayTeamScore": "14",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "FOX"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818004,
+                "awayTeamId": 366,
+                "homeTeamId": 348,
+                "startDate": "2022-09-25T17:00:00.0000000Z",
+                "location": "Gillette Stadium",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "BAL @ NE",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "26",
+                    "awayTeamScore": "37",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "FOX"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818079,
+                "awayTeamId": 339,
+                "homeTeamId": 338,
+                "startDate": "2022-09-25T17:00:00.0000000Z",
+                "location": "Lucas Oil Stadium",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "KC @ IND",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "20",
+                    "awayTeamScore": "17",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "CBS"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818371,
+                "awayTeamId": 350,
+                "homeTeamId": 364,
+                "startDate": "2022-09-25T17:00:00.0000000Z",
+                "location": "Bank of America Stadium",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "NO @ CAR",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "22",
+                    "awayTeamScore": "14",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "FOX"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818401,
+                "awayTeamId": 325,
+                "homeTeamId": 326,
+                "startDate": "2022-09-25T17:00:00.0000000Z",
+                "location": "Soldier Field",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "HOU @ CHI",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "23",
+                    "awayTeamScore": "20",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "CBS"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818419,
+                "awayTeamId": 324,
+                "homeTeamId": 345,
+                "startDate": "2022-09-25T17:00:00.0000000Z",
+                "location": "Sun Life Stadium",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "BUF @ MIA",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "21",
+                    "awayTeamScore": "19",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "CBS"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818642,
+                "awayTeamId": 334,
+                "homeTeamId": 347,
+                "startDate": "2022-09-25T17:00:00.0000000Z",
+                "location": "U.S. Bank Stadium",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "DET @ MIN",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "28",
+                    "awayTeamScore": "24",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "FOX"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818672,
+                "awayTeamId": 327,
+                "homeTeamId": 352,
+                "startDate": "2022-09-25T17:00:00.0000000Z",
+                "location": "MetLife Stadium",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "CIN @ NYJ",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "12",
+                    "awayTeamScore": "27",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "CBS"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818702,
+                "awayTeamId": 341,
+                "homeTeamId": 336,
+                "startDate": "2022-09-25T17:00:00.0000000Z",
+                "location": "LP Field",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "LV @ TEN",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "24",
+                    "awayTeamScore": "22",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "FOX"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818720,
+                "awayTeamId": 354,
+                "homeTeamId": 363,
+                "startDate": "2022-09-25T17:00:00.0000000Z",
+                "location": "FedEx Field",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "PHI @ WAS",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "8",
+                    "awayTeamScore": "24",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "FOX"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818750,
+                "awayTeamId": 365,
+                "homeTeamId": 357,
+                "startDate": "2022-09-25T20:05:00.0000000Z",
+                "location": "SoFi Stadium",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "JAX @ LAC",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "10",
+                    "awayTeamScore": "38",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "CBS"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818774,
+                "awayTeamId": 343,
+                "homeTeamId": 355,
+                "startDate": "2022-09-25T20:25:00.0000000Z",
+                "location": "University of Phoenix Stadium",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "LAR @ ARI",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "12",
+                    "awayTeamScore": "20",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "FOX"
+                    }
+                ]
+            },
+            {
+                "gameId": 5818792,
+                "awayTeamId": 323,
+                "homeTeamId": 361,
+                "startDate": "2022-09-25T20:25:00.0000000Z",
+                "location": "CenturyLink Field",
+                "timeRemainingStatus": "Final",
+                "sport": "NFL",
+                "status": "Final",
+                "description": "ATL @ SEA",
+                "sportSpecificData": {
+                    "timeRemaining": "Final",
+                    "homeTeamScore": "23",
+                    "awayTeamScore": "27",
+                    "quarter": "4"
+                },
+                "league": "NFL",
+                "competitionStatus": "ScoresOfficial",
+                "competitionStatusDetail": "",
+                "gameAttributes": [
+                    {
+                        "typeId": 8,
+                        "value": "4"
+                    },
+                    {
+                        "typeId": 9,
+                        "value": "Final"
+                    },
+                    {
+                        "typeId": 22,
+                        "value": "3"
+                    },
+                    {
+                        "typeId": 27,
+                        "value": "False"
+                    },
+                    {
+                        "typeId": 32,
+                        "value": "FOX"
+                    }
+                ]
+            }
+        ],
+        "gameTypeId": 1,
+        "allTags": [
+            "Featured"
+        ]
+    },
+    "responseStatus": {
+
+    },
+    "errorStatus": {
+
+    }
+}

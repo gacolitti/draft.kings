@@ -6,11 +6,11 @@
 \alias{dk_optimize_lineup.classic}
 \title{Optimize Lineup}
 \usage{
-dk_optimize_lineup(schematic, max_points, ...)
+dk_optimize_lineup(schematic, max_points, solver = "glpk", ...)
 
-\method{dk_optimize_lineup}{showdown_captain_mode}(schematic, max_points = NULL, ...)
+\method{dk_optimize_lineup}{showdown_captain_mode}(schematic, max_points = NULL, solver = "glpk", ...)
 
-\method{dk_optimize_lineup}{classic}(schematic, max_points = NULL, ...)
+\method{dk_optimize_lineup}{classic}(schematic, max_points = NULL, solver = "glpk", ...)
 }
 \arguments{
 \item{schematic}{Output from \code{\link[=dk_prepare_schematic]{dk_prepare_schematic()}} which
@@ -19,6 +19,8 @@ news status, salary, and projected fantasy points.}
 
 \item{max_points}{Optional upper threshold of points. This is used primarily
 to get many successive lineups in \code{\link[=dk_get_optimal_lineups]{dk_get_optimal_lineups()}}}
+
+\item{solver}{the 'ROI' solver name (character vector of length 1)}
 
 \item{...}{Other arguments passed to optimization method.}
 }

@@ -94,6 +94,7 @@ get_error_body <- function(resp) {
 #' @return The checked data frame
 #'
 #' @examples
+#' \dontrun{
 #' df <- data.frame(
 #'   col1 = c(1, 2, 3),
 #'   col2 = c("a", "b", "c"),
@@ -107,7 +108,8 @@ get_error_body <- function(resp) {
 #'   col3 = "logical"
 #' )
 #'
-#' check_data_frame(df, class_list)
+#' check_df(df, class_list)
+#' }
 #'
 #' @keywords internal
 check_df <- function(df, class_list) {
@@ -135,3 +137,20 @@ check_df <- function(df, class_list) {
 }
 
 
+#' Check Solver
+#'
+#' Ensure the solver name passed to `dk_optimize_lineup` is available
+#'
+#' @inheritParams ompr.roi::with_ROI
+#'
+check_solver <- function(solver) {
+
+  if (!requireNamespace(glue::glue("ROI.plugin.{solver}"), quietly = TRUE)) {
+
+    cli::cli_abort(
+      "The `ROI.plugin.{solver}` package is required to use this function."
+    )
+
+  }
+
+}

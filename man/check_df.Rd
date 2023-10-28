@@ -25,6 +25,7 @@ This function checks the classes of a data frame and allows for certain columns 
 allowed classes.
 }
 \examples{
+\dontrun{
 df <- data.frame(
   col1 = c(1, 2, 3),
   col2 = c("a", "b", "c"),
@@ -38,7 +39,8 @@ class_list <- list(
   col3 = "logical"
 )
 
-check_data_frame(df, class_list)
+check_df(df, class_list)
+}
 
 }
 \keyword{internal}
