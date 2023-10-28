@@ -368,3 +368,28 @@ dk_resp_parse.sports_resp <- function(resp) {
     clean_names()
 
 }
+
+## Competition -------------------------------------------------------------------------------------
+
+#' @method dk_resp_parse competitions_resp
+#'
+#' @export
+dk_resp_parse.competitions_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  dplyr::tibble("competitions" = resp$competitions) |>
+    tidyr::hoist(.col = "competitions", "competitionId", "sport", "startTime",
+                 "competitionState", "CompetitionStateDetail",
+                 "timeRemainingStatus", "homeTeam", "awayTeam",
+                 "sportSpecificData", "gameAttributes") |>
+    tidyr::unnest_wider(col = "awayTeam", names_sep = "_") |>
+    tidyr::unnest_wider(col = "homeTeam", names_sep = "_") |>
+    tidyr::unnest_wider(col = "sportSpecificData") |>
+    # TODO: Consider adding coded name value game attribute pairs removed here.
+    # Currently there is no mapping of the typeId (code) to a name
+    dplyr::select(-"gameAttributes") |>
+    dplyr::select(-"competitions") |>
+    clean_names()
+
+}

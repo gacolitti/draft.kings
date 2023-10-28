@@ -1,0 +1,68 @@
+{
+    "competitions": [
+        {
+            "competitionId": 5819761,
+            "sport": "NFL",
+            "homeTeam": {
+                "teamId": 366,
+                "teamName": "Ravens",
+                "teamAbbreviation": "BAL",
+                "teamCity": "Baltimore",
+                "primaryColor": "#241773",
+                "secondaryColor": "#9e7C0c",
+                "tertiaryColor": "#000000",
+                "teamLogoUrl": "https://dkn.gs/sports/images/nfl/teams/logos/160/18495.png",
+                "darkModeTeamLogoUrl": ""
+            },
+            "awayTeam": {
+                "teamId": 327,
+                "teamName": "Bengals",
+                "teamAbbreviation": "CIN",
+                "teamCity": "Cincinnati",
+                "primaryColor": "#fb4f14",
+                "secondaryColor": "#000000",
+                "tertiaryColor": "#ffffff",
+                "teamLogoUrl": "https://dkn.gs/sports/images/nfl/teams/logos/160/18320.png",
+                "darkModeTeamLogoUrl": ""
+            },
+            "startTime": "2022-10-10T00:20:00.0000000Z",
+            "competitionState": "ScoresOfficial",
+            "competitionStateDetail": "",
+            "timeRemainingStatus": "Final",
+            "sportSpecificData": {
+                "timeRemaining": "Final",
+                "homeTeamScore": "19",
+                "awayTeamScore": "17",
+                "quarter": "4"
+            },
+            "gameAttributes": [
+                {
+                    "typeId": 8,
+                    "value": "4"
+                },
+                {
+                    "typeId": 9,
+                    "value": "Final"
+                },
+                {
+                    "typeId": 22,
+                    "value": "5"
+                },
+                {
+                    "typeId": 27,
+                    "value": "False"
+                },
+                {
+                    "typeId": 32,
+                    "value": "NBC"
+                }
+            ]
+        }
+    ],
+    "responseStatus": {
+
+    },
+    "errorStatus": {
+
+    }
+}
