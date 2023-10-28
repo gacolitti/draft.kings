@@ -326,22 +326,6 @@ dk_optimize_lineup <- function(schematic, max_points, ...) {
 
   }
 
-  if (!requireNamespace("ompr", quietly = TRUE)) {
-
-    cli::cli_abort(
-      "The `ompr` package is required to use this function."
-    )
-
-  }
-
-  if (!requireNamespace("ompr.roi", quietly = TRUE)) {
-
-    cli::cli_abort(
-      "The `ompr.roi` package is required to use this function."
-    )
-
-  }
-
   UseMethod("dk_optimize_lineup")
 
 }
