@@ -132,6 +132,38 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
 
 }
 
+#' Get Additional Draft Group Info
+#'
+#' Fetch additional info for a specific draft group
+#'
+#' @inheritParams dk_get_draft_group
+#' @inheritDotParams dk_get_draft_group
+#'
+#' @examples
+#' \dontrun{
+#'   dk_get_draft_group_info2(75284)
+#'
+#' }
+#'
+#' @export
+dk_get_draft_group_info2 <- function(draft_group_id = NULL,
+                                    contest_key = NULL,
+                                    output = c("cleaned_json", "json", "response", "request"),
+                                    ...) {
+
+  output <- rlang::arg_match(output)
+
+  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
+
+  req <- dk_request(
+    ...,
+    paths = glue::glue("sites/US-DK/draftgroups/v3/draftgroups/{draft_group_id}?format=json")
+  )
+
+  dk_request_process(req, output, objclass = "draft_group_info2_resp")
+
+}
+
 #' Get Player List
 #'
 #' Fetch list of players and related info for a specific draft group.

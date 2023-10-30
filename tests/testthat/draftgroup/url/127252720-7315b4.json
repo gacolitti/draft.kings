@@ -1,82 +1,85 @@
 {
     "contestDetail": {
-        "contestSummary": "This 2-player contest features $2,000.00 in total prizes and pays out the top 1 finishing positions. First place wins $2,000.00.",
+        "contestSummary": "This 2-player contest features $3.60 in total prizes and pays out the top 1 finishing positions. First place wins $3.60.",
         "payoutSummary": [
             {
                 "minPosition": 1,
                 "maxPosition": 1,
                 "tierPayoutDescriptions": {
-                    "Cash": "$2,000.00"
+                    "Cash": "$3.60"
                 },
                 "payoutDescriptions": [
                     {
                         "payoutDescriptionType": "Text",
                         "order": 1,
-                        "payoutDescription": "$2,000.00",
+                        "payoutDescription": "$3.60",
                         "quantity": 1,
-                        "value": 2000
+                        "value": 3.6000000000
                     }
                 ]
             }
         ],
-        "PayoutDescription": "$2,000",
+        "PayoutDescription": "$3.60",
         "IsCashPrizeOnly": true,
         "scoringStyleId": 1,
-        "contestStateDetail": "Cancelled",
-        "sport": "MLB",
+        "contestStateDetail": "Completed",
+        "includesPastSeasonCollectibles ": false,
+        "sport": "NBA",
         "isGuaranteed": false,
         "isPrivate": false,
         "isResizable": false,
         "wasResized": false,
         "exclusions": [
             "AllContests",
-            "ContestTypeBlackList-12",
-            "GameTypeBlackList-0",
-            "PaidGameTypeBlackList-0",
+            "ContestTypeBlackList-70",
+            "GameTypeBlackList-70",
+            "PaidGameTypeBlackList-70",
             "SportsBlackList-0",
             "PaidContests",
+            "RateLimit-69476-200",
             "PublicContest",
             "NonGuaranteedPaidContests"
         ],
         "acceptedTickets": [
-            506
+            531,
+            12188
         ],
         "payoutDescriptions": {
-            "Cash": "$2,000.00"
+            "Cash": "$3.60"
         },
         "payoutDescriptionMetadata": [
             {
                 "payoutDescriptionType": "Text",
                 "order": 0,
-                "payoutDescription": "$2,000.00",
+                "payoutDescription": "$3.60",
                 "quantity": 1,
-                "value": 2000
+                "value": 3.6000000000
             }
         ],
-        "fppAward": 2400,
-        "ownerUserKey": "109870",
-        "sortOrder": 2078200,
+        "fppAward": 2,
+        "ownerUserKey": "12191378",
+        "sortOrder": 3146000,
         "filters": [
 
         ],
-        "contestStartTime": "2015-04-24T23:05:00.0000000Z",
-        "gameTypeId": 0,
+        "contestStartTime": "2022-05-27T01:00:00.0000000Z",
+        "gameTypeId": 70,
         "ticketOnlyEntry": false,
-        "gameSetKey": "14628EE6A8E4419FC690E1BDD4A50A8F",
-        "contestKey": "5915939",
-        "name": "MLB $1,060 Head-to-Head vs. just2buff",
-        "draftGroupId": 6106,
-        "playTypeId": 1896,
-        "entries": 1,
+        "gameSetKey": "C76A72C6452EF2FED6808F849F9DD9E2",
+        "contestKey": "127252720",
+        "name": "NBA $2 TheSoulCaliber vs. SeaBassFish (Thu - Fri)",
+        "draftGroupId": 69476,
+        "playTypeId": 44136,
+        "entries": 2,
         "maximumEntries": 2,
         "maximumEntriesPerUser": 1,
-        "entryFee": 1060,
-        "crownAmount": 583000,
-        "totalPayouts": 2000.00000000000000,
+        "entryFee": 2,
+        "crownAmount": 1100,
+        "totalPayouts": 3.6000000000,
         "contestState": "Completed",
         "attributes": {
-            "IsCombinable": "true",
-            "Multi Match Limit By User": "109870",
+            "Multi Match Limit By User": "12191378",
+            "Head to Head Opponent Name": "SeaBassFish",
             "On Demand Creation": "true",
             "Is H2H": "true",
             "DC Prize Structure Type": "7"

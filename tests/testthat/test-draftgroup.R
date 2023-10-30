@@ -7,17 +7,17 @@ httptest2::with_mock_dir("draftgroup", {
 
     set.seed(1)
     d_sampled <- d |> dplyr::slice_sample(n = 5)
-    expect_snapshot(dplyr::glimpse(d_sampled, 200))
+    expect_snapshot(str(d_sampled))
 
   })
 
   test_that("dk_get_draft_group() works when passed a contest ID", {
 
-    d <- dk_get_draft_group(contest_key = 5915939)
+    d <- dk_get_draft_group(contest_key = 127252720)
 
     set.seed(1)
     d_sampled <- d |> dplyr::slice_sample(n = 5)
-    expect_snapshot(dplyr::glimpse(d_sampled, 200))
+    expect_snapshot(str(d_sampled))
 
   })
 
@@ -27,7 +27,7 @@ httptest2::with_mock_dir("draftgroup", {
 
     set.seed(1)
     d_sampled <- d |> dplyr::slice_sample(n = 5)
-    expect_snapshot(dplyr::glimpse(d_sampled, 200))
+    expect_snapshot(str(d_sampled))
 
   })
 
@@ -35,7 +35,23 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_draft_group_info(draft_group_id = 75367)
 
-    expect_snapshot(dplyr::glimpse(d, 200))
+    expect_snapshot(str(d))
+
+  })
+
+  test_that("dk_get_draft_group_info2() returns expected data for single competition draft group", {
+
+    d <- dk_get_draft_group_info2(draft_group_id = 75367)
+
+    expect_snapshot(str(d))
+
+  })
+
+  test_that("dk_get_draft_group_info2() returns expected data for multi-competition draft group", {
+
+    d <- dk_get_draft_group_info2(draft_group_id = 42994)
+
+    expect_snapshot(str(d))
 
   })
 
@@ -45,7 +61,7 @@ httptest2::with_mock_dir("draftgroup", {
 
     set.seed(1)
     d_sampled <- d |> dplyr::slice_sample(n = 5)
-    expect_snapshot(dplyr::glimpse(d_sampled, 200))
+    expect_snapshot(str(d_sampled))
 
   })
 
@@ -55,7 +71,7 @@ httptest2::with_mock_dir("draftgroup", {
 
     set.seed(1)
     d_sampled <- d |> dplyr::slice_sample(n = 5)
-    expect_snapshot(dplyr::glimpse(d_sampled, 200))
+    expect_snapshot(str(d_sampled))
 
   })
 
@@ -66,11 +82,11 @@ httptest2::with_mock_dir("draftgroup", {
 
     set.seed(1)
     d_sampled <- d_nfl |> dplyr::slice_sample(n = 5)
-    expect_snapshot(dplyr::glimpse(d_sampled, 200))
+    expect_snapshot(str(d_sampled))
 
     set.seed(1)
     d_sampled <- d_nba |> dplyr::slice_sample(n = 5)
-    expect_snapshot(dplyr::glimpse(d_sampled, 200))
+    expect_snapshot(str(d_sampled))
 
   })
 
