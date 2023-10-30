@@ -4,12 +4,12 @@
 #' Fetch contest information such as the sport, payout, and contest summary.
 #'
 #' @inheritParams dk_request_process
+#' @inheritDotParams dk_request
 #'
 #' @param contest_key The sequence of digits that correspond to a specific contest.
 #'   This can be found by examining the URL of a contest page.
 #'   For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 #'   is 133645678.
-#' @param ... Arguments passed to [draft.kings::dk_request()]
 #'
 #' @examples
 #'   \dontrun{
@@ -39,9 +39,10 @@ dk_get_contest_info <- function(contest_key,
 #' Fetch the full table of contests and related info from DraftKings.com lobby
 #'
 #' @inheritParams dk_request_process
+#' @inheritParams dk_get_contest_info
+#' @inheritDotParams dk_request
 #'
 #' @param sport character. optional.
-#' @param ... Arguments passed to [draft.kings::dk_request()]
 #'
 #' @export
 dk_get_lobby_contests <- function(sport = NULL,
@@ -67,11 +68,11 @@ dk_get_lobby_contests <- function(sport = NULL,
 #'
 #' @inheritParams dk_request_process
 #' @inheritParams dk_get_contest_info
+#' @inheritDotParams dk_request
 #'
 #' @param game_type_id Integer corresponding to the game type.
 #'   For example, 159 in \url{https://api.draftkings.com/lineups/v1/gametypes/159/rules}.
 #'   If both `game_type_id` and `contest_key` are passed, then `contest_key` is ignored.
-#' @param ... Arguments passed to [draft.kings::dk_request()]
 #'
 #' @export
 dk_get_game_type_rules <- function(game_type_id = NULL,
@@ -107,7 +108,7 @@ dk_get_game_type_rules <- function(game_type_id = NULL,
 #' Fetch the full list of game types
 #'
 #' @inheritParams dk_get_lobby_contests
-#' @inheritDotParams dk_get_lobby_contests
+#' @inheritDotParams dk_request
 #'
 #' @export
 dk_get_lobby_game_types <- function(sport = NULL,

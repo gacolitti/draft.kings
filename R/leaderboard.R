@@ -8,7 +8,7 @@
 #'
 #' @inheritParams dk_request_process
 #' @inheritParams dk_get_contest_info
-#' @inheritDotParams dk_get_contest_info
+#' @inheritDotParams dk_request
 #' @param cookies Path to JSON of cookies needed to perform API request.
 #'
 #' @examples
@@ -52,10 +52,9 @@ dk_get_leaderboard <- function(contest_key,
 #' and the fantasy points associated to each stat.
 #'
 #' @inheritParams dk_request_process
-#' @inheritParams dk_get_contest_info
 #' @inheritParams dk_get_leaderboard
 #' @inheritParams dk_get_draft_group
-#' @inheritDotParams dk_get_contest_info
+#' @inheritDotParams dk_request
 #' @param entry_keys Vector of numeric (or character) keys that correspond to a specific entry in
 #'   a specific contest. See output from [dk_get_leaderboard()].
 #'
