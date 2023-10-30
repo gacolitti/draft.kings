@@ -1,0 +1,1384 @@
+{
+    "draftGroups": [
+        {
+            "draftGroupId": 42994,
+            "contestTypeId": 21,
+            "sportId": 1,
+            "startTimeType": "Normal",
+            "minStartTime": "2021-01-03T18:00:00.0000000Z",
+            "maxStartTime": "2021-01-03T21:25:00.0000000Z",
+            "draftGroupState": "Historical",
+            "allowUgc": true,
+            "leagues": [
+                {
+                    "leagueId": 1,
+                    "leagueName": "National Football League",
+                    "leagueAbbreviation": "NFL"
+                }
+            ],
+            "gameTypeId": 1,
+            "gameSetKey": "DCFBEBF16AA6DC5B68B6C919F3CF158E",
+            "allTags": [
+                "Featured"
+            ],
+            "competitionIds": [
+                5673424,
+                5673442,
+                5673748,
+                5674390,
+                5674408,
+                5674426,
+                5674444,
+                5674456,
+                5674474,
+                5674492,
+                5675369,
+                5675399,
+                5675429,
+                5675441,
+                5675459
+            ],
+            "scoringStyleId": 1,
+            "allowLineupCreation": true,
+            "isLateDraftEligible": false,
+            "lastDraftTimeUtc": "2021-01-03T18:00:00.0000000Z"
+        }
+    ],
+    "gameStyles": [
+        {
+            "gameStyleId": 1,
+            "name": "Classic",
+            "description": "Create a 9-player lineup while staying under the $50,000 salary cap",
+            "draftType": "SalaryCap",
+            "sportId": 1,
+            "sortOrder": 1,
+            "gameTypes": [
+                {
+                    "gameTypeId": 1,
+                    "name": "Classic",
+                    "description": "Create a 9-player lineup while staying under the $50,000 salary cap",
+                    "tag": "",
+                    "sportId": 1
+                }
+            ],
+            "tag": "",
+            "attributes": [
+
+            ]
+        }
+    ],
+    "sports": [
+        {
+            "sportId": 1,
+            "name": "NFL",
+            "fullName": "Football",
+            "sortOrder": 1,
+            "competitionTerm": "Game",
+            "competitionTermPlural": "Games",
+            "regionalDisplayName": "NFL",
+            "regionalDisplayFullName": "Football"
+        }
+    ],
+    "gameSets": [
+        {
+            "gameSetKey": "DCFBEBF16AA6DC5B68B6C919F3CF158E",
+            "sportId": 1,
+            "competitions": [
+                {
+                    "competitionId": 5673424,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 348,
+                        "teamName": "Patriots",
+                        "abbreviation": "NE",
+                        "city": "New England"
+                    },
+                    "awayTeam": {
+                        "teamId": 352,
+                        "teamName": "Jets",
+                        "abbreviation": "NYJ",
+                        "city": "New York"
+                    },
+                    "startTime": "2021-01-03T18:00:00.0000000Z",
+                    "name": "NYJ @ NE",
+                    "venue": "Gillette Stadium",
+                    "weather": {
+                        "icon": "cloudy",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "2"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "2"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "85"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "(Shotgun) S.Darnold pass short left to C.Herndon to NYJ 15 for 8 yards (M.Jackson). Belichick 311th career win (including postseason), 3rd all-time (Shula 347, Halas 324)."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "3"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5673442,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 334,
+                        "teamName": "Lions",
+                        "abbreviation": "DET",
+                        "city": "Detroit"
+                    },
+                    "awayTeam": {
+                        "teamId": 347,
+                        "teamName": "Vikings",
+                        "abbreviation": "MIN",
+                        "city": "Minnesota"
+                    },
+                    "startTime": "2021-01-03T18:00:00.0000000Z",
+                    "name": "MIN @ DET",
+                    "venue": "Ford Field",
+                    "weather": {
+                        "icon": "cloudy",
+                        "isDome": true
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "13"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "13"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "K.Cousins kneels to DET 13 for -1 yards."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "3"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5674390,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 324,
+                        "teamName": "Bills",
+                        "abbreviation": "BUF",
+                        "city": "Buffalo"
+                    },
+                    "awayTeam": {
+                        "teamId": 345,
+                        "teamName": "Dolphins",
+                        "abbreviation": "MIA",
+                        "city": "Miami"
+                    },
+                    "startTime": "2021-01-03T18:00:00.0000000Z",
+                    "name": "MIA @ BUF",
+                    "venue": "Ralph Wilson Stadium",
+                    "weather": {
+                        "icon": "rain",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "13"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "38"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "M.Barkley kneels to MIA 38 for -1 yards."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "3"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5674456,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 327,
+                        "teamName": "Bengals",
+                        "abbreviation": "CIN",
+                        "city": "Cincinnati"
+                    },
+                    "awayTeam": {
+                        "teamId": 366,
+                        "teamName": "Ravens",
+                        "abbreviation": "BAL",
+                        "city": "Baltimore"
+                    },
+                    "startTime": "2021-01-03T18:00:00.0000000Z",
+                    "name": "BAL @ CIN",
+                    "venue": "Paul Brown Stadium",
+                    "weather": {
+                        "icon": "cloudy",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "1"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "10"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "33"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "(Shotgun) T.Williams left guard to BLT 33 for 17 yards (P.Queen)."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "2"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "2"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5674474,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 329,
+                        "teamName": "Browns",
+                        "abbreviation": "CLE",
+                        "city": "Cleveland"
+                    },
+                    "awayTeam": {
+                        "teamId": 356,
+                        "teamName": "Steelers",
+                        "abbreviation": "PIT",
+                        "city": "Pittsburgh"
+                    },
+                    "startTime": "2021-01-03T18:00:00.0000000Z",
+                    "name": "PIT @ CLE",
+                    "venue": "FirstEnergy Stadium",
+                    "weather": {
+                        "icon": "cloudy",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "2"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "11"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "40"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "B.Mayfield kneels to PIT 40 for -1 yards."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "3"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5675369,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 351,
+                        "teamName": "Giants",
+                        "abbreviation": "NYG",
+                        "city": "New York"
+                    },
+                    "awayTeam": {
+                        "teamId": 331,
+                        "teamName": "Cowboys",
+                        "abbreviation": "DAL",
+                        "city": "Dallas"
+                    },
+                    "startTime": "2021-01-03T18:00:00.0000000Z",
+                    "name": "DAL @ NYG",
+                    "venue": "MetLife Stadium",
+                    "weather": {
+                        "icon": "rain",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "13"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "64"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "D.Jones kneels to NYG 36 for -1 yards."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5675399,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 362,
+                        "teamName": "Buccaneers",
+                        "abbreviation": "TB",
+                        "city": "Tampa Bay"
+                    },
+                    "awayTeam": {
+                        "teamId": 323,
+                        "teamName": "Falcons",
+                        "abbreviation": "ATL",
+                        "city": "Atlanta"
+                    },
+                    "startTime": "2021-01-03T18:00:00.0000000Z",
+                    "name": "ATL @ TB",
+                    "venue": "Raymond James Stadium",
+                    "weather": {
+                        "icon": "cloudy",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "11"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "19"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "T.Brady kneels to ATL 19 for no gain."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "2"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5673748,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 326,
+                        "teamName": "Bears",
+                        "abbreviation": "CHI",
+                        "city": "Chicago"
+                    },
+                    "awayTeam": {
+                        "teamId": 335,
+                        "teamName": "Packers",
+                        "abbreviation": "GB",
+                        "city": "Green Bay"
+                    },
+                    "startTime": "2021-01-03T21:25:00.0000000Z",
+                    "name": "GB @ CHI",
+                    "venue": "Soldier Field",
+                    "weather": {
+                        "icon": "partly-cloudy-day",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "2"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "1"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "1"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "(Shotgun) M.Trubisky pass short right to J.Graham to GB 1 for 3 yards (J.Alexander)."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "1"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "3"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5674408,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 364,
+                        "teamName": "Panthers",
+                        "abbreviation": "CAR",
+                        "city": "Carolina"
+                    },
+                    "awayTeam": {
+                        "teamId": 350,
+                        "teamName": "Saints",
+                        "abbreviation": "NO",
+                        "city": "New Orleans"
+                    },
+                    "startTime": "2021-01-03T21:25:00.0000000Z",
+                    "name": "NO @ CAR",
+                    "venue": "Bank of America Stadium",
+                    "weather": {
+                        "icon": "partly-cloudy-day",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "2"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "11"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "85"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "J.Winston kneels to NO 15 for -1 yards."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "3"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "2"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5674426,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 338,
+                        "teamName": "Colts",
+                        "abbreviation": "IND",
+                        "city": "Indianapolis"
+                    },
+                    "awayTeam": {
+                        "teamId": 365,
+                        "teamName": "Jaguars",
+                        "abbreviation": "JAX",
+                        "city": "Jacksonville"
+                    },
+                    "startTime": "2021-01-03T21:25:00.0000000Z",
+                    "name": "JAX @ IND",
+                    "venue": "Lucas Oil Stadium",
+                    "weather": {
+                        "icon": "cloudy",
+                        "isDome": true
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "3"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "12"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "43"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "P.Rivers kneels to JAX 43 for -1 yards."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "3"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5674444,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 325,
+                        "teamName": "Texans",
+                        "abbreviation": "HOU",
+                        "city": "Houston"
+                    },
+                    "awayTeam": {
+                        "teamId": 336,
+                        "teamName": "Titans",
+                        "abbreviation": "TEN",
+                        "city": "Tennessee"
+                    },
+                    "startTime": "2021-01-03T21:25:00.0000000Z",
+                    "name": "TEN @ HOU",
+                    "venue": "Reliant Stadium",
+                    "weather": {
+                        "icon": "clear-day",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "65"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "S.Sloman 37 yard field goal is GOOD, Center-M.Overton, Holder-B.Kern. Kick hits right upright and bounces through for the field goal."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "1"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5674492,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 339,
+                        "teamName": "Chiefs",
+                        "abbreviation": "KC",
+                        "city": "Kansas City"
+                    },
+                    "awayTeam": {
+                        "teamId": 357,
+                        "teamName": "Chargers",
+                        "abbreviation": "LAC",
+                        "city": "Los Angeles"
+                    },
+                    "startTime": "2021-01-03T21:25:00.0000000Z",
+                    "name": "LAC @ KC",
+                    "venue": "Arrowhead Stadium",
+                    "weather": {
+                        "icon": "fog",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "11"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "11"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "J.Herbert kneels to KC 11 for -1 yards."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "3"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "3"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5675429,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 332,
+                        "teamName": "Broncos",
+                        "abbreviation": "DEN",
+                        "city": "Denver"
+                    },
+                    "awayTeam": {
+                        "teamId": 341,
+                        "teamName": "Raiders",
+                        "abbreviation": "LV",
+                        "city": "Las Vegas"
+                    },
+                    "startTime": "2021-01-03T21:25:00.0000000Z",
+                    "name": "LV @ DEN",
+                    "venue": "Sports Authority Field at Mile High",
+                    "weather": {
+                        "icon": "partly-cloudy-day",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "2"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "11"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "58"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "D.Carr kneels to LV 42 for -1 yards."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5675441,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 343,
+                        "teamName": "Rams",
+                        "abbreviation": "LAR",
+                        "city": "Los Angeles"
+                    },
+                    "awayTeam": {
+                        "teamId": 355,
+                        "teamName": "Cardinals",
+                        "abbreviation": "ARI",
+                        "city": "Arizona"
+                    },
+                    "startTime": "2021-01-03T21:25:00.0000000Z",
+                    "name": "ARI @ LAR",
+                    "venue": "SoFi Stadium",
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "1"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "10"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "59"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "(Shotgun) C.Streveler pass short left to D.Hopkins to ARZ 41 for 12 yards (J.Ramsey, J.Fuller)."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "competitionId": 5675459,
+                    "sport": "NFL",
+                    "sportId": 1,
+                    "homeTeam": {
+                        "teamId": 359,
+                        "teamName": "49ers",
+                        "abbreviation": "SF",
+                        "city": "San Francisco"
+                    },
+                    "awayTeam": {
+                        "teamId": 361,
+                        "teamName": "Seahawks",
+                        "abbreviation": "SEA",
+                        "city": "Seattle"
+                    },
+                    "startTime": "2021-01-03T21:25:00.0000000Z",
+                    "name": "SEA @ SF",
+                    "venue": "University of Phoenix Stadium",
+                    "weather": {
+                        "icon": "partly-cloudy-day",
+                        "isDome": false
+                    },
+                    "startingLineupsAvailable": false,
+                    "depthChartsAvailable": true,
+                    "competitionState": "ScoresOfficial",
+                    "competitionStateDetail": "",
+                    "competitionStartedEarly": false,
+                    "competitionAttributes": [
+                        {
+                            "typeId": 3,
+                            "value": "home"
+                        },
+                        {
+                            "typeId": 5,
+                            "value": "3"
+                        },
+                        {
+                            "typeId": 6,
+                            "value": "6"
+                        },
+                        {
+                            "typeId": 8,
+                            "value": "4"
+                        },
+                        {
+                            "typeId": 9,
+                            "value": "Final"
+                        },
+                        {
+                            "typeId": 10,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 11,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 12,
+                            "value": "40"
+                        },
+                        {
+                            "typeId": 13,
+                            "value": "R.Wilson kneels to SF 40 for -1 yards."
+                        },
+                        {
+                            "typeId": 14,
+                            "value": "away"
+                        },
+                        {
+                            "typeId": 22,
+                            "value": "17"
+                        },
+                        {
+                            "typeId": 27,
+                            "value": "False"
+                        },
+                        {
+                            "typeId": 46,
+                            "value": "0"
+                        },
+                        {
+                            "typeId": 47,
+                            "value": "1"
+                        }
+                    ]
+                }
+            ],
+            "minStartTime": "2021-01-03T18:00:00.0000000Z"
+        }
+    ]
+}

@@ -253,6 +253,58 @@ dk_resp_parse.player_fp_resp <- function(resp) {
 
 }
 
+
+#' @method dk_resp_parse draft_group_info2_resp
+#'
+#' @export
+dk_resp_parse.draft_group_info2_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  draft_groups <- dplyr::tibble(draft_groups = resp$draftGroups) |>
+    tidyr::unnest_wider(col = "draft_groups") |>
+    tidyr::hoist(.col = "leagues", "leagueId", "leagueName", "leagueAbbreviation") |>
+    tidyr::unnest_wider(col = "allTags", names_sep = "") |>
+    dplyr::mutate(competitionIds = paste0(unlist(.data$competitionIds), collapse = ", ")) |>
+    clean_names()
+
+  game_types <- dplyr::tibble(gameStyles = resp$gameStyles) |>
+    tidyr::hoist(.col = "gameStyles", "gameTypes") |>
+    tidyr::unnest(cols = "gameTypes") |>
+    tidyr::unnest_wider("gameTypes", names_sep = "_") |>
+    clean_names() |>
+    dplyr::select(-"game_styles")
+
+  game_styles <- dplyr::tibble(gameStyles = resp$gameStyles) |>
+    tidyr::hoist(.col = "gameStyles", "gameTypes") |>
+    tidyr::unnest_wider("gameStyles", names_sep = "_") |>
+    clean_names() |>
+    dplyr::select(-"game_types", -"game_styles_attributes")
+
+  sports <- dplyr::tibble(sports = resp$sports) |>
+    tidyr::unnest_wider(col = "sports")
+
+  competitions <- dplyr::tibble(game_sets = resp$gameSets) |>
+    tidyr::unnest_wider(col = "game_sets") |>
+    tidyr::unnest_longer(col = "competitions") |>
+    dplyr::select(-"sportId") |>
+    tidyr::unnest_wider(col = "competitions") |>
+    tidyr::unnest_wider(col = "homeTeam", names_sep = "_") |>
+    tidyr::unnest_wider(col = "awayTeam", names_sep = "_") |>
+    try(tidyr::unnest_wider(col = "weather", names_sep = "_")) |>
+    dplyr::mutate(gameSetKey = resp$gameSets$gameSetKey) |>
+    clean_names()
+
+  list(
+    draft_groups = draft_groups,
+    game_types = game_types,
+    game_styles = game_styles,
+    sports = sports,
+    competitions = competitions
+  )
+
+}
+
 ## Leaderboard -------------------------------------------------------------------------------------
 
 #' @method dk_resp_parse leaderboard_resp
@@ -365,6 +417,31 @@ dk_resp_parse.sports_resp <- function(resp) {
   resp <- extract_json(resp)
 
   dplyr::bind_rows(resp$sports) %>%
+    clean_names()
+
+}
+
+## Competition -------------------------------------------------------------------------------------
+
+#' @method dk_resp_parse competitions_resp
+#'
+#' @export
+dk_resp_parse.competitions_resp <- function(resp) {
+
+  resp <- extract_json(resp)
+
+  dplyr::tibble("competitions" = resp$competitions) |>
+    tidyr::hoist(.col = "competitions", "competitionId", "sport", "startTime",
+                 "competitionState", "CompetitionStateDetail",
+                 "timeRemainingStatus", "homeTeam", "awayTeam",
+                 "sportSpecificData", "gameAttributes") |>
+    tidyr::unnest_wider(col = "awayTeam", names_sep = "_") |>
+    tidyr::unnest_wider(col = "homeTeam", names_sep = "_") |>
+    tidyr::unnest_wider(col = "sportSpecificData") |>
+    # TODO: Consider adding coded name value game attribute pairs removed here.
+    # Currently there is no mapping of the typeId (code) to a name
+    dplyr::select(-"gameAttributes") |>
+    dplyr::select(-"competitions") |>
     clean_names()
 
 }
