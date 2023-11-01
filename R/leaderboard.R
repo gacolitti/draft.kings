@@ -9,7 +9,7 @@
 #' @inheritParams dk_request_process
 #' @inheritParams dk_get_contest_info
 #' @inheritDotParams dk_request
-#' @param cookies Path to JSON of cookies needed to perform API request.
+#' @param cookie_file Path to JSON of cookies needed to perform API request.
 #'
 #' @examples
 #'   \dontrun{
@@ -18,13 +18,19 @@
 #'
 #' @export
 dk_get_leaderboard <- function(contest_key,
-                               cookies = path.expand("~/cookies.json"),
+                               cookie_file = path.expand("~/cookies.json"),
                                output = c("cleaned_json", "json", "response", "request"),
                                ...) {
 
   output <- rlang::arg_match(output)
 
-  cook <- jsonlite::read_json(cookies)
+  if (!file.exists(cookie_file)) {
+    rlang::abort(
+      "`cookie_file` not found: {cookie_file}"
+    )
+  }
+
+  cook <- jsonlite::read_json(cookie_file)
   clean_cook <- paste0(unlist(lapply(cook, function(x) {paste0(x$name, "=", x$value)})),
                        collapse = ";")
 
@@ -66,13 +72,19 @@ dk_get_leaderboard <- function(contest_key,
 #' @export
 dk_get_entries <- function(draft_group_id,
                            entry_keys,
-                           cookies = path.expand("~/cookies.json"),
+                           cookie_file = path.expand("~/cookies.json"),
                            output = c("cleaned_json", "json", "response", "request"),
                            ...) {
 
   output <- rlang::arg_match(output)
 
-  cook <- jsonlite::read_json(cookies)
+  if (!file.exists(cookie_file)) {
+    rlang::abort(
+      "`cookie_file` not found: {cookie_file}"
+    )
+  }
+
+  cook <- jsonlite::read_json(cookie_file)
   clean_cook <- paste0(unlist(lapply(cook, function(x) {paste0(x$name, "=", x$value)})),
                        collapse = ";")
 

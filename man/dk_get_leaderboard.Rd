@@ -6,7 +6,7 @@
 \usage{
 dk_get_leaderboard(
   contest_key,
-  cookies = path.expand("~/cookies.json"),
+  cookie_file = path.expand("~/cookies.json"),
   output = c("cleaned_json", "json", "response", "request"),
   ...
 )
@@ -17,7 +17,7 @@ This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
 
-\item{cookies}{Path to JSON of cookies needed to perform API request.}
+\item{cookie_file}{Path to JSON of cookies needed to perform API request.}
 
 \item{output}{One of "cleaned_json" (the default),
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used

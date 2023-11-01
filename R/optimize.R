@@ -8,8 +8,6 @@
 #'
 #' @inheritParams dk_get_draft_group
 #'
-#' @importFrom rlang .data .env
-#'
 #' @param draft_group Object returned by `get_draftable_players()`. If `NULL` (the default),
 #'   then this object is fetched using the `draft_group_id`. The following columns are required:
 #'    draftable_id, player_id, first_name, last_name, display_name, salary, team_id, status.
@@ -333,8 +331,6 @@ dk_optimize_lineup <- function(schematic, max_points, solver = "glpk", ...) {
 #' available players, their salaries, and their projected
 #' fantasy points for a showdown captain mode game type.
 #'
-#' @importFrom rlang .data .env
-#'
 #' @rdname dk_optimize_lineup
 #' @method dk_optimize_lineup showdown_captain_mode
 #' @export
@@ -427,8 +423,6 @@ dk_optimize_lineup.showdown_captain_mode <- function(schematic, max_points = NUL
 #' Determine the optimal lineup of players based on the list of
 #' available players, their salaries, and their projected
 #' fantasy points for a classic game type.
-#'
-#' @importFrom rlang .data .env
 #'
 #' @rdname dk_optimize_lineup
 #' @method dk_optimize_lineup classic
@@ -674,8 +668,6 @@ dk_write_csv <- function(optimal_lineups, file, ...) {
 #' Given the output from [dk_get_optimal_lineups()], create a
 #' CSV of Showdown Captain Mode lineups formatted for
 #' uplaod to \url{https://www.draftkings.com/lineup/upload}.
-#'
-#' @importFrom rlang .data .env
 #'
 #' @rdname dk_write_csv
 #' @method dk_write_csv showdown_captain_mode_multiple_solutions

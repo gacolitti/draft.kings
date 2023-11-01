@@ -35,8 +35,6 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 #' @inheritParams dk_get_contest_info
 #' @inheritDotParams dk_request
 #'
-#' @importFrom rlang .data .env
-#'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
 #'   If `draft_group_id` and `contest_key` are both passed, `contest_key` is ignored.
 #' @param draftable_ids Unique draftable IDs to filter by. If `NULL` (the default),
