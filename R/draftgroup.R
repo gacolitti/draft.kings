@@ -33,9 +33,7 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 #' their salaries.
 #'
 #' @inheritParams dk_get_contest_info
-#' @inheritDotParams dk_get_contest_info
-#'
-#' @importFrom rlang .data .env
+#' @inheritDotParams dk_request
 #'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
 #'   If `draft_group_id` and `contest_key` are both passed, `contest_key` is ignored.
@@ -80,7 +78,7 @@ dk_get_draft_group <- function(draft_group_id = NULL,
 #' currently present at \url{www.draftkings.com/lobby}.
 #'
 #' @inheritParams dk_get_lobby_contests
-#' @inheritDotParams dk_get_lobby_contests
+#' @inheritDotParams dk_request
 #'
 #' @export
 dk_get_lobby_draft_groups <- function(sport = NULL,
@@ -105,7 +103,7 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
 #' Fetch info for a specific draft group
 #'
 #' @inheritParams dk_get_draft_group
-#' @inheritDotParams dk_get_draft_group
+#' @inheritDotParams dk_request
 #'
 #' @examples
 #' \dontrun{
@@ -137,7 +135,7 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
 #' Fetch additional info for a specific draft group
 #'
 #' @inheritParams dk_get_draft_group
-#' @inheritDotParams dk_get_draft_group
+#' @inheritDotParams dk_request
 #'
 #' @examples
 #' \dontrun{
@@ -169,7 +167,7 @@ dk_get_draft_group_info2 <- function(draft_group_id = NULL,
 #' Fetch list of players and related info for a specific draft group.
 #'
 #' @inheritParams dk_get_draft_group_info
-#' @inheritDotParams dk_get_draft_group_info
+#' @inheritDotParams dk_request
 #'
 #' @examples
 #' \dontrun{
@@ -203,7 +201,7 @@ dk_get_player_list <- function(draft_group_id = NULL,
 #' Fetch list of teams for a specific draft group.
 #'
 #' @inheritParams dk_get_draft_group_info
-#' @inheritDotParams dk_get_draft_group_info
+#' @inheritDotParams dk_request
 #'
 #' @export
 dk_get_team_list <- function(draft_group_id = NULL,
@@ -232,7 +230,7 @@ dk_get_team_list <- function(draft_group_id = NULL,
 #' game for a given season and week (NFL) or date (NBA/MLB).
 #'
 #' @inheritParams dk_get_contest_info
-#' @inheritDotParams dk_get_contest_info
+#' @inheritDotParams dk_request
 #'
 #' @param timeframe integer. Either the week number for NFL, or a date of the form `20230312` for
 #'   MLB and NBA. If the timeframe format detected does not match the sport argument passed, an

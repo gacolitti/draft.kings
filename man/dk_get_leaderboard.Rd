@@ -6,7 +6,7 @@
 \usage{
 dk_get_leaderboard(
   contest_key,
-  cookies = path.expand("~/cookies.json"),
+  cookie_file = path.expand("~/cookies.json"),
   output = c("cleaned_json", "json", "response", "request"),
   ...
 )
@@ -17,16 +17,25 @@ This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
 
-\item{cookies}{Path to JSON of cookies needed to perform API request.}
+\item{cookie_file}{Path to JSON of cookies needed to perform API request.}
 
 \item{output}{One of "cleaned_json" (the default),
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
 to parse the JSON body,}
 
 \item{...}{
-  Arguments passed on to \code{\link[=dk_get_contest_info]{dk_get_contest_info}}
+  Arguments passed on to \code{\link[=dk_request]{dk_request}}
   \describe{
-    \item{\code{}}{}
+    \item{\code{query_params}}{A list of query parameters passed to \verb{[httr2::req_url_query]}.}
+    \item{\code{proxy_args}}{List of arguments to \link[httr2:req_proxy]{httr2::req_proxy}}
+    \item{\code{curl_options}}{List of arguments to \link[httr2:req_options]{httr2::req_options}}
+    \item{\code{throttle_rate}}{List of arguments to \link[httr2:req_throttle]{httr2::req_throttle}}
+    \item{\code{headers}}{List of arguments to \code{\link[httr2:req_headers]{httr2::req_headers()}}}
+    \item{\code{paths}}{List of arguments to \code{\link[httr2:req_url]{httr2::req_url_path_append()}}}
+    \item{\code{error_handling_options}}{List of arguments to \code{\link[httr2:req_error]{httr2::req_error()}}}
+    \item{\code{retry_options}}{List of arguments passed to \code{\link[httr2:req_retry]{httr2::req_retry()}}}
+    \item{\code{base_url}}{Base URL for request.}
+    \item{\code{method}}{Custom HTTP method}
   }}
 }
 \description{

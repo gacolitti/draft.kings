@@ -6,7 +6,7 @@
 #' team IDs, and sport name.
 #'
 #' @inheritParams dk_get_contest_info
-#' @inheritDotParams dk_get_contest_info
+#' @inheritDotParams dk_request
 #'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
 #'

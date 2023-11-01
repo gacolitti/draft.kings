@@ -116,7 +116,6 @@ dk_resp_parse.game_type_rules_resp <- function(resp) {
 }
 
 #' @method dk_resp_parse lobby_game_types_resp
-#' @importFrom rlang .data .env
 #' @export
 dk_resp_parse.lobby_game_types_resp <- function(resp) {
 
@@ -160,8 +159,6 @@ dk_resp_parse.lobby_draft_groups_resp <- function(resp) {
 }
 
 #' @method dk_resp_parse draft_group_info_resp
-#'
-#' @importFrom rlang .data .env
 #'
 #' @export
 dk_resp_parse.draft_group_info_resp <- function(resp) {
@@ -218,8 +215,6 @@ dk_resp_parse.draft_group_info_resp <- function(resp) {
 }
 
 #' @method dk_resp_parse player_list_resp
-#'
-#' @importFrom rlang .data .env
 #'
 #' @export
 dk_resp_parse.player_list_resp <- function(resp) {

@@ -5,7 +5,7 @@
 #'
 #' @inheritParams dk_request_process
 #'
-#' @param ... Arguments passed to [draft.kings::dk_request()]
+#' @inheritDotParams dk_request
 #'
 #' @examples
 #'   \dontrun{

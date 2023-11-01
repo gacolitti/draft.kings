@@ -1,0 +1,70 @@
+{
+    "contestDetail": {
+        "contestSummary": "This 100-player contest features $0.00 in total prizes and pays out the top 1 finishing positions. First place wins $0.00.",
+        "payoutSummary": [
+            {
+                "minPosition": 1,
+                "maxPosition": 1,
+                "tierPayoutDescriptions": {
+                    "Cash": "$0.00"
+                }
+            }
+        ],
+        "PayoutDescription": "$0",
+        "IsCashPrizeOnly": true,
+        "scoringStyleId": 1,
+        "contestStateDetail": "Completed",
+        "includesPastSeasonCollectibles ": false,
+        "sport": "NBA",
+        "isGuaranteed": true,
+        "isPrivate": true,
+        "isResizable": false,
+        "wasResized": false,
+        "exclusions": [
+            "AllContests",
+            "ContestTypeBlackList-70",
+            "GameTypeBlackList-70",
+            "SportsBlackList-0"
+        ],
+        "acceptedTickets": [
+
+        ],
+        "payoutDescriptions": {
+
+        },
+        "payoutDescriptionMetadata": [
+
+        ],
+        "fppAward": 0,
+        "sortOrder": -1001,
+        "filters": [
+
+        ],
+        "contestStartTime": "2019-01-01T01:00:00.0000000Z",
+        "gameTypeId": 70,
+        "ticketOnlyEntry": false,
+        "gameSetKey": "AFCDDE7381D0184FDD5C4B5F75B5DA60",
+        "contestKey": "67116261",
+        "name": "NBA Tester (Night)",
+        "draftGroupId": 23802,
+        "playTypeId": 41134,
+        "entries": 1,
+        "maximumEntries": 100,
+        "maximumEntriesPerUser": 1,
+        "entryFee": 0,
+        "totalPayouts": 0,
+        "contestState": "Completed",
+        "attributes": {
+            "IsGuranteed": "true",
+            "LobbyClass": "icon-lightning-bolt",
+            "IsInternal": "true",
+            "Allow Pregeneration": "true",
+            "Is NonRevenue": "true",
+            "IsVideoGated": "true",
+            "Ignore EntryFeeMin": "true"
+        }
+    },
+    "errorStatus": {
+
+    }
+}

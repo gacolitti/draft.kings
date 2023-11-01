@@ -25,10 +25,18 @@ is 133645678.}
 to parse the JSON body,}
 
 \item{...}{
-  Arguments passed on to \code{\link[=dk_get_draft_group]{dk_get_draft_group}}
+  Arguments passed on to \code{\link[=dk_request]{dk_request}}
   \describe{
-    \item{\code{draftable_ids}}{Unique draftable IDs to filter by. If \code{NULL} (the default),
-then all draftable IDs will be included in the result.}
+    \item{\code{query_params}}{A list of query parameters passed to \verb{[httr2::req_url_query]}.}
+    \item{\code{proxy_args}}{List of arguments to \link[httr2:req_proxy]{httr2::req_proxy}}
+    \item{\code{curl_options}}{List of arguments to \link[httr2:req_options]{httr2::req_options}}
+    \item{\code{throttle_rate}}{List of arguments to \link[httr2:req_throttle]{httr2::req_throttle}}
+    \item{\code{headers}}{List of arguments to \code{\link[httr2:req_headers]{httr2::req_headers()}}}
+    \item{\code{paths}}{List of arguments to \code{\link[httr2:req_url]{httr2::req_url_path_append()}}}
+    \item{\code{error_handling_options}}{List of arguments to \code{\link[httr2:req_error]{httr2::req_error()}}}
+    \item{\code{retry_options}}{List of arguments passed to \code{\link[httr2:req_retry]{httr2::req_retry()}}}
+    \item{\code{base_url}}{Base URL for request.}
+    \item{\code{method}}{Custom HTTP method}
   }}
 }
 \description{
