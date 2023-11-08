@@ -18,8 +18,8 @@
 #'
 #' @export
 dk_get_contest_info <- function(contest_key,
-                             output = c("cleaned_json", "json", "response", "request"),
-                             ...) {
+                                output = c("cleaned_json", "json", "response", "request"),
+                                ...) {
 
   stopifnot(is.numeric(contest_key))
   output <- rlang::arg_match(output)
