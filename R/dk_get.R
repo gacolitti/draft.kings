@@ -61,6 +61,17 @@ dk_get <- function(func,
     )
   }
 
+  # Set options which enable proxy IP rotation
+  # See: https://stackoverflow.com/a/76135690/9489566
+  dots_list <- list(...)
+  if (!"curl_options" %in% names(dots_list)) {
+    curl_options <- list(forbid_reuse = TRUE)
+  }
+
+  if (!"headers" %in% names(dots_list)) {
+    headers <- list(Connection = "close")
+  }
+
   if (is.null(furrr_options)) {
     furrr_options <- list(stdout = TRUE,
                           seed = TRUE,
@@ -87,6 +98,8 @@ dk_get <- function(func,
               output = if (output == "all") "response" else output,
               retry_options = retry_options,
               proxy_args = proxy_args,
+              headers = headers,
+              curl_options = curl_options,
               ...
             )
 
