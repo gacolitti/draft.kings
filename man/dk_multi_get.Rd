@@ -7,8 +7,8 @@
 dk_multi_get(
   reqs,
   paths = NULL,
-  n_chunks = NULL,
   chunk_size = Inf,
+  n_chunks = NULL,
   sleep = 3,
   report_time = TRUE,
   .progress = TRUE,
@@ -18,9 +18,12 @@ dk_multi_get(
 \arguments{
 \item{reqs}{A list of \link[httr2]{request}s.}
 
-\item{n_chunks}{An optional integer indicating the desired number of chunks.}
+\item{paths}{An optional list of paths, if you want to download the request
+bodies to disks. If supplied, must be the same length as \code{reqs}.}
 
 \item{chunk_size}{An optional integer indicating the desired number of elements per chunk.}
+
+\item{n_chunks}{An optional integer indicating the desired number of chunks.}
 
 \item{sleep}{A numeric value indicating the number of seconds to sleep
 after performing the requests. If NULL or negative, no sleep is performed.}
@@ -31,7 +34,7 @@ after performing the requests. If NULL or negative, no sleep is performed.}
 a basic progress bar, use a string to give it a name, or see
 \link[purrr]{progress_bars} for more details.}
 
-\item{...}{Other arguments passed to \code{\link[httr2:multi_req_perform]{httr2::multi_req_perform()}}}
+\item{...}{Other arguments passed to \code{\link[=dk_req_perform]{dk_req_perform()}}}
 }
 \description{
 Fetch DraftKings data in parallel using \code{httr2::multi_req_perform()}

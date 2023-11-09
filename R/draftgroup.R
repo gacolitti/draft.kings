@@ -54,6 +54,7 @@ dk_get_draft_group <- function(draft_group_id = NULL,
                                contest_key = NULL,
                                draftable_ids = NULL,
                                output = c("cleaned_json", "json", "response", "request"),
+                               process_args = NULL,
                                ...) {
 
   output <- rlang::arg_match(output)
@@ -68,7 +69,10 @@ dk_get_draft_group <- function(draft_group_id = NULL,
     )
   )
 
-  dk_request_process(req, output, objclass = "draft_group_resp")
+  process_args <- c(list(req = req, output = output, objclass = "draft_group_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
 
@@ -83,6 +87,7 @@ dk_get_draft_group <- function(draft_group_id = NULL,
 #' @export
 dk_get_lobby_draft_groups <- function(sport = NULL,
                              output = c("cleaned_json", "json", "response", "request"),
+                             process_args = NULL,
                              ...) {
 
   output <- rlang::arg_match(output)
@@ -94,7 +99,11 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
     query_params = list(sport = sport)
   )
 
-  dk_request_process(req, output, objclass = "lobby_draft_groups_resp")
+  process_args <- c(list(req = req, output = output, objclass = "lobby_draft_groups_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
+
 
 }
 
@@ -115,6 +124,7 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
 dk_get_draft_group_info <- function(draft_group_id = NULL,
                                  contest_key = NULL,
                                  output = c("cleaned_json", "json", "response", "request"),
+                                 process_args = NULL,
                                  ...) {
 
   output <- rlang::arg_match(output)
@@ -126,7 +136,10 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
     paths = glue::glue("draftgroups/v1/{draft_group_id}")
   )
 
-  dk_request_process(req, output, objclass = "draft_group_info_resp")
+  process_args <- c(list(req = req, output = output, objclass = "draft_group_info_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
 
@@ -147,6 +160,7 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
 dk_get_draft_group_info2 <- function(draft_group_id = NULL,
                                     contest_key = NULL,
                                     output = c("cleaned_json", "json", "response", "request"),
+                                    process_args = NULL,
                                     ...) {
 
   output <- rlang::arg_match(output)
@@ -158,7 +172,10 @@ dk_get_draft_group_info2 <- function(draft_group_id = NULL,
     paths = glue::glue("sites/US-DK/draftgroups/v3/draftgroups/{draft_group_id}?format=json")
   )
 
-  dk_request_process(req, output, objclass = "draft_group_info2_resp")
+  process_args <- c(list(req = req, output = output, objclass = "draft_group_info2_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
 
@@ -179,6 +196,7 @@ dk_get_draft_group_info2 <- function(draft_group_id = NULL,
 dk_get_player_list <- function(draft_group_id = NULL,
                             contest_key = NULL,
                             output = c("cleaned_json", "json", "response", "request"),
+                            process_args = NULL,
                             ...) {
 
   output <- rlang::arg_match(output)
@@ -192,7 +210,10 @@ dk_get_player_list <- function(draft_group_id = NULL,
     query_params = list("draftGroupId" = draft_group_id)
   )
 
-  dk_request_process(req, output, objclass = "player_list_resp")
+  process_args <- c(list(req = req, output = output, objclass = "player_list_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
 
@@ -207,6 +228,7 @@ dk_get_player_list <- function(draft_group_id = NULL,
 dk_get_team_list <- function(draft_group_id = NULL,
                           contest_key = NULL,
                           output = c("cleaned_json", "json", "response", "request"),
+                          process_args = NULL,
                           ...) {
 
   output <- rlang::arg_match(output)
@@ -220,7 +242,10 @@ dk_get_team_list <- function(draft_group_id = NULL,
     query_params = list("draftGroupId" = draft_group_id)
   )
 
-  dk_request_process(req, output, objclass = "team_list_resp")
+  process_args <- c(list(req = req, output = output, objclass = "team_list_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
 
@@ -242,10 +267,11 @@ dk_get_team_list <- function(draft_group_id = NULL,
 #'
 #' @export
 dk_get_player_fp <- function(timeframe,
-                              season = as.numeric(format(Sys.Date(), "%Y")),
-                              sport = c("nfl", "nba", "mlb"),
-                              output = c("cleaned_json", "json", "response", "request"),
-                              ...) {
+                             season = as.numeric(format(Sys.Date(), "%Y")),
+                             sport = c("nfl", "nba", "mlb"),
+                             output = c("cleaned_json", "json", "response", "request"),
+                             process_args = NULL,
+                             ...) {
 
   output <- rlang::arg_match(output)
   sport <- rlang::arg_match(sport)
@@ -285,6 +311,9 @@ dk_get_player_fp <- function(timeframe,
       glue::glue('{{"sport":"{sport}","embed":"stats"}}')
     )
 
-  dk_request_process(req, output, objclass = "player_fp_resp")
+  process_args <- c(list(req = req, output = output, objclass = "player_fp_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }

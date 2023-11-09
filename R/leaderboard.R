@@ -20,6 +20,7 @@
 dk_get_leaderboard <- function(contest_key,
                                cookie_file = path.expand("~/cookies.json"),
                                output = c("cleaned_json", "json", "response", "request"),
+                               process_args = NULL,
                                ...) {
 
   output <- rlang::arg_match(output)
@@ -46,7 +47,10 @@ dk_get_leaderboard <- function(contest_key,
     )
   )
 
-  dk_request_process(req, output, objclass = "leaderboard_resp")
+  process_args <- c(list(req = req, output = output, objclass = "leaderboard_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
 
@@ -74,6 +78,7 @@ dk_get_entries <- function(draft_group_id,
                            entry_keys,
                            cookie_file = path.expand("~/cookies.json"),
                            output = c("cleaned_json", "json", "response", "request"),
+                           process_args = NULL,
                            ...) {
 
   output <- rlang::arg_match(output)
@@ -100,6 +105,9 @@ dk_get_entries <- function(draft_group_id,
     )
   )
 
-  dk_request_process(req, output, objclass = "entries_resp")
+  process_args <- c(list(req = req, output = output, objclass = "entries_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }

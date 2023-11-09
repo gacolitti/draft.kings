@@ -20,15 +20,17 @@
 #' @return A list of responses from `httr2::multi_req_perform`.
 #'
 #' @examples
+#' \dontrun{
 #' req_list <- list(
 #'   httr2::request("http://httpbin.org/get"),
 #'   httr2::request("http://httpbin.org/get")
 #' )
 #' responses <- multi_req_perform_with_sleep(req_list, sleep = 2)
+#' }
 #'
 #' @keywords internal
 #'
-multi_req_perform_with_sleep <- function(reqs, sleep = 3, ...) {
+multi_req_perform_with_sleep <- function(reqs, sleep = 3, paths = NULL, ...) {
   if (!is.numeric(sleep) || sleep < 0) {
     stop("`sleep` should be a non-negative numeric value.")
   }
@@ -57,9 +59,11 @@ multi_req_perform_with_sleep <- function(reqs, sleep = 3, ...) {
 #' @return A list of chunks.
 #'
 #' @examples
+#' \dontrun{
 #' vec <- 1:10
 #' chunk(vec, chunk_size = 3)
 #' chunk(vec, n_chunks = 3)
+#' }
 #'
 #' @keywords internal
 #'

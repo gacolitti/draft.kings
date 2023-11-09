@@ -4,13 +4,16 @@
 \alias{multi_req_perform_with_sleep}
 \title{Perform multiple HTTP requests with a delay}
 \usage{
-multi_req_perform_with_sleep(reqs, sleep = 3, ...)
+multi_req_perform_with_sleep(reqs, sleep = 3, paths = NULL, ...)
 }
 \arguments{
 \item{reqs}{A list of \link[httr2]{request}s.}
 
 \item{sleep}{A numeric value indicating the number of seconds to sleep
 after performing the requests. If NULL or negative, no sleep is performed.}
+
+\item{paths}{An optional list of paths, if you want to download the request
+bodies to disks. If supplied, must be the same length as \code{reqs}.}
 
 \item{...}{Other arguments passed to \code{\link[httr2:multi_req_perform]{httr2::multi_req_perform()}}}
 }
@@ -28,11 +31,13 @@ useful for rate limiting or when dealing with APIs that have request quotas
 over time.
 }
 \examples{
+\dontrun{
 req_list <- list(
   httr2::request("http://httpbin.org/get"),
   httr2::request("http://httpbin.org/get")
 )
 responses <- multi_req_perform_with_sleep(req_list, sleep = 2)
+}
 
 }
 \keyword{internal}

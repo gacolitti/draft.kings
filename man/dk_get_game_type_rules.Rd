@@ -8,6 +8,7 @@ dk_get_game_type_rules(
   game_type_id = NULL,
   contest_key = NULL,
   output = c("cleaned_json", "json", "response", "request"),
+  process_args = NULL,
   ...
 )
 }
@@ -24,6 +25,8 @@ is 133645678.}
 \item{output}{One of "cleaned_json" (the default),
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
 to parse the JSON body,}
+
+\item{process_args}{Optional list of arguments passed to \code{dk_request_process}}
 
 \item{...}{
   Arguments passed on to \code{\link[=dk_request]{dk_request}}

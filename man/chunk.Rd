@@ -26,9 +26,11 @@ and \code{n_chunks} is ignored with a warning. If neither is provided, the funct
 will stop with an error. The function returns a list of chunks.
 }
 \examples{
+\dontrun{
 vec <- 1:10
 chunk(vec, chunk_size = 3)
 chunk(vec, n_chunks = 3)
+}
 
 }
 \keyword{internal}

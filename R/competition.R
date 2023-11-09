@@ -25,6 +25,7 @@
 #' @export
 dk_get_competitions <- function(draft_group_id = NULL,
                                output = c("cleaned_json", "json", "response", "request"),
+                               process_args = NULL,
                                ...) {
 
   output <- rlang::arg_match(output)
@@ -36,6 +37,9 @@ dk_get_competitions <- function(draft_group_id = NULL,
     )
   )
 
-  dk_request_process(req, output, objclass = "competitions_resp")
+  process_args <- c(list(req = req, output = output, objclass = "competitions_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
