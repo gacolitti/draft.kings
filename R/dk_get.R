@@ -46,7 +46,7 @@ dk_get <- function(func,
   if (is.null(retry_options)) {
     retry_options <- list(
       max_tries = 5,
-      is_transient = ~httr2::resp_status(.x) %in% c(429, 500, 503, 408, 400, 404)
+      is_transient = ~httr2::resp_status(.x) %in% c(429, 500, 503, 408, 400)
     )
   }
 
