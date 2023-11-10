@@ -35,15 +35,25 @@ dk_get_leaderboard <- function(contest_key,
   clean_cook <- paste0(unlist(lapply(cook, function(x) {paste0(x$name, "=", x$value)})),
                        collapse = ";")
 
-  req <- dk_request(
-    ...,
-    paths = glue::glue("scores/v1/leaderboards/{contest_key}"),
-    query_params = list(
-      "format" = "json",
-      "embed" = "leaderboard"
-    ),
-    curl_options = list(
-      "cookie" = clean_cook
+  # Update curl options to ensure it includes cookies
+  dots_list <- list(...)
+  if ("curl_options" %in% names(dots_list)) {
+    dots_list[["curl_options"]] <- utils::modifyList(dots_list[["curl_options"]], list("cookie" = clean_cook))
+  } else {
+    dots_list[["curl_options"]] <- list("cookie" = clean_cook)
+  }
+
+  req <- do.call(
+    dk_request,
+    c(
+      list(
+        paths = glue::glue("scores/v1/leaderboards/{contest_key}"),
+        query_params = list(
+          "format" = "json",
+          "embed" = "leaderboard"
+        )
+      ),
+      dots_list
     )
   )
 
@@ -93,15 +103,25 @@ dk_get_entries <- function(draft_group_id,
   clean_cook <- paste0(unlist(lapply(cook, function(x) {paste0(x$name, "=", x$value)})),
                        collapse = ";")
 
-  req <- dk_request(
-    ...,
-    paths = glue::glue("scores/v2/entries/{draft_group_id}/{paste0(entry_keys, collapse = ',')}"),
-    query_params = list(
-      "format" = "json",
-      "embed" = "roster"
-    ),
-    curl_options = list(
-      "cookie" = clean_cook
+  # Update curl options to ensure it includes cookies
+  dots_list <- list(...)
+  if ("curl_options" %in% names(dots_list)) {
+    dots_list[["curl_options"]] <- utils::modifyList(dots_list[["curl_options"]], list("cookie" = clean_cook))
+  } else {
+    dots_list[["curl_options"]] <- list("cookie" = clean_cook)
+  }
+
+  req <- do.call(
+    dk_request,
+    c(
+      list(
+        paths = glue::glue("scores/v2/entries/{draft_group_id}/{paste0(entry_keys, collapse = ',')}"),
+        query_params = list(
+          "format" = "json",
+          "embed" = "roster"
+        )
+      ),
+      dots_list
     )
   )
 
