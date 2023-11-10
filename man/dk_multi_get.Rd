@@ -7,9 +7,10 @@
 dk_multi_get(
   reqs,
   paths = NULL,
-  chunk_size = Inf,
+  chunk_size = NULL,
   n_chunks = NULL,
-  sleep = 3,
+  batch_sleep = 3,
+  retry_sleep = 3,
   report_time = TRUE,
   .progress = TRUE,
   ...
@@ -21,12 +22,12 @@ dk_multi_get(
 \item{paths}{An optional list of paths, if you want to download the request
 bodies to disks. If supplied, must be the same length as \code{reqs}.}
 
-\item{chunk_size}{An optional integer indicating the desired number of elements per chunk.}
+\item{chunk_size, n_chunks}{Arguments passed to \code{\link[=chunk]{chunk()}}.
+By default, \code{reqs} is not batched into chunks.}
 
-\item{n_chunks}{An optional integer indicating the desired number of chunks.}
+\item{batch_sleep}{Delay in seconds between batches defined by \code{chunk_size} or \code{n_chunks}.}
 
-\item{sleep}{A numeric value indicating the number of seconds to sleep
-after performing the requests. If NULL or negative, no sleep is performed.}
+\item{retry_sleep}{Delay in seconds between retries. See \code{\link[=multi_req_perform2]{multi_req_perform2()}} for details.}
 
 \item{report_time}{Should the time it took the function to complete be reported?}
 
@@ -34,9 +35,12 @@ after performing the requests. If NULL or negative, no sleep is performed.}
 a basic progress bar, use a string to give it a name, or see
 \link[purrr]{progress_bars} for more details.}
 
-\item{...}{Other arguments passed to \code{\link[=dk_req_perform]{dk_req_perform()}}}
+\item{...}{Other arguments passed to \code{\link[=multi_req_perform2]{multi_req_perform2()}}.}
+}
+\value{
+A list of \code{httr2} response objects returned by \code{\link[httr2:multi_req_perform]{httr2::multi_req_perform()}}
 }
 \description{
 Fetch DraftKings data in parallel using \code{httr2::multi_req_perform()}
-and in batches.
+with retry logic and in batches.
 }
