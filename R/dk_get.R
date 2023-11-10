@@ -43,10 +43,19 @@ dk_get <- function(func,
   output <- rlang::arg_match(output)
 
   # Set retry options if not passed
+  a <- rep(1, 1e9)
   if (is.null(retry_options)) {
+
+    is_transient <- function(resp) {
+      httr2::resp_status(resp) %in% c(429, 500, 503, 408, 400)
+    }
+    # Don't include caller function objects in environment
+    # this reduces size of resulting response/request object
+    environment(is_transient) <- new.env(parent = baseenv())
+
     retry_options <- list(
       max_tries = 5,
-      is_transient = ~httr2::resp_status(.x) %in% c(429, 500, 503, 408, 400)
+      is_transient = is_transient
     )
   }
 

@@ -55,6 +55,9 @@ multi_req_perform2 <- function(reqs, max_tries = 1, retry_sleep = 3, is_transien
     is_transient <- function(resp) {
       is.null(resp) || "httr2_failed" %in% class(resp) || resp$status %in% c(429, 503, 403)
     }
+    # Don't include caller function objects in environment
+    # this reduces size of resulting response
+    environment(is_transient) <- new.env(parent = baseenv())
   }
 
   out <- httr2::multi_req_perform(reqs, paths = paths, ...)
