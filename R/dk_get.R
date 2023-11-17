@@ -43,7 +43,6 @@ dk_get <- function(func,
   output <- rlang::arg_match(output)
 
   # Set retry options if not passed
-  a <- rep(1, 1e9)
   if (is.null(retry_options)) {
 
     is_transient <- function(resp) {
