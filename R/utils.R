@@ -59,19 +59,16 @@ clean_names <- function(.data,
 #' @keywords internal
 get_error_body <- function(resp) {
 
-  if (httr2::resp_content_type(resp) == "application/json") {
+  content_type <- httr2::resp_content_type(resp)
 
-    resp_body <- httr2::resp_body_json(resp)
+  if (content_type == "application/json") {
     paste0(
-      tools::toTitleCase(gsub("_", " ", (resp_body$errorType))),
+      tools::toTitleCase(gsub("_", " ", httr2::resp_body_json(resp)$errorType)),
       "\n",
-      resp_body$error
+      httr2::resp_body_json(resp)$error
     )
-
-  } else if (httr2::resp_content_type(resp) == "text/html") {
-
+  } else if (content_type == "text/html") {
     httr2::resp_body_html(resp)
-
   }
 
 }
