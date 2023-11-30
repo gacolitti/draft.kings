@@ -301,7 +301,7 @@
         "row.names": {
           "type": "integer",
           "attributes": {},
-          "value": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42]
+          "value": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87]
         },
         "class": {
           "type": "character",
@@ -313,87 +313,87 @@
         {
           "type": "double",
           "attributes": {},
-          "value": [94510, 94524, 94528, 94529, 94834, 94798, 94702, 94703, 94704, 94705, 94994, 94969, 94971, 94972, 94974, 94895, 94892, 94894, 94897, 94896, 94899, 94898, 94900, 94901, 94903, 94904, 94975, 94992, 94575, 94995, 94633, 94634, 94635, 94653, 94654, 94801, 94802, 94804, 94828, 94990, 95031, 95033]
+          "value": [96481, 96492, 96480, 96509, 96510, 96484, 96506, 96482, 96488, 96499, 96495, 96500, 96494, 96496, 96497, 96498, 96486, 96503, 96507, 96501, 96502, 96487, 96504, 96490, 96508, 96505, 96491, 96663, 96664, 96665, 96666, 96667, 96668, 96669, 96670, 96281, 96283, 96284, 96285, 96286, 96287, 96289, 96290, 96292, 96865, 96862, 96864, 96866, 96940, 96867, 96868, 96870, 96871, 96875, 96872, 96874, 96876, 96952, 96877, 96878, 96880, 96881, 96797, 96796, 96798, 96825, 96795, 96826, 96827, 96829, 96830, 96828, 96884, 96883, 96941, 96942, 96943, 96944, 96357, 96807, 96808, 96767, 96768, 96769, 96468, 96835, 96836]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [96, 21, 108, 110, 21, 145, 158, 159, 159, 159, 114, 125, 126, 127, 125, 81, 70, 73, 81, 70, 81, 70, 70, 81, 112, 113, 94, 94, 168, 173, 123, 122, 123, 123, 123, 29, 135, 84, 29, 31, 149, 106]
+          "value": [21, 96, 21, 108, 110, 21, 53, 21, 285, 96, 96, 96, 96, 96, 96, 96, 21, 96, 51, 96, 96, 21, 96, 21, 51, 96, 21, 158, 159, 159, 159, 158, 159, 159, 159, 125, 126, 127, 125, 125, 127, 125, 127, 125, 81, 70, 73, 81, 70, 70, 81, 112, 113, 81, 70, 73, 81, 70, 70, 81, 112, 113, 95, 94, 95, 95, 94, 94, 95, 95, 95, 94, 97, 98, 98, 97, 98, 97, 168, 123, 123, 123, 122, 123, 85, 149, 151]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["2023-10-31T00:15:00.0000000Z", "2023-10-31T00:15:00.0000000Z", "2023-10-31T01:15:00.0000000Z", "2023-10-31T01:45:00.0000000Z", "2023-11-05T18:00:00.0000000Z", "2023-11-03T00:15:00.0000000Z", "2023-10-30T16:00:00.0000000Z", "2023-10-30T16:00:00.0000000Z", "2023-10-30T18:00:00.0000000Z", "2023-10-30T20:00:00.0000000Z", "2023-10-31T00:03:00.0000000Z", "2023-10-30T23:00:00.0000000Z", "2023-10-30T23:00:00.0000000Z", "2023-10-31T00:00:00.0000000Z", "2023-10-31T02:00:00.0000000Z", "2023-10-30T23:00:00.0000000Z", "2023-10-30T23:00:00.0000000Z", "2023-10-30T23:00:00.0000000Z", "2023-10-30T23:30:00.0000000Z", "2023-10-30T23:30:00.0000000Z", "2023-10-31T00:00:00.0000000Z", "2023-10-31T00:00:00.0000000Z", "2023-10-31T01:00:00.0000000Z", "2023-10-31T02:30:00.0000000Z", "2023-10-31T03:30:00.0000000Z", "2023-10-31T03:50:00.0000000Z", "2023-10-31T23:00:00.0000000Z", "2023-11-04T16:00:00.0000000Z", "2023-11-04T22:00:00.0000000Z", "2023-11-05T20:00:00.0000000Z", "2023-10-30T17:30:00.0000000Z", "2023-10-30T19:45:00.0000000Z", "2023-10-30T20:00:00.0000000Z", "2023-10-30T23:00:00.0000000Z", "2023-10-31T01:00:00.0000000Z", "2023-11-02T10:00:00.0000000Z", "2023-11-02T10:00:00.0000000Z", "2023-11-02T10:00:00.0000000Z", "2023-11-02T10:00:00.0000000Z", "2023-11-04T19:00:00.0000000Z", "2023-10-31T08:55:00.0000000Z", "2023-10-31T09:00:00.0000000Z"]
+          "value": ["2023-12-03T18:00:00.0000000Z", "2023-12-01T01:15:00.0000000Z", "2023-12-01T01:15:00.0000000Z", "2023-12-01T02:15:00.0000000Z", "2023-12-01T02:45:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T18:00:00.0000000Z", "2023-12-03T21:05:00.0000000Z", "2023-12-03T21:25:00.0000000Z", "2023-12-03T21:05:00.0000000Z", "2023-12-03T21:05:00.0000000Z", "2023-12-03T21:25:00.0000000Z", "2023-12-03T21:25:00.0000000Z", "2023-12-04T01:20:00.0000000Z", "2023-12-04T01:20:00.0000000Z", "2023-12-04T01:20:00.0000000Z", "2023-12-05T01:15:00.0000000Z", "2023-12-05T01:15:00.0000000Z", "2023-12-01T17:00:00.0000000Z", "2023-12-01T17:00:00.0000000Z", "2023-12-01T19:00:00.0000000Z", "2023-12-01T21:00:00.0000000Z", "2023-12-01T23:00:00.0000000Z", "2023-12-01T23:00:00.0000000Z", "2023-12-02T01:00:00.0000000Z", "2023-12-02T03:00:00.0000000Z", "2023-12-01T00:00:00.0000000Z", "2023-12-01T00:00:00.0000000Z", "2023-12-01T00:30:00.0000000Z", "2023-12-01T01:00:00.0000000Z", "2023-12-01T02:00:00.0000000Z", "2023-12-01T03:00:00.0000000Z", "2023-12-01T03:00:00.0000000Z", "2023-12-02T00:00:00.0000000Z", "2023-12-02T00:00:00.0000000Z", "2023-12-01T00:00:00.0000000Z", "2023-12-01T00:00:00.0000000Z", "2023-12-01T00:00:00.0000000Z", "2023-12-01T00:30:00.0000000Z", "2023-12-01T00:30:00.0000000Z", "2023-12-01T01:00:00.0000000Z", "2023-12-01T03:00:00.0000000Z", "2023-12-01T04:00:00.0000000Z", "2023-12-01T04:21:00.0000000Z", "2023-12-02T00:00:00.0000000Z", "2023-12-02T00:00:00.0000000Z", "2023-12-02T00:00:00.0000000Z", "2023-12-02T00:30:00.0000000Z", "2023-12-02T00:30:00.0000000Z", "2023-12-02T01:00:00.0000000Z", "2023-12-02T03:00:00.0000000Z", "2023-12-02T04:00:00.0000000Z", "2023-12-02T04:20:00.0000000Z", "2023-12-02T00:00:00.0000000Z", "2023-12-02T00:00:00.0000000Z", "2023-12-02T01:00:00.0000000Z", "2023-12-02T17:00:00.0000000Z", "2023-12-02T17:00:00.0000000Z", "2023-12-02T20:00:00.0000000Z", "2023-12-02T21:00:00.0000000Z", "2023-12-03T01:00:00.0000000Z", "2023-12-03T01:00:00.0000000Z", "2023-12-03T01:00:00.0000000Z", "2023-12-01T02:00:00.0000000Z", "2023-12-01T02:00:00.0000000Z", "2023-12-01T23:30:00.0000000Z", "2023-12-02T00:00:00.0000000Z", "2023-12-02T01:30:00.0000000Z", "2023-12-02T02:00:00.0000000Z", "2023-12-02T21:00:00.0000000Z", "2023-12-01T01:10:00.0000000Z", "2023-12-01T03:05:00.0000000Z", "2023-12-01T19:30:00.0000000Z", "2023-12-01T19:45:00.0000000Z", "2023-12-01T20:00:00.0000000Z", "2023-12-01T15:46:00.0000000Z", "2023-12-01T10:25:00.0000000Z", "2023-12-01T12:00:00.0000000Z"]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["2023-10-30T20:15:00.0000000", "2023-10-30T20:15:00.0000000", "2023-10-30T21:15:00.0000000", "2023-10-30T21:45:00.0000000", "2023-11-05T13:00:00.0000000", "2023-11-02T20:15:00.0000000", "2023-10-30T12:00:00.0000000", "2023-10-30T12:00:00.0000000", "2023-10-30T14:00:00.0000000", "2023-10-30T16:00:00.0000000", "2023-10-30T20:03:00.0000000", "2023-10-30T19:00:00.0000000", "2023-10-30T19:00:00.0000000", "2023-10-30T20:00:00.0000000", "2023-10-30T22:00:00.0000000", "2023-10-30T19:00:00.0000000", "2023-10-30T19:00:00.0000000", "2023-10-30T19:00:00.0000000", "2023-10-30T19:30:00.0000000", "2023-10-30T19:30:00.0000000", "2023-10-30T20:00:00.0000000", "2023-10-30T20:00:00.0000000", "2023-10-30T21:00:00.0000000", "2023-10-30T22:30:00.0000000", "2023-10-30T23:30:00.0000000", "2023-10-30T23:50:00.0000000", "2023-10-31T19:00:00.0000000", "2023-11-04T12:00:00.0000000", "2023-11-04T18:00:00.0000000", "2023-11-05T15:00:00.0000000", "2023-10-30T13:30:00.0000000", "2023-10-30T15:45:00.0000000", "2023-10-30T16:00:00.0000000", "2023-10-30T19:00:00.0000000", "2023-10-30T21:00:00.0000000", "2023-11-02T06:00:00.0000000", "2023-11-02T06:00:00.0000000", "2023-11-02T06:00:00.0000000", "2023-11-02T06:00:00.0000000", "2023-11-04T15:00:00.0000000", "2023-10-31T04:55:00.0000000", "2023-10-31T05:00:00.0000000"]
+          "value": ["2023-12-03T13:00:00.0000000", "2023-11-30T20:15:00.0000000", "2023-11-30T20:15:00.0000000", "2023-11-30T21:15:00.0000000", "2023-11-30T21:45:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T13:00:00.0000000", "2023-12-03T16:05:00.0000000", "2023-12-03T16:25:00.0000000", "2023-12-03T16:05:00.0000000", "2023-12-03T16:05:00.0000000", "2023-12-03T16:25:00.0000000", "2023-12-03T16:25:00.0000000", "2023-12-03T20:20:00.0000000", "2023-12-03T20:20:00.0000000", "2023-12-03T20:20:00.0000000", "2023-12-04T20:15:00.0000000", "2023-12-04T20:15:00.0000000", "2023-12-01T12:00:00.0000000", "2023-12-01T12:00:00.0000000", "2023-12-01T14:00:00.0000000", "2023-12-01T16:00:00.0000000", "2023-12-01T18:00:00.0000000", "2023-12-01T18:00:00.0000000", "2023-12-01T20:00:00.0000000", "2023-12-01T22:00:00.0000000", "2023-11-30T19:00:00.0000000", "2023-11-30T19:00:00.0000000", "2023-11-30T19:30:00.0000000", "2023-11-30T20:00:00.0000000", "2023-11-30T21:00:00.0000000", "2023-11-30T22:00:00.0000000", "2023-11-30T22:00:00.0000000", "2023-12-01T19:00:00.0000000", "2023-12-01T19:00:00.0000000", "2023-11-30T19:00:00.0000000", "2023-11-30T19:00:00.0000000", "2023-11-30T19:00:00.0000000", "2023-11-30T19:30:00.0000000", "2023-11-30T19:30:00.0000000", "2023-11-30T20:00:00.0000000", "2023-11-30T22:00:00.0000000", "2023-11-30T23:00:00.0000000", "2023-11-30T23:21:00.0000000", "2023-12-01T19:00:00.0000000", "2023-12-01T19:00:00.0000000", "2023-12-01T19:00:00.0000000", "2023-12-01T19:30:00.0000000", "2023-12-01T19:30:00.0000000", "2023-12-01T20:00:00.0000000", "2023-12-01T22:00:00.0000000", "2023-12-01T23:00:00.0000000", "2023-12-01T23:20:00.0000000", "2023-12-01T19:00:00.0000000", "2023-12-01T19:00:00.0000000", "2023-12-01T20:00:00.0000000", "2023-12-02T12:00:00.0000000", "2023-12-02T12:00:00.0000000", "2023-12-02T15:00:00.0000000", "2023-12-02T16:00:00.0000000", "2023-12-02T20:00:00.0000000", "2023-12-02T20:00:00.0000000", "2023-12-02T20:00:00.0000000", "2023-11-30T21:00:00.0000000", "2023-11-30T21:00:00.0000000", "2023-12-01T18:30:00.0000000", "2023-12-01T19:00:00.0000000", "2023-12-01T20:30:00.0000000", "2023-12-01T21:00:00.0000000", "2023-12-02T16:00:00.0000000", "2023-11-30T20:10:00.0000000", "2023-11-30T22:05:00.0000000", "2023-12-01T14:30:00.0000000", "2023-12-01T14:45:00.0000000", "2023-12-01T15:00:00.0000000", "2023-12-01T10:46:00.0000000", "2023-12-01T05:25:00.0000000", "2023-12-01T07:00:00.0000000"]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [37, 38, 40, 41, 43, 45, 96, 97, 98, 99, 1, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 1, 2, 4, 999, 999, 999, 999]
+          "value": [1, 2, 3, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 25, 26, 27, 28, 30, 31, 35, 36, 37, 42, 43, 104, 105, 106, 107, 108, 109, 110, 111, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999, 999]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["Featured", "", "Featured", "Featured", "Featured", "", "", "", "", "", "Featured", "Featured", "Featured", "Featured", "", "", "Featured", "Featured", "", "", "", "", "Featured", "Featured", "", "", "Featured", "", "Featured", "Featured", "Featured", "", "Featured", "", "", "Featured", "Featured", "", "", "Featured", "Featured", "Featured"]
+          "value": ["Featured", "Featured", "", "Featured", "Featured", "", "Featured", "", "Featured", "Featured", "", "", "", "", "", "", "", "Featured", "Featured", "", "", "", "Featured", "", "Featured", "Featured", "", "", "", "", "", "Featured", "", "", "Featured", "Featured", "Featured", "", "", "", "Featured", "", "Featured", "Featured", "", "Featured", "Featured", "", "", "Featured", "Featured", "", "", "", "Featured", "Featured", "", "", "Featured", "Featured", "", "", "", "Featured", "", "", "Featured", "", "Featured", "", "", "Featured", "Featured", "Featured", "Featured", "", "Featured", "Featured", "Featured", "", "", "", "Featured", "Featured", "Featured", "Featured", ""]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [96, 1, 108, 110, 1, 145, 158, 159, 159, 159, 114, 125, 126, 127, 125, 81, 70, 73, 81, 70, 81, 70, 70, 81, 112, 113, 94, 94, 168, 173, 123, 122, 123, 123, 123, 6, 135, 84, 6, 10, 149, 106]
+          "value": [1, 96, 1, 108, 110, 1, 53, 1, 285, 96, 96, 96, 96, 96, 96, 96, 1, 96, 51, 96, 96, 1, 96, 1, 51, 96, 1, 158, 159, 159, 159, 158, 159, 159, 159, 125, 126, 127, 125, 125, 127, 125, 127, 125, 81, 70, 73, 81, 70, 70, 81, 112, 113, 81, 70, 73, 81, 70, 70, 81, 112, 113, 95, 94, 95, 95, 94, 94, 95, 95, 95, 94, 97, 98, 98, 97, 98, 97, 168, 123, 123, 123, 122, 123, 85, 149, 151]
         },
         {
           "type": "logical",
           "attributes": {},
-          "value": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+          "value": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 14, 14, 6, 5, 7, 7, 7, 7, 7, 2, 2, 2, 2, 8, 14, 14]
+          "value": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 6, 7, 7, 7, 7, 7, 2, 14, 14]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "MLB", "NHL", "NHL", "NHL", "NHL", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "CFB", "CFB", "MMA", "NAS", "SOC", "SOC", "SOC", "SOC", "SOC", "GOLF", "GOLF", "GOLF", "GOLF", "CFL", "CS:GO", "TEN"]
+          "value": ["NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NFL", "NHL", "NHL", "NHL", "NHL", "NHL", "NHL", "NHL", "NHL", "NHL", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "NBA", "CFB", "CFB", "CFB", "CFB", "CFB", "CFB", "CFB", "CFB", "CFB", "CFB", "CBB", "CBB", "CBB", "CBB", "CBB", "CBB", "MMA", "SOC", "SOC", "SOC", "SOC", "SOC", "GOLF", "CS:GO", "CS:GO"]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [1, 2, 1, 1, 10, 14, 3, 1, 1, 1, 1, 9, 9, 1, 2, 1, 11, 11, 1, 2, 1, 4, 2, 1, 1, 1, 2, 0, 14, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0]
+          "value": [10, 1, 13, 1, 1, 7, 10, 12, 10, 1, 1, 1, 1, 1, 1, 1, 3, 1, 3, 1, 1, 2, 1, 2, 2, 1, 2, 3, 1, 1, 1, 3, 1, 1, 1, 14, 14, 1, 3, 4, 1, 2, 1, 2, 1, 9, 9, 1, 3, 5, 1, 1, 1, 1, 6, 6, 1, 3, 2, 1, 1, 1, 1, 2, 1, 1, 8, 4, 1, 1, 1, 2, 1, 4, 7, 1, 3, 1, 15, 1, 1, 1, 4, 1, 1, 2, 1]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": [" (LV vs DET)", " (Mon-Thu)", " (2H LV vs DET)", " (4Q LV vs DET)", null, " (W9-W17 Tournament)", " (Madden Stream)", " (Madden Stream NO vs PHI)", " (Madden Stream BUF vs ATL)", " (Madden Stream GB vs LV)", " (TEX vs ARI)", null, " (NHL Tiers)", " (CLS vs DAL)", " (Late)", " (BOS vs WAS)", null, " (NBA Tiers)", " (MIN vs ATL)", " (Turbo)", " (GSW vs NOP)", " (Turbo)", " (Night)", " (ORL vs LAL)", " (2H ORL vs LAL)", " (4Q ORL vs LAL)", null, null, null, " (Cup)", " (EMP vs ATA)", " (Interleague)", " (COV vs WBA)", " (ORL vs NSH)", " (SEA vs DAL)", " (PGA TOUR)", " (PGA TOUR Tiers)", " (Round 1 PGA TOUR)", " (LPGA)", " (Semi-Final)", " (Thunderpick World Champ)", null]
+          "value": [null, " (SEA vs DAL)", " (Thu-Mon)", " (2H SEA vs DAL)", " (4Q SEA vs DAL)", " (Early Only)", " (NFL Tiers)", " (Sun-Mon)", " (NFL Superflex)", " (MIA vs WAS)", " (DET vs NO)", " (DEN vs HOU)", " (LAC vs NE)", " (ATL vs NYJ)", " (ARI vs PIT)", " (IND vs TEN)", " (Afternoon Only)", " (SF vs PHI)", " (Afternoon Only)", " (CAR vs TB)", " (CLE vs LAR)", " (Afternoon Turbo)", " (KC vs GB)", " (Primetime)", " (Primetime)", " (CIN vs JAX)", " (Mon-Thu)", " (Madden Stream Early)", " (Madden Stream WAS vs MIN)", " (Madden Stream NE vs CHI)", " (Madden Stream GB vs CAR)", " (Madden Stream)", " (Madden Stream DEN vs NYG)", " (Madden Stream TB vs LAR)", " (Madden Stream NYJ vs DAL)", null, " (NHL Tiers)", " (NYI vs CAR)", " (Turbo)", " (Late)", " (VGK vs VAN)", " (Later)", " (OTT vs CLS)", null, " (POR vs CLE)", null, " (NBA Tiers)", " (IND vs MIA)", " (Turbo)", " (Night)", " (LAC vs GSW)", " (2H LAC vs GSW)", " (4Q LAC vs GSW)", " (WAS vs ORL)", null, " (NBA Tiers)", " (PHI vs BOS)", " (Turbo)", " (Night)", " (DEN vs PHX)", " (2H DEN vs PHX)", " (4Q DEN vs PHX)", " (NMST vs LIB)", null, " (ORE vs UW)", " (OKST vs UT)", null, " (Afternoon)", " (UGA vs BAMA)", " (UL vs FSU)", " (MICH vs IOWA)", " (Night)", " (CRE vs OKST)", " (Night)", null, " (UMD vs IU)", " (Night)", " (UCONN vs KU)", null, " (PUE vs TIG)", " (CDG vs PUM)", " (D98 vs KOE)", " (Interleague)", " (PNE vs QPR)", " (Round 2 PGA TOUR)", " (CCT Online Finals)", " (ANO vs SPT)"]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0]
+          "value": [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         },
         {
           "type": "logical",
           "attributes": {},
-          "value": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+          "value": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [90, 8, 93, 96, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 108, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0]
+          "value": [2, 88, 1, 91, 94, 4, 59, 3, 164, 0, 0, 0, 0, 0, 0, 0, 5, 0, 40, 0, 0, 12, 89, 7, 38, 90, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         },
         {
           "type": "character",
           "attributes": {},
-          "value": ["BDC3C9E411C80B5F1CB8ACC38B3A0C6E", "650E0A0EF030A6FF434CE80D13281ABD", "BA0A5071954622BF886528802FBFD7BF", "6538271309076983FA2FD83058660C56", "3B8964141D94F57E1C5EFFB5F0662F67", "13F9B7730B5D547E75437B549C20CEF6", "3B6655168DF87C01D1ACAE7558E0B901", "FE30441E796075D23025DB649F3E2B24", "14D2286929A5054E1F6A4C8D802D4B5E", "0403D2C9345EF1B6D4D5D1BAEE0ED7C8", "8A47E5C71EACA7A7F05C9D971795E780", "326BB8BBEFE6BBFB63FA593A4B8B9376", "326BB8BBEFE6BBFB63FA593A4B8B9376", "2CE057D78A323D12F0216C6A9B46EF6A", "185A92584F55C1FAE898B15E64E70D5D", "1E6721052B025F76CB70015ED37E1170", "E1B910721EBBF93989F3A7C60B8BC31E", "E1B910721EBBF93989F3A7C60B8BC31E", "8557A3FFAC1D75E642AA0DD49E20561C", "67F51F90A1B2225A67023318BA389C5F", "D61167D8847E96B0554BDA66A223CEFD", "9BCF1A674F17C7218065DCC9EBEEE5AF", "14DAB05437E06671AE441578FF1BD575", "2D201AC32A2DABC412DB653DE6045A93", "43C016CF43DC5F9E0F3354B5CF1BF03D", "FC125320025AAD93D5B69B965D5AD2D8", "8D0B5DDF263F81CF22FEACE03B9B23B8", "A52D68113A635A7F9BD0F7672792B5A5", "7D67DD1069821678DDC79AA720E6B622", "2630C350601CACFD8A9B6C0D3FD33146", "9523A51F8BC445E7571320BF1ACAE333", "F33868F8B6F56A1FBA8F4BB098BA467B", "83037DB48E857C6C7832D36447B6AD4C", "CF19980C96C3BD10F46EA84EF1DDC914", "F4163ED6C8087042560D8159BCFA5E80", "A7EC6192351075DA5863D6B25713A7EE", "A7EC6192351075DA5863D6B25713A7EE", "D2A74A9D7FC23D577EE4512A83B8B98A", "BC193B96287494501EE5F9E033C30C91", "1B04B13006865E071913D5D44A96B62D", "175D1429C9740940567AC96AAF9770AA", "E4A4B7CBB5C10C04E204500F2A7A2D0D"]
+          "value": ["E2051358EC133824061BE11F60773A08", "47056625DCB2DE1DB54B22097ECC39A4", "946E4357AF577FCD986BBA6A6C895316", "82F9C5830A4E9B2CDCF07CD6D9697CB0", "8898CD6E0FA45C5D0D8C2042DA8B6CB2", "485EA6D527A26B0ADF62C40F37BF211F", "E2051358EC133824061BE11F60773A08", "037950558ED0C433782B16F9ADA763AC", "E2051358EC133824061BE11F60773A08", "D347048DE289C6F5B1B298F8C40E4DAC", "327AE17E90B4255F8ADFECDB56720939", "0604EB71C8AC3E16AC1C30F07D1195E7", "A0BEB77BCF38BEECBF12D1CA88D5B9E4", "3B691636A2C0E986491A9DF94A387F7D", "52C2E0C3929501CFC1DF8509B1E9A0FF", "E944ECC24379E6CFD02B7A29794318AF", "A0CD8D5E300F824E227164567103C518", "B0EEC9C71AA85A9FBC0B8FD7CBBEED5B", "A0CD8D5E300F824E227164567103C518", "9A750DB98653EE8E3226CDB4DD2A33BE", "3FEED13C8970E1981EF8C4FD312E4740", "10811534DEBBCF925DA203614402DE1D", "004D657D1CF0E1AF325AC6EB91852055", "6EB5448E551380CF4F66CE1C0C26EAD9", "6EB5448E551380CF4F66CE1C0C26EAD9", "18514C0524DD7AE4E547F805F6026613", "61A767FDB07FCB29EAA9466017901502", "BD30B326561AFA3FFDF648341A9B711F", "E48135AA27EE4F99D0293BE78CFC3B9F", "CB725083A9E4D1FF8B5394142D85A7FA", "B7DD073CB1B43462855645DF26D3D2D7", "8FD2809531A704613F44B80FB193B4E7", "5AF7EDF537EC6656F313D98776D2C4B0", "EA30BD51C5FC2E3F5409F1A7815F8580", "7098237BBB6A808F94BE31F688B62E52", "43E35F09ECA35EA3CF337BC58A5CA268", "43E35F09ECA35EA3CF337BC58A5CA268", "2F276A2A0C625EA92BDBF8B7924DB0BB", "443148EC11213F0DC0B4FC288F58E522", "825C374B67F14FED181E970D5826A04D", "6AFD5E50F90EB33EC44478CFE9B0A2BE", "4737D722AD4D823D355D2633FAF4CE02", "CC7D669FC4F24D6D5B45A8D2E416553E", "ED32831FCE7659C32D63098A73FC539E", "61DF48CED12342C105E5FC45AC09CE54", "2B17F398E8FFCA9A31CE4EC4DE0D1D0F", "2B17F398E8FFCA9A31CE4EC4DE0D1D0F", "0893426767AAE92A90C8CEB4FCE9F75A", "C234BE430329BFFBBBE9351C2EB3FC36", "C0511934BF906EED27355200F8265A9C", "B3E775D976077B98009ACE194094209F", "33F7FABF4F5AD46EA12109734FD06F5A", "EB3BB9131D8CB4D3BDB5AC3BFCD9E3CE", "FCA2844A4DB7D8B084EED1339DC8E747", "D0ED546AF6561F5E712C511536A85F41", "D0ED546AF6561F5E712C511536A85F41", "4FEFC099F9FDB4E333B51484243A351F", "F081BB5DC8260160A71E5C40E565F004", "36F50904470F56971EC9AF1E36B522F2", "943A32EF0BA2C349CE8B69EB6293C7A9", "1ED72C7C5E63EE07EE87BF7FFBF622C4", "C5F0BE2E80F0712A0AA3557B441FF683", "D04AE2EC542D4211360A15FD5FBEAC2D", "FA6C426ED9F6D0252540B9529A78E9C9", "26780F538C7419F313A721488514CF7C", "AEAB63FBDF42F4FF55499F42B85ED585", "F43F19AC1329DBF6B0F4E30A3F339B61", "1FFB58DB68286A9227996D10C3F6E918", "09259D5CD466CE13E5E37D3E972C5403", "6735E5211D2218D014B31E553AB5D41D", "BC7B5CF4937AE26949326E8D6167F830", "164CE3126F6F2D867B1ABE647E7C5C0F", "A51EF15644BF359C4192676426193831", "B9DBD652340A8D0AEA9F16D319585089", "3D10F3FDF7D16C7A14192CF5ED2CBDD5", "5205A2C40E7ED3E5A98419EBCAE98BCB", "7C22EBCEFFCE081721C6979B9F7F77E0", "9AA7518B5A2F7D727C642D91A6573163", "8778FB89C31F90D4589AC9057146EFA1", "481752BD7A17FCFAA7001CA00BBD66DA", "EBCF3451B70DD26226F78A7A3B4F94A8", "4159DC1964961B16E3EEE373181C9BA3", "CB181C9C7C01C99442782721A51F47B6", "33C4742847A6A974B6C890E3C40385A2", "DE2A0EA3D918756E8029B77D9B33FC41", "DFCF3754DCF80B3CB72D71C264FADC0B", "7882D5ACCA9F800A6637BCAE73496220"]
         },
         {
           "type": "logical",
           "attributes": {},
-          "value": [true, true, true, true, true, false, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, null, true, null, true, true, true, true, true, true, true, null, null, null, null, null]
+          "value": [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, null, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]
         }
       ]
     }
@@ -637,7 +637,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["draft_groups", "game_types", "game_styles", "sports", "competitions"]
+          "value": ["draft_groups", "game_types", "game_styles", "sports", "competitions", "competition_attributes"]
         }
       },
       "value": [
@@ -647,7 +647,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["draft_group_id", "contest_type_id", "sport_id", "start_time_suffix", "start_time_type", "min_start_time", "max_start_time", "draft_group_state", "sort_order", "allow_ugc", "league_id", "league_name", "league_abbreviation", "leagues", "game_type_id", "game_set_key", "all_tags1", "competition_ids", "scoring_style_id", "allow_lineup_creation", "is_late_draft_eligible", "last_draft_time_utc"]
+              "value": ["draft_group_id", "contest_type_id", "sport_id", "start_time_suffix", "start_time_type", "min_start_time", "max_start_time", "draft_group_state", "sort_order", "allow_ugc", "league_id", "league_name", "league_abbreviation", "game_type_id", "game_set_key", "all_tags1", "competition_ids", "scoring_style_id", "allow_lineup_creation", "is_late_draft_eligible", "last_draft_time_utc"]
             },
             "row.names": {
               "type": "integer",
@@ -712,58 +712,19 @@
               "value": [true]
             },
             {
-              "type": "logical",
+              "type": "integer",
               "attributes": {},
-              "value": [null]
+              "value": [79]
             },
             {
-              "type": "logical",
+              "type": "character",
               "attributes": {},
-              "value": [null]
+              "value": ["Simulation"]
             },
             {
-              "type": "logical",
+              "type": "character",
               "attributes": {},
-              "value": [null]
-            },
-            {
-              "type": "list",
-              "attributes": {},
-              "value": [
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["leagueId", "leagueName", "leagueAbbreviation"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [79]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Simulation"]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["SIM"]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "value": ["SIM"]
             },
             {
               "type": "integer",
@@ -979,7 +940,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["competition_id", "sport", "sport_id", "home_team_team_id", "home_team_team_name", "home_team_abbreviation", "home_team_city", "away_team_team_id", "away_team_team_name", "away_team_abbreviation", "away_team_city", "start_time", "name", "starting_lineups_available", "depth_charts_available", "competition_state", "competition_state_detail", "competition_started_early", "competition_attributes", "min_start_time"]
+              "value": ["competition_id", "sport", "sport_id", "home_team_team_id", "home_team_team_name", "home_team_abbreviation", "home_team_city", "away_team_team_id", "away_team_team_name", "away_team_abbreviation", "away_team_city", "start_time", "name", "starting_lineups_available", "depth_charts_available", "competition_state", "competition_state_detail", "competition_started_early", "min_start_time"]
             },
             "row.names": {
               "type": "integer",
@@ -1084,109 +1045,46 @@
               "value": [false]
             },
             {
-              "type": "list",
+              "type": "character",
               "attributes": {},
-              "value": [
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["5"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["00"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "value": ["2022-10-08T18:00:00.0000000Z"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "class": {
+              "type": "character",
+              "attributes": {},
+              "value": ["tbl_df", "tbl", "data.frame"]
+            },
+            "row.names": {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 2, 3, 4]
+            },
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["competition_id", "typeId", "value"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [5915939, 5915939, 5915939, 5915939]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [8, 10, 11, 22]
             },
             {
               "type": "character",
               "attributes": {},
-              "value": ["2022-10-08T18:00:00.0000000Z"]
+              "value": ["5", "0", "00", "2"]
             }
           ]
         }
@@ -1201,7 +1099,7 @@
         "names": {
           "type": "character",
           "attributes": {},
-          "value": ["draft_groups", "game_types", "game_styles", "sports", "competitions"]
+          "value": ["draft_groups", "game_types", "game_styles", "sports", "competitions", "competition_attributes"]
         }
       },
       "value": [
@@ -1211,7 +1109,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["draft_group_id", "contest_type_id", "sport_id", "start_time_type", "min_start_time", "max_start_time", "draft_group_state", "allow_ugc", "league_id", "league_name", "league_abbreviation", "leagues", "game_type_id", "game_set_key", "all_tags1", "competition_ids", "scoring_style_id", "allow_lineup_creation", "is_late_draft_eligible", "last_draft_time_utc"]
+              "value": ["draft_group_id", "contest_type_id", "sport_id", "start_time_type", "min_start_time", "max_start_time", "draft_group_state", "allow_ugc", "league_id", "league_name", "league_abbreviation", "game_type_id", "game_set_key", "all_tags1", "competition_ids", "scoring_style_id", "allow_lineup_creation", "is_late_draft_eligible", "last_draft_time_utc"]
             },
             "row.names": {
               "type": "integer",
@@ -1266,58 +1164,19 @@
               "value": [true]
             },
             {
-              "type": "logical",
+              "type": "integer",
               "attributes": {},
-              "value": [null]
+              "value": [1]
             },
             {
-              "type": "logical",
+              "type": "character",
               "attributes": {},
-              "value": [null]
+              "value": ["National Football League"]
             },
             {
-              "type": "logical",
+              "type": "character",
               "attributes": {},
-              "value": [null]
-            },
-            {
-              "type": "list",
-              "attributes": {},
-              "value": [
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["leagueId", "leagueName", "leagueAbbreviation"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [1]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["National Football League"]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["NFL"]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "value": ["NFL"]
             },
             {
               "type": "integer",
@@ -1337,7 +1196,7 @@
             {
               "type": "character",
               "attributes": {},
-              "value": ["5673424, 5673442, 5673748, 5674390, 5674408, 5674426, 5674444, 5674456, 5674474, 5674492, 5675369, 5675399, 5675429, 5675441, 5675459"]
+              "value": ["5673424,5673442,5673748,5674390,5674408,5674426,5674444,5674456,5674474,5674492,5675369,5675399,5675429,5675441,5675459"]
             },
             {
               "type": "integer",
@@ -1533,7 +1392,7 @@
             "names": {
               "type": "character",
               "attributes": {},
-              "value": ["competition_id", "sport", "sport_id", "home_team_team_id", "home_team_team_name", "home_team_abbreviation", "home_team_city", "away_team_team_id", "away_team_team_name", "away_team_abbreviation", "away_team_city", "start_time", "name", "venue", "weather", "starting_lineups_available", "depth_charts_available", "competition_state", "competition_state_detail", "competition_started_early", "competition_attributes", "min_start_time"]
+              "value": ["competition_id", "sport", "sport_id", "home_team_team_id", "home_team_team_name", "home_team_abbreviation", "home_team_city", "away_team_team_id", "away_team_team_name", "away_team_abbreviation", "away_team_city", "start_time", "name", "venue", "weather_icon", "weather_is_dome", "starting_lineups_available", "depth_charts_available", "competition_state", "competition_state_detail", "competition_started_early", "min_start_time"]
             },
             "row.names": {
               "type": "integer",
@@ -1618,321 +1477,14 @@
               "value": ["Gillette Stadium", "Ford Field", "Ralph Wilson Stadium", "Paul Brown Stadium", "FirstEnergy Stadium", "MetLife Stadium", "Raymond James Stadium", "Soldier Field", "Bank of America Stadium", "Lucas Oil Stadium", "Reliant Stadium", "Arrowhead Stadium", "Sports Authority Field at Mile High", "SoFi Stadium", "University of Phoenix Stadium"]
             },
             {
-              "type": "list",
+              "type": "character",
               "attributes": {},
-              "value": [
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["cloudy"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["cloudy"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [true]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["rain"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["cloudy"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["cloudy"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["rain"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["cloudy"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["partly-cloudy-day"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["partly-cloudy-day"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["cloudy"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [true]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["clear-day"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["fog"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["partly-cloudy-day"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                },
-                {
-                  "type": "NULL"
-                },
-                {
-                  "type": "list",
-                  "attributes": {
-                    "names": {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["icon", "isDome"]
-                    }
-                  },
-                  "value": [
-                    {
-                      "type": "character",
-                      "attributes": {},
-                      "value": ["partly-cloudy-day"]
-                    },
-                    {
-                      "type": "logical",
-                      "attributes": {},
-                      "value": [false]
-                    }
-                  ]
-                }
-              ]
+              "value": ["cloudy", "cloudy", "rain", "cloudy", "cloudy", "rain", "cloudy", "partly-cloudy-day", "partly-cloudy-day", "cloudy", "clear-day", "fog", "partly-cloudy-day", null, "partly-cloudy-day"]
+            },
+            {
+              "type": "logical",
+              "attributes": {},
+              "value": [false, true, false, false, false, false, false, false, false, true, false, false, false, null, false]
             },
             {
               "type": "logical",
@@ -1960,4681 +1512,513 @@
               "value": [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
             },
             {
-              "type": "list",
+              "type": "character",
               "attributes": {},
-              "value": [
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["85"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["(Shotgun) S.Darnold pass short left to C.Herndon to NYJ 15 for 8 yards (M.Jackson). Belichick 311th career win (including postseason), 3rd all-time (Shula 347, Halas 324)."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["13"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["13"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["K.Cousins kneels to DET 13 for -1 yards."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["13"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["38"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["M.Barkley kneels to MIA 38 for -1 yards."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["1"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["10"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["33"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["(Shotgun) T.Williams left guard to BLT 33 for 17 yards (P.Queen)."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["11"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["40"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["B.Mayfield kneels to PIT 40 for -1 yards."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["1"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["13"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["64"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["D.Jones kneels to NYG 36 for -1 yards."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["11"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["19"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["T.Brady kneels to ATL 19 for no gain."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["1"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["1"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["(Shotgun) M.Trubisky pass short right to J.Graham to GB 1 for 3 yards (J.Alexander)."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["1"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["11"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["85"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["J.Winston kneels to NO 15 for -1 yards."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["12"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["43"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["P.Rivers kneels to JAX 43 for -1 yards."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["1"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["65"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["S.Sloman 37 yard field goal is GOOD, Center-M.Overton, Holder-B.Kern. Kick hits right upright and bounces through for the field goal."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["1"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["11"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["11"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["J.Herbert kneels to KC 11 for -1 yards."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["2"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["11"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["58"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["D.Carr kneels to LV 42 for -1 yards."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["1"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["10"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["59"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["(Shotgun) C.Streveler pass short left to D.Hopkins to ARZ 41 for 12 yards (J.Ramsey, J.Fuller)."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "list",
-                  "attributes": {},
-                  "value": [
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [3]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["home"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [5]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["3"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [6]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["6"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [8]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["4"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [9]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["Final"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [10]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [11]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [12]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["40"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [13]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["R.Wilson kneels to SF 40 for -1 yards."]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [14]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["away"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [22]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["17"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [27]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["False"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [46]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["0"]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "list",
-                      "attributes": {
-                        "names": {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["typeId", "value"]
-                        }
-                      },
-                      "value": [
-                        {
-                          "type": "integer",
-                          "attributes": {},
-                          "value": [47]
-                        },
-                        {
-                          "type": "character",
-                          "attributes": {},
-                          "value": ["1"]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "value": ["2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "class": {
+              "type": "character",
+              "attributes": {},
+              "value": ["tbl_df", "tbl", "data.frame"]
+            },
+            "row.names": {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208]
+            },
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["competition_id", "typeId", "value"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [5673424, 5673424, 5673424, 5673424, 5673424, 5673424, 5673424, 5673424, 5673424, 5673424, 5673424, 5673424, 5673424, 5673424, 5673442, 5673442, 5673442, 5673442, 5673442, 5673442, 5673442, 5673442, 5673442, 5673442, 5673442, 5673442, 5673442, 5673442, 5674390, 5674390, 5674390, 5674390, 5674390, 5674390, 5674390, 5674390, 5674390, 5674390, 5674390, 5674390, 5674390, 5674390, 5674456, 5674456, 5674456, 5674456, 5674456, 5674456, 5674456, 5674456, 5674456, 5674456, 5674456, 5674456, 5674456, 5674456, 5674474, 5674474, 5674474, 5674474, 5674474, 5674474, 5674474, 5674474, 5674474, 5674474, 5674474, 5674474, 5674474, 5674474, 5675369, 5675369, 5675369, 5675369, 5675369, 5675369, 5675369, 5675369, 5675369, 5675369, 5675369, 5675369, 5675369, 5675369, 5675399, 5675399, 5675399, 5675399, 5675399, 5675399, 5675399, 5675399, 5675399, 5675399, 5675399, 5675399, 5675399, 5675399, 5673748, 5673748, 5673748, 5673748, 5673748, 5673748, 5673748, 5673748, 5673748, 5673748, 5673748, 5673748, 5673748, 5673748, 5674408, 5674408, 5674408, 5674408, 5674408, 5674408, 5674408, 5674408, 5674408, 5674408, 5674408, 5674408, 5674408, 5674408, 5674426, 5674426, 5674426, 5674426, 5674426, 5674426, 5674426, 5674426, 5674426, 5674426, 5674426, 5674426, 5674426, 5674426, 5674444, 5674444, 5674444, 5674444, 5674444, 5674444, 5674444, 5674444, 5674444, 5674444, 5674444, 5674444, 5674492, 5674492, 5674492, 5674492, 5674492, 5674492, 5674492, 5674492, 5674492, 5674492, 5674492, 5674492, 5674492, 5674492, 5675429, 5675429, 5675429, 5675429, 5675429, 5675429, 5675429, 5675429, 5675429, 5675429, 5675429, 5675429, 5675429, 5675429, 5675441, 5675441, 5675441, 5675441, 5675441, 5675441, 5675441, 5675441, 5675441, 5675441, 5675441, 5675441, 5675441, 5675441, 5675459, 5675459, 5675459, 5675459, 5675459, 5675459, 5675459, 5675459, 5675459, 5675459, 5675459, 5675459, 5675459, 5675459]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 22, 27, 46, 47]
             },
             {
               "type": "character",
               "attributes": {},
-              "value": ["2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z", "2021-01-03T18:00:00.0000000Z"]
+              "value": ["away", "2", "2", "4", "Final", "0", "0", "85", "(Shotgun) S.Darnold pass short left to C.Herndon to NYJ 15 for 8 yards (M.Jackson). Belichick 311th career win (including postseason), 3rd all-time (Shula 347, Halas 324).", "away", "17", "False", "3", "0", "home", "4", "13", "4", "Final", "0", "0", "13", "K.Cousins kneels to DET 13 for -1 yards.", "away", "17", "False", "0", "3", "away", "4", "13", "4", "Final", "0", "0", "38", "M.Barkley kneels to MIA 38 for -1 yards.", "home", "17", "False", "3", "0", "home", "1", "10", "4", "Final", "0", "0", "33", "(Shotgun) T.Williams left guard to BLT 33 for 17 yards (P.Queen).", "home", "17", "False", "2", "2", "home", "2", "11", "4", "Final", "0", "0", "40", "B.Mayfield kneels to PIT 40 for -1 yards.", "home", "17", "False", "3", "1", "away", "4", "13", "4", "Final", "0", "0", "64", "D.Jones kneels to NYG 36 for -1 yards.", "home", "17", "False", "0", "0", "away", "4", "11", "4", "Final", "0", "0", "19", "T.Brady kneels to ATL 19 for no gain.", "home", "17", "False", "2", "0", "away", "2", "1", "4", "Final", "0", "0", "1", "(Shotgun) M.Trubisky pass short right to J.Graham to GB 1 for 3 yards (J.Alexander).", "home", "17", "False", "1", "3", "away", "2", "11", "4", "Final", "0", "0", "85", "J.Winston kneels to NO 15 for -1 yards.", "away", "17", "False", "3", "2", "home", "3", "12", "4", "Final", "0", "0", "43", "P.Rivers kneels to JAX 43 for -1 yards.", "home", "17", "False", "3", "1", "away", "4", "Final", "0", "0", "65", "S.Sloman 37 yard field goal is GOOD, Center-M.Overton, Holder-B.Kern. Kick hits right upright and bounces through for the field goal.", "away", "17", "False", "0", "1", "away", "4", "11", "4", "Final", "0", "0", "11", "J.Herbert kneels to KC 11 for -1 yards.", "away", "17", "False", "3", "3", "home", "2", "11", "4", "Final", "0", "0", "58", "D.Carr kneels to LV 42 for -1 yards.", "away", "17", "False", "0", "0", "home", "1", "10", "4", "Final", "0", "0", "59", "(Shotgun) C.Streveler pass short left to D.Hopkins to ARZ 41 for 12 yards (J.Ramsey, J.Fuller).", "away", "17", "False", "0", "0", "home", "3", "6", "4", "Final", "0", "0", "40", "R.Wilson kneels to SF 40 for -1 yards.", "away", "17", "False", "0", "1"]
+            }
+          ]
+        }
+      ]
+    }
+
+# dk_get_draft_group_info2() returns expected data for multiple draft groups
+
+    {
+      "type": "list",
+      "attributes": {
+        "names": {
+          "type": "character",
+          "attributes": {},
+          "value": ["draft_groups", "game_types", "game_styles", "sports", "competitions", "competition_attributes"]
+        }
+      },
+      "value": [
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["draft_group_id", "contest_type_id", "sport_id", "start_time_suffix", "start_time_type", "min_start_time", "max_start_time", "draft_group_state", "sort_order", "allow_ugc", "league_id", "league_name", "league_abbreviation", "game_type_id", "game_set_key", "all_tags1", "competition_ids", "scoring_style_id", "allow_lineup_creation", "is_late_draft_eligible", "last_draft_time_utc"]
+            },
+            "row.names": {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 2]
+            },
+            "class": {
+              "type": "character",
+              "attributes": {},
+              "value": ["tbl_df", "tbl", "data.frame"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [75367, 24180]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [159, 81]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 4]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": [" (Madden Stream NO vs LV)", " (LAL vs OKC)"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Normal", "Normal"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["2022-10-08T18:00:00.0000000Z", "2019-01-18T02:30:00.0000000Z"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["2022-10-08T18:00:00.0000000Z", "2019-01-18T02:30:00.0000000Z"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Historical", "Historical"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [118, "NA"]
+            },
+            {
+              "type": "logical",
+              "attributes": {},
+              "value": [true, true]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [79, 4]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Simulation", "National Basketball Association"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["SIM", "NBA"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [159, 81]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["053F506F9FF644BE55A825378B66217B", "BE445F42152C4F4A20305558470EFC73"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": [null, "Featured"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["5915939", "5554387"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 1]
+            },
+            {
+              "type": "logical",
+              "attributes": {},
+              "value": [true, true]
+            },
+            {
+              "type": "logical",
+              "attributes": {},
+              "value": [false, false]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["2022-10-08T18:00:00.0000000Z", "2019-01-18T02:30:00.0000000Z"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["game_types_game_type_id", "game_types_name", "game_types_description", "game_types_tag", "game_types_sport_id"]
+            },
+            "row.names": {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 2]
+            },
+            "class": {
+              "type": "character",
+              "attributes": {},
+              "value": ["tbl_df", "tbl", "data.frame"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [159, 81]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Madden Showdown Captain Mode", "Showdown Captain Mode"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Create your team from 1 game, while staying under the $50,000 salary cap", "Create your team from 1 game, while staying under the $50,000 salary cap"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["", ""]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 4]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["game_styles_game_style_id", "game_styles_name", "game_styles_description", "game_styles_draft_type", "game_styles_sport_id", "game_styles_sort_order", "game_styles_tag"]
+            },
+            "row.names": {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 2]
+            },
+            "class": {
+              "type": "character",
+              "attributes": {},
+              "value": ["tbl_df", "tbl", "data.frame"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [97, 38]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Madden Showdown Captain Mode", "Showdown Captain Mode"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Create your team from 1 game, while staying under the $50,000 salary cap", "Create your team from 1 game, while staying under the $50,000 salary cap"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["SalaryCap", "SalaryCap"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 4]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [15, 3]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["", ""]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "class": {
+              "type": "character",
+              "attributes": {},
+              "value": ["tbl_df", "tbl", "data.frame"]
+            },
+            "row.names": {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 2]
+            },
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["sportId", "name", "fullName", "sortOrder", "competitionTerm", "competitionTermPlural", "regionalDisplayName", "regionalDisplayFullName"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 4]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["NFL", "NBA"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Football", "Basketball"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 2]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Game", "Game"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Games", "Games"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["NFL", "NBA"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Football", "Basketball"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["competition_id", "sport", "sport_id", "home_team_team_id", "home_team_team_name", "home_team_abbreviation", "home_team_city", "away_team_team_id", "away_team_team_name", "away_team_abbreviation", "away_team_city", "start_time", "name", "venue", "starting_lineups_available", "depth_charts_available", "competition_state", "competition_state_detail", "competition_started_early", "min_start_time"]
+            },
+            "row.names": {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 2]
+            },
+            "class": {
+              "type": "character",
+              "attributes": {},
+              "value": ["tbl_df", "tbl", "data.frame"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [5554387, 5915939]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["NBA", "NFL"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [4, 1]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [25, 341]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Thunder", "Raiders"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["OKC", "LV"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Oklahoma City", "Las Vegas"]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [13, 350]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Lakers", "Saints"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["LAL", "NO"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Los Angeles", "New Orleans"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["2019-01-18T02:30:00.0000000Z", "2022-10-08T18:00:00.0000000Z"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["LAL @ OKC", "NO @ LV"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["Chesapeake Energy Arena", null]
+            },
+            {
+              "type": "logical",
+              "attributes": {},
+              "value": [false, false]
+            },
+            {
+              "type": "logical",
+              "attributes": {},
+              "value": [true, true]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["ScoresOfficial", "ScoresOfficial"]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["", ""]
+            },
+            {
+              "type": "logical",
+              "attributes": {},
+              "value": [false, false]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["2019-01-18T02:30:00.0000000Z", "2022-10-08T18:00:00.0000000Z"]
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attributes": {
+            "class": {
+              "type": "character",
+              "attributes": {},
+              "value": ["tbl_df", "tbl", "data.frame"]
+            },
+            "row.names": {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            },
+            "names": {
+              "type": "character",
+              "attributes": {},
+              "value": ["competition_id", "typeId", "value"]
+            }
+          },
+          "value": [
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [5554387, 5554387, 5554387, 5554387, 5554387, 5915939, 5915939, 5915939, 5915939]
+            },
+            {
+              "type": "integer",
+              "attributes": {},
+              "value": [1, 9, 23, 27, 32, 8, 10, 11, 22]
+            },
+            {
+              "type": "character",
+              "attributes": {},
+              "value": ["https://yz34j.app.goo.gl/?link=http://tunein.com/radio/Los-Angeles-Lakers-at-Oklahoma-City-Thunder-Jan-17-2019-p1157567/&apn=tunein.player&isi=418987775&ibi=com.tunein.TuneInRadio&utm_source=gamefeed&", "Final", "2", "False", "TNT", "5", "0", "00", "2"]
             }
           ]
         }
@@ -6706,7 +2090,7 @@
         {
           "type": "double",
           "attributes": {},
-          "value": [17, 2, 41, 4, 13, 8, 12, 22, 22, 82, 14, 4, 18, 12, 84, 13, 2, 0, 0, 16, 5, 11, 81, 87, 80, 7, 14, 83, 45, 39, 35, 80, 49, 46, 34, 37, 83, 89, 38, 19, 15]
+          "value": [17, 2, 41, 4, 13, 8, 12, 22, 22, 82, 14, 4, 18, 12, 84, 13, 2, 0, 0, 16, 5, 11, 81, 87, 80, 7, 10, 83, 45, 39, 35, 80, 49, 46, 34, 37, 83, 89, 38, 19, 15]
         },
         {
           "type": "character",
@@ -6771,7 +2155,7 @@
         {
           "type": "character",
           "attributes": {},
-          "value": ["16.1", "16.0", "23.1", "17.8", "10.9", "9.2", "14.8", "0.2", "7.0", "9.8", "0.0", "0.1", "10.4", "11.5", "0.8", "7.3", "6.3", "4.7", "4.3", "6.9", "8.7", "0.0", "0.0", "3.1", "0.6", "0.2", "0.0", "0.2", "0.9", "0.0", "0.0", "0.1", "0.0", "0.4", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0"]
+          "value": ["16.4", "16.0", "22.7", "17.8", "11.3", "9.0", "14.8", "0.2", "7.0", "9.9", "0.0", "0.1", "10.2", "11.5", "0.7", "7.5", "6.3", "4.8", "4.3", "6.9", "8.6", "0.0", "0.0", "3.1", "0.5", "0.2", "0.0", "0.2", "0.9", "0.0", "0.0", "0.1", "0.0", "0.4", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0"]
         },
         {
           "type": "double",
@@ -6796,12 +2180,12 @@
         {
           "type": "character",
           "attributes": {},
-          "value": ["", "", "", "", "", "", "Q", "Q", "", "", "", "", "", "", "", "", "Q", "", "", "", "Q", "", "", "", "", "", "", "", "", "", "", "", "", "IR", "", "", "", "Q", "IR", "", ""]
+          "value": ["", "", "", "", "IR", "", "IR", "Q", "", "", "", "", "Q", "Q", "", "", "", "", "", "Q", "Q", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "Q", "Q", "IR", "", ""]
         },
         {
           "type": "double",
           "attributes": {},
-          "value": [0, 0, 2, 2, 2, 0, 2, 0, 0, 2, 0, 0, 1, 2, 0, 1, 2, 0, 0, 2, 0, 0, 2, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+          "value": [1, 0, 1, 1, 0, 1, 0, 0, 1, 2, 1, 0, 2, 2, 0, 1, 1, 0, 0, 2, 0, 1, 0, 2, 0, 1, 0, 1, 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 0]
         },
         {
           "type": "character",
@@ -6871,7 +2255,7 @@
         {
           "type": "character",
           "attributes": {},
-          "value": ["/Date(1665252000000)/"]
+          "value": ["/Date(1665237600000)/"]
         },
         {
           "type": "double",

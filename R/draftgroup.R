@@ -149,27 +149,26 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
 #'
 #' @inheritParams dk_get_draft_group
 #' @inheritDotParams dk_request
+#' @param draft_group_ids One or more draft group IDs. See [dk_get_draft_group()].
 #'
 #' @examples
 #' \dontrun{
-#'   dk_get_draft_group_info2(75284)
+#'   dk_get_draft_group_info2(c(75284, 24180))
 #'
 #' }
 #'
 #' @export
-dk_get_draft_group_info2 <- function(draft_group_id = NULL,
-                                    contest_key = NULL,
+dk_get_draft_group_info2 <- function(draft_group_ids = NULL,
                                     output = c("cleaned_json", "json", "response", "request"),
                                     process_args = NULL,
                                     ...) {
 
   output <- rlang::arg_match(output)
 
-  draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
-
+  draft_group_ids <- glue::glue_collapse(draft_group_ids, sep = ",")
   req <- dk_request(
     ...,
-    paths = glue::glue("sites/US-DK/draftgroups/v3/draftgroups/{draft_group_id}?format=json")
+    paths = glue::glue("sites/US-DK/draftgroups/v3/draftgroups/{draft_group_ids}?format=json")
   )
 
   process_args <- c(list(req = req, output = output, objclass = "draft_group_info2_resp"),

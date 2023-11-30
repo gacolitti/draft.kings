@@ -258,9 +258,10 @@ dk_resp_parse.draft_group_info2_resp <- function(resp) {
 
   draft_groups <- dplyr::tibble(draft_groups = resp$draftGroups) |>
     tidyr::unnest_wider(col = "draft_groups") |>
-    tidyr::hoist(.col = "leagues", "leagueId", "leagueName", "leagueAbbreviation") |>
+    dplyr::mutate(leagues = purrr::map(.data$leagues, as.data.frame)) |>
+    tidyr::unnest_wider("leagues") |>
     tidyr::unnest_wider(col = "allTags", names_sep = "") |>
-    dplyr::mutate(competitionIds = paste0(unlist(.data$competitionIds), collapse = ", ")) |>
+    dplyr::mutate(competitionIds = purrr::map_chr(.data$competitionIds, ~paste0(.x, collapse = ","))) |>
     clean_names()
 
   game_types <- dplyr::tibble(gameStyles = resp$gameStyles) |>
@@ -279,23 +280,37 @@ dk_resp_parse.draft_group_info2_resp <- function(resp) {
   sports <- dplyr::tibble(sports = resp$sports) |>
     tidyr::unnest_wider(col = "sports")
 
-  competitions <- dplyr::tibble(game_sets = resp$gameSets) |>
+  tmp_competitions <- dplyr::tibble(game_sets = resp$gameSets) |>
     tidyr::unnest_wider(col = "game_sets") |>
     tidyr::unnest_longer(col = "competitions") |>
     dplyr::select(-"sportId") |>
     tidyr::unnest_wider(col = "competitions") |>
     tidyr::unnest_wider(col = "homeTeam", names_sep = "_") |>
-    tidyr::unnest_wider(col = "awayTeam", names_sep = "_") |>
-    try(tidyr::unnest_wider(col = "weather", names_sep = "_")) |>
+    tidyr::unnest_wider(col = "awayTeam", names_sep = "_")
+
+  if (purrr::pluck_exists(tmp_competitions, "weather")) {
+    tmp_competitions <- tmp_competitions |>
+      tidyr::unnest_wider(col = "weather", names_sep = "_")
+  }
+
+  competitions <- tmp_competitions |>
     dplyr::mutate(gameSetKey = resp$gameSets$gameSetKey) |>
     clean_names()
+
+  competition_attributes <- competitions |>
+    dplyr::select("competition_id", "competition_attributes") |>
+    tidyr::unnest_longer("competition_attributes") |>
+    tidyr::unnest_wider("competition_attributes")
+
+  competitions$competition_attributes <- NULL
 
   list(
     draft_groups = draft_groups,
     game_types = game_types,
     game_styles = game_styles,
     sports = sports,
-    competitions = competitions
+    competitions = competitions,
+    competition_attributes = competition_attributes
   )
 
 }
