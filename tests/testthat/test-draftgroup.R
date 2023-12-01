@@ -62,7 +62,7 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_player_list(draft_group_id = 75367)
 
-    expected_names <- c("pid", "did", "pcode", "tsid", "fn", "ln", "fnu", "lnu", "jn", "pn", "dgst", "tid", "htid", "atid", "htabbr", "atabbr", "posid", "rosposid", "slo", "is_disabled_from_drafting", "s", "ppg", "or", "swp", "ipc", "pp", "i", "news", "img_lg", "alt_img_lg", "img_sm", "alt_img_sm")
+    expected_names <- c("player_id", "did", "pcode", "competition_id", "first_name", "last_name", "first_name_duplicate", "last_name_duplicate", "jersey_number", "position", "competition_start_time", "team_id", "home_team_id", "away_team_id", "home_team_abbreviation", "away_team_abbreviation", "position_id", "roster_slot_id", "slo", "is_disabled", "salary", "points_per_game", "own_rate", "is_swappable", "in_play_contest", "pp", "injury_status", "news_code", "large_image_url", "alternate_large_image_url", "small_image_url", "alternate_small_image_url")
     expect_in(names(d), expected_names)
 
   })

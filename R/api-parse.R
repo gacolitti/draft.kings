@@ -221,7 +221,41 @@ dk_resp_parse.player_list_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-   convert_json(resp$playerList)
+  new_names <- c(pid = "player_id",
+                 did = "did", # unknown
+                 pcode = "pcode", # unknown
+                 tsid = "competition_id",
+                 fn = "first_name",
+                 ln = "last_name",
+                 fnu = "first_name_duplicate",
+                 lnu = "last_name_duplicate",
+                 jn = "jersey_number",
+                 pn = "position",
+                 dgst = "competition_start_time",
+                 tid = "team_id",
+                 htid = "home_team_id",
+                 atid = "away_team_id",
+                 htabbr = "home_team_abbreviation",
+                 atabbr = "away_team_abbreviation",
+                 posid = "position_id",
+                 rosposid = "roster_slot_id",
+                 slo = "slo", # unknown
+                 is_disabled_from_drafting = "is_disabled",
+                 s = "salary",
+                 ppg = "points_per_game",
+                 or = "own_rate",
+                 swp = "is_swappable",
+                 ipc = "in_play_contest",
+                 pp = "pp", # unknown
+                 i = "injury_status",
+                 news = "news_code",
+                 img_lg = "large_image_url",
+                 alt_img_lg = "alternate_large_image_url",
+                 img_sm = "small_image_url",
+                 alt_img_sm = "alternate_small_image_url")
+
+   convert_json(resp$playerList) |>
+     stats::setNames(new_names)
 
 }
 
@@ -448,7 +482,7 @@ dk_resp_parse.competitions_resp <- function(resp) {
     tidyr::unnest_wider(col = "awayTeam", names_sep = "_") |>
     tidyr::unnest_wider(col = "homeTeam", names_sep = "_") |>
     tidyr::unnest_wider(col = "sportSpecificData") |>
-    # TODO: Consider adding coded name value game attribute pairs removed here.
+    # TODO: Name value game attribute pairs removed here.
     # Currently there is no mapping of the typeId (code) to a name
     dplyr::select(-"gameAttributes") |>
     dplyr::select(-"competitions") |>
