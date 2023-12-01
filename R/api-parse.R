@@ -267,7 +267,23 @@ dk_resp_parse.team_list_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-   convert_json(resp$teamList)
+  new_names <- c(ht = "home_team_abbreviation",
+                 htid = "home_team_id",
+                 at = "away_team_abbreviation",
+                 atid = "away_team_id",
+                 tz = "competition_start_time",
+                 dh = "dh", # unknown
+                 s = "s", # unknown
+                 status = "game_status",
+                 status_code = "game_status_code")
+
+
+  convert_json(resp$teamList) |>
+    # Convert tz to date-time
+    dplyr::mutate(tz = as.POSIXct(as.numeric(gsub("/Date\\((\\d+)\\)/", "\\1", .data$tz)) / 1000,
+                                  origin = "1970-01-01", tz = "UTC")
+    ) |>
+    stats::setNames(new_names)
 
 }
 
@@ -278,7 +294,11 @@ dk_resp_parse.player_fp_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-  convert_json(resp$data)
+  convert_json(resp$data) |>
+    dplyr::rename("competition_id" = "game_id") |>
+    dplyr::rename("competition_start_time" = "game_start_time") |>
+    dplyr::mutate(competition_start_time = as.POSIXct(.data$competition_start_time,
+                                                      format = "%Y-%m-%dT%H:%M:%OS", tz = "UTC"))
 
 }
 

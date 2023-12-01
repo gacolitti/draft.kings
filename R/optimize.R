@@ -176,7 +176,8 @@ dk_prepare_schematic <- function(draft_group_id,
     if (is.null(draft_group_exp_fp)) {
 
       player_list <- dk_get_player_list(draft_group_id) %>%
-        dplyr::transmute("player_id" = .data$pid, "exp_fp" = as.numeric(.data$ppg))
+        dplyr::mutate(player_id, "exp_fp" = as.numeric(.data$points_per_game),
+                      .keep = "none")
 
       draft_group <- draft_group %>%
         dplyr::left_join(player_list, by = "player_id")
