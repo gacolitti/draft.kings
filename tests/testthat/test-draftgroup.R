@@ -21,7 +21,11 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_lobby_draft_groups()
 
-    expected_names <- c("draft_group_id", "contest_type_id", "start_date", "start_date_est", "sort_order", "draft_group_tag", "game_type_id", "game_type", "sport_sort_order", "sport", "game_count", "contest_start_time_suffix", "contest_start_time_type", "games", "draft_group_series_id", "game_set_key", "allowugc")
+    expected_names <- c("draft_group_id", "contest_type_id", "start_date", "start_date_est",
+                        "sort_order", "draft_group_tag", "game_type_id", "game_type",
+                        "sport_sort_order", "sport", "game_count", "contest_start_time_suffix",
+                        "contest_start_time_type", "games", "draft_group_series_id",
+                        "game_set_key", "allowugc")
     expect_in(names(d), expected_names)
 
   })
@@ -62,7 +66,14 @@ httptest2::with_mock_dir("draftgroup", {
 
     d <- dk_get_player_list(draft_group_id = 75367)
 
-    expected_names <- c("player_id", "did", "pcode", "competition_id", "first_name", "last_name", "first_name_duplicate", "last_name_duplicate", "jersey_number", "position", "competition_start_time", "team_id", "home_team_id", "away_team_id", "home_team_abbreviation", "away_team_abbreviation", "position_id", "roster_slot_id", "slo", "is_disabled", "salary", "points_per_game", "own_rate", "is_swappable", "in_play_contest", "pp", "injury_status", "news_code", "large_image_url", "alternate_large_image_url", "small_image_url", "alternate_small_image_url")
+    expected_names <- c("player_id", "did", "pcode", "competition_id", "first_name", "last_name",
+                        "first_name_duplicate", "last_name_duplicate", "jersey_number", "position",
+                        "competition_start_time", "team_id", "home_team_id", "away_team_id",
+                        "home_team_abbreviation", "away_team_abbreviation", "position_id",
+                        "roster_slot_id", "slo", "is_disabled", "salary", "points_per_game",
+                        "own_rate", "is_swappable", "in_play_contest", "pp", "injury_status",
+                        "news_code", "large_image_url", "alternate_large_image_url",
+                        "small_image_url", "alternate_small_image_url")
     expect_in(names(d), expected_names)
 
   })

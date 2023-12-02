@@ -31,6 +31,13 @@ convert_json <- function(resp) {
 
 }
 
+#' @noRd
+#' @keywords internal
+extract_unix_timestamp <- function(x) {
+  as.POSIXct(as.numeric(gsub("/Date\\((\\d+)\\)/", "\\1", x)) / 1000,
+             origin = "1970-01-01", tz = "UTC")
+}
+
 ## Parse -------------------------------------------------------------------------------------------
 
 #' Parse Response JSON
@@ -67,8 +74,71 @@ dk_resp_parse.lobby_contests_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-  resp$Contests %>%
-    convert_json()
+  new_names <- c(uc = "uc", # unknown
+    ec = "ec", # unknown
+    mec = "maximum_entries_per_user",
+    fpp = "frequent_player_points",
+    s = "s", # unknown
+    n = "name",
+    nt = "entries",
+    m = "maximum_entries",
+    a = "entry_fee",
+    po = "total_payouts",
+    tix = "tickets",
+    sdstring = "start_time_string",
+    sd = "contest_start_time",
+    id = "contest_key",
+    tmpl = "tmpl", # unknown
+    pt = "pt", # unknown
+    so = "so", # unknown
+    fwt = "fwt", # unknown
+    is_owner = "is_owner",
+    start_time_type = "start_time_type",
+    dg = "draft_group_id",
+    ulc = "ulc", # unknown
+    cs = "contest_status",
+    game_type = "game_type",
+    ssd = "ssd", # unknown
+    dgpo = "dgpo", # unknown
+    cso = "cso", # unknown
+    ir = "ir", # unknown
+    rl = "rl", # unknown
+    rlc = "rlc", # unknown
+    rll = "rll", # unknown
+    sa = "sa", # unknown
+    free_with_crowns = "free_with_crowns",
+    crown_amount = "crown_amount",
+    is_bonus_finalized = "is_bonus_finalized",
+    is_snake_draft = "is_snake_draft",
+    attr_is_guaranteed = "attr_is_guaranteed",
+    attr_lobby_class = "attr_lobby_class",
+    attr_is_starred = "attr_is_starred",
+    pd_cash = "pd_cash", # unknown
+    pd_contest_seat = "pd_contest_seat", # unknown
+    attr_is_tournament_of_champ = "attr_is_tournament_of_champ",
+    attr_is_qualifier = "attr_is_qualifier",
+    pd_live_final_seat = "pd_live_final_seat", # unknown
+    attr_is_winner_take_all = "attr_is_winner_take_all",
+    attr_league = "attr_league",
+    attr_hide_branded_logo = "attr_hide_branded_logo",
+    attr_is_double_up = "attr_is_double_up",
+    attr_is_fiftyfifty = "attr_is_fiftyfifty",
+    attr_is_headliner = "attr_is_headliner",
+    attr_is_nighttime = "attr_is_nighttime",
+    pd_ticket = "pd_ticket", # unknown
+    attr_is_casual = "attr_is_casual",
+    attr_multiplier = "attr_multiplier",
+    attr_is_beginner = "attr_is_beginner"
+  )
+
+
+  resp$Contests |>
+    convert_json() |>
+    dplyr::mutate(
+      sd = extract_unix_timestamp(.data$sd)
+    ) |>
+    stats::setNames(new_names)
+
 
 }
 
@@ -280,9 +350,7 @@ dk_resp_parse.team_list_resp <- function(resp) {
 
   convert_json(resp$teamList) |>
     # Convert tz to date-time
-    dplyr::mutate(tz = as.POSIXct(as.numeric(gsub("/Date\\((\\d+)\\)/", "\\1", .data$tz)) / 1000,
-                                  origin = "1970-01-01", tz = "UTC")
-    ) |>
+    dplyr::mutate(tz = extract_unix_timestamp(.data$tz)) |>
     stats::setNames(new_names)
 
 }

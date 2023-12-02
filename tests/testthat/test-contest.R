@@ -14,7 +14,18 @@ httptest2::with_mock_dir("contest", {
 
     d <- dk_get_lobby_contests()
 
-    expected_names <- c("uc", "ec", "mec", "fpp", "s", "n", "nt", "m", "a", "po", "tix", "sdstring", "sd", "id", "tmpl", "pt", "so", "fwt", "is_owner", "start_time_type", "dg", "ulc", "cs", "game_type", "ssd", "dgpo", "cso", "ir", "rl", "rlc", "rll", "sa", "free_with_crowns", "crown_amount", "is_bonus_finalized", "is_snake_draft", "attr_is_guaranteed", "attr_lobby_class", "attr_is_starred", "pd_cash", "pd_contest_seat", "attr_is_tournament_of_champ", "attr_is_qualifier", "pd_live_final_seat", "attr_league", "attr_hide_branded_logo", "attr_is_double_up", "attr_is_fiftyfifty", "attr_is_headliner", "pd_ticket", "attr_is_winner_take_all", "attr_is_nighttime", "attr_is_casual", "attr_multiplier", "attr_is_beginner", "attr_always_visible")
+    expected_names <- c("uc", "ec", "maximum_entries_per_user", "frequent_player_points", "s",
+                        "name", "entries", "maximum_entries", "entry_fee", "total_payouts",
+                        "tickets", "start_time_string", "contest_start_time", "contest_key",
+                        "tmpl", "pt", "so", "fwt", "is_owner", "start_time_type", "draft_group_id",
+                        "ulc", "contest_status", "game_type", "ssd", "dgpo", "cso", "ir", "rl",
+                        "rlc", "rll", "sa", "free_with_crowns", "crown_amount", "is_bonus_finalized",
+                        "is_snake_draft", "attr_is_guaranteed", "attr_lobby_class", "attr_is_starred",
+                        "pd_cash", "pd_contest_seat", "attr_is_tournament_of_champ",
+                        "attr_is_qualifier", "pd_live_final_seat", "attr_is_winner_take_all",
+                        "attr_league", "attr_hide_branded_logo", "attr_is_double_up",
+                        "attr_is_fiftyfifty", "attr_is_headliner", "attr_is_nighttime",
+                        "pd_ticket", "attr_is_casual", "attr_multiplier", "attr_is_beginner")
     expect_in(names(d), expected_names)
 
   })
