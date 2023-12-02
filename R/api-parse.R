@@ -421,6 +421,7 @@ dk_resp_parse.draft_group_info2_resp <- function(resp) {
 
   competition_attributes <- competitions |>
     dplyr::select("competition_id", "competition_attributes") |>
+    dplyr::filter(!is.na(.data$competition_attributes)) |>
     tidyr::unnest_longer("competition_attributes") |>
     tidyr::unnest_wider("competition_attributes")
 
