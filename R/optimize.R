@@ -103,7 +103,7 @@ dk_prepare_schematic <- function(draft_group_id,
   }
 
   # Fetch draft group info if rules, draft_group, or draft_group_exp_fp not passed
-  if (is.null(rules) || is.null(draft_group) || is.null(draft_group_exp_fp)) {
+  if (is.null(rules)) {
 
     draft_group_info <- dk_get_draft_group_info(draft_group_id)$info
 

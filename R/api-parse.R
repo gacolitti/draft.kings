@@ -383,7 +383,8 @@ dk_resp_parse.draft_group_info2_resp <- function(resp) {
     dplyr::mutate(leagues = purrr::map(.data$leagues, as.data.frame)) |>
     tidyr::unnest_wider("leagues") |>
     tidyr::unnest_wider(col = "allTags", names_sep = "") |>
-    dplyr::mutate(competitionIds = purrr::map_chr(.data$competitionIds, ~paste0(.x, collapse = ","))) |>
+    dplyr::mutate(competitionIds = purrr::map_chr(.data$competitionIds,
+                                                  ~paste0(.x, collapse = ","))) |>
     clean_names()
 
   game_types <- dplyr::tibble(gameStyles = resp$gameStyles) |>
