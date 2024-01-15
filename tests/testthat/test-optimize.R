@@ -4,7 +4,7 @@ check_solver("glpk")
 
 httptest2::with_mock_dir("optimize", {
 
-  testthat::test_that(
+  test_that(
     "dk_optimize_lineup() returns results for NFL Showdown Captain Mode",
     {
       # NFL showdown contest
@@ -15,7 +15,7 @@ httptest2::with_mock_dir("optimize", {
     }
   )
 
-  testthat::test_that(
+  test_that(
     "dk_optimize_lineup() returns results for NFL Classic Game Type",
     {
       # NFL classic contest
@@ -25,7 +25,7 @@ httptest2::with_mock_dir("optimize", {
     }
   )
 
-  testthat::test_that(
+  test_that(
     "dk_optimize_lineup() returns results for NBA Showdown Captain Mode",
     {
       # NFL showdown contest
@@ -36,7 +36,7 @@ httptest2::with_mock_dir("optimize", {
     }
   )
 
-  testthat::test_that(
+  test_that(
     "dk_optimize_lineup() returns results for NBA Classic Game Type",
     {
       # NFL classic contest

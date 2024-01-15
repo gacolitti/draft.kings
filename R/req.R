@@ -52,13 +52,15 @@ dk_request <- function(proxy_args = NULL,
 #' @param output One of "cleaned_json" (the default),
 #'   "json", "response", or "request". If "cleaned_json" then [tidyjson::spread_all()] is used
 #'   to parse the JSON body,
+#' @param ... Other arguments passed to [dk_req_perform()]
 #'
 #' @return See `output`.
 #' @export
 #'
 dk_request_process <- function(req,
                                output = c("cleaned_json", "json", "response", "request"),
-                               objclass = NULL) {
+                               objclass = NULL,
+                               ...) {
 
   output <- rlang::arg_match(output)
 
@@ -70,11 +72,11 @@ dk_request_process <- function(req,
 
   if (output == "response") {
 
-    out <- dk_req_perform(req, output = "response", objclass = objclass)
+    out <- dk_req_perform(req, output = "response", objclass = objclass, ...)
 
   } else {
 
-    out <- dk_req_perform(req, output = "json", objclass = objclass)
+    out <- dk_req_perform(req, output = "json", objclass = objclass, ...)
 
   }
 

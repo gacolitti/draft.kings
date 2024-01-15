@@ -103,7 +103,7 @@ dk_prepare_schematic <- function(draft_group_id,
   }
 
   # Fetch draft group info if rules, draft_group, or draft_group_exp_fp not passed
-  if (is.null(rules) || is.null(draft_group) || is.null(draft_group_exp_fp)) {
+  if (is.null(rules)) {
 
     draft_group_info <- dk_get_draft_group_info(draft_group_id)$info
 
@@ -176,7 +176,8 @@ dk_prepare_schematic <- function(draft_group_id,
     if (is.null(draft_group_exp_fp)) {
 
       player_list <- dk_get_player_list(draft_group_id) %>%
-        dplyr::transmute("player_id" = .data$pid, "exp_fp" = as.numeric(.data$ppg))
+        dplyr::mutate(player_id, "exp_fp" = as.numeric(.data$points_per_game),
+                      .keep = "none")
 
       draft_group <- draft_group %>%
         dplyr::left_join(player_list, by = "player_id")

@@ -31,6 +31,13 @@ convert_json <- function(resp) {
 
 }
 
+#' @noRd
+#' @keywords internal
+extract_unix_timestamp <- function(x) {
+  as.POSIXct(as.numeric(gsub("/Date\\((\\d+)\\)/", "\\1", x)) / 1000,
+             origin = "1970-01-01", tz = "UTC")
+}
+
 ## Parse -------------------------------------------------------------------------------------------
 
 #' Parse Response JSON
@@ -67,8 +74,71 @@ dk_resp_parse.lobby_contests_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-  resp$Contests %>%
-    convert_json()
+  new_names <- c(uc = "uc", # unknown
+    ec = "ec", # unknown
+    mec = "maximum_entries_per_user",
+    fpp = "frequent_player_points",
+    s = "s", # unknown
+    n = "name",
+    nt = "entries",
+    m = "maximum_entries",
+    a = "entry_fee",
+    po = "total_payouts",
+    tix = "tickets",
+    sdstring = "start_time_string",
+    sd = "contest_start_time",
+    id = "contest_key",
+    tmpl = "tmpl", # unknown
+    pt = "pt", # unknown
+    so = "so", # unknown
+    fwt = "fwt", # unknown
+    is_owner = "is_owner",
+    start_time_type = "start_time_type",
+    dg = "draft_group_id",
+    ulc = "ulc", # unknown
+    cs = "contest_status",
+    game_type = "game_type",
+    ssd = "ssd", # unknown
+    dgpo = "dgpo", # unknown
+    cso = "cso", # unknown
+    ir = "ir", # unknown
+    rl = "rl", # unknown
+    rlc = "rlc", # unknown
+    rll = "rll", # unknown
+    sa = "sa", # unknown
+    free_with_crowns = "free_with_crowns",
+    crown_amount = "crown_amount",
+    is_bonus_finalized = "is_bonus_finalized",
+    is_snake_draft = "is_snake_draft",
+    attr_is_guaranteed = "attr_is_guaranteed",
+    attr_lobby_class = "attr_lobby_class",
+    attr_is_starred = "attr_is_starred",
+    pd_cash = "pd_cash", # unknown
+    pd_contest_seat = "pd_contest_seat", # unknown
+    attr_is_tournament_of_champ = "attr_is_tournament_of_champ",
+    attr_is_qualifier = "attr_is_qualifier",
+    pd_live_final_seat = "pd_live_final_seat", # unknown
+    attr_is_winner_take_all = "attr_is_winner_take_all",
+    attr_league = "attr_league",
+    attr_hide_branded_logo = "attr_hide_branded_logo",
+    attr_is_double_up = "attr_is_double_up",
+    attr_is_fiftyfifty = "attr_is_fiftyfifty",
+    attr_is_headliner = "attr_is_headliner",
+    attr_is_nighttime = "attr_is_nighttime",
+    pd_ticket = "pd_ticket", # unknown
+    attr_is_casual = "attr_is_casual",
+    attr_multiplier = "attr_multiplier",
+    attr_is_beginner = "attr_is_beginner"
+  )
+
+
+  resp$Contests |>
+    convert_json() |>
+    dplyr::mutate(
+      sd = extract_unix_timestamp(.data$sd)
+    ) |>
+    stats::setNames(new_names)
+
 
 }
 
@@ -221,7 +291,41 @@ dk_resp_parse.player_list_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-   convert_json(resp$playerList)
+  new_names <- c(pid = "player_id",
+                 did = "did", # unknown
+                 pcode = "pcode", # unknown
+                 tsid = "competition_id",
+                 fn = "first_name",
+                 ln = "last_name",
+                 fnu = "first_name_duplicate",
+                 lnu = "last_name_duplicate",
+                 jn = "jersey_number",
+                 pn = "position",
+                 dgst = "competition_start_time",
+                 tid = "team_id",
+                 htid = "home_team_id",
+                 atid = "away_team_id",
+                 htabbr = "home_team_abbreviation",
+                 atabbr = "away_team_abbreviation",
+                 posid = "position_id",
+                 rosposid = "roster_slot_id",
+                 slo = "slo", # unknown
+                 is_disabled_from_drafting = "is_disabled",
+                 s = "salary",
+                 ppg = "points_per_game",
+                 or = "own_rate",
+                 swp = "is_swappable",
+                 ipc = "in_play_contest",
+                 pp = "pp", # unknown
+                 i = "injury_status",
+                 news = "news_code",
+                 img_lg = "large_image_url",
+                 alt_img_lg = "alternate_large_image_url",
+                 img_sm = "small_image_url",
+                 alt_img_sm = "alternate_small_image_url")
+
+   convert_json(resp$playerList) |>
+     stats::setNames(new_names)
 
 }
 
@@ -233,7 +337,21 @@ dk_resp_parse.team_list_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-   convert_json(resp$teamList)
+  new_names <- c(ht = "home_team_abbreviation",
+                 htid = "home_team_id",
+                 at = "away_team_abbreviation",
+                 atid = "away_team_id",
+                 tz = "competition_start_time",
+                 dh = "dh", # unknown
+                 s = "s", # unknown
+                 status = "game_status",
+                 status_code = "game_status_code")
+
+
+  convert_json(resp$teamList) |>
+    # Convert tz to date-time
+    dplyr::mutate(tz = extract_unix_timestamp(.data$tz)) |>
+    stats::setNames(new_names)
 
 }
 
@@ -244,7 +362,11 @@ dk_resp_parse.player_fp_resp <- function(resp) {
 
   resp <- extract_json(resp)
 
-  convert_json(resp$data)
+  convert_json(resp$data) |>
+    dplyr::rename("competition_id" = "game_id") |>
+    dplyr::rename("competition_start_time" = "game_start_time") |>
+    dplyr::mutate(competition_start_time = as.POSIXct(.data$competition_start_time,
+                                                      format = "%Y-%m-%dT%H:%M:%OS", tz = "UTC"))
 
 }
 
@@ -258,9 +380,11 @@ dk_resp_parse.draft_group_info2_resp <- function(resp) {
 
   draft_groups <- dplyr::tibble(draft_groups = resp$draftGroups) |>
     tidyr::unnest_wider(col = "draft_groups") |>
-    tidyr::hoist(.col = "leagues", "leagueId", "leagueName", "leagueAbbreviation") |>
+    dplyr::mutate(leagues = purrr::map(.data$leagues, as.data.frame)) |>
+    tidyr::unnest_wider("leagues") |>
     tidyr::unnest_wider(col = "allTags", names_sep = "") |>
-    dplyr::mutate(competitionIds = paste0(unlist(.data$competitionIds), collapse = ", ")) |>
+    dplyr::mutate(competitionIds = purrr::map_chr(.data$competitionIds,
+                                                  ~paste0(.x, collapse = ","))) |>
     clean_names()
 
   game_types <- dplyr::tibble(gameStyles = resp$gameStyles) |>
@@ -279,23 +403,38 @@ dk_resp_parse.draft_group_info2_resp <- function(resp) {
   sports <- dplyr::tibble(sports = resp$sports) |>
     tidyr::unnest_wider(col = "sports")
 
-  competitions <- dplyr::tibble(game_sets = resp$gameSets) |>
+  tmp_competitions <- dplyr::tibble(game_sets = resp$gameSets) |>
     tidyr::unnest_wider(col = "game_sets") |>
     tidyr::unnest_longer(col = "competitions") |>
     dplyr::select(-"sportId") |>
     tidyr::unnest_wider(col = "competitions") |>
     tidyr::unnest_wider(col = "homeTeam", names_sep = "_") |>
-    tidyr::unnest_wider(col = "awayTeam", names_sep = "_") |>
-    try(tidyr::unnest_wider(col = "weather", names_sep = "_")) |>
+    tidyr::unnest_wider(col = "awayTeam", names_sep = "_")
+
+  if (purrr::pluck_exists(tmp_competitions, "weather")) {
+    tmp_competitions <- tmp_competitions |>
+      tidyr::unnest_wider(col = "weather", names_sep = "_")
+  }
+
+  competitions <- tmp_competitions |>
     dplyr::mutate(gameSetKey = resp$gameSets$gameSetKey) |>
     clean_names()
+
+  competition_attributes <- competitions |>
+    dplyr::select("competition_id", "competition_attributes") |>
+    dplyr::filter(!is.na(.data$competition_attributes)) |>
+    tidyr::unnest_longer("competition_attributes") |>
+    tidyr::unnest_wider("competition_attributes")
+
+  competitions$competition_attributes <- NULL
 
   list(
     draft_groups = draft_groups,
     game_types = game_types,
     game_styles = game_styles,
     sports = sports,
-    competitions = competitions
+    competitions = competitions,
+    competition_attributes = competition_attributes
   )
 
 }
@@ -433,7 +572,7 @@ dk_resp_parse.competitions_resp <- function(resp) {
     tidyr::unnest_wider(col = "awayTeam", names_sep = "_") |>
     tidyr::unnest_wider(col = "homeTeam", names_sep = "_") |>
     tidyr::unnest_wider(col = "sportSpecificData") |>
-    # TODO: Consider adding coded name value game attribute pairs removed here.
+    # TODO: Name value game attribute pairs removed here.
     # Currently there is no mapping of the typeId (code) to a name
     dplyr::select(-"gameAttributes") |>
     dplyr::select(-"competitions") |>

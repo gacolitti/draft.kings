@@ -44,9 +44,17 @@ dk_get <- function(func,
 
   # Set retry options if not passed
   if (is.null(retry_options)) {
+
+    is_transient <- function(resp) {
+      httr2::resp_status(resp) %in% c(429, 500, 503, 408, 400)
+    }
+    # Don't include caller function objects in environment
+    # this reduces size of resulting response/request object
+    environment(is_transient) <- new.env(parent = baseenv())
+
     retry_options <- list(
       max_tries = 5,
-      is_transient = ~httr2::resp_status(.x) %in% c(429, 500, 503, 408, 400, 404)
+      is_transient = is_transient
     )
   }
 
@@ -59,6 +67,17 @@ dk_get <- function(func,
       password = paste0(Sys.getenv('PACKET_STREAM_PASS'), "_country-UnitedStates"),
       auth = "basic"
     )
+  }
+
+  # Set options which enable proxy IP rotation
+  # See: https://stackoverflow.com/a/76135690/9489566
+  dots_list <- list(...)
+  if (!"curl_options" %in% names(dots_list)) {
+    curl_options <- list(forbid_reuse = TRUE)
+  }
+
+  if (!"headers" %in% names(dots_list)) {
+    headers <- list(Connection = "close")
   }
 
   if (is.null(furrr_options)) {
@@ -87,6 +106,8 @@ dk_get <- function(func,
               output = if (output == "all") "response" else output,
               retry_options = retry_options,
               proxy_args = proxy_args,
+              headers = headers,
+              curl_options = curl_options,
               ...
             )
 
@@ -101,6 +122,14 @@ dk_get <- function(func,
                 status = out$status_code,
                 error_message = as.character(NA),
                 error_output = list(NULL)
+              )
+
+              # Only return request
+            } else if (output == "request") {
+
+              out <- dplyr::tibble(
+                key = .key,
+                !!output := list(out)
               )
 
             } else {
@@ -129,26 +158,44 @@ dk_get <- function(func,
 
         if (inherits(resp, "error")) {
 
-          resp <- dplyr::tibble(
-            key = .key,
-            response = list(resp$resp),
-            error_output = list(resp),
-            error_message = resp$message,
-            status = resp$resp$status
-          )
-
           if (output == "all") {
-            resp <- resp |>
-              dplyr::mutate(
-                request = list(httr2::last_request())
-              ) |>
-              dplyr::relocate("request", .before = "response")
+
+            out <- dplyr::tibble(
+              key = .key,
+              request = list(httr2::last_request()),
+              response = list(resp$resp),
+              error_output = list(resp),
+              error_message = resp$message,
+              status = resp$resp$status
+            )
+
+          } else if (output == "request") {
+
+            out <- dplyr::tibble(
+              key = .key,
+              request = list(httr2::last_request()),
+              response = list(resp$resp),
+              error_output = list(resp),
+              error_message = resp$message,
+              status = resp$resp$status
+            )
+
+          } else {
+
+            out <- dplyr::tibble(
+              key = .key,
+              response = list(resp$resp),
+              error_output = list(resp),
+              error_message = resp$message,
+              status = resp$resp$status
+            )
+
           }
 
         }
 
 
-        resp
+        out
 
       }
     )),
@@ -157,16 +204,20 @@ dk_get <- function(func,
     }
   )
 
-  status_200_count <- sum(out$status == 200, na.rm = TRUE)
-  total <- length(out$status)
-  non_200_status_count <- total - status_200_count
-  pct_total <- round(non_200_status_count / total * 100, 1)
+  if ("status" %in% colnames(out)) {
 
-  if (non_200_status_count > 0) {
+    status_200_count <- sum(out$status == 200, na.rm = TRUE)
+    total <- length(out$status)
+    non_200_status_count <- total - status_200_count
+    pct_total <- round(non_200_status_count / total * 100, 1)
 
-    cli::cli_warn(
-      "{non_200_status_count} of {total} request{?s} ({pct_total}%) did not have a 200 status code"
-    )
+    if (non_200_status_count > 0) {
+
+      cli::cli_warn(
+        "{non_200_status_count} of {total} request{?s} ({pct_total}%) did not have a 200 status code"
+      )
+    }
+
   }
 
   if (report_time) pretty_duration(start_time, prefix = "Total time")

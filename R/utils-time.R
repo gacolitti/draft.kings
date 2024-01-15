@@ -91,5 +91,5 @@ pretty_duration <- function(start_time, end_time = Sys.time(), prefix = NULL) {
   cli::cli_alert_success(pluralized_output)
 
   # Return the formatted duration string
-  return(invisible(pluralized_output))
+  invisible(pluralized_output)
 }

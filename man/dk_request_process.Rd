@@ -7,7 +7,8 @@
 dk_request_process(
   req,
   output = c("cleaned_json", "json", "response", "request"),
-  objclass = NULL
+  objclass = NULL,
+  ...
 )
 }
 \arguments{
@@ -20,6 +21,8 @@ to parse the JSON body,}
 \item{objclass}{character. Name of class to assign to output object. Default
 is NULL, and no additional class is assigned. Used to facilitate parsing;
 See \code{\link[=dk_resp_parse]{dk_resp_parse()}}.}
+
+\item{...}{Other arguments passed to \code{\link[=dk_req_perform]{dk_req_perform()}}}
 }
 \value{
 See \code{output}.

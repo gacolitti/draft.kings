@@ -10,6 +10,7 @@
 #'   This can be found by examining the URL of a contest page.
 #'   For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 #'   is 133645678.
+#' @param process_args Optional list of arguments passed to `dk_request_process`
 #'
 #' @examples
 #'   \dontrun{
@@ -18,8 +19,9 @@
 #'
 #' @export
 dk_get_contest_info <- function(contest_key,
-                             output = c("cleaned_json", "json", "response", "request"),
-                             ...) {
+                                output = c("cleaned_json", "json", "response", "request"),
+                                process_args = NULL,
+                                ...) {
 
   stopifnot(is.numeric(contest_key))
   output <- rlang::arg_match(output)
@@ -30,7 +32,9 @@ dk_get_contest_info <- function(contest_key,
     query_params = list(format = "json")
   )
 
-  dk_request_process(req, output, objclass = "contest_info_resp")
+  process_args <- c(list(req = req, output = output, objclass = "contest_info_resp"), process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
 
@@ -47,6 +51,7 @@ dk_get_contest_info <- function(contest_key,
 #' @export
 dk_get_lobby_contests <- function(sport = NULL,
                          output = c("cleaned_json", "json", "response", "request"),
+                         process_args = NULL,
                          ...) {
 
   output <- rlang::arg_match(output)
@@ -58,7 +63,10 @@ dk_get_lobby_contests <- function(sport = NULL,
     query_params = list(sport = sport)
   )
 
-  dk_request_process(req, output, objclass = "lobby_contests_resp")
+  process_args <- c(list(req = req, output = output, objclass = "lobby_contests_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
 
@@ -78,6 +86,7 @@ dk_get_lobby_contests <- function(sport = NULL,
 dk_get_game_type_rules <- function(game_type_id = NULL,
                                contest_key = NULL,
                                output = c("cleaned_json", "json", "response", "request"),
+                               process_args = NULL,
                                ...) {
 
   output <- rlang::arg_match(output)
@@ -96,10 +105,15 @@ dk_get_game_type_rules <- function(game_type_id = NULL,
 
   }
 
-  req <- dk_request(...,
-                    paths = glue::glue("lineups/v1/gametypes/{game_type_id}/rules"))
+  req <- dk_request(
+    ...,
+    paths = glue::glue("lineups/v1/gametypes/{game_type_id}/rules")
+  )
 
-  dk_request_process(req, output, objclass = "game_type_rules_resp")
+  process_args <- c(list(req = req, output = output, objclass = "game_type_rules_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }
 
@@ -113,6 +127,7 @@ dk_get_game_type_rules <- function(game_type_id = NULL,
 #' @export
 dk_get_lobby_game_types <- function(sport = NULL,
                              output = c("cleaned_json", "json", "response", "request"),
+                             process_args = NULL,
                              ...) {
 
   output <- rlang::arg_match(output)
@@ -124,6 +139,10 @@ dk_get_lobby_game_types <- function(sport = NULL,
     query_params = list(sport = sport)
   )
 
-  dk_request_process(req, output, objclass = "lobby_game_types_resp")
+
+  process_args <- c(list(req = req, output = output, objclass = "lobby_game_types_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }

@@ -4,6 +4,7 @@
 #' Fetch list of sport names and IDs.
 #'
 #' @inheritParams dk_request_process
+#' @inheritParams dk_get_contest_info
 #'
 #' @inheritDotParams dk_request
 #'
@@ -14,7 +15,8 @@
 #'
 #' @export
 dk_get_sports <- function(output = c("cleaned_json", "json", "response", "request"),
-                        ...) {
+                          process_args = NULL,
+                          ...) {
 
   output <- rlang::arg_match(output)
 
@@ -24,6 +26,9 @@ dk_get_sports <- function(output = c("cleaned_json", "json", "response", "reques
     query_params = list(format = "json")
   )
 
-  dk_request_process(req, output, objclass = "sports_resp")
+  process_args <- c(list(req = req, output = output, objclass = "sports_resp"),
+                    process_args)
+
+  do.call(dk_request_process, process_args)
 
 }

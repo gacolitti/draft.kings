@@ -5,24 +5,20 @@
 \title{Get Additional Draft Group Info}
 \usage{
 dk_get_draft_group_info2(
-  draft_group_id = NULL,
-  contest_key = NULL,
+  draft_group_ids = NULL,
   output = c("cleaned_json", "json", "response", "request"),
+  process_args = NULL,
   ...
 )
 }
 \arguments{
-\item{draft_group_id}{Sequence of digits that correspond to a draft table/group.
-If \code{draft_group_id} and \code{contest_key} are both passed, \code{contest_key} is ignored.}
-
-\item{contest_key}{The sequence of digits that correspond to a specific contest.
-This can be found by examining the URL of a contest page.
-For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
-is 133645678.}
+\item{draft_group_ids}{One or more draft group IDs. See \code{\link[=dk_get_draft_group]{dk_get_draft_group()}}.}
 
 \item{output}{One of "cleaned_json" (the default),
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
 to parse the JSON body,}
+
+\item{process_args}{Optional list of arguments passed to \code{dk_request_process}}
 
 \item{...}{
   Arguments passed on to \code{\link[=dk_request]{dk_request}}
@@ -44,7 +40,7 @@ Fetch additional info for a specific draft group
 }
 \examples{
 \dontrun{
-  dk_get_draft_group_info2(75284)
+  dk_get_draft_group_info2(c(75284, 24180))
 
 }
 
