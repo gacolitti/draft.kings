@@ -5,7 +5,7 @@ Version: 0.5.1.9000
 Author: Giovanni Colitti
 Maintainer: Giovanni Colitti <g.a.colitti@gmail.com>
 Description: Fetch data from DraftKings using the provided API and perform lineup optimization.
-License: file LICENSE
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
