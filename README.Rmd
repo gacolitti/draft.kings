@@ -13,15 +13,26 @@ knitr::opts_chunk$set(
 )
 ```
 
-# draft.kings
+# draft.kings <a href="github.com/gacolitti/draft.kings"><img src="man/figures/sticker.png" align="right" height="138" /></a>
+
 
 <!-- badges: start -->
-[![experimental](https://img.shields.io/badge/experimental-orange.svg)](https://example.com)
+[![experimental](https://img.shields.io/badge/experimental-orange.svg)](https://github.com/gaclitti/draft.kings)
 <!-- badges: end -->
 
-`draft.kings` makes it easy to pull data from Draft Kings and optimize your lineups. If you use Draft Kings and know R, this package is for you.
+# Overview
 
-## Installation
+`draft.kings` makes it easy to pull data from DraftKings and optimize your lineups. You
+can get current contests, fetch draftable players for each contest, and list contest participants
+and their points for each contest. There are also functions to facilitate lineup optimization using
+DraftKings player projections or your own player point predictions. If you use
+DraftKings and know R, this package is for you.
+
+The functions contained in this package wrap
+any endpoints I was able to find by inspecting the Draft Kings website. The DraftKings public API 
+is undocumented. If you find an endpoint not included in the package, please open an issue.
+
+### Installation
 
 You can install the development version of draft.kings from [GitHub](https://github.com/) with:
 
@@ -36,14 +47,14 @@ library(draft.kings)
 
 # Contests
 
-## List all contests in the Draft Kings lobby
+### List all contests in the Draft Kings lobby
 
 ```{r}
 dk_get_lobby_contests() |> dplyr::glimpse()
 ```
 
 
-## Get info about a particular contest
+### Get info about a particular contest
 
 ```{r}
 dk_get_contest_info(contest_key = 133645678) |> dplyr::glimpse()
@@ -54,14 +65,14 @@ dk_get_contest_info(contest_key = 133645678) |> dplyr::glimpse()
 
 # Draft Groups
 
-## List all the draft groups in the Draft Kings lobby
+### List all the draft groups in the Draft Kings lobby
 
 ```{r}
 # You can pass in sport or leave it NULL to fetch all sports
 dk_get_lobby_draft_groups(sport = NULL) |> dplyr::glimpse()
 ```
 
-## Get draft group 
+### Get draft group 
 ```{r}
 dk_get_draft_group(draft_group_id = 75284) |> dplyr::glimpse()
 
@@ -73,34 +84,34 @@ dk_get_draft_group(draft_group_id = 75284) |> dplyr::glimpse()
 >**Note:**
 > A draft group is the list of players associated with a fantasy sports contest. 
 
-## Get draft group info
+### Get draft group info
 ```{r}
 dk_get_draft_group_info(draft_group_id = 75284) |> dplyr::glimpse()
 ```
 
-## Get more draft group info
+### Get more draft group info
 ```{r}
 dk_get_draft_group_info2(draft_group_id = 75284) |> dplyr::glimpse()
 ```
 
-## Get list of players for a draft group
+### Get list of players for a draft group
 ```{r}
 dk_get_player_list(draft_group_id = 75284) |> dplyr::glimpse()
 ```
 
-## Get list of teams for a draft group
+### Get list of teams for a draft group
 ```{r}
 dk_get_team_list(draft_group_id = 75284) |> dplyr::glimpse()
 ```
 
-## Get player fantasy points earned
+### Get player fantasy points earned
 ```{r}
 # Data starts on October 18th, 2022 for NBA
 # `timeframe` represents the week of the season for NFL
 dk_get_player_fp(sport = "nfl", season = 2023, timeframe = 10) |> dplyr::glimpse()
 ```
 
-## Get competitions associated to a draft group
+### Get competitions associated to a draft group
 
 ```{r}
 dk_get_competitions(draft_group_id = 75284) |> dplyr::glimpse()
@@ -109,7 +120,7 @@ dk_get_competitions(draft_group_id = 75284) |> dplyr::glimpse()
 
 # Leaderboard
 
-## Get player leaderboard information for a particular contest
+#### Get player leaderboard information for a particular contest
 
 A leaderboard contains a list of entries in a contest, fantasy points for each entry, associated
 users for each entry, rank, and winnings.
@@ -122,7 +133,7 @@ dk_get_leaderboard(contest_key = 133645678) |> dplyr::glimpse()
 > Some functions such as `dk_get_leaderboard()` require passing the session cookies to the
 > function as a JSON file.
 
-## Get entries for a contest
+### Get entries for a contest
 
 Fetch details for entries in a contest, including the drafted roster for each entry, stats for each
 player in an entry roster, and the fantasy points associated to each stat.
@@ -140,7 +151,7 @@ dk_get_entries(draft_group_id = 80584, entry_keys = c(3618408508, 3618897002))
 uses Draft Kings player point projections, but you can pass in your own player point projections. Only
 NFL and NBA contest types are supported currently.
 
-## Prepare schematic
+### Prepare schematic
 
 To perform optimization you must first prepare a schematic. A schematic contains all the necessary
 information to perform optimization including the contest type, set of players, rules, and expected
@@ -151,7 +162,7 @@ schematic <- dk_prepare_schematic(draft_group_id = 80584)
 dplyr::glimpse(schematic)
 ```
 
-## Perform optimization
+### Perform optimization
 
 Pass the schematic object to the optimization function:
 
@@ -159,7 +170,7 @@ Pass the schematic object to the optimization function:
 optimal_lineup <- dk_optimize_lineup(schematic)
 ```
 
-## Extract solution
+### Extract solution
 
 Finally, extract the solution from the solved model object:
 
