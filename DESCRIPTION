@@ -29,8 +29,11 @@ Suggests:
     devtools,
     diffviewer,
     httptest2,
+    pkgdown,
     ROI.plugin.glpk,
     testthat (>= 3.0.0),
     usethis
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
+URL: https://gacolitti.github.io/draft.kings
+BugReports: https://github.com/gacolitti/draft.kings/issues

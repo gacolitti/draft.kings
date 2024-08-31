@@ -1,0 +1,27 @@
+url: https://gacolitti.github.io/draft.kings/
+template:
+  bootstrap: 5
+  bootswatch: lumen
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, tutorials, news]
+    right: [search, github]
+
+reference:
+- title: "Data Fetching"
+  desc: "Functions for fetching DraftKings data"
+  contents:
+  - starts_with("dk_get_")
+- title: "Optimization"
+  desc: "Functions for lineup optimization"
+  contents:
+  - starts_with("dk_optimize")
+  - starts_with("dk_prepare")
+  - starts_with("dk_extract")
+  - "dk_write_csv"
+- title: "API Functions"
+  desc: "Low-level functions for interacting with the DraftKings API"
+  contents:
+  - starts_with("dk_req")
+  - starts_with("dk_resp_")
