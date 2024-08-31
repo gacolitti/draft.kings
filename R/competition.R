@@ -6,7 +6,7 @@
 #' team IDs, and sport name.
 #'
 #' @inheritParams dk_get_contest_info
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
 #'
@@ -30,7 +30,7 @@ dk_get_competitions <- function(draft_group_id = NULL,
 
   output <- rlang::arg_match(output)
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     paths = glue::glue(
       "sports/v1/competitions?draftGroupId={draft_group_id}&format=json"
@@ -40,6 +40,6 @@ dk_get_competitions <- function(draft_group_id = NULL,
   process_args <- c(list(req = req, output = output, objclass = "competitions_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }

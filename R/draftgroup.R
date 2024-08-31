@@ -33,7 +33,7 @@ check_draft_group_id <- function(draft_group_id = NULL, contest_key = NULL) {
 #' their salaries.
 #'
 #' @inheritParams dk_get_contest_info
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @param draft_group_id Sequence of digits that correspond to a draft table/group.
 #'   If `draft_group_id` and `contest_key` are both passed, `contest_key` is ignored.
@@ -61,7 +61,7 @@ dk_get_draft_group <- function(draft_group_id = NULL,
 
   draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     paths = glue::glue(
       "/draftgroups/v1/draftgroups/{draft_group_id}/draftables/",
@@ -72,7 +72,7 @@ dk_get_draft_group <- function(draft_group_id = NULL,
   process_args <- c(list(req = req, output = output, objclass = "draft_group_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }
 
@@ -82,7 +82,7 @@ dk_get_draft_group <- function(draft_group_id = NULL,
 #' currently present at \url{www.draftkings.com/lobby}.
 #'
 #' @inheritParams dk_get_lobby_contests
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @export
 dk_get_lobby_draft_groups <- function(sport = NULL,
@@ -92,7 +92,7 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
 
   output <- rlang::arg_match(output)
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     base_url = "https://www.draftkings.com/",
     paths = "lobby/getcontests",
@@ -102,7 +102,7 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
   process_args <- c(list(req = req, output = output, objclass = "lobby_draft_groups_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 
 }
@@ -112,7 +112,7 @@ dk_get_lobby_draft_groups <- function(sport = NULL,
 #' Fetch info for a specific draft group
 #'
 #' @inheritParams dk_get_draft_group
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @examples
 #' \dontrun{
@@ -131,7 +131,7 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
 
   draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     paths = glue::glue("draftgroups/v1/{draft_group_id}")
   )
@@ -139,7 +139,7 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
   process_args <- c(list(req = req, output = output, objclass = "draft_group_info_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }
 
@@ -148,7 +148,7 @@ dk_get_draft_group_info <- function(draft_group_id = NULL,
 #' Fetch additional info for a specific draft group
 #'
 #' @inheritParams dk_get_draft_group
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #' @param draft_group_ids One or more draft group IDs. See [dk_get_draft_group()].
 #'
 #' @examples
@@ -166,7 +166,7 @@ dk_get_draft_group_info2 <- function(draft_group_ids = NULL,
   output <- rlang::arg_match(output)
 
   draft_group_ids <- glue::glue_collapse(draft_group_ids, sep = ",")
-  req <- dk_request(
+  req <- dk_req(
     ...,
     paths = glue::glue("sites/US-DK/draftgroups/v3/draftgroups/{draft_group_ids}?format=json")
   )
@@ -174,7 +174,7 @@ dk_get_draft_group_info2 <- function(draft_group_ids = NULL,
   process_args <- c(list(req = req, output = output, objclass = "draft_group_info2_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }
 
@@ -183,7 +183,7 @@ dk_get_draft_group_info2 <- function(draft_group_ids = NULL,
 #' Fetch list of players and related info for a specific draft group.
 #'
 #' @inheritParams dk_get_draft_group_info
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @examples
 #' \dontrun{
@@ -202,7 +202,7 @@ dk_get_player_list <- function(draft_group_id = NULL,
 
   draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     paths = "lineup/getavailableplayers",
     base_url = "https://www.draftkings.com/",
@@ -212,7 +212,7 @@ dk_get_player_list <- function(draft_group_id = NULL,
   process_args <- c(list(req = req, output = output, objclass = "player_list_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }
 
@@ -221,7 +221,7 @@ dk_get_player_list <- function(draft_group_id = NULL,
 #' Fetch list of teams for a specific draft group.
 #'
 #' @inheritParams dk_get_draft_group_info
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @export
 dk_get_team_list <- function(draft_group_id = NULL,
@@ -234,7 +234,7 @@ dk_get_team_list <- function(draft_group_id = NULL,
 
   draft_group_id <- check_draft_group_id(draft_group_id, contest_key)
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     paths = "lineup/getavailableplayers",
     base_url = "https://www.draftkings.com/",
@@ -244,7 +244,7 @@ dk_get_team_list <- function(draft_group_id = NULL,
   process_args <- c(list(req = req, output = output, objclass = "team_list_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }
 
@@ -254,7 +254,7 @@ dk_get_team_list <- function(draft_group_id = NULL,
 #' game for a given season and week (NFL) or date (NBA/MLB).
 #'
 #' @inheritParams dk_get_contest_info
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @param timeframe integer. Either the week number for NFL, or a date of the form `20230312` for
 #'   MLB and NBA. If the timeframe format detected does not match the sport argument passed, an
@@ -297,7 +297,7 @@ dk_get_player_fp <- function(timeframe,
 
   }
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     base_url = "https://live.draftkings.com/api/v2/",
     paths = path,
@@ -313,6 +313,6 @@ dk_get_player_fp <- function(timeframe,
   process_args <- c(list(req = req, output = output, objclass = "player_fp_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }

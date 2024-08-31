@@ -3,14 +3,14 @@
 #'
 #' Fetch contest information such as the sport, payout, and contest summary.
 #'
-#' @inheritParams dk_request_process
-#' @inheritDotParams dk_request
+#' @inheritParams dk_req_process
+#' @inheritDotParams dk_req
 #'
 #' @param contest_key The sequence of digits that correspond to a specific contest.
 #'   This can be found by examining the URL of a contest page.
 #'   For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 #'   is 133645678.
-#' @param process_args Optional list of arguments passed to `dk_request_process`
+#' @param process_args Optional list of arguments passed to `dk_req_process`
 #'
 #' @examples
 #'   \dontrun{
@@ -26,7 +26,7 @@ dk_get_contest_info <- function(contest_key,
   stopifnot(is.numeric(contest_key))
   output <- rlang::arg_match(output)
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     paths = glue::glue("contests/v1/contests/{contest_key}"),
     query_params = list(format = "json")
@@ -34,7 +34,7 @@ dk_get_contest_info <- function(contest_key,
 
   process_args <- c(list(req = req, output = output, objclass = "contest_info_resp"), process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }
 
@@ -42,9 +42,9 @@ dk_get_contest_info <- function(contest_key,
 #'
 #' Fetch the full table of contests and related info from DraftKings.com lobby
 #'
-#' @inheritParams dk_request_process
+#' @inheritParams dk_req_process
 #' @inheritParams dk_get_contest_info
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @param sport character. optional.
 #'
@@ -56,7 +56,7 @@ dk_get_lobby_contests <- function(sport = NULL,
 
   output <- rlang::arg_match(output)
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     base_url = "https://www.draftkings.com/",
     paths = "lobby/getcontests",
@@ -66,7 +66,7 @@ dk_get_lobby_contests <- function(sport = NULL,
   process_args <- c(list(req = req, output = output, objclass = "lobby_contests_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }
 
@@ -74,9 +74,9 @@ dk_get_lobby_contests <- function(sport = NULL,
 #'
 #' Fetch rules corresponding to a specific game type ID.
 #'
-#' @inheritParams dk_request_process
+#' @inheritParams dk_req_process
 #' @inheritParams dk_get_contest_info
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @param game_type_id Integer corresponding to the game type.
 #'   For example, 159 in \url{https://api.draftkings.com/lineups/v1/gametypes/159/rules}.
@@ -105,7 +105,7 @@ dk_get_game_type_rules <- function(game_type_id = NULL,
 
   }
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     paths = glue::glue("lineups/v1/gametypes/{game_type_id}/rules")
   )
@@ -113,7 +113,7 @@ dk_get_game_type_rules <- function(game_type_id = NULL,
   process_args <- c(list(req = req, output = output, objclass = "game_type_rules_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }
 
@@ -122,7 +122,7 @@ dk_get_game_type_rules <- function(game_type_id = NULL,
 #' Fetch the full list of game types
 #'
 #' @inheritParams dk_get_lobby_contests
-#' @inheritDotParams dk_request
+#' @inheritDotParams dk_req
 #'
 #' @export
 dk_get_lobby_game_types <- function(sport = NULL,
@@ -132,7 +132,7 @@ dk_get_lobby_game_types <- function(sport = NULL,
 
   output <- rlang::arg_match(output)
 
-  req <- dk_request(
+  req <- dk_req(
     ...,
     base_url = "https://www.draftkings.com/",
     paths = "lobby/getcontests",
@@ -143,6 +143,6 @@ dk_get_lobby_game_types <- function(sport = NULL,
   process_args <- c(list(req = req, output = output, objclass = "lobby_game_types_resp"),
                     process_args)
 
-  do.call(dk_request_process, process_args)
+  do.call(dk_req_process, process_args)
 
 }
