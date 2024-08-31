@@ -11,7 +11,6 @@ LazyData: true
 Imports: 
     cli,
     dplyr,
-    furrr,
     glue,
     httr2,
     jsonlite,
@@ -29,7 +28,9 @@ Suggests:
     devtools,
     diffviewer,
     httptest2,
+    knitr,
     pkgdown,
+    rmarkdown,
     ROI.plugin.glpk,
     testthat (>= 3.0.0),
     usethis
@@ -37,3 +38,4 @@ Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
 URL: https://gacolitti.github.io/draft.kings
 BugReports: https://github.com/gacolitti/draft.kings/issues
+VignetteBuilder: knitr
