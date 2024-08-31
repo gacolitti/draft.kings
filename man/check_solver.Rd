@@ -7,8 +7,9 @@
 check_solver(solver)
 }
 \arguments{
-\item{solver}{the 'ROI' solver name (character vector of length 1)}
+\item{solver}{A string of the solver name.}
 }
 \description{
 Ensure the solver name passed to \code{dk_optimize_lineup} is available
 }
+\keyword{internal}

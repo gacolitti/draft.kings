@@ -14,3 +14,4 @@ add_headers(req, headers)
 \description{
 Add list of arguments for \code{httr2::req_headers} to a request object
 }
+\keyword{internal}

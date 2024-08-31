@@ -8,4 +8,12 @@
 \description{
 Fetch data from DraftKings using the provided API and perform lineup optimization.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://gacolitti.github.io/draft.kings}
+  \item Report bugs at \url{https://github.com/gacolitti/draft.kings/issues}
+}
+
+}
 \keyword{internal}

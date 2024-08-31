@@ -14,3 +14,4 @@ add_retry(req, retry_options)
 \description{
 Add list of arguments to a request object that control when a request is retried
 }
+\keyword{internal}
