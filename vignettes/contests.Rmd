@@ -1,0 +1,89 @@
+---
+title: "Contests"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Contests}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(draft.kings)
+```
+
+# Understanding DraftKings Contests
+
+DraftKings is a popular daily fantasy sports platform that offers a wide variety of contests across multiple sports. These contests allow users to draft virtual teams of real players and compete against other users for prizes. This vignette will guide you through using the `draft.kings` package to interact with DraftKings contests programmatically.
+
+## Types of Contests
+
+DraftKings offers a wide variety of contest types, including:
+
+1. Guaranteed Prize Pools (GPPs): Large tournaments with fixed prize pools.
+2. Cash Games:
+   - Head-to-Head: Contests between two players.
+   - 50/50s: Contests where the top half of entries win.
+   - Double-Ups: Similar to 50/50s, but winners double their entry fee.
+3. Leagues: Smaller contests with a set number of entries.
+4. Showdown: Single-game contests focusing on one specific matchup.
+5. Tiers: Contests where players are grouped into tiers, and you select one from each tier.
+6. Classic: Traditional salary cap-based contests across multiple games.
+7. In-Game Showdown: Live contests that start after a game has begun.
+8. Best Ball: Season-long contests with automated lineup optimization.
+9. Step Tournaments: Multi-stage contests where winners advance to higher levels.
+10. Beginner Contests: Restricted to newer players on the platform.
+11. Satellites and Qualifiers: Contests that award entries into larger tournaments.
+
+Each contest type has its own strategy and appeal to different players. The `draft.kings` package provides tools to interact with and analyze these various contest types.
+
+## Key Concepts
+
+Before diving into the functions, it's important to understand a few key concepts:
+
+- **Contest Key**: A unique identifier for each contest.
+- **Draft Group**: A set of players available for drafting in a particular contest or set of contests.
+- **Draft Group ID**: A unique identifier for each draft group.
+
+The `draft.kings` package provides functions to interact with these elements, allowing you to fetch contest information, player data, and more. Let's explore some of these functions below.
+
+
+# Contest Details
+
+## dk_get_lobby_contests()
+
+*List all contests in the Draft Kings lobby*
+
+The `dk_get_lobby_contests()` function retrieves information about all available contests in the DraftKings lobby.
+
+```{r}
+contests <- dk_get_lobby_contests()
+contests |> 
+  dplyr::select(contest_key, name, game_type, entry_fee, entries, maximum_entries_per_user) |>
+  head(5)
+```
+
+> **Note:**
+> A contest key is the sequence of digits that correspond to a specific contest. This can be found by examining the URL of a contest page. For example: https://www.draftkings.com/draft/contest/133645678#. Here the contest ID is 133645678.
+
+
+## dk_get_contest_info()
+
+*Get detailed contest info by contest key*
+
+The `dk_get_contest_info()` function provides more detailed information about a specific contest compared to `dk_get_lobby_contests()`. While `dk_get_lobby_contests()` gives an overview of multiple contests, `dk_get_contest_info()` focuses on a single contest with in-depth details. 
+
+```{r}
+dk_get_contest_info(contest_key = 133645678) |> 
+  dplyr::select(contest_summary, payout_description, sport, entry_fee, entries, maximum_entries)
+```
+
+
+
+

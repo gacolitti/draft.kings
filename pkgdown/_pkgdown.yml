@@ -1,12 +1,39 @@
 url: https://gacolitti.github.io/draft.kings/
 template:
   bootstrap: 5
-  bootswatch: lumen
+  params:
+    bootswatch: lumen
 
 navbar:
   structure:
-    left:  [intro, reference, articles, tutorials, news]
-    right: [search, github]
+    left:  [home, reference, articles]
+    right: [news, github]
+  components:
+    home:
+      icon: fas fa-home
+      href: index.html
+      aria-label: Home
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Contests
+        href: articles/contests.html
+      - text: Draft Groups
+        href: articles/draftgroups.html
+      - text: Leaderboard & Entries
+        href: articles/leaderboard.html
+      - text: Lineup Optimization
+        href: articles/optimization.html
+    news:
+      text: News
+      href: news/index.html
+    github:
+      icon: fab fa-github
+      href: https://github.com/gacolitti/draft.kings
+      aria-label: GitHub
 
 reference:
 - title: "Data Fetching"
@@ -25,3 +52,7 @@ reference:
   contents:
   - starts_with("dk_req")
   - starts_with("dk_resp_")
+
+authors:
+  Giovanni Colitti:
+    href: https://github.com/gacolitti

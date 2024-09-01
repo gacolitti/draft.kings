@@ -4,3 +4,6 @@
 .Ruserdata
 .Renviron
 docs/
+inst/doc
+
+/.quarto/
