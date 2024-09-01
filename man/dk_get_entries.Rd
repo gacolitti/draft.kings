@@ -7,7 +7,8 @@
 dk_get_entries(
   draft_group_id,
   entry_keys,
-  cookie_file = path.expand("~/cookies.json"),
+  iv = Sys.getenv("DK_IV"),
+  jwe = Sys.getenv("DK_JWE"),
   output = c("cleaned_json", "json", "response", "request"),
   process_args = NULL,
   ...
@@ -20,7 +21,9 @@ If \code{draft_group_id} and \code{contest_key} are both passed, \code{contest_k
 \item{entry_keys}{Vector of numeric (or character) keys that correspond to a specific entry in
 a specific contest. See output from \code{\link[=dk_get_leaderboard]{dk_get_leaderboard()}}.}
 
-\item{cookie_file}{Path to JSON of cookies needed to perform API request.}
+\item{iv}{Character string. The 'iv' cookie value. If not provided, it will be retrieved from the DK_IV environment variable.}
+
+\item{jwe}{Character string. The 'jwe' cookie value. If not provided, it will be retrieved from the DK_JWE environment variable.}
 
 \item{output}{One of "cleaned_json" (the default),
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used

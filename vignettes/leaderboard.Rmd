@@ -39,8 +39,7 @@ dk_get_leaderboard(contest_key = 133645678)
 ```
 
 >**Note:**
-> Some functions such as `dk_get_leaderboard()` require passing the session cookies to the
-> function as a JSON file.
+> Some functions such as `dk_get_leaderboard()` and `dk_get_entries()` require authentication via DraftKings session cookies. These can be provided either by setting the `DK_IV` and `DK_JWE` environment variables, or by passing them directly to the functions using the `iv` and `jwe` arguments.
 
 ## dk_get_entries()
 

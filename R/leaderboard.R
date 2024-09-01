@@ -1,4 +1,3 @@
-
 #' Get Leaderboard
 #'
 #' Fetch leaderboard for a contest. A leaderboard
@@ -9,7 +8,8 @@
 #' @inheritParams dk_req_process
 #' @inheritParams dk_get_contest_info
 #' @inheritDotParams dk_req
-#' @param cookie_file Path to JSON of cookies needed to perform API request.
+#' @param iv Character string. The 'iv' cookie value. If not provided, it will be retrieved from the DK_IV environment variable.
+#' @param jwe Character string. The 'jwe' cookie value. If not provided, it will be retrieved from the DK_JWE environment variable.
 #'
 #' @examples
 #'   \dontrun{
@@ -18,22 +18,19 @@
 #'
 #' @export
 dk_get_leaderboard <- function(contest_key,
-                               cookie_file = path.expand("~/cookies.json"),
+                               iv = Sys.getenv("DK_IV"),
+                               jwe = Sys.getenv("DK_JWE"),
                                output = c("cleaned_json", "json", "response", "request"),
                                process_args = NULL,
                                ...) {
 
   output <- rlang::arg_match(output)
 
-  if (!file.exists(cookie_file)) {
-    rlang::abort(
-      "`cookie_file` not found: {cookie_file}"
-    )
+  if (nchar(iv) == 0 || nchar(jwe) == 0) {
+    rlang::abort("Both 'iv' and 'jwe' cookies are required. Set DK_IV and DK_JWE environment variables or pass them directly.")
   }
 
-  cook <- jsonlite::read_json(cookie_file)
-  clean_cook <- paste0(unlist(lapply(cook, function(x) {paste0(x$name, "=", x$value)})),
-                       collapse = ";")
+  clean_cook <- paste0("iv=", iv, ";jwe=", jwe)
 
   # Update curl options to ensure it includes cookies
   dots_list <- list(...)
@@ -86,22 +83,19 @@ dk_get_leaderboard <- function(contest_key,
 #' @export
 dk_get_entries <- function(draft_group_id,
                            entry_keys,
-                           cookie_file = path.expand("~/cookies.json"),
+                           iv = Sys.getenv("DK_IV"),
+                           jwe = Sys.getenv("DK_JWE"),
                            output = c("cleaned_json", "json", "response", "request"),
                            process_args = NULL,
                            ...) {
 
   output <- rlang::arg_match(output)
 
-  if (!file.exists(cookie_file)) {
-    rlang::abort(
-      "`cookie_file` not found: {cookie_file}"
-    )
+  if (nchar(iv) == 0 || nchar(jwe) == 0) {
+    rlang::abort("Both 'iv' and 'jwe' cookies are required. Set DK_IV and DK_JWE environment variables or pass them directly.")
   }
 
-  cook <- jsonlite::read_json(cookie_file)
-  clean_cook <- paste0(unlist(lapply(cook, function(x) {paste0(x$name, "=", x$value)})),
-                       collapse = ";")
+  clean_cook <- paste0("iv=", iv, ";jwe=", jwe)
 
   # Update curl options to ensure it includes cookies
   dots_list <- list(...)

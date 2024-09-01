@@ -6,6 +6,8 @@
 \alias{draft.kings-package}
 \title{draft.kings: Draft Kings API Wrapper and Optimization}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Fetch data from DraftKings using the provided API and perform lineup optimization.
 }
 \seealso{
