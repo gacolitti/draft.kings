@@ -16,6 +16,8 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_KEEP_PKG_SOURCE: yes
+      DK_IV: ${{ secrets.DK_IV }}
+      DK_JWE: ${{ secrets.DK_JWE }}
     steps:
       - uses: actions/checkout@v4
 
