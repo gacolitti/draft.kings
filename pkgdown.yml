@@ -1,0 +1,12 @@
+pandoc: 2.9.2.1
+pkgdown: 2.1.0
+pkgdown_sha: ~
+articles:
+  contests: contests.html
+  draftgroups: draftgroups.html
+  leaderboard: leaderboard.html
+  optimization: optimization.html
+last_built: 2024-09-02T00:42Z
+urls:
+  reference: https://gacolitti.github.io/draft.kings/reference
+  article: https://gacolitti.github.io/draft.kings/articles
