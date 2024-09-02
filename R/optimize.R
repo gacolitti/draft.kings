@@ -95,7 +95,7 @@ dk_prepare_schematic <- function(draft_group_id,
         "salary" = c("integer", "numeric"),
         "team_id" = c("integer", "numeric"),
         "competition_id" = c("integer", "numeric"),
-        "position" = c("character"),
+        "roster_slot_id" = c("integer", "numeric"),
         "status" = c("character")
       )
     )
@@ -210,10 +210,6 @@ dk_prepare_schematic <- function(draft_group_id,
   # Remove duplicates in terms of everything but draftable_id
   draft_group <- draft_group %>%
     dplyr::distinct(dplyr::across(!dplyr::all_of("draftable_id")), .keep_all = TRUE)
-
-  # Separate players that can perform multiple positions into different rows
-  draft_group <- draft_group %>%
-    tidyr::separate_rows("position", sep = "/")
 
   # Add row number
   draft_group <- draft_group %>%
@@ -523,14 +519,14 @@ dk_optimize_lineup.classic <- function(schematic, max_points = NULL, solver = "g
   # Set player constraints for NBA classic
   if (rules$game_type_id == 70) {
 
-    # Ensure at least 1 player in each position
+    # Ensure at least 1 player in each roster slot
     mod <- mod %>%
       ompr::add_constraint(
         ompr::sum_over(
           draftable_id[i],
-          i = draft_group$row_number[which(draft_group$position == position)]
+          i = draft_group$row_number[which(draft_group$roster_slot_id == roster_slot_id)]
         ) >= 1,
-        position = unique(draft_group$position)
+        roster_slot_id = unique(draft_group$roster_slot_id)
       )
 
     # Ensure 8 players (allows for one flex that can come from any position)
@@ -552,9 +548,9 @@ dk_optimize_lineup.classic <- function(schematic, max_points = NULL, solver = "g
       ompr::add_constraint(
         ompr::sum_over(
           draftable_id[i],
-          i = draft_group$row_number[which(draft_group$position == position)]
+          i = draft_group$row_number[which(draft_group$roster_slot_id == roster_slot_id)]
         ) == 1,
-        position = c("QB", "DST")
+        roster_slot_id = c(66, 71)
       )
 
     # Ensure at least 3 WR
@@ -562,9 +558,9 @@ dk_optimize_lineup.classic <- function(schematic, max_points = NULL, solver = "g
       ompr::add_constraint(
         ompr::sum_over(
           draftable_id[i],
-          i = draft_group$row_number[which(draft_group$position == position)]
+          i = draft_group$row_number[which(draft_group$roster_slot_id == roster_slot_id)]
         ) >= 3,
-        position = "WR"
+        roster_slot_id = 68
       )
 
     # Ensure at least 2 RB
@@ -572,9 +568,9 @@ dk_optimize_lineup.classic <- function(schematic, max_points = NULL, solver = "g
       ompr::add_constraint(
         ompr::sum_over(
           draftable_id[i],
-          i = draft_group$row_number[which(draft_group$position == position)]
+          i = draft_group$row_number[which(draft_group$roster_slot_id == roster_slot_id)]
         ) >= 2,
-        position = "RB"
+        roster_slot_id = 67
       )
 
     # Ensure at least 1 TE
@@ -582,9 +578,9 @@ dk_optimize_lineup.classic <- function(schematic, max_points = NULL, solver = "g
       ompr::add_constraint(
         ompr::sum_over(
           draftable_id[i],
-          i = draft_group$row_number[which(draft_group$position == position)]
+          i = draft_group$row_number[which(draft_group$roster_slot_id == roster_slot_id)]
         ) >= 1,
-        position = "TE"
+        roster_slot_id = 69
       )
 
     # Ensure 9 players (allows for one flex which can be either RB/WR/TE)

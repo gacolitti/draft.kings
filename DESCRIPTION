@@ -1,7 +1,7 @@
 Package: draft.kings
 Type: Package
 Title: Draft Kings API Wrapper and Optimization
-Version: 0.5.4
+Version: 0.5.5
 Author: Giovanni Colitti
 Maintainer: Giovanni Colitti <g.a.colitti@gmail.com>
 Description: Fetch data from DraftKings using the provided API and perform lineup optimization.
@@ -13,7 +13,6 @@ Imports:
     dplyr,
     glue,
     httr2,
-    jsonlite,
     magrittr,
     ompr,
     ompr.roi,

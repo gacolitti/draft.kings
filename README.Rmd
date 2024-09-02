@@ -18,19 +18,21 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![experimental](https://img.shields.io/badge/experimental-orange.svg)](https://github.com/gaclitti/draft.kings)
+[![R-CMD-check](https://github.com/gacolitti/draft.kings/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gacolitti/draft.kings/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/gacolitti/draft.kings/graph/badge.svg)](https://app.codecov.io/gh/gacolitti/draft.kings)
 <!-- badges: end -->
 
 # Overview
 
-`draft.kings` makes it easy to pull data from DraftKings and optimize your lineups. You
-can get current contests, fetch draftable players for each contest, and list contest participants
-and their points for each contest. There are also functions to facilitate lineup optimization using
-DraftKings player projections or your own player point predictions. If you use
-DraftKings and know R, this package is for you.
+`draft.kings` is an R package that wraps the undocumented DraftKings API, providing seamless access to data and additional tools for fantasy sports strategy. 
 
-The functions contained in this package wrap
-any endpoints I was able to find by inspecting the Draft Kings website. The DraftKings public API 
-is undocumented. If you find an endpoint not included in the package, please open an issue.
+Key features:
+
+- Retrieve contests and draftable players
+- List participants and scores
+- Optimize lineups
+
+`draft.kings` aims to be the most comprehensive API wrapper package for DraftKings in any programming language. Users are encouraged to create issues for new endpoints or bugs to help improve the package.
 
 ### Installation
 
@@ -41,45 +43,93 @@ You can install the development version of draft.kings from [GitHub](https://git
 devtools::install_github("gacolitti/draft.kings")
 ```
 
-```{r}
+```{r, echo = FALSE}
 library(draft.kings)
 ```
 
 # Examples
 
-## Contests
+## Contests & Draft Groups
 
+**Contest Info**
 ```{r}
-dk_get_contest_info(contest_key = 133645678)
+contest_info <- dk_get_contest_info(contest_key = 133645678) 
+
+contest_info$contest_summary
+
+contest_info |> 
+  dplyr::select(contest_key, contest_summary, payout_description, sport, entry_fee, entries)
+
 ```
 
-## Draft Groups
-
+**Draft Group**
 ```{r}
-dk_get_draft_group_info(draft_group_id = 75284)
+draft_group <- dk_get_draft_group(draft_group_id = 75284)
+
+draft_group |> 
+  dplyr::select(draftable_id, player_id, first_name, last_name, position, salary, status)
+```
+
+**Draft Group Info**
+```{r}
+dg_info <- dk_get_draft_group_info(draft_group_id = 75284)
+
+dg_info$info |> 
+  dplyr::select(draft_group_id, game_type_id, sport, game_type, min_start_time, max_start_time)
+
+dg_info$games |> 
+  dplyr::select(game_id, away_team_id, home_team_id, start_date, location, time_remaining_status)
+
+dg_info$leagues |> 
+  dplyr::select(league_id, league_name, league_abbreviation)
 ```
 
 ## Leaderboard & Entries
 
+**Leaderboard**
 ```{r}
-dk_get_leaderboard(contest_key = 133645678)
+leaderboard <- dk_get_leaderboard(contest_key = 133645678)
+
+leaderboard |> 
+  dplyr::select(draft_group_id, contest_key, entry_key, user_name, rank, fantasy_points)
 ```
 
+**Entries**
 ```{r}
-dk_get_entries(draft_group_id = 80584, entry_keys = c(3618408508, 3618897002))
+entries <- dk_get_entries(draft_group_id = 80584, entry_keys = c(3618408508, 3618897002))
+
+entries |> 
+  dplyr::select(entry_key, draftable_id, display_name, roster_position, fantasy_points)
 ```
 
 ## Lineup Optimization
 
+**Prepare Schematic**
 ```{r}
 # prepare schematic with contest rules and DraftKings player projections
 schematic <- dk_prepare_schematic(draft_group_id = 80584)
+schematic |> names()
+```
 
-# run optimization
+**Run Optimization**
+```{r}
+# perform lineup optimization based on rules and player projections 
 optimized_lineup <- dk_optimize_lineup(schematic)
+```
 
-# extract solution
-dk_extract_solution(optimized_lineup)
+**Extract Solution**
+```{r}
+# extract solution from optimized lineup object
+solution <- dk_extract_solution(optimized_lineup)
+
+solution |> names()
+
+# exp_fp is the expected fantasy points for each player in the lineup
+solution$optimal_lineup |> 
+  dplyr::select(draftable_id, display_name, position, salary, exp_fp)
+
+# total expected fantasy points for the lineup
+solution$exp_fp_total
 ```
 
 # Further Reading

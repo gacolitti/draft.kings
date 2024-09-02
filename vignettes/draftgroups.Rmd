@@ -1,5 +1,7 @@
 ---
-title: "Draft Groups"
+title: Draft Groups
+description: >
+  Fetch DraftKings draft groups and draft group details
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Draft Groups}
@@ -14,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, echo = FALSE}
 library(draft.kings)
 ```
 
