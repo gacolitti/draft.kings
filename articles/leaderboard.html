@@ -12,21 +12,32 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="../lightswitch.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Leaderboard &amp; Entries">
+<meta name="description" content="Fetch DraftKings leaderboard and entries
+">
+<meta property="og:description" content="Fetch DraftKings leaderboard and entries
+">
+<meta property="og:image" content="https://gacolitti.github.io/draft.kings/logo.png">
+<!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-068KL483G3"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-068KL483G3');
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top " aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="../index.html">draft.kings</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.5.5</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +46,6 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item"><a class="nav-link" href="../index.html" aria-label="Home"><span class="fa fas fa-home"></span></a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
@@ -46,10 +56,21 @@
     <li><a class="dropdown-item" href="../articles/optimization.html">Lineup Optimization</a></li>
   </ul>
 </li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
-<li class="nav-item"><a class="nav-link" href="../news/index.html">News</a></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/gacolitti/draft.kings" aria-label="GitHub"><span class="fa fab fa-github"></span></a></li>
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/gacolitti/draft.kings/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-lightswitch" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" aria-label="Light switch"><span class="fa fa-sun"></span></button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-lightswitch">
+<li><button class="dropdown-item" data-bs-theme-value="light"><span class="fa fa-sun"></span> Light</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="dark"><span class="fa fa-moon"></span> Dark</button></li>
+    <li><button class="dropdown-item" data-bs-theme-value="auto"><span class="fa fa-adjust"></span> Auto</button></li>
+  </ul>
+</li>
       </ul>
 </div>
 
@@ -70,8 +91,6 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://gacolitti.github.io/draft.kings">draft.kings</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="analyzing-contest-results-and-rankings">Analyzing Contest Results and Rankings<a class="anchor" aria-label="anchor" href="#analyzing-contest-results-and-rankings"></a>
 </h2>
@@ -88,7 +107,7 @@
 <li>Winnings (if any) for each entry</li>
 </ol>
 <p>This data allows for in-depth analysis of contest results, participant performance, and payout distributions. It’s particularly useful for understanding successful strategies, identifying top users, and gaining insights into contest dynamics.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/dk_get_leaderboard.html">dk_get_leaderboard</a></span><span class="op">(</span>contest_key <span class="op">=</span> <span class="fl">133645678</span><span class="op">)</span> </span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 215 × 21</span></span></span>
 <span><span class="co">#&gt;    draft_group_id contest_key entry_key  lineup_id user_name    user_key</span></span>
@@ -128,7 +147,7 @@
 <li>Entry metadata such as entry fees, potential winnings, and current ranking</li>
 </ol>
 <p>This function provides a deep dive into the composition and performance of individual contest entries, allowing for analysis of roster strategies and player contributions.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/dk_get_entries.html">dk_get_entries</a></span><span class="op">(</span>draft_group_id <span class="op">=</span> <span class="fl">80584</span>, entry_keys <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3618408508</span>, <span class="fl">3618897002</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 76 × 29</span></span></span>
 <span><span class="co">#&gt;    contest_key entry_key  user_key draft_group_id lineup_id first_name last_name</span></span>
