@@ -1,5 +1,7 @@
 ---
-title: "Contests"
+title: Contests
+description: >
+  Fetch DraftKings contests and contest details
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Contests}
@@ -14,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, echo = FALSE}
 library(draft.kings)
 ```
 

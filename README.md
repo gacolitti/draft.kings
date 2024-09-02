@@ -10,17 +10,19 @@
 
 # Overview
 
-`draft.kings` makes it easy to pull data from DraftKings and optimize
-your lineups. You can get current contests, fetch draftable players for
-each contest, and list contest participants and their points for each
-contest. There are also functions to facilitate lineup optimization
-using DraftKings player projections or your own player point
-predictions. If you use DraftKings and know R, this package is for you.
+`draft.kings` is an R package that wraps the undocumented DraftKings
+API, providing seamless access to data and additional tools for fantasy
+sports strategy.
 
-The functions contained in this package wrap any endpoints I was able to
-find by inspecting the Draft Kings website. The DraftKings public API is
-undocumented. If you find an endpoint not included in the package,
-please open an issue.
+Key features:
+
+- Retrieve contests and draftable players
+- List participants and scores
+- Optimize lineups
+
+`draft.kings` aims to be the most comprehensive API wrapper package for
+DraftKings in any programming language. Users are encouraged to create
+issues for new endpoints or bugs to help improve the package.
 
 ### Installation
 
@@ -38,49 +40,68 @@ library(draft.kings)
 
 # Examples
 
-## Contests
+## Contests & Draft Groups
+
+**Contest Info**
 
 ``` r
-dk_get_contest_info(contest_key = 133645678)
-#> # A tibble: 1 × 33
-#>   contest_summary         payout_description is_cash_prize_only scoring_style_id
-#>   <chr>                   <chr>              <lgl>                         <dbl>
-#> 1 This 215-player contes… $5,000             TRUE                              1
-#> # ℹ 29 more variables: contest_state_detail <chr>,
-#> #   includes_past_season_collectibles <lgl>, sport <chr>, is_guaranteed <lgl>,
-#> #   is_private <lgl>, is_resizable <lgl>, was_resized <lgl>, fpp_award <dbl>,
-#> #   sort_order <dbl>, contest_start_time <chr>, game_type_id <dbl>,
-#> #   ticket_only_entry <lgl>, game_set_key <chr>, contest_key <chr>, name <chr>,
-#> #   draft_group_id <dbl>, play_type_id <dbl>, entries <dbl>,
-#> #   maximum_entries <dbl>, maximum_entries_per_user <dbl>, entry_fee <dbl>, …
+contest_info <- dk_get_contest_info(contest_key = 133645678) 
+
+contest_info$contest_summary
+#> [1] "This 215-player contest features $5,000.00 in total prizes and pays out the top 5 finishing positions. First place wins $1,000.00."
+
+contest_info |> 
+  dplyr::select(contest_key, contest_summary, payout_description, sport, entry_fee, entries)
+#> # A tibble: 1 × 6
+#>   contest_key contest_summary         payout_description sport entry_fee entries
+#>   <chr>       <chr>                   <chr>              <chr>     <dbl>   <dbl>
+#> 1 133645678   This 215-player contes… $5,000             NFL          27     215
 ```
 
-## Draft Groups
+**Draft Group**
 
 ``` r
-dk_get_draft_group_info(draft_group_id = 75284)
-#> $info
-#> # A tibble: 1 × 12
-#>   draft_group_id sport_id start_time_suffix start_time_type min_start_time      
-#>            <int>    <int> <chr>             <chr>           <chr>               
-#> 1          75284        1 " (CIN vs BAL)"   Normal          2022-10-10T00:20:00…
-#> # ℹ 7 more variables: max_start_time <chr>, draft_group_state <chr>,
-#> #   allow_ugc <lgl>, game_type_id <int>, contest_type_id <int>, sport <chr>,
-#> #   game_type <chr>
-#> 
-#> $games
-#> # A tibble: 1 × 16
+draft_group <- dk_get_draft_group(draft_group_id = 75284)
+
+draft_group |> 
+  dplyr::select(draftable_id, player_id, first_name, last_name, position, salary, status)
+#> # A tibble: 106 × 7
+#>    draftable_id player_id first_name last_name position salary status
+#>           <dbl>     <dbl> <chr>      <chr>     <chr>     <dbl> <chr> 
+#>  1     24633208    877745 Lamar      Jackson   QB        18300 None  
+#>  2     24633209   1109979 Ja'Marr    Chase     WR        16500 None  
+#>  3     24633210    878785 Joe        Burrow    QB        15900 None  
+#>  4     24633211    820699 Mark       Andrews   TE        14400 None  
+#>  5     24633212    820727 Joe        Mixon     RB        13200 None  
+#>  6     24633213    978579 Tee        Higgins   WR        12300 None  
+#>  7     24633261    877745 Lamar      Jackson   QB        12200 None  
+#>  8     24633262   1109979 Ja'Marr    Chase     WR        11000 None  
+#>  9     24633263    878785 Joe        Burrow    QB        10600 None  
+#> 10     24633214    976513 J.K.       Dobbins   RB        10500 None  
+#> # ℹ 96 more rows
+```
+
+**Draft Group Info**
+
+``` r
+dg_info <- dk_get_draft_group_info(draft_group_id = 75284)
+
+dg_info$info |> 
+  dplyr::select(draft_group_id, game_type_id, sport, game_type, min_start_time, max_start_time)
+#> # A tibble: 1 × 6
+#>   draft_group_id game_type_id sport game_type min_start_time      max_start_time
+#>            <int>        <int> <chr> <chr>     <chr>               <chr>         
+#> 1          75284           96 NFL   SalaryCap 2022-10-10T00:20:0… 2022-10-10T00…
+
+dg_info$games |> 
+  dplyr::select(game_id, away_team_id, home_team_id, start_date, location, time_remaining_status)
+#> # A tibble: 1 × 6
 #>   game_id away_team_id home_team_id start_date    location time_remaining_status
 #>     <int>        <int>        <int> <chr>         <chr>    <chr>                
-#> 1 5819761          327          366 2022-10-10T0… M&T Ban… Final                
-#> # ℹ 10 more variables: sport <chr>, status <chr>, description <chr>,
-#> #   league <chr>, competition_status <chr>, competition_status_detail <chr>,
-#> #   sport_specific_data_time_remaining <chr>,
-#> #   sport_specific_data_home_team_score <chr>,
-#> #   sport_specific_data_away_team_score <chr>,
-#> #   sport_specific_data_quarter <chr>
-#> 
-#> $leagues
+#> 1 5819761          327          366 2022-10-10T0… M&T Ban… Final
+
+dg_info$leagues |> 
+  dplyr::select(league_id, league_name, league_abbreviation)
 #> # A tibble: 1 × 3
 #>   league_id league_name              league_abbreviation
 #>       <int> <chr>                    <chr>              
@@ -89,116 +110,92 @@ dk_get_draft_group_info(draft_group_id = 75284)
 
 ## Leaderboard & Entries
 
-``` r
-dk_get_leaderboard(contest_key = 133645678)
-#> # A tibble: 215 × 21
-#>    draft_group_id contest_key entry_key  lineup_id user_name    user_key
-#>             <int> <chr>       <chr>          <int> <chr>        <chr>   
-#>  1          75284 133645678   3412356478        -1 GenoMike21   642864  
-#>  2          75284 133645678   3416201807        -1 carlitosway9 1334845 
-#>  3          75284 133645678   3416313295        -1 KidRaider3   5752908 
-#>  4          75284 133645678   3416410911        -1 carlosking89 8636059 
-#>  5          75284 133645678   3416034618        -1 sjamo35      8672865 
-#>  6          75284 133645678   3416642033        -1 Jace2013     11763756
-#>  7          75284 133645678   3416680035        -1 Bucknutz00   417423  
-#>  8          75284 133645678   3415573084        -1 JWolff33     13692689
-#>  9          75284 133645678   3416580244        -1 eracnrobert  2374855 
-#> 10          75284 133645678   3415480406        -1 Maria2199    3405766 
-#> # ℹ 205 more rows
-#> # ℹ 15 more variables: user_entry_count <int>, user_entry_index <int>,
-#> #   time_remaining <int>, time_remaining_unit <chr>, max_time_remaining <int>,
-#> #   time_remaining_opponent <int>, rank <int>, fantasy_points <dbl>,
-#> #   fantasy_points_opponent <dbl>, user_name_opponent <chr>,
-#> #   number_tickets_won <int>, tickets_value <int>, winning_value <int>,
-#> #   winnings <list>, scoring_precision <int>
-```
+**Leaderboard**
 
 ``` r
-dk_get_entries(draft_group_id = 80584, entry_keys = c(3618408508, 3618897002))
-#> # A tibble: 76 × 29
-#>    contest_key entry_key  user_key draft_group_id lineup_id first_name last_name
-#>    <chr>       <chr>      <chr>             <int>     <int> <chr>      <chr>    
-#>  1 140039397   3618408508 11222656          80584        -1 Cole       Beasley  
-#>  2 140039397   3618408508 11222656          80584        -1 Cole       Beasley  
-#>  3 140039397   3618408508 11222656          80584        -1 Cole       Beasley  
-#>  4 140039397   3618408508 11222656          80584        -1 Cole       Beasley  
-#>  5 140039397   3618408508 11222656          80584        -1 Cole       Beasley  
-#>  6 140039397   3618408508 11222656          80584        -1 Gabe       Davis    
-#>  7 140039397   3618408508 11222656          80584        -1 Gabe       Davis    
-#>  8 140039397   3618408508 11222656          80584        -1 Gabe       Davis    
-#>  9 140039397   3618408508 11222656          80584        -1 Gabe       Davis    
-#> 10 140039397   3618408508 11222656          80584        -1 Gabe       Davis    
+leaderboard <- dk_get_leaderboard(contest_key = 133645678)
+
+leaderboard |> 
+  dplyr::select(draft_group_id, contest_key, entry_key, user_name, rank, fantasy_points)
+#> # A tibble: 215 × 6
+#>    draft_group_id contest_key entry_key  user_name     rank fantasy_points
+#>             <int> <chr>       <chr>      <chr>        <int>          <dbl>
+#>  1          75284 133645678   3412356478 GenoMike21       1          101. 
+#>  2          75284 133645678   3416201807 carlitosway9     1          101. 
+#>  3          75284 133645678   3416313295 KidRaider3       1          101. 
+#>  4          75284 133645678   3416410911 carlosking89     4           97.6
+#>  5          75284 133645678   3416034618 sjamo35          5           96.3
+#>  6          75284 133645678   3416642033 Jace2013         6           96.2
+#>  7          75284 133645678   3416680035 Bucknutz00       7           94.2
+#>  8          75284 133645678   3415573084 JWolff33         8           93.9
+#>  9          75284 133645678   3416580244 eracnrobert      9           90.2
+#> 10          75284 133645678   3415480406 Maria2199       10           90.1
+#> # ℹ 205 more rows
+```
+
+**Entries**
+
+``` r
+entries <- dk_get_entries(draft_group_id = 80584, entry_keys = c(3618408508, 3618897002))
+
+entries |> 
+  dplyr::select(entry_key, draftable_id, display_name, roster_position, fantasy_points)
+#> # A tibble: 76 × 5
+#>    entry_key  draftable_id display_name roster_position fantasy_points
+#>    <chr>             <int> <chr>        <chr>                    <dbl>
+#>  1 3618408508     26369002 Cole Beasley FLEX                       6  
+#>  2 3618408508     26369002 Cole Beasley FLEX                       3.5
+#>  3 3618408508     26369002 Cole Beasley FLEX                       2  
+#>  4 3618408508     26369002 Cole Beasley FLEX                       0  
+#>  5 3618408508     26369002 Cole Beasley FLEX                       0  
+#>  6 3618408508     26368984 Gabe Davis   FLEX                       6  
+#>  7 3618408508     26368984 Gabe Davis   FLEX                      11.3
+#>  8 3618408508     26368984 Gabe Davis   FLEX                       6  
+#>  9 3618408508     26368984 Gabe Davis   FLEX                       3  
+#> 10 3618408508     26368984 Gabe Davis   FLEX                       0  
 #> # ℹ 66 more rows
-#> # ℹ 22 more variables: short_name <chr>, display_name <chr>,
-#> #   roster_position_id <int>, roster_position <chr>,
-#> #   roster_position_sort_order <int>, e_tag <chr>, percent_drafted <dbl>,
-#> #   draftable_id <int>, score <dbl>, stats_description <chr>,
-#> #   time_remaining_unit <chr>, time_remaining <int>, max_time_remaining <int>,
-#> #   percent_drafted_cp <chr>, player_deep_link <chr>, …
 ```
 
 ## Lineup Optimization
 
+**Prepare Schematic**
+
 ``` r
 # prepare schematic with contest rules and DraftKings player projections
 schematic <- dk_prepare_schematic(draft_group_id = 80584)
+schematic |> names()
+#> [1] "draft_group"    "rules"          "draft_group_id"
+```
 
-# run optimization
+**Run Optimization**
+
+``` r
+# perform lineup optimization based on rules and player projections 
 optimized_lineup <- dk_optimize_lineup(schematic)
+```
 
-# extract solution
-dk_extract_solution(optimized_lineup)
-#> $optimal_lineup
-#>   draftable_id first_name last_name   display_name short_name player_id
-#> 1     26368922       Josh     Allen     Josh Allen   J. Allen    868199
-#> 2     26368976     Tyreek      Hill    Tyreek Hill    T. Hill    823156
-#> 3     26368982     Raheem   Mostert Raheem Mostert R. Mostert    606501
-#> 4     26368990      James      Cook     James Cook    J. Cook   1131012
-#> 5     26368996      Jason   Sanders  Jason Sanders J. Sanders    821895
-#> 6     26368997   Dolphins                 Dolphins   Dolphins       345
-#>   player_dk_id position roster_slot_id salary status is_swappable is_disabled
-#> 1        11370       QB            511  18600   None        FALSE       FALSE
-#> 2        11477       WR            512  11000   None        FALSE       FALSE
-#> 3        19614       RB            512   8000   None        FALSE       FALSE
-#> 4       640895       RB            512   5400   None        FALSE       FALSE
-#> 5        14871        K            512   3800   None        FALSE       FALSE
-#> 6        18401      DST            512   3200   None        FALSE       FALSE
-#>   news_status                                         player_image50
-#> 1      Recent  https://dkn.gs/sports/images/nfl/players/50/11370.png
-#> 2      Recent  https://dkn.gs/sports/images/nfl/players/50/11477.png
-#> 3    Breaking  https://dkn.gs/sports/images/nfl/players/50/19614.png
-#> 4      Recent https://dkn.gs/sports/images/nfl/players/50/640895.png
-#> 5        None  https://dkn.gs/sports/images/nfl/players/50/14871.png
-#> 6        <NA>    https://dkn.gs/sports/images/nfl/teams/50/18401.png
-#>                                           player_image160 alt_player_image50
-#> 1  https://dkn.gs/sports/images/nfl/players/160/11370.png                   
-#> 2  https://dkn.gs/sports/images/nfl/players/160/11477.png                   
-#> 3  https://dkn.gs/sports/images/nfl/players/160/19614.png                   
-#> 4 https://dkn.gs/sports/images/nfl/players/160/640895.png                   
-#> 5  https://dkn.gs/sports/images/nfl/players/160/14871.png                   
-#> 6    https://dkn.gs/sports/images/nfl/teams/160/18401.png                   
-#>   alt_player_image160 team_id team_abbreviation player_game_hash competition_id
-#> 1                         324               BUF   868199-5819869        5819869
-#> 2                         345               MIA   823156-5819869        5819869
-#> 3                         345               MIA   606501-5819869        5819869
-#> 4                         324               BUF  1131012-5819869        5819869
-#> 5                         345               MIA   821895-5819869        5819869
-#> 6                         345               MIA      345-5819869        5819869
-#>   competition_name       competition_start_time exp_fp is_captain
-#> 1        MIA @ BUF 2023-01-15T18:00:00.0000000Z   39.0       TRUE
-#> 2        MIA @ BUF 2023-01-15T18:00:00.0000000Z   24.6      FALSE
-#> 3        MIA @ BUF 2023-01-15T18:00:00.0000000Z   17.4      FALSE
-#> 4        MIA @ BUF 2023-01-15T18:00:00.0000000Z   14.1      FALSE
-#> 5        MIA @ BUF 2023-01-15T18:00:00.0000000Z    8.2      FALSE
-#> 6        MIA @ BUF 2023-01-15T18:00:00.0000000Z    8.6      FALSE
-#> 
-#> $draft_group_id
-#> [1] 80584
-#> 
-#> $salary_total
-#> [1] 50000
-#> 
-#> $exp_fp_total
+**Extract Solution**
+
+``` r
+# extract solution from optimized lineup object
+solution <- dk_extract_solution(optimized_lineup)
+
+solution |> names()
+#> [1] "optimal_lineup" "draft_group_id" "salary_total"   "exp_fp_total"
+
+# exp_fp is the expected fantasy points for each player in the lineup
+solution$optimal_lineup |> 
+  dplyr::select(draftable_id, display_name, position, salary, exp_fp)
+#>   draftable_id   display_name position salary exp_fp
+#> 1     26368922     Josh Allen       QB  18600   39.0
+#> 2     26368976    Tyreek Hill       WR  11000   24.6
+#> 3     26368982 Raheem Mostert       RB   8000   17.4
+#> 4     26368990     James Cook       RB   5400   14.1
+#> 5     26368996  Jason Sanders        K   3800    8.2
+#> 6     26368997       Dolphins      DST   3200    8.6
+
+# total expected fantasy points for the lineup
+solution$exp_fp_total
 #> [1] 111.9
 ```
 
