@@ -13,7 +13,6 @@ Imports:
     dplyr,
     glue,
     httr2,
-    jsonlite,
     magrittr,
     ompr,
     ompr.roi,
