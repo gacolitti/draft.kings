@@ -211,10 +211,6 @@ dk_prepare_schematic <- function(draft_group_id,
   draft_group <- draft_group %>%
     dplyr::distinct(dplyr::across(!dplyr::all_of("draftable_id")), .keep_all = TRUE)
 
-  # Separate players that can perform multiple positions into different rows
-  draft_group <- draft_group %>%
-    tidyr::separate_rows("position", sep = "/")
-
   # Add row number
   draft_group <- draft_group %>%
     dplyr::mutate("row_number" = dplyr::row_number())
