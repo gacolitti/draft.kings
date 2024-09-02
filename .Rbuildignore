@@ -4,3 +4,6 @@
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^LICENSE\.md$
+^\.github$
+^docs$
+^pkgdown$

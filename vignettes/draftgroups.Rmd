@@ -1,0 +1,217 @@
+---
+title: "Draft Groups"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Draft Groups}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(draft.kings)
+```
+
+# Understanding Draft Groups
+
+Draft groups are a fundamental concept in DraftKings' daily fantasy sports platform. They represent a collection of players available for selection in a specific contest or set of contests. Understanding draft groups is crucial for effectively participating in DraftKings contests and utilizing the `draft.kings` package.
+
+Key aspects of draft groups include:
+
+1. Player Pool: Each draft group contains a specific set of players from which contestants can build their lineups.
+
+2. Salary Cap: Draft groups typically have a salary cap, limiting the total "cost" of players that can be selected for a lineup.
+
+3. Positions: Players in a draft group are categorized by their positions, which vary depending on the sport.
+
+4. Contest Association: A draft group is linked to one or more contests. Multiple contests may share the same draft group.
+
+5. Sport and Game Type: Draft groups are sport-specific and may be further categorized by game type (e.g., classic, showdown).
+
+6. Start Time: Each draft group has a specific start time, usually corresponding to the start of the first game included in the contests.
+
+7. Player Information: Draft groups contain detailed information about each player, including their salary, team, and projected points.
+
+8. Roster Requirements: Each draft group has specific roster requirements, such as the number of players to be drafted and position limits.
+
+The `draft.kings` package provides several functions to interact with and analyze draft groups, allowing users to retrieve draft group information, player lists, and other relevant data for strategic lineup construction and contest analysis.
+
+
+# Draft Groups in Lobby
+
+## dk_get_lobby_draft_groups()
+
+*List all the draft groups in the Draft Kings lobby*
+
+The `dk_get_lobby_draft_groups()` function retrieves information about all available draft groups in the DraftKings lobby. A draft group represents a set of players available for drafting in a particular contest or set of contests. This function can be used to get an overview of the current draft groups across different sports.
+
+```{r}
+draft_groups <- dk_get_lobby_draft_groups()
+draft_groups |> 
+  dplyr::select(draft_group_id, game_type, sport, start_date, game_count) |>
+  head(5)
+```
+
+# Draft Group Info
+
+## dk_get_draft_group()
+
+*Get detailed draft group info by draft group ID*
+
+The `dk_get_draft_group()` function provides detailed information about a specific draft group. This includes data such as the sport, game type, start time, and various rules and settings for the draft group. You can use either the draft group ID directly or provide a contest key, and the function will automatically retrieve the corresponding draft group ID.
+
+```{r}
+dk_get_draft_group(draft_group_id = 75284) |> 
+  dplyr::select(draftable_id, display_name, player_id, salary, position, status, team_abbreviation, team_id, competition_id, competition_name, competition_start_time)
+```
+
+## dk_get_draft_group_info()
+
+*Get draft group info*
+
+The `dk_get_draft_group_info()` function provides a different set of information compared to `dk_get_draft_group()`. While `dk_get_draft_group()` focuses on player-specific data within a draft group, `dk_get_draft_group_info()` offers a higher-level overview of the draft group itself and associated game information.
+
+Key differences include:
+
+1. Structure: `dk_get_draft_group_info()` returns a list with three main components: info, games, and leagues.
+
+2. Draft Group Details: It provides overall draft group information such as sport_id, start_time_suffix, draft_group_state, and game_type.
+
+3. Game Information: Unlike `dk_get_draft_group()`, it includes detailed game data like location, time_remaining_status, and sport-specific scores.
+
+4. League Data: It also includes league-specific information not present in `dk_get_draft_group()`.
+
+This function is particularly useful when you need broader context about the draft group, its associated games, and league, rather than individual player details.
+
+Here's an example of how to use the function:
+
+```{r}
+dgi <- dk_get_draft_group_info(draft_group_id = 75284) 
+info <- dgi$info
+games <- dgi$games
+leagues <- dgi$leagues
+
+info |> dplyr::select(sport, start_time_suffix, draft_group_state, game_type)
+games |> dplyr::select(game_id, away_team_id, home_team_id, start_date, location)
+leagues |> dplyr::select(league_id, league_name, league_abbreviation)
+```
+
+
+## dk_get_draft_group_info2()
+
+*Get more draft group info*
+
+The `dk_get_draft_group_info2()` function provides more information compared to `dk_get_draft_group_info()`. Key differences include:
+
+1. Structure: 
+   - `dk_get_draft_group_info()`: 3 components (info, games, leagues)
+   - `dk_get_draft_group_info2()`: 6 components (draft_groups, game_types, game_styles, sports, competitions, competition_attributes)
+
+2. Unique to `dk_get_draft_group_info()`:
+   - Detailed game-specific data like scores and quarter information
+
+3. Additional in `dk_get_draft_group_info2()`:
+   - More draft group details (e.g., sort_order, game_set_key)
+   - Separate game_types and game_styles components
+   - Detailed sports data
+   - Expanded competition information (e.g., weather, venue)
+   - Competition attributes
+
+`dk_get_draft_group_info2()` is particularly useful for:
+- Analyzing contest rules and formats
+- Accessing detailed sport and competition attributes
+- Obtaining weather and venue information
+
+Example usage:
+
+```{r}
+dgi2 <- dk_get_draft_group_info2(draft_group_id = 75284) 
+
+dgi2 |> names()
+
+dgi2$draft_groups |> 
+  dplyr::select(draft_group_id, contest_type_id, draft_group_state, min_start_time, max_start_time)
+
+dgi2$competitions |> 
+  dplyr::select(competition_id, name, start_time, venue, weather_icon)
+
+
+```
+
+# Player and Team Data
+
+## dk_get_player_list()
+
+*Get list of players for a draft group*
+
+The `dk_get_player_list()` function retrieves a detailed list of players available for drafting in a specific draft group. This function is similar to `dk_get_draft_group()` and is useful for analyzing the player pool, understanding salary constraints, and making informed decisions when building lineups. Here's a breakdown of what this function provides:
+
+- Player details: Names, positions, team affiliations
+- Fantasy-relevant information: Salary, projected points, recent performance
+- Game-specific data: Opponent, game time, location
+- Additional metadata: Player IDs, roster slot IDs, status
+
+This information is particularly useful for:
+- Conducting pre-draft research
+- Identifying value picks based on salary and projected points
+- Analyzing matchups and game conditions
+- Building optimized lineups within salary constraints
+
+Let's examine the output:
+
+```{r}
+dk_get_player_list(draft_group_id = 75284) |> 
+  dplyr::select(player_id, first_name, last_name, position, salary, points_per_game, own_rate, is_swappable, in_play_contest, pp, injury_status)
+```
+
+## dk_get_team_list()
+
+*Get list of teams for a draft group*
+
+The `dk_get_team_list()` function retrieves information about the teams participating in a specific draft group. This function is useful for understanding the team composition within a contest and can provide valuable context for player selection and matchup analysis. Here's what this function typically provides:
+
+- Team identifiers: Team IDs and abbreviations
+- Game-specific information: Home/away status, opponent
+- Team metadata: Full team names, locations
+
+This information is particularly useful for:
+- Analyzing team matchups
+- Identifying home and away teams
+- Cross-referencing team data with player information
+
+Let's examine the output:
+
+```{r}
+dk_get_team_list(draft_group_id = 75284) |> 
+  dplyr::select(home_team_abbreviation, away_team_abbreviation, competition_start_time, game_status)
+```
+
+## dk_get_player_fp()
+
+*Get player fantasy points earned*
+
+The `dk_get_player_fp()` function retrieves fantasy points earned by players for a specific sport, season, and timeframe. Data starts on October 18th, 2022 for NBA.
+
+
+```{r}
+# `timeframe` represents the week of the season for NFL
+dk_get_player_fp(sport = "nfl", season = 2023, timeframe = 10) |>
+  dplyr::select(player_id, first_name, last_name, team_id, position, salary, fantasy_points, competition_id, points, sport)
+```
+
+## dk_get_competitions()
+
+*Get competitions associated to a draft group*
+
+The `dk_get_competitions()` function retrieves detailed information about the competitions associated with a specific draft group. 
+
+```{r}
+dk_get_competitions(draft_group_id = 75284) |> 
+  dplyr::select(competition_id, start_time, home_team_team_name, away_team_team_name, sport, competition_state)
+```

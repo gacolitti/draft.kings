@@ -26,10 +26,10 @@ is 133645678.}
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
 to parse the JSON body,}
 
-\item{process_args}{Optional list of arguments passed to \code{dk_request_process}}
+\item{process_args}{Optional list of arguments passed to \code{dk_req_process}}
 
 \item{...}{
-  Arguments passed on to \code{\link[=dk_request]{dk_request}}
+  Arguments passed on to \code{\link[=dk_req]{dk_req}}
   \describe{
     \item{\code{query_params}}{A list of query parameters passed to \verb{[httr2::req_url_query]}.}
     \item{\code{proxy_args}}{List of arguments to \link[httr2:req_proxy]{httr2::req_proxy}}

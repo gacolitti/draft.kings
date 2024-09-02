@@ -5,8 +5,8 @@
 #' @param unique Should the variable names be unique?
 #' @param minus_to_underscore By default `-` is replaced with `minus`.
 #'   This argument replaces the hyphen with `_` (underscore) instead.
-#'
-#' @export
+#' 
+#' @keywords internal
 clean_names <- function(.data,
                         unique = FALSE,
                         minus_to_underscore = FALSE) {
@@ -138,8 +138,9 @@ check_df <- function(df, class_list) {
 #'
 #' Ensure the solver name passed to `dk_optimize_lineup` is available
 #'
-#' @inheritParams ompr.roi::with_ROI
+#' @param solver A string of the solver name.
 #'
+#' @keywords internal
 check_solver <- function(solver) {
 
   if (!requireNamespace(glue::glue("ROI.plugin.{solver}"), quietly = TRUE)) {

@@ -5,6 +5,7 @@
 #' @inheritParams httr2::req_proxy
 #' @param proxy_args List of arguments to [httr2::req_proxy]
 #'
+#' @keywords internal
 add_proxy <- function(req, proxy_args) {
 
   if (!is.null(proxy_args)) {
@@ -24,6 +25,7 @@ add_proxy <- function(req, proxy_args) {
 #' @inheritParams httr2::req_error
 #' @param curl_options List of arguments to [httr2::req_options]
 #'
+#' @keywords internal
 add_curl_options <- function(req, curl_options) {
 
   if (!is.null(curl_options)) {
@@ -43,6 +45,7 @@ add_curl_options <- function(req, curl_options) {
 #' @inheritParams httr2::req_throttle
 #' @param throttle_rate List of arguments to [httr2::req_throttle]
 #'
+#' @keywords internal
 add_throttle <- function(req, throttle_rate) {
 
   if (!is.null(throttle_rate)) {
@@ -62,6 +65,7 @@ add_throttle <- function(req, throttle_rate) {
 #' @inheritParams httr2::req_throttle
 #' @param headers List of arguments to [httr2::req_headers()]
 #'
+#' @keywords internal
 add_headers <- function(req, headers) {
 
   if (!is.null(headers)) {
@@ -81,6 +85,7 @@ add_headers <- function(req, headers) {
 #' @inheritParams httr2::req_retry
 #' @param retry_options List of arguments passed to [httr2::req_retry()]
 #'
+#' @keywords internal
 add_retry <- function(req, retry_options) {
 
   if (!is.null(retry_options)) {
@@ -102,6 +107,7 @@ add_retry <- function(req, retry_options) {
 #' @inheritParams httr2::req_error
 #' @param error_handling_options List of arguments to [httr2::req_error()]
 #'
+#' @keywords internal
 add_error_handling <- function(req, error_handling_options = NULL) {
 
   if (is.null(error_handling_options)) {
@@ -121,6 +127,7 @@ add_error_handling <- function(req, error_handling_options = NULL) {
 #' @inheritParams httr2::req_error
 #' @param paths List of arguments to [httr2::req_url_path_append()]
 #'
+#' @keywords internal
 add_to_path <- function(req, paths) {
 
   if (!is.null(paths)) {

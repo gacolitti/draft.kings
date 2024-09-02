@@ -43,7 +43,6 @@ extract_unix_timestamp <- function(x) {
 #' Parse Response JSON
 #'
 #' @inheritParams httr2::resp_body_json
-#'
 #' @export
 dk_resp_parse <- function(resp) {
   UseMethod("dk_resp_parse")
@@ -207,7 +206,8 @@ dk_resp_parse.lobby_game_types_resp <- function(resp) {
 }
 
 #### Draftgroup ------------------------------------------------------------------------------------
-
+#' @method dk_resp_parse draft_group_resp
+#' @export
 dk_resp_parse.draft_group_resp <- function(resp) {
 
   resp$draftables %>%

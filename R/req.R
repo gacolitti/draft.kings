@@ -15,7 +15,7 @@
 #' @param query_params A list of query parameters passed to `[httr2::req_url_query]`.
 #'
 #' @export
-dk_request <- function(proxy_args = NULL,
+dk_req <- function(proxy_args = NULL,
                        curl_options = NULL,
                        throttle_rate = NULL,
                        headers = NULL,
@@ -57,7 +57,7 @@ dk_request <- function(proxy_args = NULL,
 #' @return See `output`.
 #' @export
 #'
-dk_request_process <- function(req,
+dk_req_process <- function(req,
                                output = c("cleaned_json", "json", "response", "request"),
                                objclass = NULL,
                                ...) {

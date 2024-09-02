@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# draft.kings <a href="github.com/gacolitti/draft.kings"><img src="man/figures/sticker.png" align="right" height="138" /></a>
+# draft.kings <a href="github.com/gacolitti/draft.kings"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
 
 <!-- badges: start -->
@@ -45,136 +45,43 @@ devtools::install_github("gacolitti/draft.kings")
 library(draft.kings)
 ```
 
-# Contests
+# Examples
 
-### List all contests in the Draft Kings lobby
-
-```{r}
-dk_get_lobby_contests() |> dplyr::glimpse()
-```
-
-
-### Get info about a particular contest
+## Contests
 
 ```{r}
-dk_get_contest_info(contest_key = 133645678) |> dplyr::glimpse()
+dk_get_contest_info(contest_key = 133645678)
 ```
 
-> **Note:**
-> A contest key is the sequence of digits that correspond to a specific contest. This can be found by examining the URL of a contest page. For example: https://www.draftkings.com/draft/contest/133645678#. Here the contest ID is 133645678.
-
-# Draft Groups
-
-### List all the draft groups in the Draft Kings lobby
+## Draft Groups
 
 ```{r}
-# You can pass in sport or leave it NULL to fetch all sports
-dk_get_lobby_draft_groups(sport = NULL) |> dplyr::glimpse()
+dk_get_draft_group_info(draft_group_id = 75284)
 ```
 
-### Get draft group 
-```{r}
-dk_get_draft_group(draft_group_id = 75284) |> dplyr::glimpse()
-
-# If you don't know the draft group ID, you can pass in the contest key 
-# and the draft group ID will be retrieved automatically for you.
-# dk_get_draft_group(contest_key = 133645678)
-```
-
->**Note:**
-> A draft group is the list of players associated with a fantasy sports contest. 
-
-### Get draft group info
-```{r}
-dk_get_draft_group_info(draft_group_id = 75284) |> dplyr::glimpse()
-```
-
-### Get more draft group info
-```{r}
-dk_get_draft_group_info2(draft_group_id = 75284) |> dplyr::glimpse()
-```
-
-### Get list of players for a draft group
-```{r}
-dk_get_player_list(draft_group_id = 75284) |> dplyr::glimpse()
-```
-
-### Get list of teams for a draft group
-```{r}
-dk_get_team_list(draft_group_id = 75284) |> dplyr::glimpse()
-```
-
-### Get player fantasy points earned
-```{r}
-# Data starts on October 18th, 2022 for NBA
-# `timeframe` represents the week of the season for NFL
-dk_get_player_fp(sport = "nfl", season = 2023, timeframe = 10) |> dplyr::glimpse()
-```
-
-### Get competitions associated to a draft group
+## Leaderboard & Entries
 
 ```{r}
-dk_get_competitions(draft_group_id = 75284) |> dplyr::glimpse()
+dk_get_leaderboard(contest_key = 133645678)
 ```
-
-
-# Leaderboard
-
-#### Get player leaderboard information for a particular contest
-
-A leaderboard contains a list of entries in a contest, fantasy points for each entry, associated
-users for each entry, rank, and winnings.
-
-```{r}
-dk_get_leaderboard(contest_key = 133645678) |> dplyr::glimpse()
-```
-
->**Note:**
-> Some functions such as `dk_get_leaderboard()` require passing the session cookies to the
-> function as a JSON file.
-
-### Get entries for a contest
-
-Fetch details for entries in a contest, including the drafted roster for each entry, stats for each
-player in an entry roster, and the fantasy points associated to each stat.
 
 ```{r}
 dk_get_entries(draft_group_id = 80584, entry_keys = c(3618408508, 3618897002))
 ```
 
->**Note:**
-> An entry key is a numeric (or character) key that corresponds to a specific entry in a specific contest. See output from `dk_get_leaderboard()`.
-
-# Optimization
-
-`draft.kings` contains a set of functions to perform lineup optimization. By default, optimization
-uses Draft Kings player point projections, but you can pass in your own player point projections. Only
-NFL and NBA contest types are supported currently.
-
-### Prepare schematic
-
-To perform optimization you must first prepare a schematic. A schematic contains all the necessary
-information to perform optimization including the contest type, set of players, rules, and expected
-player points.
+## Lineup Optimization
 
 ```{r}
+# prepare schematic with contest rules and DraftKings player projections
 schematic <- dk_prepare_schematic(draft_group_id = 80584)
-dplyr::glimpse(schematic)
+
+# run optimization
+optimized_lineup <- dk_optimize_lineup(schematic)
+
+# extract solution
+dk_extract_solution(optimized_lineup)
 ```
 
-### Perform optimization
+# Further Reading
 
-Pass the schematic object to the optimization function:
-
-```{r}
-optimal_lineup <- dk_optimize_lineup(schematic)
-```
-
-### Extract solution
-
-Finally, extract the solution from the solved model object:
-
-```{r}
-dk_extract_solution(optimal_lineup) |> dplyr::glimpse()
-```
-
+- [SeanDrum/Draft-Kings-API-Documentation](https://github.com/SeanDrum/Draft-Kings-API-Documentation)

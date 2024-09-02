@@ -6,7 +6,8 @@
 \usage{
 dk_get_leaderboard(
   contest_key,
-  cookie_file = path.expand("~/cookies.json"),
+  iv = Sys.getenv("DK_IV"),
+  jwe = Sys.getenv("DK_JWE"),
   output = c("cleaned_json", "json", "response", "request"),
   process_args = NULL,
   ...
@@ -18,16 +19,18 @@ This can be found by examining the URL of a contest page.
 For example: \url{https://www.draftkings.com/draft/contest/133645678#}. Here the contest ID
 is 133645678.}
 
-\item{cookie_file}{Path to JSON of cookies needed to perform API request.}
+\item{iv}{Character string. The 'iv' cookie value. If not provided, it will be retrieved from the DK_IV environment variable.}
+
+\item{jwe}{Character string. The 'jwe' cookie value. If not provided, it will be retrieved from the DK_JWE environment variable.}
 
 \item{output}{One of "cleaned_json" (the default),
 "json", "response", or "request". If "cleaned_json" then \code{\link[tidyjson:spread_all]{tidyjson::spread_all()}} is used
 to parse the JSON body,}
 
-\item{process_args}{Optional list of arguments passed to \code{dk_request_process}}
+\item{process_args}{Optional list of arguments passed to \code{dk_req_process}}
 
 \item{...}{
-  Arguments passed on to \code{\link[=dk_request]{dk_request}}
+  Arguments passed on to \code{\link[=dk_req]{dk_req}}
   \describe{
     \item{\code{query_params}}{A list of query parameters passed to \verb{[httr2::req_url_query]}.}
     \item{\code{proxy_args}}{List of arguments to \link[httr2:req_proxy]{httr2::req_proxy}}

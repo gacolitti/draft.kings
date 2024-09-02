@@ -1,0 +1,64 @@
+---
+title: "Leaderboard & Entries"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Leaderboard & Entries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(draft.kings)
+```
+
+# Analyzing Contest Results and Rankings
+
+## dk_get_leaderboard()
+
+*Get player leaderboard information for a particular contest*
+
+The `dk_get_leaderboard()` function retrieves comprehensive information about the participants and their performance in a specific DraftKings contest. This includes:
+
+1. A list of all entries in the contest
+2. Fantasy points scored by each entry
+3. User information associated with each entry
+4. Current rank of each entry
+5. Winnings (if any) for each entry
+
+This data allows for in-depth analysis of contest results, participant performance, and payout distributions. It's particularly useful for understanding successful strategies, identifying top users, and gaining insights into contest dynamics.
+
+```{r}
+dk_get_leaderboard(contest_key = 133645678) 
+```
+
+>**Note:**
+> Some functions such as `dk_get_leaderboard()` and `dk_get_entries()` require authentication via DraftKings session cookies. These can be provided either by setting the `DK_IV` and `DK_JWE` environment variables, or by passing them directly to the functions using the `iv` and `jwe` arguments.
+
+## dk_get_entries()
+
+*Get entries for a contest*
+
+Retrieve detailed information about specific entry rosters in a contest, including:
+
+1. The complete drafted roster for each entry
+2. Detailed statistics for every player in an entry's roster
+3. Fantasy points earned for each statistical category
+4. Performance breakdowns and scoring details
+5. Any late swap or substitution information
+6. Entry metadata such as entry fees, potential winnings, and current ranking
+
+This function provides a deep dive into the composition and performance of individual contest entries, allowing for  analysis of roster strategies and player contributions.
+
+```{r}
+dk_get_entries(draft_group_id = 80584, entry_keys = c(3618408508, 3618897002))
+```
+
+>**Note:**
+> An entry key is a numeric (or character) key that corresponds to a specific entry in a specific contest. See output from `dk_get_leaderboard()`.

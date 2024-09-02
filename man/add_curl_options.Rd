@@ -14,3 +14,4 @@ add_curl_options(req, curl_options)
 \description{
 Add list of curl arguments to a request object
 }
+\keyword{internal}

@@ -14,3 +14,4 @@ add_throttle(req, throttle_rate)
 \description{
 Add list of throttle arguments to a request object
 }
+\keyword{internal}

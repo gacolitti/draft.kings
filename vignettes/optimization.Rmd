@@ -1,0 +1,64 @@
+---
+title: "Lineup Optimization"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Lineup Optimization}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(draft.kings)
+```
+
+# Understanding Lineup Optimization
+
+Lineup optimization is a crucial piece of daily fantasy sports (DFS) that involves selecting the best possible combination of players within given constraints to maximize potential points. This process is particularly important in DFS platforms like DraftKings, where participants must create lineups under specific rules and salary caps.
+
+Key aspects of lineup optimization in DFS include:
+
+1. Salary Cap Management: Balancing high-value players with budget-friendly options to stay within the allocated salary cap.
+
+2. Position Requirements: Fulfilling specific position quotas required by the contest rules (e.g., 1 QB, 2 RBs, 3 WRs for NFL contests).
+
+3. Player Projections: Utilizing accurate projections of player performance, which can be based on historical data, recent form, matchups, and other relevant factors.
+
+
+The `draft.kings` package provides tools to streamline this optimization process, allowing users to leverage DraftKings' data and perform lineup optimization programmatically. By default, optimization
+uses Draft Kings player point projections, but you can pass in your own player point projections. Only
+NFL and NBA contest types are supported currently.
+
+## Prepare schematic
+
+To perform optimization you must first prepare a schematic. A schematic contains all the necessary
+information to perform optimization including the contest type, set of players, rules, and expected
+player points.
+
+```{r}
+schematic <- dk_prepare_schematic(draft_group_id = 80584)
+dplyr::glimpse(schematic)
+```
+
+## Perform optimization
+
+Pass the schematic object to the optimization function:
+
+```{r}
+optimal_lineup <- dk_optimize_lineup(schematic)
+```
+
+## Extract solution
+
+Finally, extract the solution from the solved model object:
+
+```{r}
+dk_extract_solution(optimal_lineup) |> dplyr::glimpse()
+```
+

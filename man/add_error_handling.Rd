@@ -15,3 +15,4 @@ add_error_handling(req, error_handling_options = NULL)
 Add list of arguments to a request object that when errors occur and how the message is
 extracted.
 }
+\keyword{internal}

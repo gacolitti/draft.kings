@@ -16,16 +16,16 @@ dk_req_perform(
 \arguments{
 \item{req}{A \link[httr2]{request}.}
 
-\item{path}{Optionally, path to save body of request. This is useful for
-large responses since it avoids storing the response in memory.}
+\item{path}{Optionally, path to save body of the response. This is useful
+for large responses since it avoids storing the response in memory.}
 
 \item{verbosity}{How much information to print? This is a wrapper
-around \code{req_verbose()} that uses an integer to control verbosity:
+around \code{\link[httr2:req_verbose]{req_verbose()}} that uses an integer to control verbosity:
 \itemize{
-\item 0: no output
-\item 1: show headers
-\item 2: show headers and bodies
-\item 3: show headers, bodies, and curl status messages.
+\item \code{0}: no output
+\item \code{1}: show headers
+\item \code{2}: show headers and bodies
+\item \code{3}: show headers, bodies, and curl status messages.
 }
 
 Use \code{\link[httr2:with_verbosity]{with_verbosity()}} to control the verbosity of requests that
