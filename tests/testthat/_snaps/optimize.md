@@ -150,10 +150,10 @@
         player_dk_id position roster_slot_id salary status is_swappable is_disabled
       1        33343       PG            476  14700   None        FALSE       FALSE
       2        33091        C            475  11400   None        FALSE       FALSE
-      3        33049       PG            475  10400   None        FALSE       FALSE
+      3        33049    PG/SG            475  10400   None        FALSE       FALSE
       4        32941       SG            475   6000   None        FALSE       FALSE
-      5        33306       PF            475   4000   None        FALSE       FALSE
-      6        33360        C            475   3200   None        FALSE       FALSE
+      5        33306     PF/C            475   4000   None        FALSE       FALSE
+      6        33360     PF/C            475   3200   None        FALSE       FALSE
         news_status                                        player_image50
       1      Recent https://dkn.gs/sports/images/nba/players/50/33343.png
       2      Recent https://dkn.gs/sports/images/nba/players/50/33091.png
@@ -201,22 +201,22 @@
       $optimal_lineup
         draftable_id first_name last_name    display_name short_name player_id
       1     30624164    Stephen     Curry   Stephen Curry   S. Curry    338365
-      2     30624261   De'Aaron       Fox    De'Aaron Fox     D. Fox    957489
-      3     30624303      Franz    Wagner    Franz Wagner  F. Wagner   1178131
+      2     30624262   De'Aaron       Fox    De'Aaron Fox     D. Fox    957489
+      3     30624305      Franz    Wagner    Franz Wagner  F. Wagner   1178131
       4     30624194     Jerami     Grant    Jerami Grant   J. Grant    699826
-      5     30624374    Shaedon    Sharpe  Shaedon Sharpe  S. Sharpe   1371494
-      6     30624319     Keegan    Murray   Keegan Murray  K. Murray   1231161
-      7     30624188    Malcolm   Brogdon Malcolm Brogdon M. Brogdon    601146
+      5     30624375    Shaedon    Sharpe  Shaedon Sharpe  S. Sharpe   1371494
+      6     30624320     Keegan    Murray   Keegan Murray  K. Murray   1231161
+      7     30624189    Malcolm   Brogdon Malcolm Brogdon M. Brogdon    601146
       8     30624208      Dario     Saric     Dario Saric   D. Saric    830641
         player_dk_id position roster_slot_id salary status is_swappable is_disabled
-      1        33049       PG            458   9300   None        FALSE       FALSE
-      2        33343       PG            458   8700   None        FALSE       FALSE
-      3       591008       SF            460   6500   None        FALSE       FALSE
+      1        33049    PG/SG            458   9300   None        FALSE       FALSE
+      2        33343       PG            464   8700   None        FALSE       FALSE
+      3       591008       SF            465   6500   None        FALSE       FALSE
       4        33017       PF            461   6100   None        FALSE       FALSE
-      5       649550       SG            459   5300   None        FALSE       FALSE
-      6       649547       PF            461   5200   None        FALSE       FALSE
-      7        33092       PG            458   5200   None        FALSE       FALSE
-      8        33306        C            462   3700   None        FALSE       FALSE
+      5       649550    SG/SF            460   5300   None        FALSE       FALSE
+      6       649547       PF            463   5200   None        FALSE       FALSE
+      7        33092    PG/SG            459   5200   None        FALSE       FALSE
+      8        33306     PF/C            462   3700   None        FALSE       FALSE
         news_status                                         player_image50
       1      Recent  https://dkn.gs/sports/images/nba/players/50/33049.png
       2      Recent  https://dkn.gs/sports/images/nba/players/50/33343.png
