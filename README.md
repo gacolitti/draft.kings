@@ -6,6 +6,9 @@
 <!-- badges: start -->
 
 [![experimental](https://img.shields.io/badge/experimental-orange.svg)](https://github.com/gaclitti/draft.kings)
+[![R-CMD-check](https://github.com/gacolitti/draft.kings/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gacolitti/draft.kings/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/gacolitti/draft.kings/graph/badge.svg)](https://app.codecov.io/gh/gacolitti/draft.kings)
 <!-- badges: end -->
 
 # Overview
@@ -32,10 +35,6 @@ You can install the development version of draft.kings from
 ``` r
 # install.packages("devtools")
 devtools::install_github("gacolitti/draft.kings")
-```
-
-``` r
-library(draft.kings)
 ```
 
 # Examples
