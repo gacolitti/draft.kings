@@ -246,6 +246,7 @@ dk_resp_parse.draft_group_info_resp <- function(resp) {
     .game$gameAttributes <- NULL
 
     # Extract sport specific data
+    sport_specific_data <- NULL
     if (!is.null(.game$sportSpecificData) && length(.game$sportSpecificData) > 0) {
 
       sport_specific_data <- .game$sportSpecificData %>%
@@ -256,7 +257,7 @@ dk_resp_parse.draft_group_info_resp <- function(resp) {
 
     .game$sportSpecificData <- NULL
 
-    if (exists("sport_specific_data")) {
+    if (!is.null(sport_specific_data)) {
 
       out <- dplyr::bind_cols(dplyr::as_tibble(.game), sport_specific_data)
 

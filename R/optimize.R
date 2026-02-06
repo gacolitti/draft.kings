@@ -675,7 +675,7 @@ dk_write_csv.showdown_captain_mode_multiple_solutions <- function(
     ...
   ) {
 
-  purrr::map_dfr(optimal_lineups[1], function(.x) {
+  purrr::map_dfr(optimal_lineups, function(.x) {
 
     dk_extract_solution(.x)$optimal_lineup %>%
       dplyr::transmute(
@@ -696,6 +696,45 @@ dk_write_csv.showdown_captain_mode_multiple_solutions <- function(
 
   ) %>%
     stats::setNames(c("CPT", rep("FLEX", 5))) %>%
+    utils::write.csv(file = file, row.names = FALSE, ...)
+
+}
+
+#' Write Classic Lineups to CSV
+#'
+#' Given the output from [dk_get_optimal_lineups()], create a
+#' CSV of Classic lineups formatted for
+#' upload to \url{https://www.draftkings.com/lineup/upload}.
+#'
+#' @rdname dk_write_csv
+#' @method dk_write_csv classic_multiple_solutions
+#' @export
+dk_write_csv.classic_multiple_solutions <- function(
+    optimal_lineups,
+    file = "classic_lineups.csv",
+    ...
+  ) {
+
+  purrr::map_dfr(optimal_lineups, function(.x) {
+
+    lineup <- dk_extract_solution(.x)$optimal_lineup
+
+    lineup %>%
+      dplyr::transmute(
+        "position" = paste0(.data$roster_slot_id, "_", dplyr::row_number()),
+        "value" = paste0(
+          .data$first_name,
+          " ",
+          .data$last_name,
+          " (",
+          .data$draftable_id,
+          ")"
+        )
+      ) %>%
+      tidyr::pivot_wider(names_from = "position",
+                         values_from = "value")
+
+  }) %>%
     utils::write.csv(file = file, row.names = FALSE, ...)
 
 }
