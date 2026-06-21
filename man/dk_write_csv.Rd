@@ -3,11 +3,14 @@
 \name{dk_write_csv}
 \alias{dk_write_csv}
 \alias{dk_write_csv.showdown_captain_mode_multiple_solutions}
+\alias{dk_write_csv.classic_multiple_solutions}
 \title{Write Lineups to CSV}
 \usage{
 dk_write_csv(optimal_lineups, file, ...)
 
 \method{dk_write_csv}{showdown_captain_mode_multiple_solutions}(optimal_lineups, file = "showdown_captain_mode_lineups.csv", ...)
+
+\method{dk_write_csv}{classic_multiple_solutions}(optimal_lineups, file = "classic_lineups.csv", ...)
 }
 \arguments{
 \item{optimal_lineups}{Output from \code{\link[=dk_get_optimal_lineups]{dk_get_optimal_lineups()}}}
@@ -23,4 +26,8 @@ Create CSV of optimal lineups that can be uploaded to
 Given the output from \code{\link[=dk_get_optimal_lineups]{dk_get_optimal_lineups()}}, create a
 CSV of Showdown Captain Mode lineups formatted for
 uplaod to \url{https://www.draftkings.com/lineup/upload}.
+
+Given the output from \code{\link[=dk_get_optimal_lineups]{dk_get_optimal_lineups()}}, create a
+CSV of Classic lineups formatted for
+upload to \url{https://www.draftkings.com/lineup/upload}.
 }
